@@ -24,6 +24,7 @@ const Navbar = () => {
 				<NavLinkComponent url='/about' body='About' />
 				<NavLinkComponent url='/events' body='Events' />
 				<NavLinkComponent url='/guidelines' body='Guidelines' />
+				<NavLinkComponent url='/registration' body='registration' />
 			</NavLinksContainer>
 		</NavbarContainer>
 	);
