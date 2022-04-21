@@ -1,7 +1,7 @@
 import React from "react";
 import {Navbar} from "../../components/Navbar/Navbar.component";
 import Form from "../../components/Registration/Form";
-import Boxes from "../../components/Registration/Boxes";
+// import Boxes from "../../components/Registration/Boxes";
 // import {Container} from "../../styles/container.style";
 import "./Registration.css";
 

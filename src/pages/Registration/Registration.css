@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+
+:root
+{
+    --neon1 : rgb(9, 245, 245);
+}
+
 .section-registration {
     width: 100%;
     /* height: 100vh; */
@@ -16,6 +22,17 @@
 }
 
 .main-registration {
+    /* padding: 5% 0%; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-registration
+{
     padding: 5% 0%;
     width: 100%;
     height: 100%;
@@ -76,13 +93,13 @@
     outline: none;
     background: none;
     transition: 0.3s;
-    border: 1px solid rgb(9, 245, 245);
+    border: 1px solid var(--neon1);
     z-index: 2;
 }
 
 
 .form-group input:focus {
-    box-shadow: 0 0 15px rgb(9, 245, 245), 0 0 75px rgb(9, 245, 245);
+    box-shadow: 0 0 15px var(--neon1), 0 0 75px var(--neon1);
 }
 
 .form-group input::placeholder {
@@ -99,15 +116,54 @@
     outline: none;
     background: none;
     transition: 0.3s;
-    border: 1px solid rgb(9, 245, 245);
+    border: 1px solid var(--neon1);
     z-index: 2;
 }
 
 
 .form-group select:focus {
-    box-shadow: 0 0 15px rgb(9, 245, 245), 0 0 75px rgb(9, 245, 245);
+    box-shadow: 0 0 15px var(--neon1), 0 0 75px var(--neon1);
 }
 
 .form-group select::placeholder {
     color: grey;
+}
+
+
+.form-button
+{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+}
+
+.form-button button
+{
+    width: 20%;
+    height: 6vh;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 1% 2%;
+    color: white;
+    text-indent: 10px;
+    border-radius: 10px;
+    outline: none;
+    background: none;
+    transition: 0.3s;
+    border: 1px solid var(--neon1);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-button button:hover {
+    box-shadow: 0 0 15px var(--neon1), 0 0 75px var(--neon1);
+    background: var(--neon1);
+    color: black;
 }
