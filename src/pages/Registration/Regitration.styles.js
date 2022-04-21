@@ -5,7 +5,15 @@ export const Container = styled.section`
     height: 100vh;
     background: black;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
+    div {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-item: center;
+    }
 `;
