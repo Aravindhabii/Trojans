@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import Assassin from './assets/fonts/Assassin.ttf';
 
 export const GlobalStyles = createGlobalStyle`
 	*{
@@ -8,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	@font-face {
-		font-family: trojans;
-		src: url('./assets/');
+		font-family: 'trojans';
+		src: url(${Assassin});
 	}
 `;

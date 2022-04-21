@@ -34,6 +34,7 @@ export const HeroContent = styled.div`
 		font-size: 3rem;
 		font-weight: bold;
 		margin-bottom: 1rem;
+		font-family: 'trojans';
 	}
 	p {
 		color: #fff;
