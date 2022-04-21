@@ -7,6 +7,28 @@ export const HeroSection = styled.section`
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+`;
+
+export const HeroVideo = styled.video`
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+`;
+
+export const HeroContent = styled.div`
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	z-index: 1;
+
 	h1 {
 		color: #fff;
 		font-size: 3rem;
