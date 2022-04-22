@@ -11,6 +11,9 @@ export const FullScreenNavbarStyle = styled.div`
 	padding-left: 3rem;
 	justify-content: space-between;
 	overflow: hidden;
+	transition: all 0.3s ease-in-out;
+	opacity: ${({ isNavOpen }) => (isNavOpen ? 1 : 0)};
+	z-index: ${({ isNavOpen }) => (isNavOpen ? 100 : -1)};
 `;
 
 export const NavLinksContainer = styled.ul`
@@ -41,7 +44,7 @@ export const Navlink = styled.li`
 
 export const MenuButton = styled.div`
 	width: 3rem;
-	height: 1.5rem;
+	height: 2.5rem;
 	position: absolute;
 	display: flex;
 	align-items: center;
@@ -108,6 +111,6 @@ export const NavRightImages = styled.div`
 		height: 100%;
 		top: 0;
 		left: 0;
-		background-color: rgba(0, 0, 0, 0.5);
+		background-color: rgba(0, 0, 0, 0);
 	}
 `;
