@@ -4,10 +4,8 @@
     box-sizing: border-box;
 }
 
-
-:root
-{
-    --neon1 : rgb(9, 245, 245);
+:root {
+    --neon1: rgb(9, 245, 245);
 }
 
 .section-registration {
@@ -21,6 +19,12 @@
     color: white;
 }
 
+.video-bg
+{
+    width: 100%;
+    height: 100%;
+}
+
 .main-registration {
     /* padding: 5% 0%; */
     width: 100%;
@@ -31,8 +35,7 @@
     justify-content: center;
 }
 
-.form-registration
-{
+.form-registration {
     padding: 5% 0%;
     width: 100%;
     height: 100%;
@@ -97,9 +100,8 @@
     z-index: 2;
 }
 
-
 .form-group input:focus {
-    box-shadow: 0 0 15px var(--neon1), 0 0 75px var(--neon1);
+    box-shadow: 0 0 15px var(--neon1) /* , 0 0 75px var(--neon1) */;
 }
 
 .form-group input::placeholder {
@@ -120,18 +122,15 @@
     z-index: 2;
 }
 
-
 .form-group select:focus {
-    box-shadow: 0 0 15px var(--neon1), 0 0 75px var(--neon1);
+    box-shadow: 0 0 15px var(--neon1) /* , 0 0 75px var(--neon1) */;
 }
 
 .form-group select::placeholder {
     color: grey;
 }
 
-
-.form-button
-{
+.form-button {
     width: 100%;
     height: 10vh;
     display: flex;
@@ -141,8 +140,7 @@
     margin: 1%;
 }
 
-.form-button button
-{
+.form-button button {
     width: 20%;
     height: 6vh;
     border-radius: 5px;
@@ -163,7 +161,7 @@
 }
 
 .form-button button:hover {
-    box-shadow: 0 0 15px var(--neon1), 0 0 75px var(--neon1);
+    box-shadow: 0 0 15px var(--neon1) /* , 0 0 75px var(--neon1) */;
     background: var(--neon1);
     color: black;
 }

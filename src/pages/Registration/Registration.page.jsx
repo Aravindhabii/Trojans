@@ -3,6 +3,7 @@ import {Navbar} from "../../components/Navbar/Navbar.component";
 import Form from "../../components/Registration/Form";
 // import Boxes from "../../components/Registration/Boxes";
 // import {Container} from "../../styles/container.style";
+import Video from "../../assets/Video.mp4"
 import "./Registration.css";
 
 function Registration() {
@@ -11,7 +12,12 @@ function Registration() {
             {/* <div className="box-main-div">
                 <Boxes />
             </div> */}
-            <Form />
+            <div className="video-bg">
+                <video>
+                    <source src="Video" />
+                </video>
+                <Form />
+            </div>
         </section>
     );
 }
