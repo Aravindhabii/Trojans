@@ -1,31 +1,23 @@
 import React from 'react';
 
-import {
-	NavbarContainer,
-	NavbarLogo,
-	NavLinksContainer,
-	Navlink
-} from './Navbar.styles';
+import { NavbarContainer, NavbarLogo, MenuButton } from './Navbar.styles';
+import FullScreenNavbar from './FullScreenNavbar.component';
 
-const NavLinkComponent = ({ body, url }) => (
-	<Navlink>
-		<a href={url}>{body}</a>
-	</Navlink>
-);
-
-const Navbar = () => {
+const Navbar = ({ active }) => {
 	return (
-		<NavbarContainer>
-			<NavbarLogo>
-				<h1>Trojans</h1>
-			</NavbarLogo>
-			<NavLinksContainer>
-				<NavLinkComponent url='/' body='Home' />
-				<NavLinkComponent url='/about' body='About' />
-				<NavLinkComponent url='/events' body='Events' />
-				<NavLinkComponent url='/guidelines' body='Guidelines' />
-			</NavLinksContainer>
-		</NavbarContainer>
+		<>
+			<FullScreenNavbar active={active} />
+			<NavbarContainer>
+				<NavbarLogo>
+					<h1>Trojans</h1>
+				</NavbarLogo>
+				<MenuButton>
+					<span></span>
+					<span></span>
+					<span></span>
+				</MenuButton>
+			</NavbarContainer>
+		</>
 	);
 };
 

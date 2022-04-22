@@ -25,27 +25,19 @@ export const NavbarLogo = styled.div`
 	}
 `;
 
-export const NavLinksContainer = styled.ul`
+export const MenuButton = styled.div`
+	width: 3rem;
+	height: 1.5rem;
+	position: relative;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	@media (max-width: 768px) {
-		display: none;
-	}
-`;
+	justify-content: space-between;
+	flex-direction: column;
 
-export const Navlink = styled.li`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-right: 1rem;
-	a {
-		text-decoration: none;
-		font-size: 1.2rem;
-		font-weight: bold;
-		color: inherit;
+	span {
+		background-color: white;
+		width: 100%;
+		height: 2px;
+		border-radius: 10px;
 	}
 `;
