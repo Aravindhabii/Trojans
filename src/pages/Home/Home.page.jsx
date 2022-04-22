@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { HeroSection, HeroContent } from './Home.styles';
 
 import Navbar from '../../components/Navbar/Navbar.component';
+import Preloader from '../../components/PreLoader/Preloader.component';
 import OnlyLogo_White from '../../assets/Trojans_logo/OnlyLogo_White.png';
 
 const HomePage = () => {
 	return (
 		<>
+			<Preloader />
 			<Navbar active={{ route: 'home', scroll: 0 }} />
 			<HeroSection>
 				<HeroContent>

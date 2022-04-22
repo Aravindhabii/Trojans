@@ -7,7 +7,7 @@ import {
 	MenuButton,
 	NavRight,
 	NavRightImages
-} from '../FullScreenNavbar.style';
+} from './FullScreenNavbar.style';
 
 const NavLinkComponent = ({
 	body,
