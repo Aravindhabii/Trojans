@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.shadow-container {
+    width: 1rem;
+    height: 10rem;
+    position: absolute;
+    background: none;
+    border: 1px solid var(--neon1);
+    border-radius: 15px;
+}
+
+.shadow-container:nth-child(1) {
+    transform: rotate(45deg);
+    top: 15%;
+    left: 10%;
+    animation: 1.5s shadow-animation1 infinite alternate;
+}
+
+@keyframes shadow-animation1 {
+    100% {
+        transform: rotate(0deg);
+    }
+    0% {
+        transform: rotate(45deg);
+        background: var(--neon1);
+        box-shadow: 0 0 10px var(--neon1);
+    }
+}
+
+.shadow-container:nth-child(2) {
+    transform: rotate(0deg);
+    top: 15%;
+    right: 10%;
+    animation: 1.5s shadow-animation2 infinite alternate;
+    animation-delay: 1s;
+}
+@keyframes shadow-animation2 {
+    100% {
+        transform: rotate(0deg);
+    }
+    0% {
+        transform: rotate(-45deg);
+        background: var(--neon1);
+        box-shadow: 0 0 10px var(--neon1);
+    }
+}
+
+.shadow-container:nth-child(3) {
+    transform: rotate(135deg);
+    bottom: 15%;
+    left: 10%;
+    animation: 1.5s shadow-animation3 infinite alternate;
+    animation-delay: 1.5s;
+}
+@keyframes shadow-animation3 {
+    100% {
+        transform: rotate(0deg);
+    }
+    0% {
+        transform: rotate(-45deg);
+        background: var(--neon1);
+        box-shadow: 0 0 10px var(--neon1);
+    }
+}
+
+.shadow-container:nth-child(4) {
+    transform: rotate(-135deg);
+    bottom: 15%;
+    right: 10%;
+    animation: 1.5s shadow-animation4 infinite alternate;
+    animation-delay: 2s;
+}
+@keyframes shadow-animation4 {
+    100% {
+        transform: rotate(0deg);
+    }
+    0% {
+        transform: rotate(-45deg);
+        background: var(--neon1);
+        box-shadow: 0 0 10px var(--neon1);
+    }
+}
+
+.shadow-container-section {
+    top: 30%;
+    left: 0;
+    width: 10%;
+    height: 20%;
+    position: absolute;
+    background: none;
+    border-radius: 15px;
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.shadow-container-div {
+    width: 1rem;
+    position: relative;
+    background: none;
+    border: 1px solid var(--neon1);
+    border-radius: 15px;
+    margin: 0 2%;
+    background: var(--neon1);
+    box-shadow: 0 0 10px var(--neon1);
+}
+
+.shadow-container-div:nth-child(1) {
+    height: 6rem;
+}
+.shadow-container-div:nth-child(2) {
+    height: 8rem;
+}
+.shadow-container-div:nth-child(3) {
+    height: 10rem;
+}
+.shadow-container-div:nth-child(4) {
+    height: 8rem;
+}
+.shadow-container-div:nth-child(5) {
+    height: 6rem;
+}
