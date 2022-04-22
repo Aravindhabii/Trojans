@@ -1,19 +1,22 @@
-import React from "react";
-import {Navbar} from "../../components/Navbar/Navbar.component";
-import Form from "../../components/Registration/Form";
+import React from 'react';
+import Form from '../../components/Registration/Form';
+import Navbar from '../../components/Navbar/Navbar.component';
 // import Boxes from "../../components/Registration/Boxes";
 // import {Container} from "../../styles/container.style";
-import "./Registration.css";
+import './Registration.css';
 
 function Registration() {
-    return (
-        <section className="section-registration">
-            {/* <div className="box-main-div">
+	return (
+		<>
+			<Navbar active={{ route: 'register', scroll: 4 }} />
+			<section className='section-registration'>
+				{/* <div className="box-main-div">
                 <Boxes />
             </div> */}
-            <Form />
-        </section>
-    );
+				<Form />
+			</section>
+		</>
+	);
 }
 
 // name

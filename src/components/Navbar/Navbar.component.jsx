@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { NavbarContainer, NavbarLogo, MenuButton } from './Navbar.styles';
 import FullScreenNavbar from './FullScreenNavbar.component';
 
 const Navbar = ({ active }) => {
+	const [isNavOpen, setIsNavOpen] = useState(false);
+
 	return (
 		<>
-			<FullScreenNavbar active={active} />
+			<FullScreenNavbar
+				active={active}
+				isNavOpen={isNavOpen}
+				setIsNavOpen={setIsNavOpen}
+			/>
 			<NavbarContainer>
 				<NavbarLogo>
 					<h1>Trojans</h1>
 				</NavbarLogo>
-				<MenuButton>
+				<MenuButton onClick={() => setIsNavOpen(true)}>
 					<span></span>
 					<span></span>
 					<span></span>

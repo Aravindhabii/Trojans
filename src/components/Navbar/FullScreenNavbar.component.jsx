@@ -26,7 +26,7 @@ const NavLinkComponent = ({
 	</Navlink>
 );
 
-const FullScreenNavbar = ({ active }) => {
+const FullScreenNavbar = ({ active, isNavOpen, setIsNavOpen }) => {
 	const images = [
 		'https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80',
 		'https://images.pexels.com/photos/11041919/pexels-photo-11041919.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
@@ -38,8 +38,8 @@ const FullScreenNavbar = ({ active }) => {
 	const [scrollDiv, setScrollDiv] = useState(active.scroll);
 
 	return (
-		<FullScreenNavbarStyle>
-			<MenuButton>
+		<FullScreenNavbarStyle isNavOpen={isNavOpen}>
+			<MenuButton onClick={() => setIsNavOpen(false)}>
 				<span></span>
 				<span></span>
 				<span></span>
@@ -75,6 +75,14 @@ const FullScreenNavbar = ({ active }) => {
 					body='Guidelines'
 					setScrollDiv={setScrollDiv}
 					scroll={3}
+					activeScroll={active.scroll}
+				/>
+				<NavLinkComponent
+					activeRoute={active.route === 'register' ? true : false}
+					url='/registration'
+					body='Register'
+					setScrollDiv={setScrollDiv}
+					scroll={4}
 					activeScroll={active.scroll}
 				/>
 			</NavLinksContainer>
