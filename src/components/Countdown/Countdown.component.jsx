@@ -3,7 +3,7 @@ import moment from 'moment';
 
 import { CountdownContainer } from './Countdown.style';
 
-const targetTime = moment('18-05-2022', 'DD-MM-YYYY');
+const targetTime = moment('18-05-2021', 'DD-MM-YYYY');
 
 const Countdown = ({ setShowCountdown }) => {
 	const [currentTime, setCurrentTime] = useState(moment());
