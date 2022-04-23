@@ -15,9 +15,9 @@ const App = () => {
 	return (
 		<>
 			<GlobalStyles />
-			{showCountdown ? (
+			{/* {showCountdown ? (
 				<Countdown setShowCountdown={setShowCountdown} />
-			) : (
+			) : ( */}
 				<Routes>
 					<Route path='/' element={<HomePage />} />
 					<Route exact path='/about' element={<AboutPage />} />
@@ -25,7 +25,7 @@ const App = () => {
 					<Route exact path='/guidelines' element={<GuidelinesPage />} />
 					<Route exact path='/registration' element={<RegistrationPage />} />
 				</Routes>
-			)}
+			{/* )} */}
 		</>
 	);
 };
