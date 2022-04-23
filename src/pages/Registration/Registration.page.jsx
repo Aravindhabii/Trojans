@@ -10,7 +10,7 @@ import "./Registration.css";
 function Registration() {
     return (
         <section className="section-registration">
-            <Shadow />
+            {/* <Shadow /> */}
             <Form />
         </section>
     );
