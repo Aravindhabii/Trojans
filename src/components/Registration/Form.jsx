@@ -1,4 +1,5 @@
 import React from "react";
+import "./Form.css";
 
 function Form() {
     return (
@@ -53,16 +54,50 @@ function Form() {
                             id="techical_events"
                             className="techical_events"
                         >
-                            <option value="Coder's Chemistry">
+                            <option
+                                value="selct_any_one"
+                                className="options-styling"
+                                disabled
+                                selected
+                            >
+                                Select Any One
+                            </option>
+                            <option
+                                className="options-styling"
+                                value="Coder's Chemistry"
+                            >
                                 Coder's Chemistry
                             </option>
-                            <option value="Mastermind">Mastermind</option>
-                            <option value="Site-ing">Site-ing</option>
-                            <option value="Paper Bytes">Paper Bytes</option>
-                            <option value="Trojan Throttle">
+                            <option
+                                className="options-styling"
+                                value="Mastermind"
+                            >
+                                Mastermind
+                            </option>
+                            <option
+                                className="options-styling"
+                                value="Site-ing"
+                            >
+                                Site-ing
+                            </option>
+                            <option
+                                className="options-styling"
+                                value="Paper Bytes"
+                            >
+                                Paper Bytes
+                            </option>
+                            <option
+                                className="options-styling"
+                                value="Trojan Throttle"
+                            >
                                 Trojan Throttle
                             </option>
-                            <option value="Goose Chase">Goose Chase</option>
+                            <option
+                                className="options-styling"
+                                value="Goose Chase"
+                            >
+                                Goose Chase
+                            </option>
                         </select>
                     </div>
                     <div className="form-group">
@@ -74,14 +109,47 @@ function Form() {
                             id="non_techical_events"
                             className="non_techical_events"
                         >
-                            <option value="No Brainz">No Brainz</option>
-                            <option value="Shutter Stop">Shutter Stop</option>
-                            <option value="GPU">GPU</option>
-                            <option value="Pechu Pechadhan Irukanum">
+                            <option
+                                value="selct_any_one"
+                                className="options-styling"
+                                disabled
+                                selected
+                            >
+                                Select Any One
+                            </option>
+                            <option
+                                className="options-styling"
+                                value="No Brainz"
+                            >
+                                No Brainz
+                            </option>
+                            <option
+                                className="options-styling"
+                                value="Shutter Stop"
+                            >
+                                Shutter Stop
+                            </option>
+                            <option className="options-styling" value="GPU">
+                                GPU
+                            </option>
+                            <option
+                                className="options-styling"
+                                value="Pechu Pechadhan Irukanum"
+                            >
                                 Pechu Pechadhan Irukanum
                             </option>
-                            <option value="Talent Festa">Talent Festa</option>
-                            <option value="Ship Wreck">Ship Wreck</option>
+                            <option
+                                className="options-styling"
+                                value="Talent Festa"
+                            >
+                                Talent Festa
+                            </option>
+                            <option
+                                className="options-styling"
+                                value="Ship Wreck"
+                            >
+                                Ship Wreck
+                            </option>
                         </select>
                     </div>
                     <div className="form-button">
