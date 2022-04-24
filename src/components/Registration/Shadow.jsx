@@ -1,20 +1,50 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./Shadow.css";
 
-function Shadow() {
+function Shadow({isClicked, setIsClicked}) {
+    function getWindowDimensions() {
+        const {innerWidth: width, innerHeight: height} = window;
+        return {
+            width,
+            height,
+        };
+    }
+    const [windowDimensions, setWindowDimensions] = useState(
+        getWindowDimensions()
+    );
+
+    const [noOfDivs, setNoOfDivs] = useState([]);
+
+    useEffect(() => {
+        const width = Math.ceil(window.innerWidth / 60);
+        const height = Math.ceil(window.innerHeight / 60);
+        setNoOfDivs(Array(width * height).fill(0));
+        window.addEventListener("resize", () =>
+            setNoOfDivs(Array(width * height).fill(0))
+        );
+        return () =>
+            window.removeEventListener(
+                "resize",
+                setNoOfDivs(Array(Math.ceil(window.innerWidth / 80)).fill(0))
+            );
+    }, []);
+
     return (
         <>
-            <div className="shadow-container"></div>
-            <div className="shadow-container"></div>
-            <div className="shadow-container"></div>
-            <div className="shadow-container"></div>
-            <section className="shadow-container-section">
-                <div className="shadow-container-div"></div>
-                <div className="shadow-container-div"></div>
-                <div className="shadow-container-div"></div>
-                <div className="shadow-container-div"></div>
-                <div className="shadow-container-div"></div>
-            </section>
+            <div className="section-box">
+                {noOfDivs.map((div, index) => {
+                    return (
+                        <div
+                            key={index}
+                            className="box-shadow"
+                            style={{
+                                opacity: isClicked ? 0 : 1,
+                            }}
+                            onClick={() => setIsClicked(!isClicked)}
+                        />
+                    );
+                })}
+            </div>
         </>
     );
 }
