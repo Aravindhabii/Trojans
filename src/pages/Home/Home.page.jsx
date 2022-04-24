@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import { HeroSection, HeroVideo, HeroContent } from './Home.styles';
+import { HeroSection, HeroContent } from './Home.styles';
 
 import Navbar from '../../components/Navbar/Navbar.component';
-
-import Hero1Video from '../../assets/home/hero-video.mp4';
+import Preloader from '../../components/PreLoader/Preloader.component';
+import OnlyLogo_White from '../../assets/Trojans_logo/OnlyLogo_White.png';
 
 const HomePage = () => {
 	return (
 		<>
-			<Navbar />
+			<Preloader />
+			<Navbar active={{ route: 'home', scroll: 0 }} />
 			<HeroSection>
-				<HeroVideo src={Hero1Video} autoPlay loop />
 				<HeroContent>
-					<h1>Trojans</h1>
+					<h1>
+						TR
+						<img src={OnlyLogo_White} alt='Trojans' />
+						JANS
+					</h1>
 					<p>We are Trojans</p>
 					<a href='/events'>View our events</a>
 				</HeroContent>

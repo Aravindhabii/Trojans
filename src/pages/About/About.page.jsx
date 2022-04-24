@@ -70,7 +70,7 @@ const AboutPage = () => {
 	}
 	return (
 		<>
-			<Navbar />
+			<Navbar active={{ route: 'about', scroll: 1 }} />
 			<HeroSection>
 				<video className='video' loop autoPlay muted>
 					<source src={video} type="video/mp4"/>
@@ -104,7 +104,6 @@ const AboutPage = () => {
             ut neque, et minus.</p> : null}
 				</div>
 			</HeroSection>
-			
 		</>
 	);
 };

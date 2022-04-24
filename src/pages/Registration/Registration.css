@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section-registration {
+    width: 100%;
+    min-height: 100vh;
+    background: url("https://cdn.searchenginejournal.com/wp-content/uploads/2019/11/why-technical-seo-and-on-site-seo-is-rarely-enough-5dcfef7155db8.png")
+        center/cover no-repeat;
+    overflow: hidden;
+}

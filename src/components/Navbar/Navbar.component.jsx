@@ -1,31 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import {
-	NavbarContainer,
-	NavbarLogo,
-	NavLinksContainer,
-	Navlink
-} from './Navbar.styles';
+import { NavbarContainer, NavbarLogo, MenuButton } from './Navbar.styles';
+import FullScreenNavbar from './FullScreenNavbar.component';
 
-const NavLinkComponent = ({ body, url }) => (
-	<Navlink>
-		<a href={url}>{body}</a>
-	</Navlink>
-);
+const Navbar = ({ active }) => {
+	const [isNavOpen, setIsNavOpen] = useState(false);
 
-const Navbar = () => {
 	return (
-		<NavbarContainer>
-			<NavbarLogo>
-				<h1>Trojans</h1>
-			</NavbarLogo>
-			<NavLinksContainer>
-				<NavLinkComponent url='/' body='Home' />
-				<NavLinkComponent url='/about' body='About' />
-				<NavLinkComponent url='/events' body='Events' />
-				<NavLinkComponent url='/guidelines' body='Guidelines' />
-			</NavLinksContainer>
-		</NavbarContainer>
+		<>
+			<FullScreenNavbar
+				active={active}
+				isNavOpen={isNavOpen}
+				setIsNavOpen={setIsNavOpen}
+			/>
+			<NavbarContainer>
+				<NavbarLogo>
+					<h1>Trojans</h1>
+				</NavbarLogo>
+				<MenuButton onClick={() => setIsNavOpen(true)}>
+					<span></span>
+					<span></span>
+					<span></span>
+				</MenuButton>
+			</NavbarContainer>
+		</>
 	);
 };
 
