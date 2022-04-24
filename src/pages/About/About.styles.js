@@ -1,32 +1,49 @@
 import styled from "styled-components";
-
+import bg from "../../assets/about/2.jpg";
 export const HeroSection = styled.section`
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
 
   width: 100%;
   height: 200vh;
-  background: black;
+  /* background: black; */
+  /* background: url(${bg}) no-repeat center/cover fixed; */
+
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   position: relative;
+  &:before {
+  }
   div {
     // width: 80%;
     height: 80vh;
-    
+    background: black;
     border-radius: 15px;
     border: 5px solid #30AADD;
     padding:3rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     // position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  video {
+    width: 100%;
+    object-fit: cover ;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* z-index: 100; */
+  }
+  .paradiv {
+    position: relative;
+  }
+  
   .speaker {
     position: absolute;
     top: 50%;
@@ -77,9 +94,24 @@ export const HeroSection = styled.section`
     line-height: 2.3rem;
     color: white;
     // margin-left:6%;
-    transform: translateY(50%);
+    transform: translateY(30%);
     font-weight: 300;
   }
-  
+  .para2 {
+    /* display: none; */
   }
+  .btn1 {
+    position: absolute;
+    bottom: 25%;
+    right: 2%;
+    transform: rotate(90deg);
+  }
+  .btn2 {
+    position: absolute;
+    top: 25%;
+    transform: rotate(-90deg);
+    right: 2%;
+  }
+  
+  
 `;
