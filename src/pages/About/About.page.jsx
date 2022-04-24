@@ -2,7 +2,7 @@ import React from 'react';
 import { useRef, useEffect,useState } from "react";
 import { useLayoutEffect } from 'react';
 import './about.css'
-import Tilt from 'react-tilt'
+// import Tilt from 'react-tilt'
 import { gsap } from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger.js";
 import Navbar from '../../components/Navbar/Navbar.component';
