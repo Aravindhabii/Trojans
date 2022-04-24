@@ -11,10 +11,17 @@ function Registration() {
     const [isClicked, setIsClicked] = useState(false);
 
     return (
-        <section className="section-registration">
-            <Shadow isClicked={isClicked} setIsClicked={setIsClicked} />
-            {!isClicked ? <Form /> : null}
-        </section>
+        <div className="main-section">
+            <section className="section-registration">
+                <img
+                className="image-registration"
+                    src="https://cdn.searchenginejournal.com/wp-content/uploads/2019/11/why-technical-seo-and-on-site-seo-is-rarely-enough-5dcfef7155db8.png"
+                    alt=""
+                />
+                <Shadow isClicked={isClicked} setIsClicked={setIsClicked} />
+                {!isClicked ? <Form /> : null}
+            </section>
+        </div>
     );
 }
 

@@ -6,7 +6,7 @@
 
 .section-box {
     position: absolute;
-    width: 100%;
+    width: 110%;
     height: 150vh;
     display: flex;
     flex-direction: row;
