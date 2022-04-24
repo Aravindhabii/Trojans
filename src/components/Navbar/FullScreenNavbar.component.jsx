@@ -78,7 +78,7 @@ const FullScreenNavbar = ({ active, isNavOpen, setIsNavOpen }) => {
 					activeScroll={active.scroll}
 				/>
 				<NavLinkComponent
-					activeRoute={active.route === 'register' ? true : false}
+					activeRoute={active.route === 'registration' ? true : false}
 					url='/registration'
 					body='Register'
 					setScrollDiv={setScrollDiv}
