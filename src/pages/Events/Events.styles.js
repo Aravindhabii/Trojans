@@ -1,38 +1,135 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeroSection = styled.section`
-	background-color: #1e1e1e;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-    .left{
-        height: 100%;
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-    }
-	h1 {
-		color: #fff;
-		font-size: 3rem;
-		font-weight: bold;
-		margin-bottom: 1rem;
-	}
-	p {
-		color: #fff;
-		font-size: 1.5rem;
-		font-weight: bold;
-		margin-bottom: 1rem;
-	}
-	a {
-		color: #fff;
-		font-size: 1.5rem;
-		font-weight: bold;
-		margin-bottom: 1rem;
-		text-decoration: none;
-		&:hover {
-			color: #fff;
-		}
-	}
+  background-color: #1e1e1e;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+  .left {
+    position: relative;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(0,0,0); */
+  }
+  .right {
+    position: relative;
+    height: 100%;
+    width: 70%;
+    display: flex;
+  }
+
+  .threedwrapper {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    bottom: 0;
+    left: 0%;
+  }
+  .canvas {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+export const Rightone = styled.div`
+  position: relative;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Righttwo = styled.div`
+  position: relative;
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: ${({ openorclose }) =>
+    openorclose ? "translateX(0)" : "translateX(100%)"};
+  transition: transform 0.5s ease-in-out;
+`;
+
+export const Button = styled.button`
+  position: relative;
+  background-color: #fff;
+  border: none;
+  width: 70%;
+  border-radius: 5px;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 3rem 1rem;
+  margin-top: 1rem;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+`;
+
+export const Eventsdiv = styled.div`
+  position: absolute;
+  width: 95%;
+  height: 85%;
+  color: #fff;
+  background: ${({ phoneimg }) =>
+    phoneimg ? `url(${phoneimg})` : "palevioletred"};
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .eventlistdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: 95%;
+  }
+`;
+
+export const Eventslist = styled.button`
+  position: relative;
+  width: 70%;
+  height: 9%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 1rem;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+`;
+
+export const Threeddiv = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  bottom: 0;
+  left: ${({ openorclose }) => (openorclose ? "10%" : "40%")};
+  transition: all 0.5s ease-in-out;
 `;
