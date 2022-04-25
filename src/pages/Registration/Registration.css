@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --neon1: rgb(9, 245, 245);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 1px solid var(--neon1);
+    box-shadow: 0 0 15px var(--neon1) /* , 0 0 75px var(--neon1) */;
+    transition: all 0.1s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon1);
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-button {
+    background: transparent;
+}
+
+.main-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.section-registration {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: 120vh;
+    overflow: hidden;
+}
+
+.image-registration {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 120vh;
+    object-fit: cover;
+}

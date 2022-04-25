@@ -2,7 +2,13 @@ import React, { useState, useEffect } from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import Navbar from "../../components/Navbar/Navbar.component";
 import Threed from "./threed";
-import { HeroSection, Button, Threeddiv, Righttwo, Rightone } from "./Events.styles";
+import {
+  HeroSection,
+  Button,
+  Threeddiv,
+  Righttwo,
+  Rightone,
+} from "./Events.styles";
 import Technical from "../../components/events/Technical";
 // import {nontechnicalevents,workshops } from "../../datas/technical.data";
 import {
@@ -21,7 +27,7 @@ const EventsPage = () => {
     if (e.target.value != currentPage) {
       setCurrentPage(e.target.value);
       setisphoneopen(true);
-    }else{
+    } else {
       setisphoneopen(false);
       setCurrentPage("");
     }
@@ -29,7 +35,7 @@ const EventsPage = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar active={{ route: "events", scroll: 2 }} />
       <HeroSection>
         <div className="left">
           <Button value="technicalevents" onClick={click}>
@@ -43,7 +49,7 @@ const EventsPage = () => {
           </Button>
         </div>
         <div className="right">
-          <Rightone >
+          <Rightone>
             <Threeddiv openorclose={isphoneopen}>
               <Threed />
             </Threeddiv>

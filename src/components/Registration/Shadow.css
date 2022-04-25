@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section-box {
+    position: absolute;
+    width: 110%;
+    height: 150vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* z-index: -1; */
+}
+
+.box-shadow {
+    position: relative;
+    width: 84px;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    /* box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); */
+    padding: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.box-shadow:hover {
+    background: none;
+    z-index: 5;
+}
