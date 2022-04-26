@@ -7,10 +7,7 @@ export const GlobalStyles = createGlobalStyle`
 		margin: 0;
 		box-sizing:border-box;
 		scroll-behavior: smooth;
-<<<<<<< HEAD
 		cursor: none;
-=======
->>>>>>> 16deef9b14b55b86b459bc42fb5051ddd19718b6
 	}
 
 	@font-face {
