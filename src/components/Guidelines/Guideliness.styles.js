@@ -21,7 +21,7 @@ export const SectionGuide = styled.section`
     &::after {
         content: "";
         position: absolute;
-        top: 0;
+        bottom: 0;
         left: 0;
         display: flex;
         flex-direction: column;
@@ -29,7 +29,7 @@ export const SectionGuide = styled.section`
         align-content: center;
         width: 100%;
         height: 10rem;
-        background: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
+        background: linear-gradient(transparent, rgba(0, 0, 0, 1));
     }
 `;
 
@@ -109,13 +109,14 @@ export const ImageDiv = styled.div`
         transition: all 1s ease-in-out;
         border-radius: 50%;
         cursor: pointer;
+        z-index: 100;
     }
     div {
         position: absolute;
         width: 10rem;
         height: 5rem;
         border-radius: 10px;
-        transform: translateX(100%);
+        transform: translateY(100%);
         animation: ${flickerBox} 2s alternate infinite;
         display: flex;
         flex-direction: row;
@@ -133,7 +134,6 @@ export const GuideContainerDiv = styled(GuideContainer)`
     width: 40%;
     height: 50%;
     background: transparent;
-    /* border: 2px solid white; */
     overflow: visible;
     &::after {
         content: "";
@@ -332,6 +332,7 @@ export const GuidelinesPointsDiv = styled.div`
         justify-content: center;
         padding: 0 5%;
         h1 {
+            font-size: 3rem;
             animation: ${flicker} 2s linear infinite;
         }
         p {

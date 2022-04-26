@@ -23,7 +23,7 @@ function FirstSection() {
                 style={{
                     width: "100%",
                     height: "100vh",
-                    transition: "all 2s ease-in-out",
+                    transition: "all 5s ease-in-out",
                     scrollBehavior: "smooth",
                     overflow: scrollEffect ? "visible" : "hidden",
                 }}
@@ -40,7 +40,7 @@ function FirstSection() {
                                 wins championships.
                             </p>
                             <NeonButton>
-                                <a href="">
+                                <a href="" id="know_more">
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -50,12 +50,13 @@ function FirstSection() {
                             </NeonButton>
                         </GuideContainerDiv>
                         <ImageDiv>
-                            <a href="#points">
+                            <a href="#know_more">
                                 <img
                                     onMouseOver={() => setNeonEffect(true)}
                                     onMouseLeave={() => setNeonEffect(false)}
                                     onClick={() =>
-                                        setScrollEffect(!scrollEffect)
+                                        // setScrollEffect(!scrollEffect)
+                                        setScrollEffect(true)
                                     }
                                     src={OnlyLogo_White}
                                 />
