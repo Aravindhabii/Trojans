@@ -22,7 +22,7 @@ const EventsPage = () => {
 	const [isphoneopen, setisphoneopen] = React.useState(false);
 
 	const click = (e) => {
-		if (e.target.value != currentPage) {
+		if (e.target.value !== currentPage) {
 			setCurrentPage(e.target.value);
 			setisphoneopen(true);
 		} else {

@@ -1,57 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 
-export const HeroSection = styled.section`
-	background-color: black;
-	flex-direction: column;
-	width: 100%;
-	height: 100vh;
-`;
-
-export const HeroContent = styled.div`
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	position: relative;
-	z-index: 1;
-
-	h1 {
-		color: #fff;
-		font-size: 7rem;
-		font-weight: bold;
-		margin-bottom: 1rem;
-		font-family: 'trojans';
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	h1 img {
-		width: 10rem;
-		margin: 0 0.5rem;
-		transition: all 0.3s ease-in-out;
-	}
-
-	p {
-		color: #fff;
-		font-size: 1.5rem;
-		font-weight: bold;
-		margin-bottom: 1rem;
-	}
-	a {
-		color: #fff;
-		font-size: 1.5rem;
-		font-weight: bold;
-		margin-bottom: 1rem;
-		text-decoration: none;
-		&:hover {
-			color: #fff;
-		}
-	}
-`;
-
 export const PhonesContainer = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -60,6 +8,13 @@ export const PhonesContainer = styled.div`
 	height: 100vh;
 	position: relative;
 	background-color: black;
+	z-index: 5;
+
+	main {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
 
 	.phone-container {
 		width: 22%;
@@ -97,50 +52,53 @@ export const PhonesContainer = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		transition: all 0.3s ease-in-out;
 
 		div {
 			width: 93%;
 			height: 92%;
-			border-radius: 5px;
+			border-radius: 10px;
 			background-color: blue;
+			background: url(${({ url }) => url}) no-repeat center/cover;
+			transform: translateZ(50px);
 		}
 	}
 `;
 
 const animation1 = keyframes`
-    0% {
-        left: -100%;
-    }
-   50%, 100% {
-        left: 100%;
-    }
+0% {
+    left: -100%;
+}
+50%, 100% {
+    left: 100%;
+}
 `;
 
 const animation2 = keyframes`
-    0% {
-        top: -100%;
-    }
-   50%, 100% {
-        top: 100%;
-    }
+0% {
+    top: -100%;
+}
+50%, 100% {
+    top: 100%;
+}
 `;
 
 const animation3 = keyframes`
-    0% {
-        right: -100%;
-    }
-   50%, 100% {
-        right: 100%;
-    }
+0% {
+    right: -100%;
+}
+50%, 100% {
+    right: 100%;
+}
 `;
 
 const animation4 = keyframes`
-    0% {
-        bottom: -100%;
-    }
-    50%, 100% {
-        bottom: 100%;
-    }
+0% {
+    bottom: -100%;
+}
+50%, 100% {
+    bottom: 100%;
+}
 `;
 
 export const PhoneButtonStyles = styled.h2`
@@ -152,7 +110,6 @@ export const PhoneButtonStyles = styled.h2`
 	color: ${({ bgColor }) => bgColor};
 	position: relative;
 	overflow: hidden;
-	cursor: pointer;
 	transform: translateZ(30px);
 
 	&:hover {
