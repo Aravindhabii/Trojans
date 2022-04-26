@@ -93,6 +93,7 @@ export const Eventsdiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow-x: hidden;
   align-items: center;
   .eventlistdiv {
     display: flex;
@@ -104,12 +105,14 @@ export const Eventsdiv = styled.div`
   }
 `;
 
-export const Eventslist = styled.button`
+export const Eventslist = styled.button.attrs({
+  className: "eventlist",
+})`
   position: relative;
   width: 70%;
   height: 9%;
   border: none;
-  display: flex;
+  /* display: none; */
   align-items: center;
   justify-content: center;
   background: #000;
@@ -117,6 +120,8 @@ export const Eventslist = styled.button`
   font-size: 1.2rem;
   font-weight: bold;
   color: #fff;
+  opacity: 0;
+  /* transform: translateX(400%); */
   margin: 1rem;
   &:hover {
     background-color: #fff;

@@ -20,7 +20,7 @@ import {
 console.log(nontechnicalevents);
 
 const EventsPage = () => {
-  const [currentPage, setCurrentPage] = useState("");
+  const [currentPage, setCurrentPage] = useState([]);
   const [isphoneopen, setisphoneopen] = React.useState(false);
 
   const click = (e) => {
@@ -55,7 +55,7 @@ const EventsPage = () => {
             </Threeddiv>
           </Rightone>
           <Righttwo openorclose={isphoneopen}>
-            <Technical currentPage={currentPage} />
+            <Technical currentPage={currentPage} setCurrentPage={setCurrentPage} />
           </Righttwo>
         </div>
       </HeroSection>
