@@ -17,7 +17,6 @@ import RenderComponent from '../../components/events/RenderComponent'
 // import Phone from '../../assets/events/image-from-rawpixel-id-2836046-original.png'
 import Phone from "../../assets/events/phonepng.png";
 
-console.log(Eventslist, "eventlist");
 const Technical = (props) => {
   const { currentPage, isphoneopen, setCurrentPage } = props;
   const [isEvent, setIsEvent] = useState(false);

@@ -1,15 +1,41 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-import { HeroSection, HeroContent, phonesContainer } from './Home.styles';
+import Tilt from 'react-parallax-tilt';
+import {
+	HeroSection,
+	HeroContent,
+	PhonesContainer,
+	PhoneButtonStyles
+} from './Home.styles';
 
 import Navbar from '../../components/Navbar/Navbar.component';
 import Preloader from '../../components/PreLoader/Preloader.component';
+
 import OnlyLogo_White from '../../assets/Trojans_logo/OnlyLogo_White.png';
+import Phone1 from '../../assets/home/phonepng.png';
+import Tablet1 from '../../assets/home/tabletpng.png';
+
+const PhoneButton = ({ text, bgColor, url, handlePhoneButtonClick }) => (
+	<PhoneButtonStyles
+		bgColor={bgColor}
+		onClick={() => handlePhoneButtonClick(url)}
+	>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		{text}
+	</PhoneButtonStyles>
+);
 
 const HomePage = () => {
 	const trojansRef = useRef();
+	const [phonesPosition, setPhonesPosition] = useState({
+		phone1: '40%',
+		tablet1: '150%'
+	});
+	const [tabletImage, setTabletImage] = useState(null);
 
 	useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
@@ -29,6 +55,10 @@ const HomePage = () => {
 		// 		autoAlpha: 0
 		// 	});
 	}, []);
+
+	const handlePhoneButtonClick = (url) => {
+		console.log(url);
+	};
 
 	return (
 		<>
@@ -60,13 +90,35 @@ const HomePage = () => {
 					</a>
 				</HeroContent>
 			</HeroSection>
-			<phonesContainer>
-				<div className='phone-container'>
-					<div>
-						
-					</div>
-				</div>
-			</phonesContainer>
+			<PhonesContainer
+				phone1={Phone1}
+				tablet1={Tablet1}
+				phonesPosition={phonesPosition}
+			>
+				<Tilt className='phone-container' perspective={4000}>
+					<PhoneButton
+						text='Technical Events'
+						bgColor='#03e9f4'
+						url='https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg'
+						handlePhoneButtonClick={handlePhoneButtonClick}
+					/>
+					<PhoneButton
+						text='Non Technical Events'
+						bgColor='#03e9f4'
+						url='https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg'
+						handlePhoneButtonClick={handlePhoneButtonClick}
+					/>
+					<PhoneButton
+						text='Workshops'
+						bgColor='#03e9f4'
+						url='https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg'
+						handlePhoneButtonClick={handlePhoneButtonClick}
+					/>
+				</Tilt>
+				<Tilt className='tablet-container' perspective={4000}>
+					<div></div>
+				</Tilt>
+			</PhonesContainer>
 		</>
 	);
 };

@@ -1,13 +1,13 @@
 import React from "react";
 
 const Switch = ({key}) => {
-  switch (key) {
-    case value:
-      break;
+  // switch (key) {
+  //   case value:
+  //     break;
 
-    default:
-      break;
-  }
+  //   default:
+  //     break;
+  // }
 };
 
 const RenderComponent = (props) => {
