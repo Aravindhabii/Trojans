@@ -15,7 +15,7 @@ const App = () => {
 	return (
 		<>
 			<GlobalStyles />
-			{showCountdown ? (
+			{!showCountdown ? (
 				<Countdown setShowCountdown={setShowCountdown} />
 			) : (
 				<Routes>

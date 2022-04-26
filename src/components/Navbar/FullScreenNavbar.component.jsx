@@ -88,13 +88,13 @@ const FullScreenNavbar = ({ active, isNavOpen, setIsNavOpen }) => {
 			</NavLinksContainer>
 			<NavRight>
 				<div>
-					{images.map((image) => (
-						<NavRightImages src={image} scroll={scrollDiv} left />
+					{images.map((image, index) => (
+						<NavRightImages src={image} scroll={scrollDiv} left key={index} />
 					))}
 				</div>
 				<div>
 					{images.map((image, index) => (
-						<NavRightImages src={image} scroll={scrollDiv} />
+						<NavRightImages src={image} scroll={scrollDiv} key={index} />
 					))}
 				</div>
 			</NavRight>

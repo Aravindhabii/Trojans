@@ -12,4 +12,8 @@ export const GlobalStyles = createGlobalStyle`
 		font-family: 'trojans';
 		src: url(${Assassin});
 	}
+
+	body{
+		overflow-x: hidden;
+	}
 `;
