@@ -30,6 +30,8 @@ export const HeroContent = styled.div`
 	flex-direction: column;
 	position: relative;
 	z-index: 2;
+	font-family: 'EdhanMartine';
+	letter-spacing: 3px;
 
 	h1 {
 		color: #fff;
@@ -40,19 +42,62 @@ export const HeroContent = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		text-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
+			0 0 10px rgba(255, 255, 255, 0.3), 0 0 25px rgba(255, 255, 255, 0.3);
+
+		@media (max-width: 1050px) {
+			font-size: 6.5rem;
+		}
+
+		@media (max-width: 650px) {
+			font-size: 6rem;
+		}
+
+		@media (max-width: 550px) {
+			font-size: 4rem;
+		}
+
+		@media (max-width: 400px) {
+			font-size: 3rem;
+		}
 	}
 
 	h1 img {
 		width: 10rem;
 		margin: 0 0.5rem;
 		transition: all 0.3s ease-in-out;
+
+		@media (max-width: 1050px) {
+			width: 9rem;
+		}
+
+		@media (max-width: 1050px) {
+			width: 8.5rem;
+		}
+
+		@media (max-width: 650px) {
+			width: 7.5rem;
+		}
+
+		@media (max-width: 550px) {
+			width: 6rem;
+		}
+
+		@media (max-width: 400px) {
+			width: 5rem;
+		}
 	}
 
 	p {
 		color: #fff;
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		font-weight: bold;
 		margin-bottom: 1rem;
+		text-align: center;
+
+		@media (max-width: 650px) {
+			font-size: 1rem;
+		}
 	}
 	a {
 		color: #fff;

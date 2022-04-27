@@ -113,6 +113,10 @@ export const NavRight = styled.div`
 	div:nth-of-type(1) {
 		margin-right: 4rem;
 	}
+
+	@media (max-width: 900px) {
+		display: none;
+	}
 `;
 
 const navImageAnimation = keyframes`

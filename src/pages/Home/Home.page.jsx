@@ -21,7 +21,7 @@ const HomePage = () => (
 		{/* <Preloader /> */}
 		<Navbar active={{ route: 'home', scroll: 0 }} />
 		<HeroHome />
-		<AboutHome />
+		{/* <AboutHome /> */}
 		<EventsHome />
 	</div>
 );

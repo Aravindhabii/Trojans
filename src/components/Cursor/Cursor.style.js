@@ -8,7 +8,9 @@ const cursorColor = keyframes`
     filter: hue-rotate(360deg);
 	}`;
 
-export const CursorDiv = styled.div`
+export const CursorDiv = styled.div.attrs({
+	className: 'cursor'
+})`
 	z-index: 999;
 	position: fixed;
 	background: #2696e8;
@@ -29,5 +31,9 @@ export const CursorDiv = styled.div`
 		opacity: 0.2;
 		transform: translate(-30%, -30%);
 		border-radius: 50%;
+	}
+
+	@media (max-width: 900px) {
+		visibility: hidden;
 	}
 `;

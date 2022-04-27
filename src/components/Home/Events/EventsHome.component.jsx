@@ -25,15 +25,15 @@ const PhoneButton = ({ text, bgColor, url, handlePhoneButtonClick }) => (
 
 const EventsHome = () => {
 	const [phonesPosition, setPhonesPosition] = useState({
-		phone1: '40%',
-		tablet1: '150%'
+		phone1: '50%',
+		tablet1: '-150%'
 	});
 	const [tabletImage, setTabletImage] = useState(null);
 
 	const handlePhoneButtonClick = (url) => {
 		setPhonesPosition({
-			phone1: '10%',
-			tablet1: '25%'
+			phone1: '20%',
+			tablet1: '-8rem'
 		});
 		setTabletImage(url);
 	};
@@ -55,7 +55,11 @@ const EventsHome = () => {
 					})
 				}
 			></main>
-			<Tilt className='phone-container' perspective={4000}>
+			<Tilt
+				tiltEnable={window.innerWidth < 900 && false}
+				className='phone-container'
+				perspective={4000}
+			>
 				<PhoneButton
 					text='Technical Events'
 					bgColor='#03e9f4'
@@ -75,7 +79,11 @@ const EventsHome = () => {
 					handlePhoneButtonClick={handlePhoneButtonClick}
 				/>
 			</Tilt>
-			<Tilt className='tablet-container' perspective={4000}>
+			<Tilt
+				tiltEnable={window.innerWidth < 900 && false}
+				className='tablet-container'
+				perspective={4000}
+			>
 				<div></div>
 			</Tilt>
 		</PhonesContainer>
