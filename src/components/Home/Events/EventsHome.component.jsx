@@ -3,6 +3,8 @@ import Tilt from 'react-parallax-tilt';
 
 import { PhonesContainer, PhoneButtonStyles } from './EventsHome.style';
 
+import HexBg from '../HexBg/HexBg.component';
+
 import Phone1 from '../../../assets/home/phonepng.png';
 import Tablet1 from '../../../assets/home/tabletpng.png';
 
@@ -44,6 +46,7 @@ const EventsHome = () => {
 			url={tabletImage}
 			id='events'
 		>
+			<HexBg direction='to top' />
 			<main
 				onClick={() =>
 					setPhonesPosition({

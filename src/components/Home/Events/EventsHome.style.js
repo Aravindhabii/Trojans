@@ -9,6 +9,8 @@ export const PhonesContainer = styled.div`
 	position: relative;
 	background-color: black;
 	z-index: 5;
+	background-size: 350px;
+	position: relative;
 
 	main {
 		width: 100%;
@@ -31,8 +33,7 @@ export const PhonesContainer = styled.div`
 		justify-content: center;
 		flex-direction: column;
 		padding: 2rem;
-		box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 20px #03e9f4,
-			0 0 50px #03e9f4, 0 0 200px #03e9f4;
+		box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 5px #03e9f4;
 		transform-style: preserve-3d;
 		transform: perspective(2000px);
 	}
@@ -43,8 +44,7 @@ export const PhonesContainer = styled.div`
 		height: 64%;
 		border-radius: 30px;
 		background: #100c0c url(${({ tablet1 }) => tablet1}) no-repeat center;
-		box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 20px #03e9f4,
-			0 0 50px #03e9f4, 0 0 200px #03e9f4;
+		box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 5px #03e9f4;
 		transform-style: preserve-3d;
 		transform: perspective(2000px);
 		left: ${({ phonesPosition }) => phonesPosition.tablet1};
@@ -116,9 +116,7 @@ export const PhoneButtonStyles = styled.h2`
 		background-color: ${({ bgColor }) => bgColor};
 		color: black;
 		box-shadow: 0 0 5px ${({ bgColor }) => bgColor},
-			0 0 25px ${({ bgColor }) => bgColor}, 0 0 20px ${({ bgColor }) => bgColor},
-			0 0 50px ${({ bgColor }) => bgColor},
-			0 0 200px ${({ bgColor }) => bgColor};
+			0 0 15px ${({ bgColor }) => bgColor}, 0 0 18px ${({ bgColor }) => bgColor};
 	}
 
 	span {

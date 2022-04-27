@@ -1,27 +1,15 @@
 import React from 'react';
-import gsap from 'gsap';
 
-import HeroHex from '../../../assets/home/Hexagon.svg';
 import OnlyLogo_White from '../../../assets/Trojans_logo/OnlyLogo_White.png';
 
 import { HeroSection, HeroContent } from './HeroHome.style';
 
+import HexBg from '../HexBg/HexBg.component';
+
 const HeroHome = () => {
 	return (
-		<HeroSection
-			onMouseMove={(e) => {
-				gsap.to('.hero-bg', {
-					duration: 1,
-					x: e.clientX - 150,
-					y: e.clientY - 150
-				});
-			}}
-			heroHex={HeroHex}
-		>
-			<div className='hero-bg-container'>
-				<div className='hero-hex'></div>
-				<div className='hero-bg'></div>
-			</div>
+		<HeroSection>
+			<HexBg direction='to bottom' />
 			<HeroContent>
 				<p>DEPARTMENT OF INFORMATION TECHNOLOGY</p>
 				<p> PRESENTS</p>
