@@ -108,7 +108,6 @@ export const ImageDiv = styled.div`
         height: 5rem;
         transition: all 1s ease-in-out;
         border-radius: 50%;
-        cursor: pointer;
         z-index: 100;
     }
     div {
@@ -247,7 +246,6 @@ export const NeonATag = styled.a`
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
         font-family: "Balsamiq Sans", cursive;
         text-decoration: none;
         color: rgba(255, 127, 255, 1);
