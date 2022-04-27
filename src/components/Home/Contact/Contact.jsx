@@ -1,6 +1,10 @@
 import React from "react";
 
-import {ContactSection, ContactContainer} from "./Contact.styles";
+import {
+    ContactSection,
+    ContactContainer,
+    ContactPerson,
+} from "./Contact.styles";
 
 function Contact() {
     return (
@@ -8,7 +12,21 @@ function Contact() {
             <ContactSection>
                 <ContactContainer>
                     <h1>Contact</h1>
-                    <h2>President</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Iure molestiae iste nam, quae cumque saepe. Atque
+                        perspiciatis eum incidunt ipsam ducimus odit soluta
+                        nobis dolor, esse nisi, necessitatibus voluptas. Ut!
+                    </p>
+                    <ContactPerson>
+                        <h2>President : 8787878787</h2>
+                    </ContactPerson>
+                    <ContactPerson>
+                        <h2>Vice President : 8787878787</h2>
+                    </ContactPerson>
+                    <ContactPerson>
+                        <h2>Secretary : 8787878787</h2>
+                    </ContactPerson>
                 </ContactContainer>
                 <ContactContainer>
                     <form action="">
