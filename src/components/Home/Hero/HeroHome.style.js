@@ -6,63 +6,6 @@ export const HeroSection = styled.section`
 	width: 100%;
 	height: 100vh;
 	scroll-snap-align: start;
-
-	.hero-bg-container {
-		height: 100vh;
-		background: #000;
-		z-index: 1;
-		position: absolute;
-		width: 100%;
-
-		.hero-hex {
-			background: url(${({ heroHex }) => heroHex}) repeat;
-			background-size: 30%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-size: 350px;
-			z-index: 1;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			&::after {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(
-					to bottom,
-					rgba(0, 0, 0, 0) 70%,
-					rgba(0, 0, 0, 1) 100%
-				);
-				z-index: -1;
-			}
-
-			&::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: rgba(0, 0, 0, 0.3);
-				z-index: -1;
-			}
-		}
-		.hero-bg {
-			position: absolute;
-			height: 300px;
-			width: 300px;
-			background: linear-gradient(90deg, #9500ff 0%, #ff41df 100%);
-			filter: blur(20px);
-			z-index: 0;
-		}
-	}
 `;
 
 const exploreSVG = keyframes`
@@ -87,6 +30,8 @@ export const HeroContent = styled.div`
 	flex-direction: column;
 	position: relative;
 	z-index: 2;
+	font-family: 'EdhanMartine';
+	letter-spacing: 3px;
 
 	h1 {
 		color: #fff;
@@ -97,19 +42,62 @@ export const HeroContent = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		text-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
+			0 0 10px rgba(255, 255, 255, 0.3), 0 0 25px rgba(255, 255, 255, 0.3);
+
+		@media (max-width: 1050px) {
+			font-size: 6.5rem;
+		}
+
+		@media (max-width: 650px) {
+			font-size: 6rem;
+		}
+
+		@media (max-width: 550px) {
+			font-size: 4rem;
+		}
+
+		@media (max-width: 400px) {
+			font-size: 3rem;
+		}
 	}
 
 	h1 img {
 		width: 10rem;
 		margin: 0 0.5rem;
 		transition: all 0.3s ease-in-out;
+
+		@media (max-width: 1050px) {
+			width: 9rem;
+		}
+
+		@media (max-width: 1050px) {
+			width: 8.5rem;
+		}
+
+		@media (max-width: 650px) {
+			width: 7.5rem;
+		}
+
+		@media (max-width: 550px) {
+			width: 6rem;
+		}
+
+		@media (max-width: 400px) {
+			width: 5rem;
+		}
 	}
 
 	p {
 		color: #fff;
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		font-weight: bold;
 		margin-bottom: 1rem;
+		text-align: center;
+
+		@media (max-width: 650px) {
+			font-size: 1rem;
+		}
 	}
 	a {
 		color: #fff;

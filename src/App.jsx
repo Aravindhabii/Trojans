@@ -16,14 +16,11 @@ const App = () => {
 
 	return (
 		<div
-			onMouseMove={(e) => {
-				gsap.to(cursorRef.current, {
-					x: e.clientX,
-					y: e.clientY,
-					duration: 0.3,
-					ease: 'ease'
-				});
-			}}
+			onMouseMove={(e) =>
+				(document.querySelector(
+					'.cursor'
+				).style.transform = `translate(${e.clientX}px, ${e.clientY}px)`)
+			}
 		>
 			<Cursor cursorRef={cursorRef} />
 			<GlobalStyles />

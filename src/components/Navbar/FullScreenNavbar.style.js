@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const FullScreenNavbarStyle = styled.div`
 	position: fixed;
@@ -8,7 +8,7 @@ export const FullScreenNavbarStyle = styled.div`
 	z-index: 1000;
 	display: flex;
 	color: white;
-	padding-left: 3rem;
+	padding-left: 5rem;
 	justify-content: space-between;
 	overflow: hidden;
 	transition: all 0.3s ease-in-out;
@@ -25,7 +25,6 @@ export const NavLinksContainer = styled.ul`
 `;
 
 export const Navlink = styled.li`
-	@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -36,12 +35,12 @@ export const Navlink = styled.li`
 		text-decoration: none;
 		font-weight: bold;
 		color: transparent;
-		-webkit-text-stroke: 1px
+		-webkit-text-stroke: 0.1px
 			${({ color, activeRoute }) =>
-				activeRoute ? color : 'rgba(255, 255, 255, 0.5)'};
+				activeRoute ? color : 'rgba(255, 255, 255)'};
 		transition: all 0.2s ease-in;
 		position: relative;
-		font-family: 'Share Tech Mono';
+		font-family: 'ShareTechMono';
 	}
 	a::before {
 		content: '${({ body }) => body}';
@@ -51,13 +50,18 @@ export const Navlink = styled.li`
 		width: ${({ activeRoute }) => (activeRoute ? '100%' : '0%')};
 		height: 100%;
 		transition: all 0.2s ease-in;
-		border-right: 4px solid ${({ color }) => color};
+		border-right: 5px solid ${({ color }) => color};
+		filter: drop-shadow(
+			${({ color, activeRoute }) =>
+				activeRoute ? '0 0 25px' : '0 0 0 ' + color}
+		);
 	}
 
 	a:hover::before {
 		width: 100%;
 		-webkit-text-stroke: 1px ${({ color }) => color};
 		border-right: 4px solid ${({ color }) => color};
+		filter: drop-shadow(0 0 25px ${({ color }) => color});
 	}
 `;
 
@@ -109,6 +113,21 @@ export const NavRight = styled.div`
 	div:nth-of-type(1) {
 		margin-right: 4rem;
 	}
+
+	@media (max-width: 900px) {
+		display: none;
+	}
+`;
+
+const navImageAnimation = keyframes`
+0%{
+	box-shadow: 0 0 5px blue, 0 0 25px blue;
+}
+
+100%{
+	box-shadow: 0 0 5px blue, 0 0 55px blue;
+
+}
 `;
 
 export const NavRightImages = styled.div`
@@ -122,14 +141,5 @@ export const NavRightImages = styled.div`
 		${({ scroll, left }) =>
 			(left ? -100 - scroll * 110 : -340 + scroll * 110) + '%'}
 	);
-
-	&::after {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		background-color: rgba(0, 0, 0, 0);
-	}
+	animation: ${navImageAnimation} 1s ease;
 `;
