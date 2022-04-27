@@ -50,7 +50,9 @@ export const Rightone = styled.div`
   align-items: center;
 `;
 
-export const Righttwo = styled.div`
+export const Righttwo = styled.div.attrs({
+  className: "rightTwo",
+})`
   position: relative;
   height: 100%;
   width: 40%;
@@ -58,7 +60,7 @@ export const Righttwo = styled.div`
   justify-content: center;
   align-items: center;
   transform: ${({ openorclose }) =>
-    openorclose ? "translateX(0)" : "translateX(100%)"};
+    openorclose ? "translateX(0)" : "translateX(100%)" } rotate(0deg);
   transition: transform 0.5s ease-in-out;
 `;
 
@@ -79,7 +81,9 @@ export const Button = styled.button`
   }
 `;
 
-export const Eventsdiv = styled.div`
+export const Eventsdiv = styled.div.attrs({
+  className: "rightTwo",
+})`
   position: absolute;
   width: 95%;
   height: 85%;

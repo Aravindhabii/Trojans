@@ -1,57 +1,56 @@
-import React from "react";
-
-const Switch = ({key}) => {
-  // switch (key) {
-  //   case value:
-  //     break;
-
-  //   default:
-  //     break;
-  // }
-};
+import React, { useEffect, useState } from "react";
+import {
+  technicalevents,
+  nontechnicalevents,
+  workshops,
+} from "../../datas/technical.data";
+import { Eventslist } from "../../pages/Events/Events.styles";
+import { gsap } from "gsap";
 
 const RenderComponent = (props) => {
-  const key = props.key;
-  return <>{Switch(key)}</>;
+  const { currentPage, setCurrentPage, clickedEvent, setClickedEvent } = props;
+  const [previousPage, setPreviousPage] = useState("");
+
+  const click = (e) => {};
+
+  useEffect(() => {
+    if (clickedEvent === "technicalevents") {
+      setCurrentPage(technicalevents);
+    } else if (clickedEvent === "nontechnicalevents") {
+      setCurrentPage(nontechnicalevents);
+    } else if (clickedEvent === "workshops") {
+      setCurrentPage(workshops);
+    }
+  }, [clickedEvent]);
+
+  useEffect(() => {
+    let t1 = gsap.timeline();
+    const t2 = gsap.timeline();
+    const mainelement = document.querySelector(".rightTwo");
+    const element = document.querySelectorAll(".eventlist");
+    t1.from(element, {
+      duration: 1,
+      opacity: 0,
+      ease: "easInOut",
+    });
+    t1.to(element, {
+      ease: "easInOut",
+      opacity: 1,
+      duration: 1,
+    });
+  }, [currentPage]);
+
+  return (
+    <div className="eventlistdiv">
+      {currentPage.map((event) => (
+        <Eventslist onClick={click} value={event.name}>
+          <h3 className="heading" key={event.id}>
+            {event.name}
+          </h3>
+        </Eventslist>
+      ))}
+    </div>
+  );
 };
 
 export default RenderComponent;
-
-
-
-
-// const mapping = (currentPage) => {
-//     if (currentPage === "technicalevents") {
-//       return (
-//         <div className="eventlistdiv" ref={listEvents}>
-//           {technicalevents.map((event) => (
-//             <Eventslist>
-//               <h3 className="heading" key={event.id}>
-//                 {event.name}
-//               </h3>
-//             </Eventslist>
-//           ))}
-//         </div>
-//       );
-//     } else if (currentPage === "nontechnicalevents") {
-//       return (
-//         <div className="eventlistdiv" ref={listEvents}>
-//           {nontechnicalevents.map((event) => (
-//             <Eventslist>
-//               <h3 key={event.id}>{event.name}</h3>
-//             </Eventslist>
-//           ))}
-//         </div>
-//       );
-//     } else if (currentPage === "workshops") {
-//       return (
-//         <div className="eventlistdiv" ref={listEvents}>
-//           {workshops.map((event) => (
-//             <Eventslist>
-//               <h3 key={event.id}>{event.name}</h3>
-//             </Eventslist>
-//           ))}
-//         </div>
-//       );
-//     }
-//   };
