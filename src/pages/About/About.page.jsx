@@ -15,15 +15,18 @@ const AboutPage = () => {
 	const [contentTrigger,setContentTrigger] = useState(false)
 	gsap.registerPlugin(ScrollTrigger)
 
-    gsap.registerPlugin(ScrollTrigger);
+    const handleScroll = (e) => {
+        const scrollY = window.scrollY;
+        console.log("====================================");
+        console.log(scrollY);
 
-		if(scrollY > 230){
-			setDisplay(2);
-		} else {
-			setDisplay(1);
-		}
-		console.log('====================================');
-	}
+        if (scrollY > 230) {
+            setDisplay(2);
+        } else {
+            setDisplay(1);
+        }
+        console.log("====================================");
+    };
 	window.addEventListener('scroll', handleScroll);
 	const tab = useRef();
 	useEffect(() => {
@@ -33,24 +36,24 @@ const AboutPage = () => {
 		let t1 = gsap.timeline();
 		const element = tab.current;
 		
-			t1.to(element, {
-				scrollTrigger: {
-					trigger: element,
+			// t1.to(element, {
+			// 	scrollTrigger: {
+			// 		trigger: element,
 					
-					pin: true,
-					start: 'top 50%',
-            		end: 'bottom -100%',
-					// scroller: window,
-					// scroller: window,
-					scrub: true,
-					// markers: true,
-					pinSpacer: true,
-					pinSpacing: false,
+			// 		pin: true,
+			// 		start: 'top 50%',
+            // 		end: 'bottom -100%',
+			// 		// scroller: window,
+			// 		// scroller: window,
+			// 		scrub: true,
+			// 		// markers: true,
+			// 		pinSpacer: true,
+			// 		pinSpacing: false,
 	
 	
 					
-				}
-			})
+			// 	}
+			// })
 			
 		ScrollTrigger.refresh()
       t1.to( element.querySelectorAll('.para') , {
@@ -72,9 +75,9 @@ const AboutPage = () => {
 		<>
 			<Navbar active={{ route: 'about', scroll: 1 }} />
 			<HeroSection contentTrigger={contentTrigger}>
-				<video className='video' loop autoPlay muted>
+				{/* <video className='video' loop autoPlay muted>
 					<source src={video} type="video/mp4"/>
-				</video>
+				</video> */}
 				<div ref={tab} className='tab' >
 					<span className='btn1' onClick={()=>handleClick('goDown')}></span>
 					<span className='btn2' onClick={()=>handleClick('goBack')}></span>

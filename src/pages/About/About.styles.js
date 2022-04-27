@@ -5,11 +5,11 @@ export const HeroSection = styled.section`
 
   width: 100%;
   height: 100vh;
-  /* background: black; */
+  background: black;
   /* background: url(${bg}) no-repeat center/cover fixed; */
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
@@ -25,7 +25,7 @@ export const HeroSection = styled.section`
     padding: 3rem;
     padding-top: 6rem;
     padding-bottom: 6rem;
-    // position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
