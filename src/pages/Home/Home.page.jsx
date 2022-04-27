@@ -1,29 +1,19 @@
-import React, { useEffect } from 'react';
-
-import { HeroSection, HeroContent } from './Home.styles';
+import React from 'react';
 
 import Navbar from '../../components/Navbar/Navbar.component';
 import Preloader from '../../components/PreLoader/Preloader.component';
-import OnlyLogo_White from '../../assets/Trojans_logo/OnlyLogo_White.png';
+import HeroHome from '../../components/Home/Hero/HeroHome.component';
+import EventsHome from '../../components/Home/Events/EventsHome.component';
+import AboutHome from '../../components/Home/About/About.component';
 
-const HomePage = () => {
-	return (
-		<>
-			<Preloader />
-			<Navbar active={{ route: 'home', scroll: 0 }} />
-			<HeroSection>
-				<HeroContent>
-					<h1>
-						TR
-						<img src={OnlyLogo_White} alt='Trojans' />
-						JANS
-					</h1>
-					<p>We are Trojans</p>
-					<a href='/events'>View our events</a>
-				</HeroContent>
-			</HeroSection>
-		</>
-	);
-};
+const HomePage = () => (
+	<>
+		<Preloader />
+		<Navbar active={{ route: 'home', scroll: 0 }} />
+		<HeroHome />
+		<AboutHome />
+		<EventsHome />
+	</>
+);
 
 export default HomePage;

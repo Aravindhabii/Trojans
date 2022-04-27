@@ -15,14 +15,17 @@ const NavLinkComponent = ({
 	activeRoute,
 	setScrollDiv,
 	scroll,
-	activeScroll
+	activeScroll,
+	color
 }) => (
 	<Navlink
 		activeRoute={activeRoute}
 		onMouseEnter={() => setScrollDiv(scroll)}
 		onMouseLeave={() => setScrollDiv(activeScroll)}
+		body={body}
+		color={color}
 	>
-		<a href={url}>{body}</a>
+		<a href={url}>{body}&nbsp;</a>
 	</Navlink>
 );
 
@@ -48,53 +51,49 @@ const FullScreenNavbar = ({ active, isNavOpen, setIsNavOpen }) => {
 				<NavLinkComponent
 					activeRoute={active.route === 'home' ? true : false}
 					url='/'
-					body='Home'
+					body='&nbsp;Home'
 					setScrollDiv={setScrollDiv}
 					scroll={0}
 					activeScroll={active.scroll}
-				/>
-				<NavLinkComponent
-					activeRoute={active.route === 'about' ? true : false}
-					url='/about'
-					body='About'
-					setScrollDiv={setScrollDiv}
-					scroll={1}
-					activeScroll={active.scroll}
+					color='red'
 				/>
 				<NavLinkComponent
 					activeRoute={active.route === 'events' ? true : false}
 					url='/events'
-					body='Events'
+					body='&nbsp;Events'
 					setScrollDiv={setScrollDiv}
-					scroll={2}
+					scroll={1}
 					activeScroll={active.scroll}
+					color='blue'
 				/>
 				<NavLinkComponent
 					activeRoute={active.route === 'guidelines' ? true : false}
 					url='/guidelines'
-					body='Guidelines'
+					body='&nbsp;Guidelines'
 					setScrollDiv={setScrollDiv}
-					scroll={3}
+					scroll={2}
 					activeScroll={active.scroll}
+					color='green'
 				/>
 				<NavLinkComponent
 					activeRoute={active.route === 'registration' ? true : false}
 					url='/registration'
-					body='Register'
+					body='&nbsp;Register'
 					setScrollDiv={setScrollDiv}
-					scroll={4}
+					scroll={3}
 					activeScroll={active.scroll}
+					color='yellow'
 				/>
 			</NavLinksContainer>
 			<NavRight>
 				<div>
-					{images.map((image) => (
-						<NavRightImages src={image} scroll={scrollDiv} left />
+					{images.map((image, index) => (
+						<NavRightImages src={image} scroll={scrollDiv} left key={index} />
 					))}
 				</div>
 				<div>
 					{images.map((image, index) => (
-						<NavRightImages src={image} scroll={scrollDiv} />
+						<NavRightImages src={image} scroll={scrollDiv} key={index} />
 					))}
 				</div>
 			</NavRight>
