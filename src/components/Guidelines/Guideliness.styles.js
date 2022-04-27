@@ -95,7 +95,6 @@ const flickerBox = keyframes`
 `;
 
 export const ImageDiv = styled.div`
-<<<<<<< HEAD
     width: 100%;
     height: 6rem;
     display: flex;
@@ -128,40 +127,6 @@ export const ImageDiv = styled.div`
                 0 0 102px #bc13fe, 0 0 151px #bc13fe;
         }
     }
-=======
-	width: 100%;
-	height: 6rem;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	img {
-		position: relative;
-		width: 5rem;
-		height: 5rem;
-		transition: all 1s ease-in-out;
-		border-radius: 50%;
-		z-index: 100;
-	}
-	div {
-		position: absolute;
-		width: 10rem;
-		height: 5rem;
-		border-radius: 10px;
-		transform: translateY(100%);
-		animation: ${flickerBox} 2s alternate infinite;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		p {
-			text-shadow: 0 0 7px #bc13fe, 0 0 10px #bc13fe, 0 0 21px #bc13fe,
-				0 0 42px #bc13fe, 0 0 82px #bc13fe, 0 0 92px #bc13fe, 0 0 102px #bc13fe,
-				0 0 151px #bc13fe;
-		}
-	}
->>>>>>> d60537491ac73c32f1d82fd627a307a5d35750d9
 `;
 
 export const GuideContainerDiv = styled(GuideContainer)`
