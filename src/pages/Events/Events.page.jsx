@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import React, { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar.component";
 import Threed from "./threed";
 import {
@@ -10,26 +9,20 @@ import {
   Rightone,
 } from "./Events.styles";
 import Technical from "../../components/events/Technical";
-// import {nontechnicalevents,workshops } from "../../datas/technical.data";
-import {
-  technicalevents,
-  nontechnicalevents,
-  workshops,
-} from "../../datas/technical.data";
-
-console.log(nontechnicalevents);
+import {technicalevents } from "../../datas/technical.data";
 
 const EventsPage = () => {
-  const [currentPage, setCurrentPage] = useState([]);
+  const [currentPage, setCurrentPage] = useState(technicalevents);
+  const [clickedEvent, setClickedEvent] = useState('');
   const [isphoneopen, setisphoneopen] = React.useState(false);
 
   const click = (e) => {
-    if (e.target.value != currentPage) {
-      setCurrentPage(e.target.value);
+    if (e.target.value !== clickedEvent) {
+      setClickedEvent(e.target.value);
       setisphoneopen(true);
     } else {
       setisphoneopen(false);
-      setCurrentPage("");
+      setClickedEvent("");
     }
   };
 
@@ -55,7 +48,7 @@ const EventsPage = () => {
             </Threeddiv>
           </Rightone>
           <Righttwo openorclose={isphoneopen}>
-            <Technical currentPage={currentPage} setCurrentPage={setCurrentPage} />
+            <Technical currentPage={currentPage} setCurrentPage={setCurrentPage} clickedEvent={clickedEvent} setClickedEvent={setClickedEvent}/>
           </Righttwo>
         </div>
       </HeroSection>
