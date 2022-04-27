@@ -5,7 +5,7 @@ export const FullScreenNavbarStyle = styled.div`
 	width: 100%;
 	height: 100vh;
 	background-color: black;
-	z-index: 100;
+	z-index: 1000;
 	display: flex;
 	color: white;
 	padding-left: 3rem;
@@ -25,6 +25,7 @@ export const NavLinksContainer = styled.ul`
 `;
 
 export const Navlink = styled.li`
+	@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -34,11 +35,29 @@ export const Navlink = styled.li`
 		font-size: 3rem;
 		text-decoration: none;
 		font-weight: bold;
-		color: ${({ activeRoute }) => (activeRoute ? 'orange' : 'inherit')};
+		color: transparent;
+		-webkit-text-stroke: 1px
+			${({ color, activeRoute }) =>
+				activeRoute ? color : 'rgba(255, 255, 255, 0.5)'};
 		transition: all 0.2s ease-in;
+		position: relative;
+		font-family: 'Share Tech Mono';
 	}
-	a:hover {
-		color: orange;
+	a::before {
+		content: '${({ body }) => body}';
+		position: absolute;
+		color: ${({ color }) => color};
+		overflow: hidden;
+		width: ${({ activeRoute }) => (activeRoute ? '100%' : '0%')};
+		height: 100%;
+		transition: all 0.2s ease-in;
+		border-right: 4px solid ${({ color }) => color};
+	}
+
+	a:hover::before {
+		width: 100%;
+		-webkit-text-stroke: 1px ${({ color }) => color};
+		border-right: 4px solid ${({ color }) => color};
 	}
 `;
 
