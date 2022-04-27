@@ -6,7 +6,7 @@
     animation: neon 2s ease-in-out infinite alternate;
 
 }
-.cam1 , .cam2 , .speaker {
+.cam1 , .cam2 ,.cam3, .speaker {
     box-shadow: 2px 2px 20px rgb(56, 232, 255);
     
     animation: neon 2s ease-in-out infinite alternate;
@@ -35,3 +35,6 @@
         border: 5px solid #D31360;
     }
 }
+
+
+
