@@ -1,24 +1,21 @@
-import React from 'react';
-import { useRef, useEffect,useState } from "react";
-import { useLayoutEffect } from 'react';
-import './about.css'
+import React from "react";
+import {useRef, useEffect, useState} from "react";
+import {useLayoutEffect} from "react";
+import "./about.css";
 // import Tilt from 'react-tilt'
-import { gsap } from "gsap";
+import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger.js";
-import Navbar from '../../components/Navbar/Navbar.component';
-import { HeroSection } from './About.styles';
-import video from '../../assets/about/Frame11.mp4';
-import btn1 from '../../assets/about/btn1.png';
-import btn2 from '../../assets/about/btn2.png';
+import Navbar from "../../components/Navbar/Navbar.component";
+import {HeroSection} from "./About.styles";
+import video from "../../assets/about/Frame11.mp4";
+import btn1 from "../../assets/about/btn1.png";
+import btn2 from "../../assets/about/btn2.png";
 const AboutPage = () => {
 	const [display, setDisplay] = useState(1);
 	const [contentTrigger,setContentTrigger] = useState(false)
 	gsap.registerPlugin(ScrollTrigger)
 
-	const handleScroll = (e) => {
-		const scrollY = window.scrollY
-		console.log('====================================');
-		console.log(scrollY);
+    gsap.registerPlugin(ScrollTrigger);
 
 		if(scrollY > 230){
 			setDisplay(2);

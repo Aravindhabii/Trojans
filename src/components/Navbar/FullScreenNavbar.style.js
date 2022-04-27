@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FullScreenNavbarStyle = styled.div`
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100vh;
 	background-color: black;

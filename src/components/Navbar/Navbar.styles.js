@@ -12,6 +12,7 @@ export const NavbarContainer = styled.div`
 	z-index: 10;
 	height: 4rem;
 	color: white;
+	z-index: 10;
 `;
 
 export const NavbarLogo = styled.div`
