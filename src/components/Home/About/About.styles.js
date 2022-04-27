@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "../../assets/about/2.jpg";
+import bg from "../../../assets/about/2.jpg";
 export const HeroSection = styled.section`
   @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
 
