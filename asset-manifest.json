@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Astroexreasearch/static/css/main.f80a8b9c.css",
+    "main.js": "/Astroexreasearch/static/js/main.c5023fe1.js",
+    "static/media/NeonEffect.mp4": "/Astroexreasearch/static/media/NeonEffect.d559108b88dd181df940.mp4",
+    "static/media/Video.mp4": "/Astroexreasearch/static/media/Video.61c76eb012b1ed621b18.mp4",
+    "static/media/2.jpg": "/Astroexreasearch/static/media/2.b311ce2ef7d10d134407.jpg",
+    "static/media/phonepng.png": "/Astroexreasearch/static/media/phonepng.a7fbabc7f90ba3ab711d.png",
+    "static/media/OnlyLogo_White.png": "/Astroexreasearch/static/media/OnlyLogo_White.a9c204195be5ac9a6a87.png",
+    "static/media/tabletpng.png": "/Astroexreasearch/static/media/tabletpng.ad0225622e4833d0d48f.png",
+    "static/media/EdhanMartine-0WrVv.ttf": "/Astroexreasearch/static/media/EdhanMartine-0WrVv.ce09c8b488fd4d2490d6.ttf",
+    "static/media/ShareTechMono-Regular.ttf": "/Astroexreasearch/static/media/ShareTechMono-Regular.d753b5dc50d171ecc94b.ttf",
+    "static/media/Assassin.ttf": "/Astroexreasearch/static/media/Assassin.9771ffea8818eb0a1f1b.ttf",
+    "static/media/Hexagon.svg": "/Astroexreasearch/static/media/Hexagon.3fcf186fe4ed2760f526482f08d97ff3.svg",
+    "index.html": "/Astroexreasearch/index.html",
+    "main.f80a8b9c.css.map": "/Astroexreasearch/static/css/main.f80a8b9c.css.map",
+    "main.c5023fe1.js.map": "/Astroexreasearch/static/js/main.c5023fe1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f80a8b9c.css",
+    "static/js/main.c5023fe1.js"
+  ]
+}
