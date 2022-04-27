@@ -231,5 +231,6 @@ export const HeroSection = styled.section`
       div {
         padding: 1rem;
       }
+      
     }
 `;

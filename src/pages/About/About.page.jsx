@@ -20,11 +20,11 @@ const AboutPage = () => {
         console.log("====================================");
         console.log(scrollY);
 
-        if (scrollY > 230) {
-            setDisplay(2);
-        } else {
-            setDisplay(1);
-        }
+        // if (scrollY > 230) {
+        //     setDisplay(2);
+        // } else {
+        //     setDisplay(1);
+        // }
         console.log("====================================");
     };
 	window.addEventListener('scroll', handleScroll);
