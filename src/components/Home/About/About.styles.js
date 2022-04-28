@@ -2,11 +2,10 @@ import styled from "styled-components";
 import bg from "../../../assets/about/2.jpg";
 export const HeroSection = styled.section`
   @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
-
   width: 100%;
   height: 100vh;
   background: black;
-  /* background: url(${bg}) no-repeat center/cover fixed; */
+  
 
   display: flex;
   justify-content: center;
@@ -75,7 +74,6 @@ export const HeroSection = styled.section`
   .cam3 {
     position: absolute;
     bottom: 47%;
-    /* transform: translateY(-50%); */
     right: 2.5%;
     height: 30px;
     width: 30px;
@@ -95,9 +93,7 @@ export const HeroSection = styled.section`
     text-align: left;
     font-weight: bold;
     color: #fff;
-    /* padding: 5% 10%; */
     padding-bottom: 3rem;
-    // margin-left:6%;
     z-index: 2;
     width: 90%;
   }
@@ -111,10 +107,10 @@ export const HeroSection = styled.section`
     font-weight: 300;
   }
   .btn1:hover {
-    transform: scale(1.3)  rotate(180deg);
+    transform: scale(1.3)  rotate(270deg);
   }
   .btn2:hover {
-    transform: scale(1.3)
+    transform: scale(1.3) rotate(90deg)
   }
   .para2 {
     /* display: none; */
@@ -217,8 +213,9 @@ export const HeroSection = styled.section`
     border: 5px solid #30aadd;
   }
     p {
-      font-size: 1rem;
-      line-height: 2.1rem;
+      line-height: 1.8rem;
+      transform: translateX(5%);
+      text-align: justify;
     }
     h1 {
       font-size: 1.5rem;
@@ -237,28 +234,32 @@ export const HeroSection = styled.section`
         
       }
       p {
-      
-      line-height: 1.65rem;
+
+      line-height: 1.6rem;
     }
     h1 {
       
       padding-bottom: 1rem;
     } 
     }
-    @media (max-width:500px) {
+    @media (max-width:600px) {
+      .btn1 {
+        top: 93%;
+      }
+      .btn2 {
+        top: 93%;
+      }
       div {
         width: 90%;
         height: 88vh;
         padding: .5rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        min-height: 650px;
-        /* overflow-y: auto; */
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        min-height: 650px;  
       }
       p {
-        text-align: justify;
-        /* min-height: 600px; */
-        line-height: 1.7rem;
+        text-align: justify;  
+
       }
     }
 `;
