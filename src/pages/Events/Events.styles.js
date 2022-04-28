@@ -231,7 +231,7 @@ export const TabletScreen = styled.div.attrs({
   }
   li {
     position: relative;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     font-size: 1.2rem;
     font-weight: 500;
   }

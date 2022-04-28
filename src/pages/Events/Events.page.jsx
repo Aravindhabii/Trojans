@@ -9,13 +9,15 @@ import {
   Rightone,
   Tabletdiv
 } from "./Events.styles";
+import {CodersChemistry} from "../../datas/events.data";
+
 import Technical from "../../components/events/Technical";
 import Tablet from "../../components/events/Tablet";
 import {technicalevents } from "../../datas/technical.data";
 
 const EventsPage = () => {
   const [currentPage, setCurrentPage] = useState(technicalevents);
-  const [currentEvent, setCurrentEvent] = useState("technicalevents");
+  const [currentEvent, setCurrentEvent] = useState(CodersChemistry);
   const [clickedEvent, setClickedEvent] = useState('');
   const [isphoneopen, setisphoneopen] = React.useState(false);
   const [isTabletOpen, setisTabletOpen] = React.useState(false);
@@ -58,9 +60,9 @@ const EventsPage = () => {
           </Righttwo>
         </div>
       </HeroSection>
-      <Tabletdiv  isTabletOpen={isTabletOpen} setisTabletOpen={setisTabletOpen}>
-          <div onClick={closetab} className="forclose"></div>
-          <Tablet />
+      <Tabletdiv  isTabletOpen={isTabletOpen}  setisTabletOpen={setisTabletOpen}>
+          <div onClick={closetab}  className="forclose"></div>
+          <Tablet currentEvent={currentEvent}/>
       </Tabletdiv>
     </>
   );
