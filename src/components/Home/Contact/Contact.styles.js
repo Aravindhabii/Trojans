@@ -204,7 +204,7 @@ const hovereffectanimation = keyframes`
     }
 `;
 
-export const HoverConatct = styled.div`
+export const HoverContact = styled.div`
     position: absolute;
     width: 200px;
     height: 200px;
@@ -234,6 +234,6 @@ export const HoverConatct = styled.div`
             -200px 200px 0px #00efff, 200px -200px 20px #00efff,
             200px -200px 20px #00efff;
         transform-origin: 250px;
-        animation: ${hovereffectanimation} 5s linear infinite;
+        animation: ${hovereffectanimation} 10s linear infinite;
     }
 `;
