@@ -29,6 +29,10 @@ export const ContactSection = styled.section`
         );
         z-index: 1;
     }
+    @media (max-width: 400px) {
+        flex-direction: column;
+        height: fit-content;
+    }
 `;
 
 const flickerBox = keyframes`
@@ -56,10 +60,10 @@ export const ContactContainer = styled.div`
     justify-content: center;
     width: 50%;
     height: 100%;
-    /* background: #000; */
+    background: #000;
     color: #fff;
-    /* overflow: hidden; */
-    z-index: 2;
+    overflow: visible;
+    /* z-index: 2; */
     h1 {
         font-size: 3rem;
         margin-bottom: 0.5rem;
@@ -142,6 +146,12 @@ export const ContactContainer = styled.div`
             }
         }
     }
+    @media (max-width: 400px) {
+        width: 90%;
+        h1 {
+            font-size: 3rem !important;
+        }
+    }
 `;
 
 export const ContactPerson = styled.div`
@@ -171,7 +181,7 @@ export const HoverConatct = styled.div`
     width: 200px;
     height: 200px;
     margin: 10%;
-    transition: 2s;
+    transition: 5s;
     span {
         position: absolute;
         top: 0%;

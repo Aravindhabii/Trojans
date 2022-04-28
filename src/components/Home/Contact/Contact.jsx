@@ -12,9 +12,9 @@ function Contact() {
     return (
         <>
             <ContactSection>
-                <video autoPlay loop muted>
+                {/* <video autoPlay loop muted>
                     <source src={NeonVideo} type="video/mp4" />
-                </video>
+                </video> */}
                 <ContactContainer>
                     <h1>Contact</h1>
                     <p>
@@ -32,7 +32,7 @@ function Contact() {
                     <ContactPerson>
                         <h2>Secretary : 8787878787</h2>
                     </ContactPerson>
-                    {/* <HoverConatct>
+                    <HoverConatct>
                         <span
                             style={{transform: "rotate(calc(36deg * 1))"}}
                         ></span>
@@ -63,7 +63,7 @@ function Contact() {
                         <span
                             style={{transform: "rotate(calc(36deg * 10))"}}
                         ></span>
-                    </HoverConatct> */}
+                    </HoverConatct>
                 </ContactContainer>
                 <ContactContainer>
                     <form action="">
