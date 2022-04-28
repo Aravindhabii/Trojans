@@ -99,7 +99,7 @@ export const HeroSection = styled.section`
   }
   p {
     width: 90%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2.3rem;
     color: white;
     // margin-left:6%;
@@ -107,10 +107,10 @@ export const HeroSection = styled.section`
     font-weight: 300;
   }
   .btn1:hover {
-    transform: scale(1.3)  rotate(270deg);
+    transform: scale(1.3)  rotate(180deg);
   }
   .btn2:hover {
-    transform: scale(1.3) rotate(90deg)
+    transform: scale(1.3);
   }
   .para2 {
     /* display: none; */
@@ -140,7 +140,19 @@ export const HeroSection = styled.section`
     width: 40px;
     right: 2%;
   }
+  @media (max-width:1150px) {
+    p {
+      line-height: 1.75rem;
+    }
+    
+  }
   @media (max-width:950px) { 
+    .btn1:hover {
+    transform: scale(1.3)  rotate(270deg);
+  }
+  .btn2:hover {
+    transform: scale(1.3) rotate(90deg)
+  }
       div {
         /* transform: rotate(-180deg); */
       }
