@@ -13,6 +13,17 @@ export const PhonesContainer = styled.div`
 	position: relative;
 	overflow: hidden;
 
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to bottom,rgba(0,0,0,0) 80%,rgba(0,0,0,1) 100%);
+    z-index: 2;
+	}
+
 	main {
 		width: 100%;
 		height: 100%;
