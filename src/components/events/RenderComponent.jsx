@@ -8,12 +8,21 @@ import { Eventslist } from "../../pages/Events/Events.styles";
 import { gsap } from "gsap";
 
 const RenderComponent = (props) => {
-  const { currentPage, setCurrentPage, clickedEvent, setClickedEvent, isTabletOpen, setisTabletOpen } = props;
+  const {
+    currentPage,
+    setCurrentPage,
+    clickedEvent,
+    setClickedEvent,
+    isTabletOpen,
+    setisTabletOpen,
+    setCurrentEvent,
+  } = props;
   const [previousPage, setPreviousPage] = useState("");
 
   const click = (e) => {
     if (isTabletOpen === false) {
       setisTabletOpen(true);
+      setClickedEvent(e.target.innerText);
     }
   };
 
@@ -47,7 +56,7 @@ const RenderComponent = (props) => {
   return (
     <div className="eventlistdiv">
       {currentPage.map((event) => (
-        <Eventslist onClick={click} value={event.name}>
+        <Eventslist onClick={click} >
           <h3 className="heading" key={event.id}>
             {event.name}
           </h3>
