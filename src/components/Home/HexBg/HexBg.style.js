@@ -56,5 +56,6 @@ export const HexBgStyle = styled.div`
 		background: linear-gradient(90deg, #9500ff 0%, #ff41df 100%);
 		filter: blur(20px);
 		z-index: 0;
+		border-radius: 50%;
 	}
 `;
