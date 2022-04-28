@@ -10,7 +10,8 @@ export const GlobalStyles = createGlobalStyle`
 		margin: 0;
 		box-sizing:border-box;
 		scroll-behavior: smooth;
-		/* cursor: none; */
+		cursor: none;
+		user-select: none;
 	}
 
 	h1,h2,h3,h4,h5,h6{
@@ -20,7 +21,7 @@ export const GlobalStyles = createGlobalStyle`
 		font-size: 2.5rem;
 		
       @media (max-width:950px) {
-			font-size: .1rem !important;
+			font-size: 1.2rem !important;
 		}
 
 		@media (max-width:700px) {
@@ -29,11 +30,11 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	p{
-		font-size: 1.2rem;
+		font-size: 1rem;
 		font-family: 'MontserratMedium' ,cursive;
 
 		@media (max-width:950px) {
-			font-size: 1.5rem !important;
+			font-size: 1rem !important;
 		}
 
 		@media (max-width:700px) {

@@ -25,15 +25,15 @@ const PhoneButton = ({ text, bgColor, url, handlePhoneButtonClick }) => (
 
 const EventsHome = () => {
 	const [phonesPosition, setPhonesPosition] = useState({
-		phone1: '50%',
-		tablet1: '-150%'
+		phone1: 50,
+		tablet1: -150
 	});
-	const [tabletImage, setTabletImage] = useState(null);
+	const [tabletImage, setTabletImage] = useState('');
 
 	const handlePhoneButtonClick = (url) => {
 		setPhonesPosition({
-			phone1: '20%',
-			tablet1: '-8rem'
+			phone1: 20,
+			tablet1: 10
 		});
 		setTabletImage(url);
 	};
@@ -55,8 +55,30 @@ const EventsHome = () => {
 					})
 				}
 			></main>
+			{tabletImage.length > 0 && window.innerWidth < 800 && (
+				<div
+					className='phone-container-popup'
+					onClick={() => setTabletImage('')}
+				>
+					{/* <svg
+						xmlns='http://www.w3.org/2000/svg'
+						className='h-6 w-6'
+						fill='none'
+						viewBox='0 0 24 24'
+						stroke='currentColor'
+						strokeWidth={2}
+					>
+						<path
+							strokeLinecap='round'
+							strokeLinejoin='round'
+							d='M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z'
+						/>
+					</svg> */}
+					<img src={tabletImage} alt='phone' />
+				</div>
+			)}
 			<Tilt
-				tiltEnable={window.innerWidth < 900 && false}
+				tiltEnable={!(window.innerWidth < 900)}
 				className='phone-container'
 				perspective={4000}
 			>
@@ -79,13 +101,15 @@ const EventsHome = () => {
 					handlePhoneButtonClick={handlePhoneButtonClick}
 				/>
 			</Tilt>
-			<Tilt
-				tiltEnable={window.innerWidth < 900 && false}
-				className='tablet-container'
-				perspective={4000}
-			>
-				<div></div>
-			</Tilt>
+			{window.innerWidth > 500 && (
+				<Tilt
+					tiltEnable={!(window.innerWidth < 900)}
+					className='tablet-container'
+					perspective={4000}
+				>
+					<div></div>
+				</Tilt>
+			)}
 		</PhonesContainer>
 	);
 };

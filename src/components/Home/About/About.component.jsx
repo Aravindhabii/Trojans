@@ -50,11 +50,20 @@ const AboutHome = () => {
     // })
 
     ScrollTrigger.refresh();
-    t1.to(element.querySelectorAll(".para"), {
-      y: 0,
-      ease: "easeInOut",
-      duration: 1,
-    });
+    if(window.innerWidth < '950') {
+      t1.to(element.querySelectorAll(".para"), {
+        x: 0,
+        ease: "easeInOut",
+        duration: 1,
+      });
+    } else {
+      t1.to(element.querySelectorAll(".para"), {
+        y: 0,
+        ease: "easeInOut",
+        duration: 1,
+      });
+    }
+   
   }, [display]);
   const handleClick = (type) => {
     if (type == "goBack") {

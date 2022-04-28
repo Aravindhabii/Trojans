@@ -11,9 +11,9 @@ import {
 } from "./Events.styles";
 import {CodersChemistry, MasterMinds} from "../../datas/events.data";
 
-import Technical from "../../components/events/Technical";
-import Tablet from "../../components/events/Tablet";
-import {technicalevents } from "../../datas/technical.data";
+import Technical from '../../components/events/Technical';
+import Tablet from '../../components/events/Tablet';
+import { technicalevents } from '../../datas/technical.data';
 
 const EventsPage = () => {
   const [currentPage, setCurrentPage] = useState(technicalevents);
