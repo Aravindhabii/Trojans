@@ -5,11 +5,13 @@ import tab from "../../assets/events/pngtablet.png"
 import Tabletcontent from "./Tabletcontent"
 
 
-const Tablet = () => {
+const Tablet = ( props) => {
+  const {isTabletOpen, setisTabletOpen} = props
+
   return (
-    <Tabletcont tab={tab}>
+    <Tabletcont tab={tab} >
         <h1>Event Name</h1>
-        <Tabletcontent/>
+        <Tabletcontent />
     </Tabletcont>
   )
 }

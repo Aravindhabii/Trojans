@@ -8,10 +8,14 @@ import { Eventslist } from "../../pages/Events/Events.styles";
 import { gsap } from "gsap";
 
 const RenderComponent = (props) => {
-  const { currentPage, setCurrentPage, clickedEvent, setClickedEvent } = props;
+  const { currentPage, setCurrentPage, clickedEvent, setClickedEvent, isTabletOpen, setisTabletOpen } = props;
   const [previousPage, setPreviousPage] = useState("");
 
-  const click = (e) => {};
+  const click = (e) => {
+    if (isTabletOpen === false) {
+      setisTabletOpen(true);
+    }
+  };
 
   useEffect(() => {
     if (clickedEvent === "technicalevents") {

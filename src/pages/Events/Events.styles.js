@@ -121,10 +121,18 @@ export const Tabletdiv = styled.div.attrs({
   height: 100vh;
   color: #fff;
   display: flex;
-  background: #1e1e1e;
+  background: rgba(30, 30, 30,0.5);
   justify-content: center;
   align-items: center;
   top: 0;
+  transform: ${({isTabletOpen}) => isTabletOpen ? "translateX(0)" : "translateX(200%)"};
+  transition: all 0.7s ease-in-out;
+  .forclose{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+  }
 `;
 
 export const Tabletcont = styled.div.attrs({
@@ -137,12 +145,13 @@ export const Tabletcont = styled.div.attrs({
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: ${({ tab }) => (tab ? `url(${tab})` : "palevioletred")};
+  /* background: ${({ tab }) => (tab ? `url(${tab})` : "palevioletred")}; */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 55px;
   overflow-x: hidden;
+  z-index: 4;
   h1 {
     position: absolute;
     top: 10%;
