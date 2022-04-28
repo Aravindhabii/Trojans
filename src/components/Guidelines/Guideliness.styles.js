@@ -95,38 +95,38 @@ const flickerBox = keyframes`
 `;
 
 export const ImageDiv = styled.div`
-	width: 100%;
-	height: 6rem;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	img {
-		position: relative;
-		width: 5rem;
-		height: 5rem;
-		transition: all 1s ease-in-out;
-		border-radius: 50%;
-		z-index: 100;
-	}
-	div {
-		position: absolute;
-		width: 10rem;
-		height: 5rem;
-		border-radius: 10px;
-		transform: translateY(100%);
-		animation: ${flickerBox} 2s alternate infinite;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		p {
-			text-shadow: 0 0 7px #bc13fe, 0 0 10px #bc13fe, 0 0 21px #bc13fe,
-				0 0 42px #bc13fe, 0 0 82px #bc13fe, 0 0 92px #bc13fe, 0 0 102px #bc13fe,
-				0 0 151px #bc13fe;
-		}
-	}
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    img {
+        position: relative;
+        width: 5rem;
+        height: 5rem;
+        transition: all 1s ease-in-out;
+        border-radius: 50%;
+        z-index: 100;
+    }
+    div {
+        position: absolute;
+        width: 10rem;
+        height: 5rem;
+        border-radius: 10px;
+        transform: translateY(100%);
+        animation: ${flickerBox} 2s alternate infinite;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        p {
+            text-shadow: 0 0 7px #bc13fe, 0 0 10px #bc13fe, 0 0 21px #bc13fe,
+                0 0 42px #bc13fe, 0 0 82px #bc13fe, 0 0 92px #bc13fe,
+                0 0 102px #bc13fe, 0 0 151px #bc13fe;
+        }
+    }
 `;
 
 export const GuideContainerDiv = styled(GuideContainer)`
@@ -227,23 +227,23 @@ export const NeonButton = styled.a`
 `;
 
 export const NeonATag = styled.a`
-	a {
-		font-size: 25px;
-		height: 60px;
-		width: 150px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-family: 'Balsamiq Sans', cursive;
-		text-decoration: none;
-		color: rgba(255, 127, 255, 1);
-		border: rgba(255, 127, 255, 1) 3px solid;
-		background-color: transparent;
-		border-radius: 0.25em;
-		box-shadow: inset 0 0 0.5em 0 rgba(255, 127, 255, 1) 0 0 0.5em 0
-			rgba(255, 127, 255, 1);
-		transition: all 0.5s;
-	}
+    a {
+        font-size: 25px;
+        height: 60px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Balsamiq Sans", cursive;
+        text-decoration: none;
+        color: rgba(255, 127, 255, 1);
+        border: rgba(255, 127, 255, 1) 3px solid;
+        background-color: transparent;
+        border-radius: 0.25em;
+        box-shadow: inset 0 0 0.5em 0 rgba(255, 127, 255, 1) 0 0 0.5em 0
+            rgba(255, 127, 255, 1);
+        transition: all 0.5s;
+    }
 
 	a:hover {
 		background-color: rgba(255, 127, 255, 1);
