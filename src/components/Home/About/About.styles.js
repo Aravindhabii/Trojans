@@ -237,11 +237,11 @@ export const HeroSection = styled.section`
         
       }
       p {
-      font-size: .9rem;
+      
       line-height: 1.65rem;
     }
     h1 {
-      font-size: 1.3rem;
+      
       padding-bottom: 1rem;
     } 
     }
