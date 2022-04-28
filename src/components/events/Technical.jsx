@@ -4,15 +4,10 @@ import {
   Eventslist,
   righttwo,
 } from "../../pages/Events/Events.styles";
-import {
-  technicalevents,
-  nontechnicalevents,
-  workshops,
-} from "../../datas/technical.data";
-// import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 import RenderComponent from "../../components/events/RenderComponent";
 
 import Phone from "../../assets/events/phonepng.png";
+import tablet from "../../assets/events/pngtablet.png"
 
 const Technical = (props) => {
   const {
@@ -21,6 +16,8 @@ const Technical = (props) => {
     setCurrentPage,
     setClickedEvent,
     clickedEvent,
+    isTabletOpen,
+    setisTabletOpen,
   } = props;
 
   // return
@@ -31,8 +28,11 @@ const Technical = (props) => {
         currentPage={currentPage}
         clickedEvent={clickedEvent}
         setClickedEvent={setClickedEvent}
+        isTabletOpen={isTabletOpen}
+        setisTabletOpen={setisTabletOpen}
       />
     </Eventsdiv>
+
   );
 };
 

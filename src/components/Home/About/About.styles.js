@@ -111,10 +111,10 @@ export const HeroSection = styled.section`
     font-weight: 300;
   }
   .btn1:hover {
-    transform: scale(1.3)  rotate(180deg);
+    transform: scale(1.3)  rotate(270deg);
   }
   .btn2:hover {
-    transform: scale(1.3)
+    transform: scale(1.3) rotate(90deg)
   }
   .para2 {
     /* display: none; */
@@ -217,17 +217,51 @@ export const HeroSection = styled.section`
     border: 5px solid #30aadd;
   }
     p {
-      font-size: 1rem;
       line-height: 2.1rem;
     }
     h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       padding-bottom: 1rem;
     } 
     }
     @media (max-width:780px) {
       div {
         padding: 1rem;
+      }
+      
+    }
+    @media (max-width:700px) {
+      div {
+        padding: .6rem;
+        
+      }
+      p {
+
+      line-height: 1.6rem;
+    }
+    h1 {
+      
+      padding-bottom: 1rem;
+    } 
+    }
+    @media (max-width:500px) {
+      .btn1 {
+        top: 93%;
+      }
+      .btn2 {
+        top: 93%;
+      }
+      div {
+        width: 90%;
+        height: 88vh;
+        padding: .5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        min-height: 650px;  
+      }
+      p {
+        text-align: justify;  
+        /* line-height: 1.7rem; */
       }
     }
 `;
