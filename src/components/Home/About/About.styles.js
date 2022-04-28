@@ -91,7 +91,6 @@ export const HeroSection = styled.section`
     }
   }
   h1 {
-    font-family: "Montserrat", sans-serif;
     font-size: 2.5rem;
     text-align: left;
     font-weight: bold;
@@ -103,7 +102,6 @@ export const HeroSection = styled.section`
     width: 90%;
   }
   p {
-    font-family: "Montserrat", sans-serif;
     width: 90%;
     font-size: 1.2rem;
     line-height: 2.3rem;
