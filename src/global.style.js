@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
 		font-size: 2.5rem;
 		
       @media (max-width:950px) {
-			font-size: .1rem !important;
+			font-size: 1.2rem !important;
 		}
 
 		@media (max-width:700px) {
@@ -29,11 +29,11 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	p{
-		font-size: 1.2rem;
+		font-size: 1rem;
 		font-family: 'MontserratMedium' ,cursive;
 
 		@media (max-width:950px) {
-			font-size: 1.5rem !important;
+			font-size: 1rem !important;
 		}
 
 		@media (max-width:700px) {

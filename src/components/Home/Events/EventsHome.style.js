@@ -1,33 +1,43 @@
 import styled, {keyframes} from "styled-components";
 
 export const PhonesContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-color: black;
-    z-index: 5;
-    background-size: 350px;
-    position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-		bottom: 0;
-		left: 0;
-		background: linear-gradient( transparent 80%, rgba(0,0,0, 1) );
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background-color: black;
+	z-index: 5;
+	background-size: 350px;
+	position: relative;
+	overflow: hidden;
+
+	main {
+		width: 100%;
+		height: 100%;
+		position: absolute;
 		z-index: 1;
     }
 
-    main {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 1;
-    }
+	.phone-container {
+		width: 18rem;
+		aspect-ratio: 9/16;
+		z-index: 2;
+		background: #100c0c url(${({ phone1 }) => phone1}) no-repeat center;
+		background-size: 100% 100%;
+		position: relative;
+		border-radius: 50px;
+		left: ${({ phonesPosition }) => phonesPosition.phone1};
+		transition: all 0.3s ease-in-out;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 2rem;
+		box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 5px #03e9f4;
+		transform-style: preserve-3d;
+		transform: perspective(2000px) translateX(-50%) !important;
 
     .phone-container {
         width: 18%;
