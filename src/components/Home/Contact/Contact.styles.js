@@ -206,10 +206,11 @@ const hovereffectanimation = keyframes`
 
 export const HoverContact = styled.div`
     position: absolute;
-    width: 200px;
+    width: 1000px;
     height: 200px;
     margin: 10%;
-    transition: 5s;
+    right: -60%;
+    transition: all 10s ease 0s;
     span {
         position: absolute;
         top: 0%;
