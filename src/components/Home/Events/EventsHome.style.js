@@ -11,6 +11,7 @@ export const PhonesContainer = styled.div`
 	z-index: 5;
 	background-size: 350px;
 	position: relative;
+	overflow: hidden;
 
 	main {
 		width: 100%;
@@ -20,7 +21,7 @@ export const PhonesContainer = styled.div`
 	}
 
 	.phone-container {
-		width: 18%;
+		width: 18rem;
 		aspect-ratio: 9/16;
 		z-index: 2;
 		background: #100c0c url(${({ phone1 }) => phone1}) no-repeat center;
