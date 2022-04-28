@@ -17,12 +17,14 @@ export const GlobalStyles = createGlobalStyle`
 		font-family: 'EdhanMartine', sans-serif;
 	}
 	h1 {
+		font-size: 2.5rem;
 		@media (max-width:700px) {
 			font-size: 1.3rem;
 		}
 	}
 
 	p{
+		font-size: 1.2rem;
 		font-family: 'MontserratMedium' ,cursive;
 		@media (max-width:700px) {
 			font-size: 1.9rem;
