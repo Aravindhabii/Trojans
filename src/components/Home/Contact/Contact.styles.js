@@ -8,6 +8,8 @@ export const ContactSection = styled.section`
     justify-content: center;
     height: 100vh;
     width: 100%;
+    background: #000;
+    overflow: hidden;
     video {
         width: 100%;
         object-fit: cover;
@@ -22,12 +24,16 @@ export const ContactSection = styled.section`
         position: absolute;
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-            to top,
-            transparent 80%,
-            rgba(0, 0, 0, 1) 
-        );
+        background: linear-gradient(to top, transparent 80%, rgba(0, 0, 0, 1));
         z-index: 1;
+    }
+    @media (max-width: 700px) {
+        flex-direction: column;
+        height: fit-content;
+    }
+    @media (max-width: 400px) {
+        flex-direction: column;
+        height: fit-content;
     }
 `;
 
@@ -56,10 +62,10 @@ export const ContactContainer = styled.div`
     justify-content: center;
     width: 50%;
     height: 100%;
-    /* background: #000; */
+    background: #000;
     color: #fff;
-    /* overflow: hidden; */
-    z-index: 2;
+    overflow: visible;
+    /* z-index: 2; */
     h1 {
         font-size: 3rem;
         margin-bottom: 0.5rem;
@@ -71,6 +77,7 @@ export const ContactContainer = styled.div`
             0 -2px 0 #bc13fe, 1px 1px #bc13fe, -1px -1px 0 #bc13fe,
             1px -1px 0 #bc13fe, -1px 1px 0 #bc13fe, 0 0 7px #bc13fe,
             0 0 10px #bc13fe, 0 0 21px #bc13fe;
+        z-index: 10;
     }
     p {
         padding: 0 10%;
@@ -105,6 +112,7 @@ export const ContactContainer = styled.div`
                 border-radius: 10px;
                 padding: 0 0.8rem;
                 margin-bottom: 0.5rem;
+                z-index: 5;
             }
             button {
                 width: 30%;
@@ -120,6 +128,7 @@ export const ContactContainer = styled.div`
                 /* animation: ${flickerBox} 2s alternate infinite; */
                 align-self: center;
                 transition: all 0.2s ease-in-out;
+                z-index: 5;
                 margin-top: 2rem;
             }
             button:hover {
@@ -138,7 +147,36 @@ export const ContactContainer = styled.div`
                 border-radius: 10px;
                 font-size: 1.1rem;
                 padding: 1rem;
+                z-index: 5;
                 outline: none;
+            }
+        }
+    }
+    @media (max-width: 700px) {
+        width: 100%;
+        padding-top: 5%;
+        h1 {
+            font-size: 3rem !important;
+        }
+        form {
+            div {
+                button {
+                    width: 55%;
+                }
+            }
+        }
+    }
+    @media (max-width: 400px) {
+        width: 100%;
+        padding-top: 15%;
+        h1 {
+            font-size: 3rem !important;
+        }
+        form {
+            div {
+                button {
+                    width: 55%;
+                }
             }
         }
     }
@@ -171,7 +209,7 @@ export const HoverConatct = styled.div`
     width: 200px;
     height: 200px;
     margin: 10%;
-    transition: 2s;
+    transition: 5s;
     span {
         position: absolute;
         top: 0%;
