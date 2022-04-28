@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/Trojans/static/css/main.f80a8b9c.css",
-    "main.js": "/Trojans/static/js/main.1d8a26b9.js",
+    "main.js": "/Trojans/static/js/main.fae60751.js",
     "static/media/NeonEffect.mp4": "/Trojans/static/media/NeonEffect.d559108b88dd181df940.mp4",
     "static/media/Video.mp4": "/Trojans/static/media/Video.61c76eb012b1ed621b18.mp4",
     "static/media/2.jpg": "/Trojans/static/media/2.b311ce2ef7d10d134407.jpg",
+    "static/media/pngtablet.png": "/Trojans/static/media/pngtablet.dc261353a4c1f58ccb03.png",
     "static/media/phonepng.png": "/Trojans/static/media/phonepng.a7fbabc7f90ba3ab711d.png",
     "static/media/OnlyLogo_White.png": "/Trojans/static/media/OnlyLogo_White.a9c204195be5ac9a6a87.png",
     "static/media/tabletpng.png": "/Trojans/static/media/tabletpng.ad0225622e4833d0d48f.png",
@@ -14,10 +15,10 @@
     "static/media/Hexagon.svg": "/Trojans/static/media/Hexagon.3fcf186fe4ed2760f526482f08d97ff3.svg",
     "index.html": "/Trojans/index.html",
     "main.f80a8b9c.css.map": "/Trojans/static/css/main.f80a8b9c.css.map",
-    "main.1d8a26b9.js.map": "/Trojans/static/js/main.1d8a26b9.js.map"
+    "main.fae60751.js.map": "/Trojans/static/js/main.fae60751.js.map"
   },
   "entrypoints": [
     "static/css/main.f80a8b9c.css",
-    "static/js/main.1d8a26b9.js"
+    "static/js/main.fae60751.js"
   ]
 }
