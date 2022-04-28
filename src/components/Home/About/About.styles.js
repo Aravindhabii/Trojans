@@ -103,7 +103,7 @@ export const HeroSection = styled.section`
     line-height: 2.3rem;
     color: white;
     // margin-left:6%;
-    transform: translateY(30%);
+    transform: translateY(20%);
     font-weight: 300;
   }
   .btn1:hover {
@@ -147,10 +147,10 @@ export const HeroSection = styled.section`
     
   }
   @media (max-width:950px) { 
-    .btn1:hover {
+    .btn2:hover {
     transform: scale(1.3)  rotate(270deg);
   }
-  .btn2:hover {
+  .btn1:hover {
     transform: scale(1.3) rotate(90deg)
   }
       div {
@@ -197,15 +197,15 @@ export const HeroSection = styled.section`
     transition: all .2s ease-in-out;
     border-radius: 10%;
     top: 91.5%;
-    left: 25%;
-    transform: rotate(-90deg);
+    right: 25%;
+    transform: rotate(90deg);
   }
   .btn2 {
+    transform: rotate(-90deg);
     position: absolute;
-    right: 25%;
+    left: 25%;
     top: 91.5%;
     box-shadow: 2px 2px 20px #d31360;
-    transform: rotate(90deg);
     background-color: #d31360;
     transition: all .2s ease-in-out;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
