@@ -13,7 +13,6 @@ const AboutHome = () => {
 
 	const handleScroll = (e) => {
 		const scrollY = window.scrollY;
-
 		if (scrollY > 230) {
 			setDisplay(2);
 		} else {

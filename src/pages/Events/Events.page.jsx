@@ -7,14 +7,17 @@ import {
   Threeddiv,
   Righttwo,
   Rightone,
+  Tabletdiv
 } from "./Events.styles";
 import Technical from "../../components/events/Technical";
+import Tablet from "../../components/events/Tablet";
 import {technicalevents } from "../../datas/technical.data";
 
 const EventsPage = () => {
   const [currentPage, setCurrentPage] = useState(technicalevents);
   const [clickedEvent, setClickedEvent] = useState('');
   const [isphoneopen, setisphoneopen] = React.useState(false);
+  const [isTabletOpen, setisTabletOpen] = React.useState(false);
 
   const click = (e) => {
     if (e.target.value !== clickedEvent) {
@@ -52,6 +55,9 @@ const EventsPage = () => {
           </Righttwo>
         </div>
       </HeroSection>
+      <Tabletdiv isTabletOpen={isTabletOpen}>
+          <Tablet />
+      </Tabletdiv>
     </>
   );
 };

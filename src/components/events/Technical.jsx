@@ -13,6 +13,7 @@ import {
 import RenderComponent from "../../components/events/RenderComponent";
 
 import Phone from "../../assets/events/phonepng.png";
+import tablet from "../../assets/events/pngtablet.png"
 
 const Technical = (props) => {
   const {
@@ -33,6 +34,7 @@ const Technical = (props) => {
         setClickedEvent={setClickedEvent}
       />
     </Eventsdiv>
+
   );
 };
 
