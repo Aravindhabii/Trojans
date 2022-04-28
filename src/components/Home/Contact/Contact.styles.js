@@ -77,7 +77,7 @@ export const ContactContainer = styled.div`
             0 -2px 0 #bc13fe, 1px 1px #bc13fe, -1px -1px 0 #bc13fe,
             1px -1px 0 #bc13fe, -1px 1px 0 #bc13fe, 0 0 7px #bc13fe,
             0 0 10px #bc13fe, 0 0 21px #bc13fe;
-        z-index: 100;
+        z-index: 10;
     }
     p {
         padding: 0 10%;
