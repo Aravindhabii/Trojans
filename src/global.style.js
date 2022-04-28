@@ -16,9 +16,18 @@ export const GlobalStyles = createGlobalStyle`
 	h1,h2,h3,h4,h5,h6{
 		font-family: 'EdhanMartine', sans-serif;
 	}
+	h1 {
+		@media (max-width:700px) {
+			font-size: 1.3rem;
+		}
+	}
 
 	p{
 		font-family: 'MontserratMedium' ,cursive;
+		@media (max-width:700px) {
+			font-size: 1.9rem;
+			
+		}
 	}
 
 	@font-face {
