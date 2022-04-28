@@ -223,7 +223,7 @@ export const HeroSection = styled.section`
       line-height: 2.1rem;
     }
     h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       padding-bottom: 1rem;
     } 
     }
@@ -232,5 +232,35 @@ export const HeroSection = styled.section`
         padding: 1rem;
       }
       
+    }
+    @media (max-width:700px) {
+      div {
+        padding: .6rem;
+        
+      }
+      p {
+      font-size: .9rem;
+      line-height: 1.65rem;
+    }
+    h1 {
+      font-size: 1.3rem;
+      padding-bottom: 1rem;
+    } 
+    }
+    @media (max-width:500px) {
+      div {
+        width: 90%;
+        height: 88vh;
+        padding: .5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        min-height: 650px;
+        /* overflow-y: auto; */
+      }
+      p {
+        text-align: justify;
+        /* min-height: 600px; */
+        line-height: 1.7rem;
+      }
     }
 `;
