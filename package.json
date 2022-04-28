@@ -1,9 +1,9 @@
 {
-  "homepage": "https://Aravindhabii.github.io/Trojans",
   "name": "trojans",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@react-three/drei": "^9.5.2",
     "@react-three/fiber": "^8.0.12",
     "@testing-library/jest-dom": "^5.16.4",

@@ -7,15 +7,21 @@ import {
   Threeddiv,
   Righttwo,
   Rightone,
+  Tabletdiv
 } from "./Events.styles";
 import Technical from "../../components/events/Technical";
+import Tablet from "../../components/events/Tablet";
 import {technicalevents } from "../../datas/technical.data";
 
 const EventsPage = () => {
   const [currentPage, setCurrentPage] = useState(technicalevents);
+  const [currentEvent, setCurrentEvent] = useState("technicalevents");
   const [clickedEvent, setClickedEvent] = useState('');
   const [isphoneopen, setisphoneopen] = React.useState(false);
-
+  const [isTabletOpen, setisTabletOpen] = React.useState(false);
+  const closetab = () => {
+    setisTabletOpen(false);
+  };
   const click = (e) => {
     if (e.target.value !== clickedEvent) {
       setClickedEvent(e.target.value);
@@ -48,10 +54,14 @@ const EventsPage = () => {
             </Threeddiv>
           </Rightone>
           <Righttwo openorclose={isphoneopen}>
-            <Technical currentPage={currentPage} setCurrentPage={setCurrentPage} clickedEvent={clickedEvent} setClickedEvent={setClickedEvent}/>
+            <Technical currentPage={currentPage} setCurrentPage={setCurrentPage} clickedEvent={clickedEvent} setClickedEvent={setClickedEvent} isTabletOpen={isTabletOpen} setisTabletOpen={setisTabletOpen}/>
           </Righttwo>
         </div>
       </HeroSection>
+      <Tabletdiv  isTabletOpen={isTabletOpen} setisTabletOpen={setisTabletOpen}>
+          <div onClick={closetab} className="forclose"></div>
+          <Tablet />
+      </Tabletdiv>
     </>
   );
 };

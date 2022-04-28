@@ -11,7 +11,7 @@ import RegistrationPage from './pages/Registration/Registration.page';
 import Countdown from './pages/Countdown/Countdown.page.jsx';
 
 const App = () => {
-	const [showCountdown, setShowCountdown] = useState(true);
+	const [showCountdown, setShowCountdown] = useState(false);
 	const cursorRef = useRef();
 
 	return (
