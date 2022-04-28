@@ -30,7 +30,6 @@ export const HeroContent = styled.div`
 	flex-direction: column;
 	position: relative;
 	z-index: 2;
-	font-family: 'EdhanMartine';
 	letter-spacing: 3px;
 
 	h1 {
@@ -88,7 +87,7 @@ export const HeroContent = styled.div`
 		}
 	}
 
-	p {
+	h3 {
 		color: #fff;
 		font-size: 1.2rem;
 		font-weight: bold;

@@ -12,8 +12,8 @@ const HeroHome = () => {
 		<HeroSection>
 			<HexBg direction='to bottom' />
 			<HeroContent>
-				<p>DEPARTMENT OF INFORMATION TECHNOLOGY</p>
-				<p> PRESENTS</p>
+				<h3>DEPARTMENT OF INFORMATION TECHNOLOGY</h3>
+				<h3> PRESENTS</h3>
 				<h1 className='trojans-logo'>
 					TR
 					<Tilt>
@@ -21,8 +21,8 @@ const HeroHome = () => {
 					</Tilt>
 					JANS
 				</h1>
-				<p>A NATIONAL LEVEL TECHNICAL SYMOPOSIUM</p>
-				<p>EXPLORE</p>
+				<h3>A NATIONAL LEVEL TECHNICAL SYMOPOSIUM</h3>
+				<h3>EXPLORE</h3>
 				{/* <a href='#events'> */}
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
