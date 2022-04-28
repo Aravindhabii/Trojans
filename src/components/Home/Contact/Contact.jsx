@@ -4,6 +4,7 @@ import {
     ContactSection,
     ContactContainer,
     ContactPerson,
+    HoverConatct,
 } from "./Contact.styles";
 
 function Contact() {
@@ -18,7 +19,7 @@ function Contact() {
                         perspiciatis eum incidunt ipsam ducimus odit soluta
                         nobis dolor, esse nisi, necessitatibus voluptas. Ut!
                     </p>
-                    <ContactPerson>
+                    {/* <ContactPerson>
                         <h2>President : 8787878787</h2>
                     </ContactPerson>
                     <ContactPerson>
@@ -26,7 +27,39 @@ function Contact() {
                     </ContactPerson>
                     <ContactPerson>
                         <h2>Secretary : 8787878787</h2>
-                    </ContactPerson>
+                    </ContactPerson> */}
+                    <HoverConatct>
+                        <span
+                            style={{transform: "rotate(calc(36deg * 1))"}}
+                        ></span>
+                        <span
+                            style={{transform: "rotate(calc(36deg * 2))"}}
+                        ></span>
+                        <span
+                            style={{transform: "rotate(calc(36deg * 3))"}}
+                        ></span>
+                        <span
+                            style={{transform: "rotate(calc(36deg * 4))"}}
+                        ></span>
+                        <span
+                            style={{transform: "rotate(calc(36deg * 5))"}}
+                        ></span>
+                        <span
+                            style={{transform: "rotate(calc(36deg * 6))"}}
+                        ></span>
+                        <span
+                            style={{transform: "rotate(calc(36deg * 7))"}}
+                        ></span>
+                        <span
+                            style={{transform: "rotate(calc(36deg * 8))"}}
+                        ></span>
+                        <span
+                            style={{transform: "rotate(calc(36deg * 9))"}}
+                        ></span>
+                        <span
+                            style={{transform: "rotate(calc(36deg * 10))"}}
+                        ></span>
+                    </HoverConatct>
                 </ContactContainer>
                 <ContactContainer>
                     <form action="">

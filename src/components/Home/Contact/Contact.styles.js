@@ -42,13 +42,19 @@ export const ContactContainer = styled.div`
     h1 {
         font-size: 3rem;
         margin-bottom: 0.5rem;
-        text-shadow: 0 0 7px #bc13fe, 0 0 10px #bc13fe, 0 0 21px #bc13fe,
+        color: black;
+        /* text-shadow: 0 0 7px #bc13fe, 0 0 10px #bc13fe, 0 0 21px #bc13fe,
                 0 0 42px #bc13fe, 0 0 82px #bc13fe, 0 0 92px #bc13fe,
-                0 0 102px #bc13fe, 0 0 151px #bc13fe;
+                0 0 102px #bc13fe, 0 0 151px #bc13fe; */
+        text-shadow: 2px 0 0 #bc13fe, -2px 0 0 #bc13fe, 0 2px 0 #bc13fe,
+            0 -2px 0 #bc13fe, 1px 1px #bc13fe, -1px -1px 0 #bc13fe,
+            1px -1px 0 #bc13fe, -1px 1px 0 #bc13fe, 0 0 7px #bc13fe,
+            0 0 10px #bc13fe, 0 0 21px #bc13fe;
     }
     p {
         padding: 0 10%;
         font-size: 1.1rem;
+        color: white;
     }
     form {
         width: 100%;
@@ -124,4 +130,29 @@ export const ContactPerson = styled.div`
     justify-content: center;
     width: 80%;
     height: 4rem;
+`;
+
+export const HoverConatct = styled.div`
+    position: relative;
+    width: 300px;
+    height: 300px;
+    span {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        transform: rotate(calc(36deg * var(--i)));
+    }
+    span::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: transparent;
+        border: 4px solid #00efff;
+    }
 `;
