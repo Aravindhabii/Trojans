@@ -225,7 +225,7 @@ export const HeroSection = styled.section`
     border: 5px solid #30aadd;
   }
     p {
-      line-height: 1.8rem;
+      line-height: 1.65rem;
       transform: translateX(5%);
       text-align: justify;
     }
