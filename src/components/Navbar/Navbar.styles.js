@@ -14,6 +14,7 @@ export const NavbarContainer = styled.div`
 	color: white;
 	z-index: 10;
 	padding: 0 5rem;
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 80%);
 
 	@media (max-width: 500px) {
 		padding: 0 2rem;
