@@ -6,7 +6,7 @@ import { CountdownContainer, CountdownCircleStyle } from './Countdown.style';
 
 import OnlyLogo_White from '../../assets/Trojans_logo/OnlyLogo_White.png';
 
-const targetTime = moment('18-05-2021', 'DD-MM-YYYY');
+const targetTime = moment('18-05-2022', 'DD-MM-YYYY');
 
 const CountdownCircle = ({ time, timeType, strokeDashOffset, color }) => {
 	const circleRef = useRef();
@@ -45,7 +45,7 @@ const Countdown = ({ setShowCountdown }) => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			if (timeBetween.milliseconds() < 0) {
-				setShowCountdown(false);
+				setShowCountdown(true);
 				clearInterval(interval);
 				return;
 			}
