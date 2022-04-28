@@ -1,8 +1,8 @@
-import { createGlobalStyle } from 'styled-components';
-import Assassin from './assets/fonts/Assassin.ttf';
-import ShareTechMono from './assets/fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf';
-import EdhanMartine from './assets/fonts/edhan-martine-font/EdhanMartine-0WrVv.ttf';
-import MontserratMedium from './assets/fonts/Montserrat/Montserrat-Medium.ttf';
+import { createGlobalStyle } from "styled-components";
+import Assassin from "./assets/fonts/Assassin.ttf";
+import ShareTechMono from "./assets/fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf";
+import EdhanMartine from "./assets/fonts/edhan-martine-font/EdhanMartine-0WrVv.ttf";
+import MontserratMedium from "./assets/fonts/Montserrat/Montserrat-Medium.ttf";
 
 export const GlobalStyles = createGlobalStyle`
 	*{
@@ -18,16 +18,26 @@ export const GlobalStyles = createGlobalStyle`
 	}
 	h1 {
 		font-size: 2.5rem;
+		
+      @media (max-width:950px) {
+			font-size: .1rem !important;
+		}
+
 		@media (max-width:700px) {
-			font-size: 1.3rem;
+			font-size: 1.3rem !important;
 		}
 	}
 
 	p{
 		font-size: 1.2rem;
 		font-family: 'MontserratMedium' ,cursive;
+
+		@media (max-width:950px) {
+			font-size: 1.5rem !important;
+		}
+
 		@media (max-width:700px) {
-			font-size: 1.9rem;
+			font-size: .9rem !important;
 			
 		}
 	}
