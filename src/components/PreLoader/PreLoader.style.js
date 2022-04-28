@@ -13,7 +13,7 @@ export const PreLoaderContainer = styled.div`
 	align-items: center;
 	overflow: hidden;
 	color: white;
-	font-family: trojans;
+	font-family: 'trojans';
     font-size: 8rem;
 
 	img {
