@@ -9,6 +9,8 @@ export const PhonesContainer = styled.div`
 	position: relative;
 	background-color: black;
 	z-index: 5;
+	background-size: 350px;
+	position: relative;
 
 	main {
 		width: 100%;
@@ -17,7 +19,7 @@ export const PhonesContainer = styled.div`
 	}
 
 	.phone-container {
-		width: 22%;
+		width: 18%;
 		aspect-ratio: 9/16;
 		z-index: 2;
 		background: #100c0c url(${({ phone1 }) => phone1}) no-repeat center;
@@ -31,28 +33,52 @@ export const PhonesContainer = styled.div`
 		justify-content: center;
 		flex-direction: column;
 		padding: 2rem;
-		box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 20px #03e9f4,
-			0 0 50px #03e9f4, 0 0 200px #03e9f4;
+		box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 5px #03e9f4;
 		transform-style: preserve-3d;
-		transform: perspective(2000px);
+		transform: perspective(2000px) translateX(-50%) !important;
+
+		@media (max-width: 1250px) {
+			width: 18rem;
+		}
+
+		@media (max-width: 800px) {
+			transform: translateX(-50%) !important;
+			left: 50%;
+		}
+
+		@media (max-width: 400px) {
+			background: rgba(0, 0, 0, 0.3);
+			box-shadow: none;
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	.tablet-container {
 		position: relative;
-		width: 42%;
-		height: 64%;
+		width: 45rem;
+		height: 30rem;
 		border-radius: 30px;
 		background: #100c0c url(${({ tablet1 }) => tablet1}) no-repeat center;
-		box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 20px #03e9f4,
-			0 0 50px #03e9f4, 0 0 200px #03e9f4;
+		box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 5px #03e9f4;
 		transform-style: preserve-3d;
 		transform: perspective(2000px);
-		left: ${({ phonesPosition }) => phonesPosition.tablet1};
+		right: ${({ phonesPosition }) => phonesPosition.tablet1};
 		overflow: hidden;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		transition: all 0.3s ease-in-out;
+		z-index: 2;
+
+		@media (max-width: 1050px) {
+			width: 24rem;
+			height: 32rem;
+		}
+
+		@media (max-width: 800px) {
+			display: none;
+		}
 
 		div {
 			width: 93%;
@@ -116,9 +142,7 @@ export const PhoneButtonStyles = styled.h2`
 		background-color: ${({ bgColor }) => bgColor};
 		color: black;
 		box-shadow: 0 0 5px ${({ bgColor }) => bgColor},
-			0 0 25px ${({ bgColor }) => bgColor}, 0 0 20px ${({ bgColor }) => bgColor},
-			0 0 50px ${({ bgColor }) => bgColor},
-			0 0 200px ${({ bgColor }) => bgColor};
+			0 0 15px ${({ bgColor }) => bgColor}, 0 0 18px ${({ bgColor }) => bgColor};
 	}
 
 	span {
