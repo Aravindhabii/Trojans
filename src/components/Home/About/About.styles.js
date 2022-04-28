@@ -2,11 +2,10 @@ import styled from "styled-components";
 import bg from "../../../assets/about/2.jpg";
 export const HeroSection = styled.section`
   @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
-
   width: 100%;
   height: 100vh;
   background: black;
-  /* background: url(${bg}) no-repeat center/cover fixed; */
+  
 
   display: flex;
   justify-content: center;
@@ -75,7 +74,6 @@ export const HeroSection = styled.section`
   .cam3 {
     position: absolute;
     bottom: 47%;
-    /* transform: translateY(-50%); */
     right: 2.5%;
     height: 30px;
     width: 30px;
@@ -95,9 +93,7 @@ export const HeroSection = styled.section`
     text-align: left;
     font-weight: bold;
     color: #fff;
-    /* padding: 5% 10%; */
     padding-bottom: 3rem;
-    // margin-left:6%;
     z-index: 2;
     width: 90%;
   }
@@ -217,7 +213,9 @@ export const HeroSection = styled.section`
     border: 5px solid #30aadd;
   }
     p {
-      line-height: 2.1rem;
+      line-height: 1.8rem;
+      transform: translateX(5%);
+      text-align: justify;
     }
     h1 {
       font-size: 1.5rem;
@@ -244,7 +242,7 @@ export const HeroSection = styled.section`
       padding-bottom: 1rem;
     } 
     }
-    @media (max-width:500px) {
+    @media (max-width:600px) {
       .btn1 {
         top: 93%;
       }
@@ -261,7 +259,7 @@ export const HeroSection = styled.section`
       }
       p {
         text-align: justify;  
-        /* line-height: 1.7rem; */
+
       }
     }
 `;
