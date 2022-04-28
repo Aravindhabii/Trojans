@@ -1,7 +1,6 @@
 import styled, {keyframes} from "styled-components";
 
 export const ContactSection = styled.section`
-    background-color: #f5f5f5;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -9,6 +8,27 @@ export const ContactSection = styled.section`
     justify-content: center;
     height: 100vh;
     width: 100%;
+    video {
+        width: 100%;
+        object-fit: cover;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            to top,
+            transparent 80%,
+            rgba(0, 0, 0, 1) 
+        );
+        z-index: 1;
+    }
 `;
 
 const flickerBox = keyframes`
@@ -36,8 +56,10 @@ export const ContactContainer = styled.div`
     justify-content: center;
     width: 50%;
     height: 100%;
-    background: #000;
+    /* background: #000; */
     color: #fff;
+    /* overflow: hidden; */
+    z-index: 2;
     h1 {
         font-size: 3rem;
         margin-bottom: 0.5rem;
@@ -123,35 +145,57 @@ export const ContactContainer = styled.div`
 `;
 
 export const ContactPerson = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
     justify-content: center;
     width: 80%;
     height: 4rem;
+    z-index: 5;
+`;
+
+const hovereffectanimation = keyframes`
+    0% {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+    0% {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
 `;
 
 export const HoverConatct = styled.div`
-    position: relative;
-    width: 300px;
-    height: 300px;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin: 10%;
+    transition: 2s;
     span {
         position: absolute;
         top: 0%;
         left: 0%;
         width: 100%;
         height: 100%;
-        transform: rotate(calc(36deg * var(--i)));
     }
     span::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
-        width: 25px;
-        height: 25px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background: transparent;
         border: 4px solid #00efff;
+        box-sizing: border-box;
+        box-shadow: 0 0 20px #00efff, -200px -200px 0px #00efff,
+            -200px -200px 20px #00efff, 200px 200px 0px #00efff,
+            200px 200px 20px #00efff, -200px 200px 0px #00efff,
+            -200px 200px 0px #00efff, 200px -200px 20px #00efff,
+            200px -200px 20px #00efff;
+        transform-origin: 250px;
+        animation: ${hovereffectanimation} 5s linear infinite;
     }
 `;

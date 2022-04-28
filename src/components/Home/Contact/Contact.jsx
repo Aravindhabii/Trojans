@@ -6,11 +6,15 @@ import {
     ContactPerson,
     HoverConatct,
 } from "./Contact.styles";
+import NeonVideo from "../../../assets/about/Frame11.mp4"
 
 function Contact() {
     return (
         <>
             <ContactSection>
+                <video autoPlay loop muted>
+                    <source src={NeonVideo} type="video/mp4" />
+                </video>
                 <ContactContainer>
                     <h1>Contact</h1>
                     <p>
@@ -19,7 +23,7 @@ function Contact() {
                         perspiciatis eum incidunt ipsam ducimus odit soluta
                         nobis dolor, esse nisi, necessitatibus voluptas. Ut!
                     </p>
-                    {/* <ContactPerson>
+                    <ContactPerson>
                         <h2>President : 8787878787</h2>
                     </ContactPerson>
                     <ContactPerson>
@@ -27,8 +31,8 @@ function Contact() {
                     </ContactPerson>
                     <ContactPerson>
                         <h2>Secretary : 8787878787</h2>
-                    </ContactPerson> */}
-                    <HoverConatct>
+                    </ContactPerson>
+                    {/* <HoverConatct>
                         <span
                             style={{transform: "rotate(calc(36deg * 1))"}}
                         ></span>
@@ -59,7 +63,7 @@ function Contact() {
                         <span
                             style={{transform: "rotate(calc(36deg * 10))"}}
                         ></span>
-                    </HoverConatct>
+                    </HoverConatct> */}
                 </ContactContainer>
                 <ContactContainer>
                     <form action="">
