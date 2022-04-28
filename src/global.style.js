@@ -10,7 +10,6 @@ export const GlobalStyles = createGlobalStyle`
 		box-sizing:border-box;
 		scroll-behavior: smooth;
 		cursor: none;
-		overflow-x: hidden;
 	}
 
 	@font-face {
