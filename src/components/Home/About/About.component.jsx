@@ -11,16 +11,16 @@ const AboutHome = () => {
 	const [contentTrigger, setContentTrigger] = useState(false);
 	gsap.registerPlugin(ScrollTrigger);
 
-	const handleScroll = (e) => {
-		const scrollY = window.scrollY;
+	// const handleScroll = (e) => {
+	// 	const scrollY = window.scrollY;
 
-		if (scrollY > 230) {
-			setDisplay(2);
-		} else {
-			setDisplay(1);
-		}
-	};
-	window.addEventListener('scroll', handleScroll);
+	// 	if (scrollY > 230) {
+	// 		setDisplay(2);
+	// 	} else {
+	// 		setDisplay(1);
+	// 	}
+	// };
+	// window.addEventListener('scroll', handleScroll);
 	const tab = useRef();
 	useEffect(() => {
 		if (window.innerWidth < '780') {
