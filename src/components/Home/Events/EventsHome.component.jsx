@@ -78,7 +78,7 @@ const EventsHome = () => {
 				</div>
 			)}
 			<Tilt
-				tiltEnable={window.innerWidth < 900 && false}
+				tiltEnable={!(window.innerWidth < 900)}
 				className='phone-container'
 				perspective={4000}
 			>
@@ -103,7 +103,7 @@ const EventsHome = () => {
 			</Tilt>
 			{window.innerWidth > 500 && (
 				<Tilt
-					tiltEnable={window.innerWidth < 900 && false}
+					tiltEnable={!(window.innerWidth < 900)}
 					className='tablet-container'
 					perspective={4000}
 				>
