@@ -30,6 +30,7 @@ export const Navlink = styled.li`
 	justify-content: center;
 	margin-right: 1rem;
 	margin: 0.5rem 0;
+
 	a {
 		font-size: 3rem;
 		text-decoration: none;
@@ -42,6 +43,7 @@ export const Navlink = styled.li`
 		position: relative;
 		font-family: 'ShareTechMono';
 	}
+
 	a::before {
 		content: '${({ body }) => body}';
 		position: absolute;
