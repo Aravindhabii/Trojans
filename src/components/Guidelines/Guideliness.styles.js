@@ -72,6 +72,14 @@ export const GuideContainer = styled.div`
         text-align: center;
         margin: 2%;
     }
+    @media (max-width: 700px) {
+        h1 {
+            font-size: 2.5rem !important;
+        }
+        p {
+            font-size: 1.2rem !important;
+        }
+    }
 `;
 
 const flickerBox = keyframes`
@@ -141,6 +149,11 @@ export const ImageDiv = styled.div`
         color: white;
         animation: ${exploreSVG} 1s ease-in-out infinite;
     }
+    @media (max-width: 700px) {
+        div {
+            display: flex !important;
+        }
+    }
 `;
 
 export const GuideContainerDiv = styled(GuideContainer)`
@@ -152,6 +165,10 @@ export const GuideContainerDiv = styled(GuideContainer)`
         content: "";
         position: absolute;
         display: none;
+    }
+    @media (max-width: 700px) {
+        width: 90%;
+        font-size: 1.4rem;
     }
 `;
 
@@ -293,6 +310,9 @@ export const GuidelinesPoints = styled.div`
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     text-shadow: 0 0 10px black;
+    @media (max-width: 700px) {
+        height: fit-content;
+    }
 `;
 
 const flicker = keyframes`
@@ -345,12 +365,17 @@ export const GuidelinesPointsDiv = styled.div`
         padding: 0 5%;
         h1 {
             color: black;
-            font-size: 3rem;
+            font-size: 3rem !important;
             animation: ${flicker} 2s linear infinite;
         }
         p {
             text-align: center;
             font-size: 1.3rem;
+        }
+        @media (max-width: 700px) {
+            p {
+                font-size: 1rem !important;
+            }
         }
     }
 `;
@@ -371,5 +396,9 @@ export const GridSection = styled.div`
         margin: 1%;
         border-radius: 10px;
         animation: ${flickerBox} 4s alternate infinite;
+    }
+    @media (max-width: 500px) {
+        grid-template-columns: repeat(1, 1fr);
+        height: fit-content;
     }
 `;
