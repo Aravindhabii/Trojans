@@ -7,6 +7,7 @@ import HeroHome from "../../components/Home/Hero/HeroHome.component";
 import EventsHome from "../../components/Home/Events/EventsHome.component";
 import Contact from "../../components/Home/Contact/Contact";
 import AboutHome from "../../components/Home/About/About.component";
+import Footer from "../../components/Footer/Footer";
 
 const HomePage = () => (
     <div
@@ -24,6 +25,7 @@ const HomePage = () => (
         <AboutHome />
         <EventsHome />
         <Contact />
+        <Footer />
     </div>
 );
 

@@ -1,7 +1,8 @@
 import React from 'react'
 import {Tabletcont} from '../../pages/Events/Events.styles'
 // import tab from "../../assets/events/tabletpng.png"
-import tab from "../../assets/events/pngtablet.png"
+// import tab from "../../assets/events/pngtablet.png"
+import tab from "../../assets/events/pngtablet-compressed.png"
 import Tabletcontent from "./Tabletcontent"
 
 

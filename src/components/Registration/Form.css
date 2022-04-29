@@ -82,6 +82,8 @@
     margin: 1% 0;
     margin-bottom: 2%;
     z-index: 2;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.7),
+        0 0 40px rgba(0, 217, 255, 0.7), 0 0 100px rgba(0, 217, 255, 0.7);
 }
 
 .form-group input {
@@ -90,7 +92,7 @@
     border-radius: 5px;
     font-size: 1rem;
     padding: 1% 2%;
-    color: white;
+    color: rgb(255, 255, 255);
     text-indent: 10px;
     border-radius: 10px;
     outline: none;
@@ -171,7 +173,12 @@
     margin: 1%;
 }
 
-.options-styling:hover
-{
+.options-styling:hover {
     background: #000;
+}
+
+@media (max-width: 600px) {
+    .form-registration {
+        width: 80%;
+    }
 }

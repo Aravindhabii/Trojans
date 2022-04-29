@@ -1,10 +1,10 @@
 export const technicalevents = [
   { id: 1, name: "Coders Chemistry" },
   { id: 1, name: "Master Minds" },
-  { id: 1, name: "Siteing" },
+  { id: 1, name: "Site-ing" },
   { id: 1, name: "Paper Bytes" },
   { id: 1, name: "Goose chase" },
-  { id: 1, name: "Trojan Throttle" },
+  { id: 1, name: "Trojan's Throttle" },
 ];
 
 export const nontechnicalevents = [

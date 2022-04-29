@@ -45,6 +45,7 @@ function Form() {
                             email="department_registration"
                         />
                     </div>
+                    
                     <div className="form-group">
                         <label htmlFor="department_registration">
                             Technical Events

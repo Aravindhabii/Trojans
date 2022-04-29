@@ -4,9 +4,9 @@ import {
     ContactSection,
     ContactContainer,
     ContactPerson,
-    HoverConatct,
+    HoverContact,
 } from "./Contact.styles";
-import NeonVideo from "../../../assets/about/Frame11.mp4"
+import NeonVideo from "../../../assets/about/Frame11.mp4";
 
 function Contact() {
     return (
@@ -32,38 +32,68 @@ function Contact() {
                     <ContactPerson>
                         <h2>Secretary : 8787878787</h2>
                     </ContactPerson>
-                    <HoverConatct>
+                    <HoverContact>
                         <span
-                            style={{transform: "rotate(calc(36deg * 1))"}}
+                            style={{
+                                transform: "rotate(calc(36deg * 1))",
+                                animationDelay: "calc(-0.25s * 1)",
+                            }}
                         ></span>
                         <span
-                            style={{transform: "rotate(calc(36deg * 2))"}}
+                            style={{
+                                transform: "rotate(calc(36deg * 2))",
+                                animationDelay: "calc(-0.25s * 2)",
+                            }}
                         ></span>
                         <span
-                            style={{transform: "rotate(calc(36deg * 3))"}}
+                            style={{
+                                transform: "rotate(calc(36deg * 3))",
+                                animationDelay: "calc(-0.25s * 3)",
+                            }}
                         ></span>
                         <span
-                            style={{transform: "rotate(calc(36deg * 4))"}}
+                            style={{
+                                transform: "rotate(calc(36deg * 4))",
+                                animationDelay: "calc(-0.25s * 4)",
+                            }}
                         ></span>
                         <span
-                            style={{transform: "rotate(calc(36deg * 5))"}}
+                            style={{
+                                transform: "rotate(calc(36deg * 5))",
+                                animationDelay: "calc(-0.25s * 5)",
+                            }}
                         ></span>
                         <span
-                            style={{transform: "rotate(calc(36deg * 6))"}}
+                            style={{
+                                transform: "rotate(calc(36deg * 6))",
+                                animationDelay: "calc(-0.25s * 6)",
+                            }}
                         ></span>
                         <span
-                            style={{transform: "rotate(calc(36deg * 7))"}}
+                            style={{
+                                transform: "rotate(calc(36deg * 7))",
+                                animationDelay: "calc(-0.25s * 7)",
+                            }}
                         ></span>
                         <span
-                            style={{transform: "rotate(calc(36deg * 8))"}}
+                            style={{
+                                transform: "rotate(calc(36deg * 8))",
+                                animationDelay: "calc(-0.25s * 8)",
+                            }}
                         ></span>
                         <span
-                            style={{transform: "rotate(calc(36deg * 9))"}}
+                            style={{
+                                transform: "rotate(calc(36deg * 9))",
+                                animationDelay: "calc(-0.25s * 9)",
+                            }}
                         ></span>
                         <span
-                            style={{transform: "rotate(calc(36deg * 10))"}}
+                            style={{
+                                transform: "rotate(calc(36deg *10))",
+                                animationDelay: "calc(-0.25s * 10)",
+                            }}
                         ></span>
-                    </HoverConatct>
+                    </HoverContact>
                 </ContactContainer>
                 <ContactContainer>
                     <form action="">

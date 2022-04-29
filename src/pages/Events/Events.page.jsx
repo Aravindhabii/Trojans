@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar.component";
 import Threed from "./threed";
 import {
@@ -9,11 +9,11 @@ import {
   Rightone,
   Tabletdiv
 } from "./Events.styles";
-import {CodersChemistry} from "../../datas/events.data";
+import {CodersChemistry, MasterMinds} from "../../datas/events.data";
 
-import Technical from "../../components/events/Technical";
-import Tablet from "../../components/events/Tablet";
-import {technicalevents } from "../../datas/technical.data";
+import Technical from '../../components/events/Technical';
+import Tablet from '../../components/events/Tablet';
+import { technicalevents } from '../../datas/technical.data';
 
 const EventsPage = () => {
   const [currentPage, setCurrentPage] = useState(technicalevents);
@@ -21,6 +21,7 @@ const EventsPage = () => {
   const [clickedEvent, setClickedEvent] = useState('');
   const [isphoneopen, setisphoneopen] = React.useState(false);
   const [isTabletOpen, setisTabletOpen] = React.useState(false);
+
   const closetab = () => {
     setisTabletOpen(false);
   };
@@ -33,6 +34,37 @@ const EventsPage = () => {
       setClickedEvent("");
     }
   };
+  useEffect(() => {
+    console.log('clicked useeffect');
+    if(clickedEvent === 'Coders Chemistry'){
+      setCurrentEvent(CodersChemistry);
+    }else if(clickedEvent === 'Master Minds'){
+      console.log('Master Minds');
+      setCurrentEvent(MasterMinds);
+    }else if(clickedEvent === 'Site-ing'){
+      setCurrentEvent(CodersChemistry);
+    }else if(clickedEvent === 'Paper Bytes'){
+      setCurrentEvent(CodersChemistry);
+    }else if(clickedEvent === 'Goose chase'){
+      setCurrentEvent(CodersChemistry);
+    }else if(clickedEvent === "Trojan's Throttle"){
+      setCurrentEvent(CodersChemistry);
+    }else if(clickedEvent === 'Technical'){
+      setCurrentEvent(CodersChemistry);
+    }else if(clickedEvent === 'Technical'){
+      setCurrentEvent(CodersChemistry);
+    }else if(clickedEvent === 'Technical'){
+      setCurrentEvent(CodersChemistry);
+    }else if(clickedEvent === 'Technical'){
+      setCurrentEvent(CodersChemistry);
+    }else if(clickedEvent === 'Technical'){
+      setCurrentEvent(CodersChemistry);
+    }
+
+  }, [clickedEvent]);
+
+
+
 
   return (
     <>
@@ -56,7 +88,7 @@ const EventsPage = () => {
             </Threeddiv>
           </Rightone>
           <Righttwo openorclose={isphoneopen}>
-            <Technical currentPage={currentPage} setCurrentPage={setCurrentPage} clickedEvent={clickedEvent} setClickedEvent={setClickedEvent} isTabletOpen={isTabletOpen} setisTabletOpen={setisTabletOpen}/>
+            <Technical setCurrentEvent={setCurrentEvent} currentEvent={currentEvent} currentPage={currentPage} setCurrentPage={setCurrentPage} clickedEvent={clickedEvent} setClickedEvent={setClickedEvent} isTabletOpen={isTabletOpen} setisTabletOpen={setisTabletOpen}/>
           </Righttwo>
         </div>
       </HeroSection>
