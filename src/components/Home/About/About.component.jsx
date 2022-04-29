@@ -102,13 +102,6 @@ const AboutHome = () => {
                 Chennai Institute of Technology want to create a place for
                 encouraging the young minds of this generation to invoke the
                 creative and tactical side of thinking.
-                {/* <span className="contentextra">
-                  Voluptatum quidem iusto molestias, consequuntur fugiat
-                  possimus minima quasi aliquam! Necessitatibus obcaecati
-                  doloribus dolores vel ut autem numquam. Autem, earum delectus
-                  mollitia natus blanditiis laborum in cumque sequi dolore ut
-                  neque, et minus.
-                </span> */}
               </p>
             </>
           ) : null}
