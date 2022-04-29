@@ -1,7 +1,7 @@
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
 
-import TrojansGold from '../../../assets/Trojans_logo/Gold-Trojans.jpeg';
+import TrojansGold from '../../../assets/Trojans_logo/trojans-full-gold-min.png';
 
 import { HeroSection, HeroContent } from './HeroHome.style';
 

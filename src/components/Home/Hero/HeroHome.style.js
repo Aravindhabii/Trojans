@@ -31,30 +31,18 @@ export const HeroContent = styled.div`
 	position: relative;
 	z-index: 2;
 	letter-spacing: 3px;
-	
+
 	img {
-		width: 10rem;
+		width: 35rem;
 		margin: 0 0.5rem;
 		transition: all 0.3s ease-in-out;
 
-		@media (max-width: 1050px) {
-			width: 9rem;
-		}
-
-		@media (max-width: 1050px) {
-			width: 8.5rem;
-		}
-
-		@media (max-width: 650px) {
-			width: 7.5rem;
-		}
-
-		@media (max-width: 550px) {
-			width: 6rem;
+		@media (max-width: 700px) {
+			width: 80%;
 		}
 
 		@media (max-width: 400px) {
-			width: 5rem;
+			width: 100%;
 		}
 	}
 
