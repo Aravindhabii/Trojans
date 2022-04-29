@@ -31,37 +31,8 @@ export const HeroContent = styled.div`
 	position: relative;
 	z-index: 2;
 	letter-spacing: 3px;
-
-	h1 {
-		color: #fff;
-		font-size: 7rem;
-		font-weight: bold;
-		margin-bottom: 1rem;
-		font-family: 'trojans';
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
-			0 0 10px rgba(255, 255, 255, 0.3), 0 0 25px rgba(255, 255, 255, 0.3);
-
-		@media (max-width: 1050px) {
-			font-size: 6.5rem;
-		}
-
-		@media (max-width: 650px) {
-			font-size: 6rem;
-		}
-
-		@media (max-width: 550px) {
-			font-size: 4rem;
-		}
-
-		@media (max-width: 400px) {
-			font-size: 3rem;
-		}
-	}
-
-	h1 img {
+	
+	img {
 		width: 10rem;
 		margin: 0 0.5rem;
 		transition: all 0.3s ease-in-out;
