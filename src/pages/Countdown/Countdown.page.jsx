@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import moment from 'moment';
 import gsap from 'gsap';
+import { Helmet } from 'react-helmet';
 
 import { CountdownContainer, CountdownCircleStyle } from './Countdown.style';
 
 import OnlyLogo_White from '../../assets/Trojans_logo/OnlyLogo_White.png';
 
-const targetTime = moment('18-05-2022', 'DD-MM-YYYY');
+const targetTime = moment('18-05-2021', 'DD-MM-YYYY');
 
 const CountdownCircle = ({ time, timeType, strokeDashOffset, color }) => {
 	const circleRef = useRef();
@@ -58,6 +59,9 @@ const Countdown = ({ setShowCountdown }) => {
 
 	return (
 		<CountdownContainer>
+			<Helmet>
+				<title>COUNTDOWN | TROJANS</title>
+			</Helmet>
 			<div>
 				<h2>A NATIONAL LEVEL TECHNICAL SYMPOSIUM</h2>
 				<h1>

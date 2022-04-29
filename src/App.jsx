@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { GlobalStyles } from './global.style.js';
-import gsap from 'gsap';
 
 import Cursor from './components/Cursor/Cursor.component.jsx';
 import HomePage from './pages/Home/Home.page.jsx';
@@ -24,7 +23,7 @@ const App = () => {
 		>
 			<Cursor cursorRef={cursorRef} />
 			<GlobalStyles />
-			{showCountdown ? (
+			{!showCountdown ? (
 				<Countdown setShowCountdown={setShowCountdown} />
 			) : (
 				<Routes>

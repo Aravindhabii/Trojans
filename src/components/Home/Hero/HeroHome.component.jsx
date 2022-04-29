@@ -15,7 +15,7 @@ const HeroHome = () => {
 				<h3>DEPARTMENT OF INFORMATION TECHNOLOGY</h3>
 				<h3> PRESENTS</h3>
 				<img src={TrojansGold} alt='Trojans' />
-				<h3>A NATIONAL LEVEL TECHNICAL SYMOPOSIUM</h3>
+				<h3>A NATIONAL LEVEL TECHNICAL SYMPOSIUM</h3>
 				<h3>EXPLORE</h3>
 				{/* <a href='#events'> */}
 				<svg
