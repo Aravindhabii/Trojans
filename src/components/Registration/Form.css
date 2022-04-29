@@ -175,3 +175,11 @@
 {
     background: #000;
 }
+
+
+@media (max-width: 600px) {
+    .form-registration
+    {
+        width: 80%;
+    }
+}
