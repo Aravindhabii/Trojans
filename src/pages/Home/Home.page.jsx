@@ -23,7 +23,7 @@ const HomePage = () => (
 		<Helmet>
 			<title>HOME | TROJANS</title>
 		</Helmet>
-		{/* <Preloader /> */}
+		<Preloader />
 		<Navbar active={{ route: 'home', scroll: 0 }} />
 		<HeroHome />
 		<AboutHome />

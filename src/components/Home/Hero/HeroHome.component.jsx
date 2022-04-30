@@ -1,5 +1,4 @@
 import React from 'react';
-import Tilt from 'react-parallax-tilt';
 
 import TrojansGold from '../../../assets/Trojans_logo/trojans-full-gold-min.png';
 
