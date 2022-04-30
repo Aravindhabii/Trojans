@@ -148,10 +148,10 @@ export const HeroSection = styled.section`
   }
   @media (max-width:950px) { 
     .btn2:hover {
-    transform: scale(1.3)  rotate(270deg);
+      transform: scale(1.3)  rotate(270deg);
   }
   .btn1:hover {
-    transform: scale(1.3) rotate(90deg)
+      transform: scale(1.3) rotate(90deg)
   }
       div {
         /* transform: rotate(-180deg); */
@@ -168,7 +168,6 @@ export const HeroSection = styled.section`
   .cam1 {
     position: absolute;
     top: 4%;
-    /* transform: translateY(-50%); */
     left: 12%;
     height: 20px;
     width: 20px;

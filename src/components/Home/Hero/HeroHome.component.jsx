@@ -1,7 +1,6 @@
 import React from 'react';
-import Tilt from 'react-parallax-tilt';
 
-import OnlyLogo_White from '../../../assets/Trojans_logo/OnlyLogo_White.png';
+import TrojansGold from '../../../assets/Trojans_logo/trojans-full-gold-min.png';
 
 import { HeroSection, HeroContent } from './HeroHome.style';
 
@@ -14,14 +13,8 @@ const HeroHome = () => {
 			<HeroContent>
 				<h3>DEPARTMENT OF INFORMATION TECHNOLOGY</h3>
 				<h3> PRESENTS</h3>
-				<h1 className='trojans-logo'>
-					TR
-					<Tilt>
-						<img src={OnlyLogo_White} alt='Trojans' />
-					</Tilt>
-					JANS
-				</h1>
-				<h3>A NATIONAL LEVEL TECHNICAL SYMOPOSIUM</h3>
+				<img src={TrojansGold} alt='Trojans' />
+				<h3>A NATIONAL LEVEL TECHNICAL SYMPOSIUM</h3>
 				<h3>EXPLORE</h3>
 				{/* <a href='#events'> */}
 				<svg

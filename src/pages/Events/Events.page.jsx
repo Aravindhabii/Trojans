@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "../../components/Navbar/Navbar.component";
-import Threed from "./threed";
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+
+import Navbar from '../../components/Navbar/Navbar.component';
+import Threed from './threed';
 import {
-  HeroSection,
-  Button,
-  Threeddiv,
-  Righttwo,
-  Rightone,
-  Tabletdiv
-} from "./Events.styles";
-import {CodersChemistry, MasterMinds} from "../../datas/events.data";
+	HeroSection,
+	Button,
+	Threeddiv,
+	Righttwo,
+	Rightone,
+	Tabletdiv
+} from './Events.styles';
+import { CodersChemistry, MasterMinds } from '../../datas/events.data';
 
 import Technical from '../../components/events/Technical';
 import Tablet from '../../components/events/Tablet';
@@ -74,6 +76,45 @@ const EventsPage = () => {
 
 
 
+	const closetab = () => {
+		setisTabletOpen(false);
+	};
+	const click = (e) => {
+		if (e.target.value !== clickedEvent) {
+			setClickedEvent(e.target.value);
+			setisphoneopen(true);
+		} else {
+			setisphoneopen(false);
+			setClickedEvent('');
+		}
+	};
+	useEffect(() => {
+		console.log('clicked useeffect');
+		if (clickedEvent === 'Coders Chemistry') {
+			setCurrentEvent(CodersChemistry);
+		} else if (clickedEvent === 'Master Minds') {
+			console.log('Master Minds');
+			setCurrentEvent(MasterMinds);
+		} else if (clickedEvent === 'Site-ing') {
+			setCurrentEvent(CodersChemistry);
+		} else if (clickedEvent === 'Paper Bytes') {
+			setCurrentEvent(CodersChemistry);
+		} else if (clickedEvent === 'Goose chase') {
+			setCurrentEvent(CodersChemistry);
+		} else if (clickedEvent === "Trojan's Throttle") {
+			setCurrentEvent(CodersChemistry);
+		} else if (clickedEvent === 'Technical') {
+			setCurrentEvent(CodersChemistry);
+		} else if (clickedEvent === 'Technical') {
+			setCurrentEvent(CodersChemistry);
+		} else if (clickedEvent === 'Technical') {
+			setCurrentEvent(CodersChemistry);
+		} else if (clickedEvent === 'Technical') {
+			setCurrentEvent(CodersChemistry);
+		} else if (clickedEvent === 'Technical') {
+			setCurrentEvent(CodersChemistry);
+		}
+	}, [clickedEvent]);
 
   return (
     <>

@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 
 import { PreLoaderContainer } from './PreLoader.style';
 
-import TrojansLogo from '../../assets/Trojans_logo/OnlyLogo_White.png';
+import TrojansLogo from '../../assets/Trojans_logo/trojans_logo.png';
 
 const Preloader = () => {
 	const preLoaderRef = useRef();
@@ -12,6 +12,11 @@ const Preloader = () => {
 	useEffect(() => {
 		gsap
 			.timeline()
+			.to('body', {
+				duration: 1,
+				overflow: 'hidden'
+			})
+
 			.fromTo(
 				spans('img'),
 				{
@@ -54,7 +59,11 @@ const Preloader = () => {
 					zIndex: -100
 				},
 				'+=1'
-			);
+			)
+			.to('body', {
+				duration: 1,
+				overflow: 'auto'
+			});
 	}, []);
 
 	return (
