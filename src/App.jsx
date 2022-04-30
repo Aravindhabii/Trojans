@@ -1,6 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { GlobalStyles } from './global.style.js';
+import gsap from 'gsap';
+import Sponser from './pages/Sponser/sponser.jsx';
+
 import Cursor from './components/Cursor/Cursor.component.jsx';
 import HomePage from './pages/Home/Home.page.jsx';
 import EventsPage from './pages/Events/Events.page';

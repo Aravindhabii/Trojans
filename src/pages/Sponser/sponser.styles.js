@@ -13,7 +13,7 @@ h1 {
 h2 {
     /* color: white; */
     font-size: 3.5rem;
-    color: #9900F0;
+    color: white;
     text-shadow: 0 0 5px #9900F0,
             0 0 10px #9900F0, 0 0 25px #9900F0;
 }
@@ -31,41 +31,44 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     align-items: center;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    /* justify-content: space-evenly;
+     */
     position: relative;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
 }
 .main2 {
     flex-direction:row-reverse !important;
 }
 .main {
     position: relative;
-    height: 420px;
-    width:320px;
+    height: 360px;
+    width:260px;
     background-color:white;
     margin: 4rem 0rem 4rem 0rem;
     
     z-index: 4;
     border-radius: 10px;
-    box-shadow: 2px 2px 30px rgb(56, 232, 255);
+    /* box-shadow: 2px 2px 30px rgb(56, 232, 255); */
 }
 .overlay {
     position: absolute;
-    left: -3%;
+    left: -8%;
     height: 50%;
-    width: 60%;
-    top: 53%;
+    width: 70%;
+    top: 57%;
     border-radius: 10px;
     background-color: #9900F0;
     box-shadow: 5px 5px 50px rgba(153, 0, 240, 1);
-    z-index: 1;
+    z-index: 3;
 }
 .overlay2 {
     position: absolute;
     right: -3%;
     height: 50%;
     width: 60%;
-    top: -3%;
+    top: -2%;
     border-radius: 10px;
     background-color: #9900F0;
     box-shadow: 5px 5px 50px rgba(153, 0, 240, 1);

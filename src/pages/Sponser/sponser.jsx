@@ -11,8 +11,8 @@ function sponser() {
           <div className="sp1">
             <img src={img} alt="" />
           </div>
-          <div className="overlay"></div>
-          <div className="overlay2"><h2>Poorvika</h2></div>
+          <div className="overlay"><h2>Poorvika</h2></div>
+          <div className="overlay2"></div>
         </div>
        
       
@@ -21,16 +21,38 @@ function sponser() {
           <div className="sp1">
             <img src={img} alt="" />
           </div>
-          <div className="overlay"></div>
-          <div className="overlay2"><h2>Poorvika</h2></div>
+          <div className="overlay"><h2>Poorvika</h2></div>
+          <div className="overlay2"></div>
         </div>
         <div className="main">
           <div className="sp1">
             <img src={img} alt="" />
           </div>
-          <div className="overlay"></div>
-          <div className="overlay2"><h2>Poorvika</h2></div>
+          <div className="overlay"><h2>Poorvika</h2></div>
+          <div className="overlay2"></div>
         </div>
+        <div className="main">
+          <div className="sp1">
+            <img src={img} alt="" />
+          </div>
+          <div className="overlay"><h2>Poorvika</h2></div>
+          <div className="overlay2"></div>
+        </div>
+        <div className="main">
+          <div className="sp1">
+            <img src={img} alt="" />
+          </div>
+          <div className="overlay"><h2>Poorvika</h2></div>
+          <div className="overlay2"></div>
+        </div>
+        <div className="main">
+          <div className="sp1">
+            <img src={img} alt="" />
+          </div>
+          <div className="overlay"><h2>Poorvika</h2></div>
+          <div className="overlay2"></div>
+        </div>
+        
         
       </div>
     </SponserSection>
