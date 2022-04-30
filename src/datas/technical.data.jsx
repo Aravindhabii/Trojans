@@ -5,6 +5,7 @@ export const technicalevents = [
   { id: 1, name: "Paper Bytes" },
   { id: 1, name: "Goose chase" },
   { id: 1, name: "Trojan's Throttle" },
+  { id: 1, name: "Trojanctf" },
 ];
 
 export const nontechnicalevents = [
@@ -13,7 +14,8 @@ export const nontechnicalevents = [
   { id: 1, name: "Event 3" },
   { id: 1, name: "Event 4" },
   { id: 1, name: "Event 5" },
-  { id: 1, name: "Event 6" }
+  { id: 1, name: "Event 6" },
+  { id: 1, name: "Event 7" },
 ]
 
 export const workshops = [

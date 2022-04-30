@@ -42,6 +42,17 @@ export const HeroSection = styled.section`
     align-items: center;
     justify-content: center;
   }
+  @media (max-width: 910px) {
+    .left {
+      width: 100%;
+      z-index: 1;
+    }
+    .right{
+      width: 100%;
+      position: absolute;
+      zindex: 2;
+    }
+  }
 `;
 
 export const Rightone = styled.div`
@@ -51,6 +62,12 @@ export const Rightone = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1150px) {
+    display: ${({isphoneopen}) => !isphoneopen ? 'flex' : 'none'};
+  }
+  @media (max-width: 910px){
+    display: none;
+  }
 `;
 
 export const Righttwo = styled.div.attrs({
@@ -63,25 +80,41 @@ export const Righttwo = styled.div.attrs({
   justify-content: center;
   align-items: center;
   transform: ${({ openorclose }) =>
-      openorclose ? "translateX(0)" : "translateX(100%)"}
+      openorclose ? "translateX(0)" : "translateX(200%)"}
     rotate(0deg);
   transition: transform 0.5s ease-in-out;
+  @media (max-width: 1150px) {
+    width: 50%;
+    z-index: 5;
+  }
 `;
 
 export const Button = styled.button`
   position: relative;
-  background-color: #fff;
+  /* background-color: #fff; */
   border: none;
   width: 70%;
   border-radius: 5px;
-  color: #000;
-  font-size: 1.2rem;
+  color: #fff;
+  background: transparent;
+  font-size: 1.8rem;
   font-weight: bold;
   padding: 3rem 1rem;
   margin-top: 1rem;
+  text-align: center;
+  border: 1px solid #03e9f4;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(46, 255, 171, 0.86);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(46, 255, 171, 0.86);
+  box-shadow: 0px 0px 10px 0px rgba(46, 255, 171, 0.86);
   &:hover {
-    background-color: #000;
-    color: #fff;
+    color: rgba(46, 255, 171, 0.86);
+    text-shadow: 0px 0px 10px rgba(46, 255, 171, 0.86);
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(46, 255, 171, 0.86);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(46, 255, 171, 0.86);
+    box-shadow: 0px 0px 30px 0px rgba(46, 255, 171, 0.86);
+  }
+  @media (max-width: 910px) {
+    width: 90%;
   }
 `;
 
@@ -103,6 +136,10 @@ export const Eventsdiv = styled.div.attrs({
   justify-content: center;
   overflow-x: hidden;
   align-items: center;
+  border-radius: 60px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 5px #03e9f4,
+    inset 0 0 5px rgba(3, 233, 244, 0.5), inset 0 0 15px rgba(3, 233, 244, 0.5),
+    inset 0 0 5px rgba(3, 233, 244, 0.5);
   .eventlistdiv {
     display: flex;
     flex-direction: column;
@@ -111,11 +148,15 @@ export const Eventsdiv = styled.div.attrs({
     height: 85%;
     width: 95%;
   }
+
+  @media (max-width: 1150px) {
+    left: 60%;
+    background: rgba(0, 0, 0, 0.9);
+  }
 `;
 
 export const Tabletdiv = styled.div.attrs({
   className: "tabletdiv",
-
 })`
   position: absolute;
   width: 100%;
@@ -129,6 +170,7 @@ export const Tabletdiv = styled.div.attrs({
   transform: ${({ isTabletOpen }) =>
     isTabletOpen ? "translateX(0)" : "translateX(200%)"};
   transition: all 0.7s ease-in-out;
+  z-index: 3;
   .forclose {
     position: absolute;
     width: 100%;
@@ -295,29 +337,34 @@ export const Eventslist = styled.button.attrs({
 })`
   position: relative;
   width: 70%;
-  height: 9%;
+  height: 11%;
   border: none;
-  /* display: none; */
+  display: flex;
   align-items: center;
   justify-content: center;
-  background: #000;
   border-radius: 5px;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #fff;
+  text-shadow: 0px 0px 10px #03e9f4 ;
+    box-shadow: 0px 0px 10px 0px #03e9f4, inset 0px 0px 4px 0px #03e9f4;
+  background: transparent;
+  color: #03e9f4;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   /* transform: translateX(400%); */
   margin: 1rem;
   &:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #03e9f4;
+    color: #fff;
   }
+
 `;
 
 export const Threeddiv = styled.div`
   position: absolute;
   height: 100%;
-  width: 50%;
+  width: 70%;
   display: flex;
   bottom: 0;
   left: ${({ openorclose }) => (openorclose ? "10%" : "40%")};
