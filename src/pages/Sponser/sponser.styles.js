@@ -9,10 +9,12 @@ h1 {
     color: white;
     font-size: 4rem;
     text-align: center;
+    padding-top: 4rem;
 }
 h2 {
     /* color: white; */
-    font-size: 3.5rem;
+    font-size: 1.5rem;
+
     color: white;
     text-shadow: 0 0 5px #9900F0,
             0 0 10px #9900F0, 0 0 25px #9900F0;
@@ -32,8 +34,10 @@ h2 {
     margin-right: auto;
     align-items: center;
     display: grid;
+    row-gap: 3rem;
     /* justify-content: space-evenly;
      */
+    margin-top: 2rem;
     position: relative;
     grid-template-columns: repeat(3,1fr);
     justify-items: center;
@@ -47,31 +51,34 @@ h2 {
     width:260px;
     background-color:white;
     margin: 4rem 0rem 4rem 0rem;
-    
+    border: 2px solid rgba(153, 0, 240, 1);
     z-index: 4;
     border-radius: 10px;
-    /* box-shadow: 2px 2px 30px rgb(56, 232, 255); */
+    
 }
 .overlay {
     position: absolute;
-    left: -8%;
-    height: 50%;
-    width: 70%;
-    top: 57%;
-    border-radius: 10px;
+    left:10%;
+    height: 15%;
+    width: 100%;
+    top: 90%;
+    /* border-radius: 10px; */
     background-color: #9900F0;
     box-shadow: 5px 5px 50px rgba(153, 0, 240, 1);
     z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .overlay2 {
     position: absolute;
-    right: -3%;
+    left: -3%;
     height: 50%;
     width: 60%;
     top: -2%;
     border-radius: 10px;
-    background-color: #9900F0;
-    box-shadow: 5px 5px 50px rgba(153, 0, 240, 1);
+    background-color: rgb(56, 232, 255);
+    box-shadow: 2px 2px 30px rgb(56, 232, 255);
     z-index: 1; 
 }
 .overlay3 {

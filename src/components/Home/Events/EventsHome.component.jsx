@@ -48,12 +48,13 @@ const EventsHome = () => {
 		>
 			<HexBg direction='to top' />
 			<main
-				onClick={() =>
+				onClick={() => {
+					console.log('hii');
 					setPhonesPosition({
-						phone1: '50%',
-						tablet1: '-150%'
-					})
-				}
+						phone1: 20,
+						tablet1: 10
+					});
+				}}
 			></main>
 			{tabletImage.length > 0 && window.innerWidth < 800 && (
 				<div
