@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import GoldTexture from '../../assets/Trojans_logo/gold_texture.jpg';
+
 export const NavbarContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
@@ -14,7 +16,11 @@ export const NavbarContainer = styled.div`
 	color: white;
 	z-index: 10;
 	padding: 0 5rem;
-	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 80%);
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 0) 80%
+	);
 
 	@media (max-width: 500px) {
 		padding: 0 2rem;
@@ -26,6 +32,13 @@ export const NavbarLogo = styled.div`
 	align-items: center;
 	justify-content: center;
 	margin-right: 1rem;
+
+	h1 {
+		color: transparent;
+		background: url(${GoldTexture});
+		background-clip: text;
+		-webkit-background-clip: text;
+	}
 `;
 
 export const MenuButton = styled.div`

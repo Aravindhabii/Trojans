@@ -9,6 +9,7 @@ export const CountdownContainer = styled.div`
 	height: 100vh;
 	background-color: black;
 	color: #fff;
+	padding: 0 3rem;
 
 	div {
 		display: flex;
@@ -22,19 +23,53 @@ export const CountdownContainer = styled.div`
 		flex-direction: row;
 	}
 
-	h1 {
-		font-size: 7rem;
-		font-weight: bold;
-		margin-bottom: 1rem;
-		font-family: 'trojans';
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	img {
+		width: 35rem;
+		margin: 0 0.5rem;
 	}
 
-	h1 img {
-		width: 10rem;
-		margin: 0 0.5rem;
+	h2 {
+		text-align: center;
+	}
+
+	@media (max-width: 768px) {
+		h2 {
+			font-size: 1.5rem;
+		}
+
+		img {
+			width: 30rem;
+		}
+	}
+
+	@media (max-width: 600px) {
+		h2 {
+			font-size: 1.2rem;
+		}
+
+		img {
+			width: 25rem;
+		}
+	}
+
+	@media (max-width: 460px) {
+		h2 {
+			font-size: 1.1rem;
+		}
+
+		img {
+			width: 22rem;
+		}
+	}
+
+	@media (max-width: 400px) {
+		h2 {
+			font-size: 1rem;
+		}
+
+		img {
+			width: 18rem;
+		}
 	}
 `;
 
@@ -93,5 +128,22 @@ export const CountdownCircleStyle = styled.div`
 		transform: translateY(40%);
 		box-shadow: 0 0 20px ${({ color }) => color},
 			0 0 60px ${({ color }) => color};
+	}
+
+	@media (max-width: 600px) {
+		width: 5rem;
+
+		svg {
+			display: none;
+		}
+
+		.dots {
+			display: none;
+		}
+	}
+
+	@media (max-width: 350px) {
+		width: 3rem;
+		margin: 0 .5rem;
 	}
 `;
