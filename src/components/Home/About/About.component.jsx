@@ -91,7 +91,7 @@ const AboutHome = () => {
                 <h1>About Trojans.</h1>
                 Trojans is a national level technical symposium organised by the
                 IT department of Chennai Institute of Technology. Trojans were
-                first launched on the day of 13th March, 2022. Trojans aim to
+                first launched on the day of 13th March, 2022. Trojans aims to
                 make the process of gaining technical knowledge into a more
                 interactive and fun activity by organising various events in
                 their symposium. Trojans take their name from the hollow wooden

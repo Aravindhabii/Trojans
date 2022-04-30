@@ -1,12 +1,18 @@
 import React from "react";
-import {RegistrationContainer, RegistrationDiv} from "./Registration.styles";
+import {
+    RegistrationContainer,
+    RegistrationDiv,
+    RegistrationDivForm,
+} from "./Registration.styles";
+import FormComponent from "./FormComponent";
+import GalleryComponent from "./GalleryComponent";
 
 function Registration() {
     return (
         <>
             <RegistrationContainer>
-                <RegistrationDiv></RegistrationDiv>
-                <RegistrationDiv></RegistrationDiv>
+                <GalleryComponent />
+                <FormComponent />
             </RegistrationContainer>
         </>
     );

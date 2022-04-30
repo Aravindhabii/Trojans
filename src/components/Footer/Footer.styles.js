@@ -1,4 +1,6 @@
 import styled, {keyframes} from "styled-components";
+// import footerGif from "../../assets/footer/footer1.gif";
+import footerGif from "../../assets/footer/footer2.jpeg";
 
 export const FooterContainer = styled.section`
     width: 100%;
@@ -58,6 +60,13 @@ export const FooterSubDiv = styled.section`
     align-items: center;
     justify-content: center;
     position: relative;
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
     p {
         color: #fff;
         padding: 2% 7%;
@@ -75,6 +84,7 @@ export const FooterSubDiv = styled.section`
         position: relative;
         width: 18rem;
         height: 12rem;
+        /* background: url(${footerGif}) center/cover no-repeat; */
         span:nth-child(1) {
             position: absolute;
             width: 100%;
