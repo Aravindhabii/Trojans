@@ -14,6 +14,13 @@ export const RegistrationDivForm = styled.div`
     background-color: #000;
     overflow: scroll;
     padding: 3% 0;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 20px;
+    }
     form {
         display: flex;
         flex-direction: column;
@@ -139,5 +146,23 @@ export const RegistrationDivForm = styled.div`
     button:hover {
         background-color: #03e9f4;
         color: #000;
+    }
+    @media (max-width: 500px) {
+        width: 100%;
+        h1 {
+            font-size: 2.3rem !important;
+        }
+        .data_events label {
+            margin-bottom: 1rem;
+        }
+        .data_events input {
+            width: 80%;
+        }
+        .events_checkbox {
+            width: 95%;
+            label {
+                margin-bottom: 1rem;
+            }
+        }
     }
 `;
