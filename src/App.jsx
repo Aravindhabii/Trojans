@@ -8,7 +8,7 @@ import Cursor from './components/Cursor/Cursor.component.jsx';
 import HomePage from './pages/Home/Home.page.jsx';
 import EventsPage from './pages/Events/Events.page';
 import GuidelinesPage from './pages/Guidelines/Guidelines.page';
-import RegistrationPage from './pages/Registration/Registration.page';
+import RegistrationPage from './pages/Registration/Registration';
 import Countdown from './pages/Countdown/Countdown.page.jsx';
 
 const App = () => {
