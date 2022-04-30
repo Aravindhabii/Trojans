@@ -17,10 +17,10 @@ import { technicalevents } from '../../datas/technical.data';
 
 const EventsPage = () => {
   const [currentPage, setCurrentPage] = useState(technicalevents);
+  const [isphoneopen, setisphoneopen] = useState(false);
   const [currentEvent, setCurrentEvent] = useState(CodersChemistry);
   const [clickedEvent, setClickedEvent] = useState('');
-  const [isphoneopen, setisphoneopen] = React.useState(false);
-  const [isTabletOpen, setisTabletOpen] = React.useState(false);
+  const [isTabletOpen, setisTabletOpen] = useState(false);
 
   const closetab = () => {
     setisTabletOpen(false);
@@ -34,6 +34,15 @@ const EventsPage = () => {
       setClickedEvent("");
     }
   };
+
+  const phoneClick = (e) => {
+    console.log(window.screen.width);
+    if (isphoneopen === true) {
+      setisphoneopen(false);
+      setClickedEvent("");
+    }
+  }
+
   useEffect(() => {
     console.log('clicked useeffect');
     if(clickedEvent === 'Coders Chemistry'){
@@ -81,8 +90,8 @@ const EventsPage = () => {
             Workshops
           </Button>
         </div>
-        <div className="right">
-          <Rightone>
+        <div className="right" onClick={phoneClick}>
+          <Rightone isphoneopen={isphoneopen}>
             <Threeddiv openorclose={isphoneopen}>
               <Threed />
             </Threeddiv>
