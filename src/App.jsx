@@ -14,7 +14,7 @@ import Countdown from './pages/Countdown/Countdown.page.jsx';
 
 const App = () => {
 	const theme = useContext(ThemeContext);
-	const [showCountdown, setShowCountdown] = useState(false);
+	const [showCountdown, setShowCountdown] = useState(true);
 	const cursorRef = useRef();
 
 	return (
@@ -28,7 +28,7 @@ const App = () => {
 			>
 				<Cursor cursorRef={cursorRef} />
 				<GlobalStyles />
-				{!showCountdown ? (
+				{showCountdown ? (
 					<Countdown setShowCountdown={setShowCountdown} />
 				) : (
 					<Routes>
