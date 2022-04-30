@@ -6,7 +6,7 @@ import {
     ContactPerson,
     HoverContact,
 } from "./Contact.styles";
-import NeonVideo from "../../../assets/about/Frame11.mp4";
+// import NeonVideo from "../../../assets/about/Frame11.mp4";
 
 function Contact() {
     return (

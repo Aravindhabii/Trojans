@@ -45,7 +45,7 @@ const Countdown = ({ setShowCountdown }) => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			if (timeBetween.milliseconds() < 0) {
-				setShowCountdown(true);
+				setShowCountdown(false);
 				clearInterval(interval);
 				return;
 			}
