@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import HexImg from '../../../assets/home/Hexagon.svg';
+import HexImageWhite from '../../../assets/home/Hexagon-white-1.png';
 
 export const HexBgStyle = styled.div`
 	height: 100vh;
