@@ -6,7 +6,7 @@ import {
     ContactPerson,
     HoverContact,
 } from "./Contact.styles";
-import NeonVideo from "../../../assets/about/Frame11.mp4";
+// import NeonVideo from "../../../assets/about/Frame11.mp4";
 
 function Contact() {
     return (
@@ -17,12 +17,8 @@ function Contact() {
                 </video> */}
                 <ContactContainer>
                     <h1>Contact</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Iure molestiae iste nam, quae cumque saepe. Atque
-                        perspiciatis eum incidunt ipsam ducimus odit soluta
-                        nobis dolor, esse nisi, necessitatibus voluptas. Ut!
-                    </p>
+                    <h2>What to learn more about us ? Confused ?</h2>
+                    <h3>Contact us to know more about us.</h3>
                     <ContactPerson>
                         <h2>President : 8787878787</h2>
                     </ContactPerson>

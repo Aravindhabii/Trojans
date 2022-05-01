@@ -1,5 +1,6 @@
 import React from "react";
 import {FooterContainer, FooterDiv, FooterSubDiv} from "./Footer.styles";
+import Footer1 from "../../assets/footer/footer1.mp4";
 
 function Footer() {
     return (
@@ -7,17 +8,26 @@ function Footer() {
             <FooterDiv>
                 <FooterSubDiv>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Est natus inventore maxime odio? Nostrum inventore esse
-                        nihil repellat vero labore tempora iusto, aperiam culpa
-                        illo veritatis delectus itaque aliquid modi.
+                        Trojans is a national level technical symposium
+                        organised by the IT department of Chennai Institute of
+                        Technology. <br /> Trojans aims to make the process of
+                        gaining technical knowledge into a more interactive and
+                        fun activity by organising various events in their
+                        symposium.
                     </p>
                     <p>
-                        <a href=""><img src="https://img.icons8.com/ios/40/ffffff/instagram-new--v1.png"/></a>
-                        <a href=""><img src="https://img.icons8.com/ios/50/ffffff/youtube-play--v1.png"/></a>
+                        <a href="">
+                            <img src="https://img.icons8.com/ios/40/ffffff/instagram-new--v1.png" />
+                        </a>
+                        <a href="">
+                            <img src="https://img.icons8.com/ios/50/ffffff/youtube-play--v1.png" />
+                        </a>
                     </p>
                 </FooterSubDiv>
                 <FooterSubDiv>
+                    <video loop autoPlay muted>
+                        <source src={Footer1} type="video/mp4" />
+                    </video>
                     <div>
                         <span></span>
                         <span></span>

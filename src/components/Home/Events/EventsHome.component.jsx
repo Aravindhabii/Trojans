@@ -4,9 +4,13 @@ import Tilt from 'react-parallax-tilt';
 import { PhonesContainer, PhoneButtonStyles } from './EventsHome.style';
 
 import HexBg from '../HexBg/HexBg.component';
+import EventsTab from './EventsTab.component';
 
 import Phone1 from '../../../assets/home/phonepng.png';
 import Tablet1 from '../../../assets/home/tabletpng.png';
+import TechnicalBg from '../../../assets/home/events/1.jpg';
+import NonTechnicalBg from '../../../assets/home/events/2.jpg';
+import WorkshopsBg from '../../../assets/home/events/3.jpg';
 
 const PhoneButton = ({ text, bgColor, url, handlePhoneButtonClick }) => (
 	<>
@@ -30,12 +34,12 @@ const EventsHome = () => {
 	});
 	const [tabletImage, setTabletImage] = useState('');
 
-	const handlePhoneButtonClick = (url) => {
+	const handlePhoneButtonClick = (slug) => {
 		setPhonesPosition({
 			phone1: 20,
 			tablet1: 10
 		});
-		setTabletImage(url);
+		setTabletImage(slug);
 	};
 
 	return (
@@ -43,15 +47,15 @@ const EventsHome = () => {
 			phone1={Phone1}
 			tablet1={Tablet1}
 			phonesPosition={phonesPosition}
-			url={tabletImage}
 			id='events'
+			url={TechnicalBg}
 		>
 			<HexBg direction='to top' />
 			<main
 				onClick={() =>
 					setPhonesPosition({
-						phone1: '50%',
-						tablet1: '-150%'
+						phone1: 20,
+						tablet1: 10
 					})
 				}
 			></main>
@@ -85,20 +89,17 @@ const EventsHome = () => {
 				<PhoneButton
 					text='Technical Events'
 					bgColor='#03e9f4'
-					url='https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg'
-					handlePhoneButtonClick={handlePhoneButtonClick}
+					handlePhoneButtonClick={() => handlePhoneButtonClick('technical')}
 				/>
 				<PhoneButton
 					text='Non Technical Events'
 					bgColor='#03e9f4'
-					url='https://images.pexels.com/photos/302743/pexels-photo-302743.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
-					handlePhoneButtonClick={handlePhoneButtonClick}
+					handlePhoneButtonClick={() => handlePhoneButtonClick('non-technical')}
 				/>
 				<PhoneButton
 					text='Workshops'
 					bgColor='#03e9f4'
-					url='https://media.istockphoto.com/photos/picturesque-morning-in-plitvice-national-park-colorful-spring-scene-picture-id1093110112?k=20&m=1093110112&s=612x612&w=0&h=3OhKOpvzOSJgwThQmGhshfOnZTvMExZX2R91jNNStBY='
-					handlePhoneButtonClick={handlePhoneButtonClick}
+					handlePhoneButtonClick={() => handlePhoneButtonClick('workshops')}
 				/>
 			</Tilt>
 			{window.innerWidth > 500 && (
@@ -107,7 +108,48 @@ const EventsHome = () => {
 					className='tablet-container'
 					perspective={4000}
 				>
-					<div></div>
+					{tabletImage.length > 0 && tabletImage === 'technical' && (
+						<EventsTab
+							events={[
+								"Coder's Chemistry",
+								'Mastermind',
+								'Site-ing',
+								'Paper bytes',
+								"Trojan's Throttle",
+								'Goose Chase'
+							]}
+							title='Technical Events'
+							imgUrl={TechnicalBg}
+						/>
+					)}
+					{tabletImage.length > 0 && tabletImage === 'non-technical' && (
+						<EventsTab
+							title='Non Technical Events'
+							events={[
+								"Coder's Chemistry",
+								'Mastermind',
+								'Site-ing',
+								'Paper bytes',
+								"Trojan's Throttle",
+								'Goose Chase'
+							]}
+							imgUrl={NonTechnicalBg}
+						/>
+					)}
+					{tabletImage.length > 0 && tabletImage === 'workshops' && (
+						<EventsTab
+							title='Workshops'
+							events={[
+								"Coder's Chemistry",
+								'Mastermind',
+								'Site-ing',
+								'Paper bytes',
+								"Trojan's Throttle",
+								'Goose Chase'
+							]}
+							imgUrl={WorkshopsBg}
+						/>
+					)}
 				</Tilt>
 			)}
 		</PhonesContainer>
