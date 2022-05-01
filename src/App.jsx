@@ -4,7 +4,7 @@ import { GlobalStyles } from './global.style.js';
 import { ThemeProvider } from 'styled-components';
 import ThemeContext from './Theme.context.jsx';
 
-import Sponser from './pages/Sponser/sponser.jsx';
+import Sponser from './pages/Sponser/Sponser.jsx';
 import Cursor from './components/Cursor/Cursor.component.jsx';
 import HomePage from './pages/Home/Home.page.jsx';
 import EventsPage from './pages/Events/Events.page';
