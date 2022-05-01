@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {toast} from "react-toastify";
 
 function loadScript(src) {
     return new Promise((resolve) => {
@@ -14,7 +15,6 @@ function loadScript(src) {
     });
 }
 
-
 const __DEV__ = document.domain === "localhost";
 
 function Pay() {
@@ -26,12 +26,16 @@ function Pay() {
         );
 
         if (!res) {
-            alert("Razorpay SDK failed to load. Are you online?");
+            // alert("Razorpay SDK failed to load. Are you online?");
+            toast.error("Some error occurred. Please try again later.");
             return;
         }
 
         const data = await fetch("http://localhost:8080/razorpay", {
             method: "POST",
+            body: JSON.stringify({
+                amount: "100",
+            }),
         }).then((t) => t.json());
 
         console.log(data);
@@ -53,7 +57,6 @@ function Pay() {
                 name,
                 email: "prasannavelmuruagn0200@gmail.com",
                 phone_number: "",
-
             },
         };
         const paymentObject = new window.Razorpay(options);
