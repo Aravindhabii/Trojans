@@ -8,7 +8,6 @@ import { useGLTF } from '@react-three/drei';
 function Fredbear({ ...props }) {
 	const group = useRef();
 	const { nodes, materials } = useGLTF('/fredbear.glb');
-	console.log(nodes, 'nodes');
 	return (
 		<group ref={group} {...props} dispose={null}>
 			<group position={[0, -0.45, -0.02]} rotation={[-Math.PI / 2, 0, 0]}>

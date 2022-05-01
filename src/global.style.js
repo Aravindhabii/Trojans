@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
 		margin: 0;
 		box-sizing:border-box;
 		scroll-behavior: smooth;
-		/* cursor: none; */
+		cursor: none;
 		user-select: none;
 	}
 
