@@ -31,13 +31,13 @@ const App = () => {
 				{/* {showCountdown ? (
 					<Countdown setShowCountdown={setShowCountdown} />
 				) : ( */}
-					<Routes>
-						<Route path='/' element={<HomePage />} />
-						<Route exact path='/events' element={<EventsPage />} />
-						<Route exact path='/guidelines' element={<GuidelinesPage />} />
-						<Route exact path='/registration' element={<RegistrationPage />} />
-						<Route exact path='/sponser' element={<Sponser />} />
-					</Routes>
+				<Routes>
+					<Route path='/' element={<HomePage />} />
+					<Route exact path='/events' element={<EventsPage />} />
+					<Route exact path='/guidelines' element={<GuidelinesPage />} />
+					<Route exact path='/registration' element={<RegistrationPage />} />
+					<Route exact path='/sponser' element={<Sponser />} />
+				</Routes>
 				{/* )} */}
 			</div>
 		</ThemeProvider>
