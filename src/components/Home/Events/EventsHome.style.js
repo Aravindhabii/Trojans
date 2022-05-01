@@ -146,15 +146,6 @@ export const PhonesContainer = styled.div`
 		@media (max-width: 800px) {
 			display: none;
 		}
-
-		div {
-			width: 93%;
-			height: 92%;
-			border-radius: 10px;
-			background-color: blue;
-			background: url(${({ url }) => url}) no-repeat center/cover;
-			transform: translateZ(50px);
-		}
 	}
 `;
 
