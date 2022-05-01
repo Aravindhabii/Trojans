@@ -11,6 +11,7 @@ export const TabImgContainer = styled.div`
 	justify-content: center;
 	text-align: center;
 	position: relative;
+	box-shadow: 0 0 5px inset #03e9f4, 0 0 10px inset #03e9f4;
 
 	.events-bg-content {
 		transform-style: preserve-3d;

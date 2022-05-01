@@ -10,11 +10,11 @@ import HomePage from './pages/Home/Home.page.jsx';
 import EventsPage from './pages/Events/Events.page';
 import GuidelinesPage from './pages/Guidelines/Guidelines.page';
 import RegistrationPage from './pages/Registration/Registration';
-import Countdown from './pages/Countdown/Countdown.page.jsx';
+// import Countdown from './pages/Countdown/Countdown.page.jsx';
 
 const App = () => {
 	const theme = useContext(ThemeContext);
-	const [showCountdown, setShowCountdown] = useState(true);
+	// const [showCountdown, setShowCountdown] = useState(true);
 	const cursorRef = useRef();
 
 	return (
@@ -28,9 +28,9 @@ const App = () => {
 			>
 				<Cursor cursorRef={cursorRef} />
 				<GlobalStyles />
-				{showCountdown ? (
+				{/* {showCountdown ? (
 					<Countdown setShowCountdown={setShowCountdown} />
-				) : (
+				) : ( */}
 					<Routes>
 						<Route path='/' element={<HomePage />} />
 						<Route exact path='/events' element={<EventsPage />} />
@@ -38,7 +38,7 @@ const App = () => {
 						<Route exact path='/registration' element={<RegistrationPage />} />
 						<Route exact path='/sponser' element={<Sponser />} />
 					</Routes>
-				)}
+				{/* )} */}
 			</div>
 		</ThemeProvider>
 	);

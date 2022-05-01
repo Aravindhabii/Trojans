@@ -127,7 +127,6 @@ export const PhonesContainer = styled.div`
 		transition: all 0.3s ease-in-out;
 		z-index: 2;
 
-
 		@media (max-width: 1400px) {
 			right: ${({ phonesPosition }) => phonesPosition.tablet1 - 4}%;
 		}
