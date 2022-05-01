@@ -9,6 +9,8 @@ import EventsTab from './EventsTab.component';
 import Phone1 from '../../../assets/home/phonepng.png';
 import Tablet1 from '../../../assets/home/tabletpng.png';
 import TechnicalBg from '../../../assets/home/events/1.jpg';
+import NonTechnicalBg from '../../../assets/home/events/2.jpg';
+import WorkshopsBg from '../../../assets/home/events/3.jpg';
 
 const PhoneButton = ({ text, bgColor, url, handlePhoneButtonClick }) => (
 	<>
@@ -46,6 +48,7 @@ const EventsHome = () => {
 			tablet1={Tablet1}
 			phonesPosition={phonesPosition}
 			id='events'
+			url={TechnicalBg}
 		>
 			<HexBg direction='to top' />
 			<main
@@ -116,14 +119,36 @@ const EventsHome = () => {
 								'Goose Chase'
 							]}
 							title='Technical Events'
-							TechnicalBg={TechnicalBg}
+							imgUrl={TechnicalBg}
 						/>
 					)}
 					{tabletImage.length > 0 && tabletImage === 'non-technical' && (
-						<EventsTab title='Non - Technical Events' />
+						<EventsTab
+							title='Non Technical Events'
+							events={[
+								"Coder's Chemistry",
+								'Mastermind',
+								'Site-ing',
+								'Paper bytes',
+								"Trojan's Throttle",
+								'Goose Chase'
+							]}
+							imgUrl={NonTechnicalBg}
+						/>
 					)}
 					{tabletImage.length > 0 && tabletImage === 'workshops' && (
-						<EventsTab title='Workshops' />
+						<EventsTab
+							title='Workshops'
+							events={[
+								"Coder's Chemistry",
+								'Mastermind',
+								'Site-ing',
+								'Paper bytes',
+								"Trojan's Throttle",
+								'Goose Chase'
+							]}
+							imgUrl={WorkshopsBg}
+						/>
 					)}
 				</Tilt>
 			)}

@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { TabImgContainer } from './EventsTab.style';
 
-const EventsTab = ({ TechnicalBg, title, events }) => {
+const EventsTab = ({ imgUrl, title, events }) => {
 	return (
-		<TabImgContainer url={TechnicalBg}>
+		<TabImgContainer imgUrl={imgUrl}>
 			<div className='events-bg-content'>
 				<h1>{title}</h1>
 				<div>
@@ -12,7 +13,7 @@ const EventsTab = ({ TechnicalBg, title, events }) => {
 						<p>{event}</p>
 					))}
 				</div>
-				<div className='button'>View Events</div>
+				<Link to='/events'>View</Link>
 			</div>
 		</TabImgContainer>
 	);
