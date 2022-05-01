@@ -8,7 +8,7 @@ export const GalleryDiv = styled.div`
     justify-content: center;
     width: 40%;
     height: 100%;
-    background-color: #fff;
+    background-color: #000;
     color: #000;
     /* overflow: scroll; */
     @media (max-width: 500px) {
@@ -34,6 +34,7 @@ export const ImageMainDiv = styled.div`
     display: flex;
     flex-direction: row;
     overflow-y: scroll;
+    padding-top: 15%;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -86,8 +87,8 @@ const flickerBox = keyframes`
 
 export const ImageDiv = styled.div`
     position: relative;
-    width: 100%;
-    height: 15rem;
+    width: 480px;
+    height: 240px;
     display: flex;
     flex-direction: column;
     object-fit: contain;
@@ -97,7 +98,7 @@ export const ImageDiv = styled.div`
     transition: all 0.3s ease-in-out;
     /* right: 0; */
     box-shadow: 0 0 5px #bc13fe, 0 0 15px #bc13fe, 0 0 5px #bc13fe;
-    animation: ${flickerBox} 1s infinite alternate;
+    /* animation: ${flickerBox} 1s infinite alternate; */
 
     img {
         width: 100%;

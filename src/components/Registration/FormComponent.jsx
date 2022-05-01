@@ -1,7 +1,5 @@
 import React from "react";
-import {
-    RegistrationDivForm,
-} from "./FormComponent.styles";
+import {RegistrationDivForm} from "./FormComponent.styles";
 
 function FormComponent() {
     return (
@@ -36,60 +34,68 @@ function FormComponent() {
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="coders_Chemistry"
                                 id="coders_Chemistry"
                             />
-                            <label htmlFor="coders_Chemistry">
+                            <label
+                                className="checkbox"
+                                htmlFor="coders_Chemistry"
+                            >
                                 Coder's Chemistry
                             </label>
                         </div>
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="mastermind"
                                 id="mastermind"
                             />
-                            <label htmlFor="mastermind">Mastermind</label>
+                            <label className="checkbox" htmlFor="mastermind">
+                                Mastermind
+                            </label>
                         </div>
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="siteing"
                                 id="siteing"
                             />
-                            <label htmlFor="siteing">Site-ing</label>
+                            <label className="checkbox" htmlFor="siteing">
+                                Site-ing
+                            </label>
                         </div>
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="paperBytes"
                                 id="paperBytes"
                             />
-                            <label htmlFor="paperBytes">Paper Bytes</label>
+                            <label className="checkbox" htmlFor="paperBytes">
+                                Paper Bytes
+                            </label>
                         </div>
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="trojanThrottle"
                                 id="trojanThrottle"
                             />
-                            <label htmlFor="trojanThrottle">
+                            <label
+                                className="checkbox"
+                                htmlFor="trojanThrottle"
+                            >
                                 Trojan Throttle
                             </label>
                         </div>
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="gooseChase"
                                 id="gooseChase"
                             />
-                            <label htmlFor="gooseChase">Goose Chase</label>
+                            <label className="checkbox" htmlFor="gooseChase">
+                                Goose Chase
+                            </label>
                         </div>
                     </span>
                 </div>
@@ -101,60 +107,68 @@ function FormComponent() {
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="coders_Chemistry"
                                 id="coders_Chemistry"
                             />
-                            <label htmlFor="coders_Chemistry">
+                            <label
+                                className="checkbox"
+                                htmlFor="coders_Chemistry"
+                            >
                                 Coder's Chemistry
                             </label>
                         </div>
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="mastermind"
                                 id="mastermind"
                             />
-                            <label htmlFor="mastermind">Mastermind</label>
+                            <label className="checkbox" htmlFor="mastermind">
+                                Mastermind
+                            </label>
                         </div>
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="siteing"
                                 id="siteing"
                             />
-                            <label htmlFor="siteing">Site-ing</label>
+                            <label className="checkbox" htmlFor="siteing">
+                                Site-ing
+                            </label>
                         </div>
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="paperBytes"
                                 id="paperBytes"
                             />
-                            <label htmlFor="paperBytes">Paper Bytes</label>
+                            <label className="checkbox" htmlFor="paperBytes">
+                                Paper Bytes
+                            </label>
                         </div>
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="trojanThrottle"
                                 id="trojanThrottle"
                             />
-                            <label htmlFor="trojanThrottle">
+                            <label
+                                className="checkbox"
+                                htmlFor="trojanThrottle"
+                            >
                                 Trojan Throttle
                             </label>
                         </div>
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="gooseChase"
                                 id="gooseChase"
                             />
-                            <label htmlFor="gooseChase">Goose Chase</label>
+                            <label className="checkbox" htmlFor="gooseChase">
+                                Goose Chase
+                            </label>
                         </div>
                     </span>
                 </div>
@@ -164,31 +178,35 @@ function FormComponent() {
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="coders_Chemistry"
                                 id="coders_Chemistry"
                             />
-                            <label htmlFor="coders_Chemistry">
+                            <label
+                                className="checkbox"
+                                htmlFor="coders_Chemistry"
+                            >
                                 Coder's Chemistry
                             </label>
                         </div>
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="mastermind"
                                 id="mastermind"
                             />
-                            <label htmlFor="mastermind">Mastermind</label>
+                            <label className="checkbox" htmlFor="mastermind">
+                                Mastermind
+                            </label>
                         </div>
                         <div>
                             <input
                                 type="checkbox"
-                                className="checkbox"
                                 name="siteing"
                                 id="siteing"
                             />
-                            <label htmlFor="siteing">Site-ing</label>
+                            <label className="checkbox" htmlFor="siteing">
+                                Site-ing
+                            </label>
                         </div>
                     </span>
                 </div>

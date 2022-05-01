@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const RegistrationDivForm = styled.div`
     @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
     position: relative;
@@ -28,7 +27,7 @@ export const RegistrationDivForm = styled.div`
         justify-content: flex-start;
         width: 100%;
         height: 100%;
-        font-family: 'Open Sans', sans-serif;
+        font-family: "Open Sans", sans-serif;
     }
     .data_events {
         display: flex;
@@ -147,6 +146,54 @@ export const RegistrationDivForm = styled.div`
         background-color: #03e9f4;
         color: #000;
     }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+    .checkbox {
+        position: relative;
+        padding: 1px 0 1px 55px;
+        color: #fff;
+        font-size: 32px;
+        letter-spacing: 2px;
+        cursor: pointer;
+    }
+    .checkbox::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        border:2px solid #fff;
+        border-radius: 4px;
+        content: "";
+    }
+    .checkbox::after {
+        opacity: 0;
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        transform: rotate(45deg);
+        width: 8px;
+        height: 18px;
+        border-right: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        filter: drop-shadow(2px 2px 2px #03e9f4)
+            drop-shadow(-2px -2px 2px #03e9f4);
+        content: "";
+    }
+    input[type="checkbox"]:checked + .checkbox {
+        text-shadow: 2px 2px 8px #03e9f4, -2px -2px 8px #03e9f4,
+            4px 4px 10px #03e9f4, -4px -4px 10px #03e9f4;
+    }
+    input[type="checkbox"]:checked + .checkbox::before {
+        box-shadow: 1px 1px 10px #03e9f4, -1px -1px 10px #03e9f4,
+            inset 1px 1px 10px #03e9f4, inset -1px -1px 10px #03e9f4;
+    }
+    input[type="checkbox"]:checked + .checkbox::after {
+        opacity: 1;
+    }
+
     @media (max-width: 500px) {
         width: 100%;
         h1 {
