@@ -10,6 +10,7 @@ import HomePage from './pages/Home/Home.page.jsx';
 import EventsPage from './pages/Events/Events.page';
 import GuidelinesPage from './pages/Guidelines/Guidelines.page';
 import RegistrationPage from './pages/Registration/Registration';
+import Pay from './pages/Pay.jsx';
 // import Countdown from './pages/Countdown/Countdown.page.jsx';
 
 const App = () => {
@@ -26,7 +27,7 @@ const App = () => {
 					).style.transform = `translate(${e.clientX}px, ${e.clientY}px)`)
 				}
 			>
-				<Cursor cursorRef={cursorRef} />
+				{/* <Cursor cursorRef={cursorRef} /> */}
 				<GlobalStyles />
 				{/* {showCountdown ? (
 					<Countdown setShowCountdown={setShowCountdown} />
@@ -37,6 +38,7 @@ const App = () => {
 					<Route exact path='/guidelines' element={<GuidelinesPage />} />
 					<Route exact path='/registration' element={<RegistrationPage />} />
 					<Route exact path='/sponser' element={<Sponser />} />
+					<Route exact path='/pay' element={<Pay />} />
 				</Routes>
 				{/* )} */}
 			</div>
