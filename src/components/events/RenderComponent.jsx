@@ -3,6 +3,7 @@ import {
   technicalevents,
   nontechnicalevents,
   workshops,
+  gamming
 } from "../../datas/technical.data";
 import { Eventslist } from "../../pages/Events/Events.styles";
 import { gsap } from "gsap";
@@ -16,13 +17,15 @@ const RenderComponent = (props) => {
     isTabletOpen,
     setisTabletOpen,
     setCurrentEvent,
+    selectedEvent,
+    setSelectedEvent
   } = props;
   const [previousPage, setPreviousPage] = useState("");
 
   const click = (e) => {
     if (isTabletOpen === false) {
       setisTabletOpen(true);
-      setClickedEvent(e.target.innerText);
+      setSelectedEvent(e.target.innerText);
     }
   };
 
@@ -33,6 +36,8 @@ const RenderComponent = (props) => {
       setCurrentPage(nontechnicalevents);
     } else if (clickedEvent === "workshops") {
       setCurrentPage(workshops);
+    } else if (clickedEvent === "gamming") {
+      setCurrentPage(gamming);
     }
   }, [clickedEvent]);
 

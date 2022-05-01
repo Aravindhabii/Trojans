@@ -42,12 +42,13 @@ export const HeroSection = styled.section`
     align-items: center;
     justify-content: center;
   }
+  
   @media (max-width: 910px) {
     .left {
       width: 100%;
       z-index: 1;
     }
-    .right{
+    .right {
       width: 100%;
       position: absolute;
       zindex: 2;
@@ -63,9 +64,9 @@ export const Rightone = styled.div`
   justify-content: center;
   align-items: center;
   @media (max-width: 1150px) {
-    display: ${({isphoneopen}) => !isphoneopen ? 'flex' : 'none'};
+    display: ${({ isphoneopen }) => (!isphoneopen ? "flex" : "none")};
   }
-  @media (max-width: 910px){
+  @media (max-width: 910px) {
     display: none;
   }
 `;
@@ -86,6 +87,9 @@ export const Righttwo = styled.div.attrs({
   @media (max-width: 1150px) {
     width: 50%;
     z-index: 5;
+  }
+  @media (max-width: 560px) {
+    width: 100%;
   }
 `;
 
@@ -153,6 +157,21 @@ export const Eventsdiv = styled.div.attrs({
     left: 60%;
     background: rgba(0, 0, 0, 0.9);
   }
+  @media (max-width: 710px) {
+    left: 50%;
+    width: 110%;
+  }
+  @media (max-width: 560px) {
+    left: 16%;
+    width: 70%;
+  }
+  @media (max-width: 440px) {
+    height: 70%;
+    width: 75%;
+    left: 13%;
+    font-size: 1rem;
+    border-radius: 40px;
+  }
 `;
 
 export const Tabletdiv = styled.div.attrs({
@@ -209,14 +228,6 @@ export const Tabletcont = styled.div.attrs({
     font-size: 2rem;
     font-weight: bold;
   }
-  .dot {
-    position: absolute;
-    background: #fff;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    top: 50%;
-  }
 `;
 
 export const TabletScreen = styled.div.attrs({
@@ -233,7 +244,7 @@ export const TabletScreen = styled.div.attrs({
   .leftarrow {
     position: absolute;
     display: ${({ pageno }) => (pageno > 1 ? "block" : "none")};
-    top: 10%;
+    bottom: 5%;
     left: 10%;
     font-size: 40px;
     color: #fff;
@@ -244,7 +255,7 @@ export const TabletScreen = styled.div.attrs({
   .rightarrow {
     position: absolute;
     display: ${({ pageno }) => (pageno < 3 ? "block" : "none")};
-    top: 10%;
+    bottom: 5%;
     right: 10%;
     font-size: 40px;
     color: #fff;
@@ -276,7 +287,7 @@ export const TabletScreen = styled.div.attrs({
     font-size: 1.5rem;
   }
   .rules {
-    position: absolute;
+    position: relative;
     height: 80%;
     width: 80%;
     display: flex;
@@ -288,9 +299,10 @@ export const TabletScreen = styled.div.attrs({
   }
   ul {
     position: relative;
-    list-style: "->   ";
-    list-style-position: outside;
-    align-self: center;
+    list-style: "->  ";
+    list-style-position: inside;
+    height: 60%;
+    overflow-y: scroll;
   }
   li {
     position: relative;
@@ -299,7 +311,7 @@ export const TabletScreen = styled.div.attrs({
     font-weight: 500;
   }
   .students {
-    position: relative;
+    position: absolute;
     height: 80%;
     width: 80%;
     display: flex;
@@ -330,6 +342,33 @@ export const TabletScreen = styled.div.attrs({
     font-weight: 500;
     margin-left: 1%;
   }
+
+  @media (max-width: 1150px) {
+    p {
+      font-size: 1.1rem;
+    }
+  }
+  @media (max-width: 700px) {
+    h2 {
+      font-size: 1.3rem;
+    }
+    .rules {
+      height: 20rem;
+      width: 100%;
+      align-items: center;
+    }
+    ul {
+      height: 20rem;
+      position: relative;
+      overflow-y: scroll;
+      width: 90%;
+      list-style: dot;
+    }
+    .description p {
+      height: 15rem;
+      overflow-y: scroll;
+    }
+  }
 `;
 
 export const Eventslist = styled.button.attrs({
@@ -345,8 +384,8 @@ export const Eventslist = styled.button.attrs({
   border-radius: 5px;
   font-size: 1.2rem;
   font-weight: bold;
-  text-shadow: 0px 0px 10px #03e9f4 ;
-    box-shadow: 0px 0px 10px 0px #03e9f4, inset 0px 0px 4px 0px #03e9f4;
+  text-shadow: 0px 0px 10px #03e9f4;
+  box-shadow: 0px 0px 10px 0px #03e9f4, inset 0px 0px 4px 0px #03e9f4;
   background: transparent;
   color: #03e9f4;
   align-items: center;
@@ -358,7 +397,9 @@ export const Eventslist = styled.button.attrs({
     background-color: #03e9f4;
     color: #fff;
   }
-
+  @media (max-width: 410px) {
+    margin: 0.6rem;
+  }
 `;
 
 export const Threeddiv = styled.div`

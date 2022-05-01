@@ -11,7 +11,7 @@ import {
   Rightone,
   Tabletdiv,
 } from "./Events.styles";
-import { CodersChemistry, MasterMinds } from "../../datas/events.data";
+import { CodersChemistry, MasterMinds, SiteIng, PaperBytes, GooseChase, TrojansThrottle,  } from "../../datas/events.data";
 
 import Technical from "../../components/events/Technical";
 import Tablet from "../../components/events/Tablet";
@@ -22,11 +22,63 @@ const EventsPage = () => {
   const [isphoneopen, setisphoneopen] = useState(false);
   const [currentEvent, setCurrentEvent] = useState(CodersChemistry);
   const [clickedEvent, setClickedEvent] = useState("");
+  const [selectedEvent, setSelectedEvent] = useState("");
   const [isTabletOpen, setisTabletOpen] = useState(false);
 
   const closetab = () => {
     setisTabletOpen(false);
   };
+
+  const phoneClick = (e) => {
+    if (isphoneopen === true) {
+      setisphoneopen(false);
+      setClickedEvent("");
+    }
+  };
+
+  useEffect(() => {
+    console.log(clickedEvent, 'clickedEvent');
+    if (selectedEvent === "CODERS CHEMISTRY") {
+      setCurrentEvent(CodersChemistry);
+      console.log("CodersChemistry");
+    } else if (selectedEvent === "MASTER MINDS") {
+      console.log("Master mind");
+      setCurrentEvent(MasterMinds);
+    } else if (selectedEvent === "SITE-ING") {
+      setCurrentEvent(SiteIng);
+    } else if (selectedEvent === "PAPER BYTES") {
+      setCurrentEvent(PaperBytes);
+    } else if (selectedEvent === "GOOSE CHASE") {
+      setCurrentEvent(GooseChase);
+    } else if (selectedEvent === "TROJAN'S THROTTLE") {
+      setCurrentEvent(TrojansThrottle);
+    } else if (selectedEvent === "TROJANCTF") {
+      setCurrentEvent(CodersChemistry);
+    } else if (selectedEvent === "SHUTTER STOP") {
+      setCurrentEvent(CodersChemistry);
+    } else if (selectedEvent === "SHIP WRECK") {
+      setCurrentEvent(CodersChemistry);
+    } else if (selectedEvent === "TALENT FEST") {
+      setCurrentEvent(CodersChemistry);
+    } else if (selectedEvent === "SQUID GAME") {
+      setCurrentEvent(CodersChemistry);
+    } else if (selectedEvent === "BOX CRICKET") {
+      setCurrentEvent(CodersChemistry);
+    } else if (selectedEvent === "ADVERTISEMENT") {
+      setCurrentEvent(CodersChemistry);
+    } else if (selectedEvent === "MACHINE LEARNING") {
+      setCurrentEvent(CodersChemistry);
+    } else if (selectedEvent === "BLOCKCHAIN") {
+      setCurrentEvent(CodersChemistry);
+    } else if (selectedEvent === "VALORANT") {
+      setCurrentEvent(CodersChemistry);
+    } else if (selectedEvent === "BGMI") {
+      setCurrentEvent(CodersChemistry);
+    } else if (selectedEvent === "FREE FIRE") {
+      setCurrentEvent(CodersChemistry);
+    }
+  }, [clickedEvent]);
+
   const click = (e) => {
     if (e.target.value !== clickedEvent) {
       setClickedEvent(e.target.value);
@@ -37,44 +89,8 @@ const EventsPage = () => {
     }
   };
 
-  const phoneClick = (e) => {
-    console.log(window.screen.width);
-    if (isphoneopen === true) {
-      setisphoneopen(false);
-      setClickedEvent("");
-    }
-  };
-
-  useEffect(() => {
-    console.log("clicked useeffect");
-    if (clickedEvent === "Coders Chemistry") {
-      setCurrentEvent(CodersChemistry);
-    } else if (clickedEvent === "Master Minds") {
-      console.log("Master Minds");
-      setCurrentEvent(MasterMinds);
-    } else if (clickedEvent === "Site-ing") {
-      setCurrentEvent(CodersChemistry);
-    } else if (clickedEvent === "Paper Bytes") {
-      setCurrentEvent(CodersChemistry);
-    } else if (clickedEvent === "Goose chase") {
-      setCurrentEvent(CodersChemistry);
-    } else if (clickedEvent === "Trojan's Throttle") {
-      setCurrentEvent(CodersChemistry);
-    } else if (clickedEvent === "Technical") {
-      setCurrentEvent(CodersChemistry);
-    } else if (clickedEvent === "Technical") {
-      setCurrentEvent(CodersChemistry);
-    } else if (clickedEvent === "Technical") {
-      setCurrentEvent(CodersChemistry);
-    } else if (clickedEvent === "Technical") {
-      setCurrentEvent(CodersChemistry);
-    } else if (clickedEvent === "Technical") {
-      setCurrentEvent(CodersChemistry);
-    }
-  }, [clickedEvent]);
-
   return (
-    <>
+    <section style={{height: '100vh', width: '100vw', overflow: "hidden", position: 'relative'}}>
       <Helmet>
         <title>EVENTS | TROJANS</title>
       </Helmet>
@@ -86,6 +102,9 @@ const EventsPage = () => {
           </Button>
           <Button value="nontechnicalevents" onClick={click}>
             Non-Technical
+          </Button>
+          <Button value="gamming" onClick={click}>
+            Gamming
           </Button>
           <Button value="workshops" onClick={click}>
             Workshops
@@ -105,6 +124,8 @@ const EventsPage = () => {
               setCurrentPage={setCurrentPage}
               clickedEvent={clickedEvent}
               setClickedEvent={setClickedEvent}
+              selectedEvent = {selectedEvent}
+              setSelectedEvent = {setSelectedEvent}
               isTabletOpen={isTabletOpen}
               setisTabletOpen={setisTabletOpen}
             />
@@ -115,7 +136,7 @@ const EventsPage = () => {
         <div onClick={closetab} className="forclose"></div>
         <Tablet currentEvent={currentEvent} />
       </Tabletdiv>
-    </>
+    </section>
   );
 };
 

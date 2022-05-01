@@ -22,7 +22,6 @@ const Tabletcontent = (props) => {
       <LeftCircleOutlined onClick={handleLeft} className="leftarrow" />
       <RightCircleOutlined onClick={handleRight} className="rightarrow" />
 
-      <span className="dot"></span>
       <div className="description">
         <h2>Description</h2>
         <p>{currentEvent.description}</p>
