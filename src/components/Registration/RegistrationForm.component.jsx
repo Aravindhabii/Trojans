@@ -33,7 +33,6 @@ const RegistrationForm = () => {
 		const isFormValid = Object.values(formInputValid).every(
 			(value) => value === true
 		);
-		console.log(isFormValid);
 		setIsButtonEnabled(isFormValid);
 	}, [formInputValid]);
 
@@ -64,9 +63,8 @@ const RegistrationForm = () => {
 				<input
 					name='email'
 					type='email'
-					onChange={(e) =>
+					onChange={() =>
 						handleEmailValidation(
-							e,
 							email,
 							setIsButtonEnabled,
 							setformInputValid,
@@ -178,7 +176,7 @@ const RegistrationForm = () => {
 						Select Event
 					</option>
 					<option value='Technical'>Technical</option>
-					<option value='TrojansCTF'>TrojansCTF</option>
+					<option value='Trojans CTF'>Trojans CTF</option>
 					<option value='Non-Technical'>Non-Technical</option>
 					<option value='Gaming'>Gaming</option>
 					<option value='Workshops'>Workshops</option>

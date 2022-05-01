@@ -2,7 +2,9 @@ import React, { useState, useRef, useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { GlobalStyles } from './global.style.js';
 import { ThemeProvider } from 'styled-components';
+import { ToastContainer } from 'react-toastify';
 import ThemeContext from './Theme.context.jsx';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Sponser from './pages/Sponser/sponser.jsx';
 import Cursor from './components/Cursor/Cursor.component.jsx';
@@ -26,6 +28,18 @@ const App = () => {
 					).style.transform = `translate(${e.clientX}px, ${e.clientY}px)`)
 				}
 			>
+				<ToastContainer
+					position='top-right'
+					autoClose={5000}
+					hideProgressBar
+					newestOnTop
+					closeOnClick
+					rtl={false}
+					pauseOnFocusLoss
+					draggable
+					pauseOnHover
+					theme='dark'
+				/>
 				<Cursor cursorRef={cursorRef} />
 				<GlobalStyles />
 				{/* {showCountdown ? (

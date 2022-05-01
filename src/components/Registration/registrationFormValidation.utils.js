@@ -1,3 +1,5 @@
+import { toast } from 'react-toastify';
+
 import { registrationEventAxios } from '../../axios/registration.axios';
 
 export const handleTextValidation = (
@@ -8,17 +10,18 @@ export const handleTextValidation = (
 ) => {
 	if (value.current.value.length < 3) {
 		value.current.classList.add('error');
+		value.current.classList.remove('success');
 		setformInputValid({ ...formInputValid, [value.current.name]: false });
 		setIsButtonEnabled(false);
 	} else {
 		value.current.classList.remove('error');
+		value.current.classList.add('success');
 		setformInputValid({ ...formInputValid, [value.current.name]: true });
 		setIsButtonEnabled(true);
 	}
 };
 
 export const handleEmailValidation = (
-	e,
 	email,
 	setIsButtonEnabled,
 	setformInputValid,
@@ -34,10 +37,12 @@ export const handleEmailValidation = (
 		)
 	) {
 		email.current.classList.add('error');
+		email.current.classList.remove('success');
 		setformInputValid({ ...formInputValid, email: false });
 		setIsButtonEnabled(false);
 	} else {
 		email.current.classList.remove('error');
+		email.current.classList.add('success');
 		setformInputValid({ ...formInputValid, email: true });
 		setIsButtonEnabled(true);
 	}
@@ -53,12 +58,14 @@ export const handlePhoneValidation = (
 		phone.current.value = phone.current.value.replace(/[a-zA-Z]/g, '');
 	if (phone.current.value.length < 10) {
 		phone.current.classList.add('error');
+		phone.current.classList.remove('success');
 		setformInputValid({ ...formInputValid, phone: false });
 		setIsButtonEnabled(false);
 	} else if (phone.current.value.length > 10) {
 		phone.current.value = phone.current.value.slice(0, 10);
 	} else {
 		phone.current.classList.remove('error');
+		phone.current.classList.add('success');
 		setformInputValid({ ...formInputValid, phone: true });
 		setIsButtonEnabled(true);
 	}
@@ -72,10 +79,12 @@ export const handleDropdownValidation = (
 ) => {
 	if (value.current.value.includes('Select')) {
 		value.current.classList.add('error');
+		value.current.classList.remove('success');
 		setformInputValid({ ...formInputValid, [value.current.name]: false });
 		setIsButtonEnabled(false);
 	} else {
 		value.current.classList.remove('error');
+		value.current.classList.add('success');
 		setformInputValid({ ...formInputValid, [value.current.name]: true });
 		setIsButtonEnabled(true);
 	}
@@ -102,7 +111,17 @@ export const handleSubmit = async (
 		event.current.value
 	).then((res) => {
 		if (res.status === 200) {
-			alert('Registration Successful');
+			name.current.value = '';
+			email.current.value = '';
+			phone.current.value = '';
+			department.current.value = 'Select Departnemt';
+			year.current.value = 'Select Year';
+			college.current.value = 'Select College';
+			event.current.value = 'Select Event';
+
+			toast.success('Hooray! You are registered successfully.');
+		} else {
+			toast.error('Oops! Registration failed. Please try again in a moment.');
 		}
 	});
 };
