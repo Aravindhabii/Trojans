@@ -80,6 +80,7 @@ const EventsHome = () => {
 							d='M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z'
 						/>
 					</svg> */}
+<<<<<<< HEAD
           <img src={tabletImage} alt="phone" />
         </div>
       )}
@@ -156,6 +157,101 @@ const EventsHome = () => {
       )}
     </PhonesContainer>
   );
+=======
+					<img src={tabletImage} alt='phone' />
+				</div>
+			)}
+			<Tilt
+				tiltEnable={!(window.innerWidth < 900)}
+				className='phone-container'
+				perspective={4000}
+			>
+				<PhoneButton
+					text='Technical Events'
+					bgColor='#03e9f4'
+					handlePhoneButtonClick={() => handlePhoneButtonClick('technical')}
+				/>
+				<PhoneButton
+					text='Non Technical Events'
+					bgColor='#03e9f4'
+					handlePhoneButtonClick={() => handlePhoneButtonClick('non-technical')}
+				/>
+				<PhoneButton
+					text='Workshops'
+					bgColor='#03e9f4'
+					handlePhoneButtonClick={() => handlePhoneButtonClick('workshops')}
+				/>
+			</Tilt>
+			{window.innerWidth > 500 && (
+				<Tilt
+					tiltEnable={!(window.innerWidth < 900)}
+					className='tablet-container'
+					perspective={4000}
+				>
+					{tabletImage.length > 0 && tabletImage === 'technical' && (
+						<TabImgContainer imgUrl={TechnicalBg}>
+							<div className='events-bg-content'>
+								<h1>NON - TECHNICAL EVENTS</h1>
+								<div>
+									<p>Paper bytes</p>
+									<p>Goose Chase</p>
+									<p>Master minds</p>
+									<p>Coder's Chemistry</p>
+									<p>Trojan's Throttle</p>
+									<p>Trojan's CTF</p>
+									<p>Site-ing</p>
+								</div>
+								<a href='/events'>View more</a>
+							</div>
+						</TabImgContainer>
+					)}
+					{tabletImage.length > 0 && tabletImage === 'non-technical' && (
+						<TabImgContainer imgUrl={NonTechnicalBg}>
+							<div className='events-bg-content'>
+								<h1>NON - TECHNICAL EVENTS</h1>
+								<div>
+									<p>SHUTTER STOP</p>
+									<p>SQUID GAME</p>
+									<p>BOX CRICKET</p>
+									<p>TALENT FEST</p>
+									<p>SHIP WRECK</p>
+									<p>GAMERS PARADISE UNITED</p>
+									<p>ENNA ENNA SOLRAN PAARUNGA</p>
+								</div>
+								<a href='/events'>View more</a>
+							</div>
+						</TabImgContainer>
+					)}
+					{tabletImage.length > 0 && tabletImage === 'workshops' && (
+						<TabImgContainer imgUrl={WorkshopsBg}>
+							<div className='events-bg-content'>
+								<h1>WORKSHOPS</h1>
+								<div>
+									<p>
+										<span>HANDS ON</span>
+										<br />
+										MACHINE LEARNING
+									</p>
+									<br />
+									<p>
+										<span>HANDS ON</span>
+										<br />
+										BLOCKCHAIN TECHNOLOGY
+									</p>
+									<br />
+									<p>
+										START-UP AND <br /> ENTREPRENEURSHIP
+									</p>
+								</div>
+								<a href='/events'>View more</a>
+							</div>
+						</TabImgContainer>
+					)}
+				</Tilt>
+			)}
+		</PhonesContainer>
+	);
+>>>>>>> 8192d8f55404dabed7f8f77b93fc1533e3969767
 };
 
 export default EventsHome;
