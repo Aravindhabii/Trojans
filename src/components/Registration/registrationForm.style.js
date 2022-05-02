@@ -3,10 +3,12 @@ import styled from 'styled-components';
 export const FormContainerStyle = styled.form`
 	position: relative;
 	width: 50vw;
+	
 	button {
 		width: 50vw;
-		padding: .8rem;
-		text-align: center;border-radius:5px;
+		padding: 0.8rem;
+		text-align: center;
+		border-radius: 5px;
 		margin: 1rem 0;
 	}
 `;
