@@ -7,7 +7,10 @@ import {
 	handleDropdownValidation,
 	handleSubmit
 } from './registrationFormValidation.utils';
-import { InputContainerStyle } from './registrationForm.style';
+import {
+	InputContainerStyle,
+	FormContainerStyle
+} from './registrationForm.style';
 
 const RegistrationForm = () => {
 	const name = useRef('');
@@ -37,7 +40,7 @@ const RegistrationForm = () => {
 	}, [formInputValid]);
 
 	return (
-		<form
+		<FormContainerStyle
 			onSubmit={(e) =>
 				handleSubmit(e, name, email, phone, department, year, college, event)
 			}
@@ -133,7 +136,7 @@ const RegistrationForm = () => {
 					}
 				>
 					<option value='Select Year' disabled>
-						Select Department
+						Select Year
 					</option>
 					<option value='1'>1</option>
 					<option value='2'>2</option>
@@ -183,7 +186,7 @@ const RegistrationForm = () => {
 				</select>
 			</InputContainerStyle>
 			<button disabled={!isButtonEnabled}>Submit</button>
-		</form>
+		</FormContainerStyle>
 	);
 };
 

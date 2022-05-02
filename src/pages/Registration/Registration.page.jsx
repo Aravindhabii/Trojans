@@ -5,13 +5,13 @@ import Footer from '../../components/Footer/Footer';
 
 import { RegistrationContainer } from './Registration.style';
 
-function Registration() {
+const Registration = () => {
 	return (
 		<RegistrationContainer>
 			<Navbar active={{ route: 'registration', scroll: 0 }} />
 			<RegistrationForm />
 		</RegistrationContainer>
 	);
-}
+};
 
 export default Registration;
