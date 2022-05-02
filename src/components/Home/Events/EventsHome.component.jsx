@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import Tilt from 'react-parallax-tilt';
 
-import { PhonesContainer, PhoneButtonStyles } from './EventsHome.style';
+import {
+	PhonesContainer,
+	PhoneButtonStyles,
+	TabImgContainer
+} from './EventsHome.style';
 
 import HexBg from '../HexBg/HexBg.component';
-import EventsTab from './EventsTab.component';
 
 import Phone1 from '../../../assets/home/phonepng.png';
 import Tablet1 from '../../../assets/home/tabletpng.png';
@@ -109,46 +112,63 @@ const EventsHome = () => {
 					perspective={4000}
 				>
 					{tabletImage.length > 0 && tabletImage === 'technical' && (
-						<EventsTab
-							events={[
-								"Coder's Chemistry",
-								'Mastermind',
-								'Site-ing',
-								'Paper bytes',
-								"Trojan's Throttle",
-								'Goose Chase'
-							]}
-							title='Technical Events'
-							imgUrl={TechnicalBg}
-						/>
+						<TabImgContainer imgUrl={TechnicalBg}>
+							<div className='events-bg-content'>
+								<h1>NON - TECHNICAL EVENTS</h1>
+								<div>
+									<p>Paper bytes</p>
+									<p>Goose Chase</p>
+									<p>Master minds</p>
+									<p>Coder's Chemistry</p>
+									<p>Trojan's Throttle</p>
+									<p>Trojan's CTF</p>
+									<p>Site-ing</p>
+								</div>
+								<a href='/events'>View more</a>
+							</div>
+						</TabImgContainer>
 					)}
 					{tabletImage.length > 0 && tabletImage === 'non-technical' && (
-						<EventsTab
-							title='Non Technical Events'
-							events={[
-								"Coder's Chemistry",
-								'Mastermind',
-								'Site-ing',
-								'Paper bytes',
-								"Trojan's Throttle",
-								'Goose Chase'
-							]}
-							imgUrl={NonTechnicalBg}
-						/>
+						<TabImgContainer imgUrl={NonTechnicalBg}>
+							<div className='events-bg-content'>
+								<h1>NON - TECHNICAL EVENTS</h1>
+								<div>
+									<p>SHUTTER STOP</p>
+									<p>SQUID GAME</p>
+									<p>BOX CRICKET</p>
+									<p>TALENT FEST</p>
+									<p>SHIP WRECK</p>
+									<p>GAMERS PARADISE UNITED</p>
+									<p>ENNA ENNA SOLRAN PAARUNGA</p>
+								</div>
+								<a href='/events'>View more</a>
+							</div>
+						</TabImgContainer>
 					)}
 					{tabletImage.length > 0 && tabletImage === 'workshops' && (
-						<EventsTab
-							title='Workshops'
-							events={[
-								"Coder's Chemistry",
-								'Mastermind',
-								'Site-ing',
-								'Paper bytes',
-								"Trojan's Throttle",
-								'Goose Chase'
-							]}
-							imgUrl={WorkshopsBg}
-						/>
+						<TabImgContainer imgUrl={WorkshopsBg}>
+							<div className='events-bg-content'>
+								<h1>WORKSHOPS</h1>
+								<div>
+									<p>
+										<span>HANDS ON</span>
+										<br />
+										MACHINE LEARNING
+									</p>
+									<br />
+									<p>
+										<span>HANDS ON</span>
+										<br />
+										BLOCKCHAIN TECHNOLOGY
+									</p>
+									<br />
+									<p>
+										START-UP AND <br /> ENTREPRENEURSHIP
+									</p>
+								</div>
+								<a href='/events'>View more</a>
+							</div>
+						</TabImgContainer>
 					)}
 				</Tilt>
 			)}

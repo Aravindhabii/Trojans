@@ -97,7 +97,7 @@ const RegistrationForm = () => {
 					ref={phone}
 				/>
 			</InputContainerStyle>
-			<div>
+			<div className='dropdown-container'>
 				<InputContainerStyle>
 					<label>Department</label>
 					<select

@@ -247,3 +247,69 @@ export const PhoneButtonStyles = styled.h2`
 		animation: ${animation4} 1s linear infinite 0.75s;
 	}
 `;
+
+export const TabImgContainer = styled.div`
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	background: black url(${({ imgUrl }) => imgUrl}) no-repeat center/cover;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	box-shadow: 0 0 5px inset #03e9f4, 0 0 10px inset #03e9f4;
+
+	.events-bg-content {
+		transform-style: preserve-3d;
+		transform: perspective(2000px);
+	}
+
+	h1,
+	p {
+		font-family: StrongBrain !important;
+		letter-spacing: 2px;
+	}
+
+	h1 {
+		margin-bottom: 2rem;
+		color: #03e9f4;
+	}
+
+	p {
+		font-size: 1.5rem;
+		color: white;
+		margin-bottom: 0.5rem;
+	}
+
+	a {
+		color: #fff;
+		width: 130px;
+		height: 40px;
+		padding: 10px 25px;
+		font-family: 'Lato', sans-serif;
+		font-weight: 500;
+		background: transparent;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		position: relative;
+		display: inline-block;
+		color: #0bf4f3;
+		border: 1px solid #0bf4f3;
+		box-shadow: 0 0 5px #0bf4f3, 0 0 5px #0bf4f3 inset;
+		text-decoration: none;
+		background-color: rgba(0, 0, 0, 0.5);
+		margin-top: 1rem;
+
+		&:before {
+			height: 0%;
+			width: 2px;
+		}
+		&:hover {
+			color: #fff;
+			box-shadow: inset 0 0 10px #0bf4f3, 0 0 20px #0bf4f3 inset,
+				0 0 20px #0bf4f3 inset;
+		}
+	}
+`;

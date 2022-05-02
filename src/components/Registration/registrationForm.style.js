@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const flicker = keyframes`
     0%,
@@ -23,16 +23,52 @@ export const FormContainerStyle = styled.form`
 	position: relative;
 	width: 50vw;
 	margin-top: 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
 	button {
-		width: 50vw;
-		padding: 0.8rem;
-		text-align: center;
+		width: 20vw;
+		padding: 10px 25px;
+		background: transparent;
+		transition: all 0.3s ease;
+		position: relative;
+		color: #bc13fe;
+		z-index: 1;
+		margin-bottom: 3rem;
+		margin-top: 1rem;
 		border-radius: 10px;
-		margin: 1rem 0;
-		color: white;
-		background-color: green;
-		outline: none;
+
+		color: #bc13fe;
+		border: 1px solid #bc13fe;
+		box-shadow: 0 0 5px #bc13fe, 0 0 5px #bc13fe inset;
+		transition: all 0.3s ease;
+		overflow: hidden;
+		cursor: pointer;
+
+		&:after {
+			position: absolute;
+			content: ' ';
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transition: all 0.3s ease;
+		}
+		&:hover {
+			color: #000;
+		}
+		&:hover:after {
+			background: #bc13fe;
+			-webkit-transform: scale(2) rotate(180deg);
+			transform: scale(2) rotate(180deg);
+			box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 1),
+				-4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+				inset -4px -4px 6px 0 rgba(255, 255, 255, 1),
+				inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+		}
 	}
 `;
 
@@ -41,41 +77,44 @@ export const InputContainerStyle = styled.div`
 	flex-direction: column;
 	width: 100%;
 	font-size: 1.3rem;
-	
+
 	label {
 		color: violet !important;
 		text-shadow: 0 0 5px violet, 0 0 15px violet;
 		animation: ${flicker} 2s infinite alternate;
 	}
-	
+
 	input {
 		font-size: 1rem;
 		outline: none;
 		border: none;
 		color: white;
 		width: 100%;
-		padding: 1.1rem 0.8rem;
+		padding: 1rem 0.8rem;
 		border-radius: 10px;
 		background-color: black;
-		box-shadow: 0 0 5px #c4c4, 0 0 15px #c4c4;
+		box-shadow: 0 0 5px #bc13fe, 0 0 15px #bc13fe;
 		margin: 1rem 0;
+		border: 1px solid #bc13fe;
+		margin-bottom: 2rem;
 	}
-	
+
 	option {
 		color: white;
-		padding: 1.1rem 0.8rem;
+		padding: 1rem 0.8rem;
 	}
-	
+
 	select {
 		outline: none;
 		font-size: 1rem;
 		border: none;
 		width: 100%;
-		padding: 1.1rem 0.8rem;
+		padding: 1rem 0.8rem;
 		border-radius: 10px;
 		background-color: black;
-		box-shadow: 0 0 5px #c4c4, 0 0 15px #c4c4;
+		box-shadow: 0 0 5px #bc13fe, 0 0 15px #bc13fe;
 		margin: 1rem 0;
+		margin-bottom: 2rem;
 		color: white;
 	}
 

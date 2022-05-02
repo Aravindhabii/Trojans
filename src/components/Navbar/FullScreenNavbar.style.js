@@ -4,6 +4,7 @@ export const FullScreenNavbarStyle = styled.div`
 	position: fixed;
 	width: 100%;
 	height: 100vh;
+	top: 0;
 	background-color: black;
 	z-index: 1000;
 	display: flex;

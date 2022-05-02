@@ -10,7 +10,8 @@ export const RegistrationContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 
-	div {
+	.dropdown-container {
 		display: flex;
+		width: 100%;
 	}
 `;
