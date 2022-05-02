@@ -88,9 +88,7 @@ const EventsPage = (props) => {
     console.log(clickedEvent, "clickedEvent");
     if (selectedEvent === "CODERS CHEMISTRY") {
       setCurrentEvent(CodersChemistry);
-      console.log("CodersChemistry");
     } else if (selectedEvent === "MASTER MINDS") {
-      console.log("Master mind");
       setCurrentEvent(MasterMinds);
     } else if (selectedEvent === "SITE-ING") {
       setCurrentEvent(SiteIng);

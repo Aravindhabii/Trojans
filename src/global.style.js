@@ -1,9 +1,9 @@
-import { createGlobalStyle } from 'styled-components';
-import Assassin from './assets/fonts/Assassin.ttf';
-import ShareTechMono from './assets/fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf';
-import EdhanMartine from './assets/fonts/edhan-martine-font/EdhanMartine-0WrVv.ttf';
-import MontserratMedium from './assets/fonts/Montserrat/Montserrat-Medium.ttf';
-import StrongBrain from './assets/fonts/strong_brain.otf';
+import {createGlobalStyle} from "styled-components";
+import Assassin from "./assets/fonts/Assassin.ttf";
+import ShareTechMono from "./assets/fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf";
+import EdhanMartine from "./assets/fonts/edhan-martine-font/EdhanMartine-0WrVv.ttf";
+import MontserratMedium from "./assets/fonts/Montserrat/Montserrat-Medium.ttf";
+import StrongBrain from "./assets/fonts/strong_brain.otf";
 
 export const GlobalStyles = createGlobalStyle`
 	*{
