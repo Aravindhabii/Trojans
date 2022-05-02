@@ -33,7 +33,11 @@ const App = () => {
 				) : ( */}
 					<Routes>
 						<Route path='/' element={<HomePage />} />
-						<Route exact path='/events' element={<EventsPage />} />
+						<Route exact path='/events' element={<EventsPage page=''/>} />
+						<Route exact path='/workshop' element={<EventsPage page='workshop'/>}/>
+						<Route exact path='/nontechnical' element={<EventsPage page='nontechnicalevents'/>}/>
+						<Route exact path='/technical' element={<EventsPage page='technicalevents'/>}/>
+						<Route exact path='/gamming' element={<EventsPage page='gamming'/>}/>
 						<Route exact path='/guidelines' element={<GuidelinesPage />} />
 						<Route exact path='/registration' element={<RegistrationPage />} />
 						<Route exact path='/sponser' element={<Sponser />} />

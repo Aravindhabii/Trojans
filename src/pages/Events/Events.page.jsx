@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { useSpring, animated } from "react-spring";
 
 import Navbar from "../../components/Navbar/Navbar.component";
 import Threed from "./threed";
+import LaptopModel from "./RenderModels/LaptopModel";
+import GamingModel from "./RenderModels/GamingModel";
+import SquidModel from "./RenderModels/SquidModel";
+import BitCoinModel from "./RenderModels/BitCoinModel";
+
 import {
   HeroSection,
   Button,
@@ -11,19 +17,41 @@ import {
   Rightone,
   Tabletdiv,
 } from "./Events.styles";
-import { CodersChemistry, MasterMinds, SiteIng, PaperBytes, GooseChase, TrojansThrottle,  } from "../../datas/events.data";
+import {
+  CodersChemistry,
+  MasterMinds,
+  SiteIng,
+  PaperBytes,
+  GooseChase,
+  TrojansThrottle,
+} from "../../datas/events.data";
 
 import Technical from "../../components/events/Technical";
 import Tablet from "../../components/events/Tablet";
-import { technicalevents } from "../../datas/technical.data";
+import {
+  technicalevents,
+  nontechnicalevents,
+  workshops,
+  gamming,
+} from "../../datas/technical.data";
 
-const EventsPage = () => {
+const EventsPage = (props) => {
+  const { page } = props;
   const [currentPage, setCurrentPage] = useState(technicalevents);
   const [isphoneopen, setisphoneopen] = useState(false);
   const [currentEvent, setCurrentEvent] = useState(CodersChemistry);
   const [clickedEvent, setClickedEvent] = useState("");
   const [selectedEvent, setSelectedEvent] = useState("");
   const [isTabletOpen, setisTabletOpen] = useState(false);
+
+  const animation = useSpring({
+    from: {
+      opacity: 0,
+    },
+    to: {
+      opacity: 1,
+    },
+  });
 
   const closetab = () => {
     setisTabletOpen(false);
@@ -35,9 +63,29 @@ const EventsPage = () => {
       setClickedEvent("");
     }
   };
+  
+  useEffect(() => {
+    if (page === "technicalevents") {
+      setCurrentPage(technicalevents);
+      setClickedEvent("technicalevents");
+      setisphoneopen(true);
+    } else if (page === "nontechnicalevents") {
+      setCurrentPage(nontechnicalevents);
+      setClickedEvent("nontechnicalevents");
+      setisphoneopen(true);
+    } else if (page === "gamming") {
+      setCurrentPage(gamming);
+      setClickedEvent("gamming");
+      setisphoneopen(true);
+    } else if (page === "workshops") {
+      setCurrentPage(workshops);
+      setClickedEvent("workshops");
+      setisphoneopen(true);
+    }
+  }, [page]);
 
   useEffect(() => {
-    console.log(clickedEvent, 'clickedEvent');
+    console.log(clickedEvent, "clickedEvent");
     if (selectedEvent === "CODERS CHEMISTRY") {
       setCurrentEvent(CodersChemistry);
       console.log("CodersChemistry");
@@ -77,7 +125,21 @@ const EventsPage = () => {
     } else if (selectedEvent === "FREE FIRE") {
       setCurrentEvent(CodersChemistry);
     }
-  }, [clickedEvent]);
+  }, [selectedEvent]);
+
+  const ThreedModel = () => {
+    if (clickedEvent === "technicalevents") {
+      return <LaptopModel />;
+    } else if (clickedEvent === "nontechnicalevents") {
+      return <SquidModel />;
+    } else if (clickedEvent === "gamming") {
+      return <GamingModel />;
+    } else if (clickedEvent === "workshops") {
+      return <BitCoinModel />;
+    } else {
+      return <GamingModel />;
+    }
+  };
 
   const click = (e) => {
     if (e.target.value !== clickedEvent) {
@@ -90,7 +152,14 @@ const EventsPage = () => {
   };
 
   return (
-    <section style={{height: '100vh', width: '100vw', overflow: "hidden", position: 'relative'}}>
+    <section
+      style={{
+        height: "100vh",
+        width: "100vw",
+        overflow: "hidden",
+        position: "relative",
+      }}
+    >
       <Helmet>
         <title>EVENTS | TROJANS</title>
       </Helmet>
@@ -113,7 +182,11 @@ const EventsPage = () => {
         <div className="right" onClick={phoneClick}>
           <Rightone isphoneopen={isphoneopen}>
             <Threeddiv openorclose={isphoneopen}>
-              <Threed />
+              {/* <div> */}
+
+              <ThreedModel />
+
+              {/* </div> */}
             </Threeddiv>
           </Rightone>
           <Righttwo openorclose={isphoneopen}>
@@ -124,8 +197,8 @@ const EventsPage = () => {
               setCurrentPage={setCurrentPage}
               clickedEvent={clickedEvent}
               setClickedEvent={setClickedEvent}
-              selectedEvent = {selectedEvent}
-              setSelectedEvent = {setSelectedEvent}
+              selectedEvent={selectedEvent}
+              setSelectedEvent={setSelectedEvent}
               isTabletOpen={isTabletOpen}
               setisTabletOpen={setisTabletOpen}
             />
