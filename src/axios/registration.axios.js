@@ -9,7 +9,7 @@ export const registrationEventAxios = (
 	college,
 	event
 ) =>
-	axios.post(`http://localhost:8080/api/data`, {
+	axios.post(`https://trojans-cit.herokuapp.com/api/data`, {
 		name,
 		email,
 		phone,
