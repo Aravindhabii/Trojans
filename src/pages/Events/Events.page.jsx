@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useSpring, animated } from "react-spring";
+import gsap from "gsap";
 
 import Navbar from "../../components/Navbar/Navbar.component";
 import Threed from "./threed";
@@ -8,6 +9,8 @@ import LaptopModel from "./RenderModels/LaptopModel";
 import GamingModel from "./RenderModels/GamingModel";
 import SquidModel from "./RenderModels/SquidModel";
 import BitCoinModel from "./RenderModels/BitCoinModel";
+import svg from "../../assets/events/binarynumber.svg";
+import HexBg from "../../components/Home/HexBg/HexBg.component";
 
 import {
   HeroSection,
@@ -58,12 +61,13 @@ const EventsPage = (props) => {
   };
 
   const phoneClick = (e) => {
-    if (isphoneopen === true) {
+    console.log('cicked ds');
+    if (isphoneopen === true && window.screen.width < 910) {
       setisphoneopen(false);
       setClickedEvent("");
     }
   };
-  
+
   useEffect(() => {
     if (page === "technicalevents") {
       setCurrentPage(technicalevents);
@@ -157,12 +161,20 @@ const EventsPage = (props) => {
         overflow: "hidden",
         position: "relative",
       }}
+      onMouseMove={(e) => {
+        gsap.to(".bg", {
+          duration: 1,
+          x: e.clientX - 150,
+          y: e.clientY - 150,
+        });
+      }}
     >
+      <HexBg direction="to bottom" svg={svg} color="rgba(3, 233, 244, 0.9)" />
       <Helmet>
         <title>EVENTS | TROJANS</title>
       </Helmet>
       <Navbar active={{ route: "events", scroll: 2 }} />
-      <HeroSection>
+      <HeroSection isphoneopen={isphoneopen}>
         <div className="left">
           <Button value="technicalevents" onClick={click}>
             Technical

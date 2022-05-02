@@ -4,12 +4,13 @@ import TrojansGold from '../../../assets/Trojans_logo/trojans-full-gold-min.png'
 
 import { HeroSection, HeroContent } from './HeroHome.style';
 
+import HexImg from "../../../assets/home/Hexagon.svg"
 import HexBg from '../HexBg/HexBg.component';
 
 const HeroHome = () => {
 	return (
 		<HeroSection>
-			<HexBg direction='to bottom' />
+			<HexBg direction='to bottom' svg={HexImg} />
 			<HeroContent>
 				<h3>DEPARTMENT OF INFORMATION TECHNOLOGY</h3>
 				<h3> PRESENTS</h3>

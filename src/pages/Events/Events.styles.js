@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const HeroSection = styled.section`
-  background-color: #1e1e1e;
+  /* background-color: #1e1e1e; */
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow-x: hidden;
+  z-index: 2;
 
   .left {
     position: relative;
@@ -46,12 +47,13 @@ export const HeroSection = styled.section`
   @media (max-width: 910px) {
     .left {
       width: 100%;
-      z-index: 1;
+      z-index: 2;
     }
     .right {
       width: 100%;
       position: absolute;
-      zindex: 2;
+      z-index: 3;
+      display: ${({ isphoneopen }) => (isphoneopen ? "flex" : "none")};
     }
   }
 `;
@@ -95,12 +97,11 @@ export const Righttwo = styled.div.attrs({
 
 export const Button = styled.button`
   position: relative;
-  /* background-color: #fff; */
   border: none;
   width: 70%;
   border-radius: 5px;
   color: #fff;
-  background: transparent;
+  background: black;
   font-size: 1.8rem;
   font-weight: bold;
   padding: 3rem 1rem;
@@ -386,7 +387,7 @@ export const Eventslist = styled.button.attrs({
   font-weight: bold;
   text-shadow: 0px 0px 10px #03e9f4;
   box-shadow: 0px 0px 10px 0px #03e9f4, inset 0px 0px 4px 0px #03e9f4;
-  background: transparent;
+  background: black;
   color: #03e9f4;
   align-items: center;
   justify-content: center;
