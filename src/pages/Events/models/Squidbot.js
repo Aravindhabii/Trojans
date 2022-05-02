@@ -6,20 +6,26 @@ source: https://sketchfab.com/3d-models/squid-game-pinksoldier-8f6112f88ea743e8a
 title: Squid Game : PinkSoldier
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
-export default function Model({ ...props }) {
-  const group = useRef()
-  const { nodes, materials } = useGLTF('/squidbot.glb')
+export default function SquidBot({ ...props }) {
+  const group = useRef();
+  const { nodes, materials } = useGLTF("/squidbot.glb");
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} position={[0, -1.45, -0.02]}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
-        <mesh geometry={nodes.Object_2.geometry} material={materials.material_0} />
-        <mesh geometry={nodes.Object_3.geometry} material={materials.material_0} />
+        <mesh
+          geometry={nodes.Object_2.geometry}
+          material={materials.material_0}
+        />
+        <mesh
+          geometry={nodes.Object_3.geometry}
+          material={materials.material_0}
+        />
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/squidbot.glb')
+useGLTF.preload("/squidbot.glb");
