@@ -28,8 +28,16 @@ export const FormContainerStyle = styled.form`
 	justify-content: center;
 	align-items: center;
 
+	@media (max-width: 650px) {
+		width: 70vw;
+	}
+
+	@media (max-width: 450px) {
+		width: 80vw;
+	}
+
 	button {
-		width: 20vw;
+		width: 10rem;
 		padding: 10px 25px;
 		background: transparent;
 		transition: all 0.3s ease;
@@ -78,6 +86,10 @@ export const InputContainerStyle = styled.div`
 	width: 100%;
 	font-size: 1.3rem;
 
+	@media (max-width: 450px) {
+		font-size: 1.1rem;
+	}
+
 	label {
 		color: violet !important;
 		text-shadow: 0 0 5px violet, 0 0 15px violet;
@@ -97,11 +109,18 @@ export const InputContainerStyle = styled.div`
 		margin: 1rem 0;
 		border: 1px solid #bc13fe;
 		margin-bottom: 2rem;
+
+		@media (max-width: 450px) {
+			padding: 0.8rem 0.8rem;
+		}
 	}
 
 	option {
 		color: white;
 		padding: 1rem 0.8rem;
+		@media (max-width: 450px) {
+			padding: 0.8rem 0.8rem;
+		}
 	}
 
 	select {
@@ -116,6 +135,10 @@ export const InputContainerStyle = styled.div`
 		margin: 1rem 0;
 		margin-bottom: 2rem;
 		color: white;
+
+		@media (max-width: 450px) {
+			padding: 0.8rem 0.8rem;
+		}
 	}
 
 	select[name='department'] {

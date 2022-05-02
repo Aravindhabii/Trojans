@@ -13,5 +13,8 @@ export const RegistrationContainer = styled.div`
 	.dropdown-container {
 		display: flex;
 		width: 100%;
+		@media (max-width: 400px) {
+			flex-direction: column;
+		}
 	}
 `;
