@@ -5,7 +5,9 @@ import {
 	handleEmailValidation,
 	handlePhoneValidation,
 	handleDropdownValidation,
-	handleSubmit
+	handleSubmit,
+	handleFocus,
+	handleBlur
 } from './registrationFormValidation.utils';
 import {
 	InputContainerStyle,
@@ -46,10 +48,11 @@ const RegistrationForm = () => {
 			}
 		>
 			<InputContainerStyle>
-				<lable>Name</lable>
+				<label>Name</label>
 				<input
 					name='name'
 					type='text'
+					className='focused'
 					onChange={() =>
 						handleTextValidation(
 							name,
@@ -59,10 +62,11 @@ const RegistrationForm = () => {
 						)
 					}
 					ref={name}
+					autoFocus
 				/>
 			</InputContainerStyle>
 			<InputContainerStyle>
-				<lable>Email</lable>
+				<label>Email</label>
 				<input
 					name='email'
 					type='email'
@@ -78,7 +82,7 @@ const RegistrationForm = () => {
 				/>
 			</InputContainerStyle>
 			<InputContainerStyle>
-				<lable>Phone</lable>
+				<label>Phone</label>
 				<input
 					name='phone'
 					type='text'
@@ -93,59 +97,61 @@ const RegistrationForm = () => {
 					ref={phone}
 				/>
 			</InputContainerStyle>
+			<div>
+				<InputContainerStyle>
+					<label>Department</label>
+					<select
+						name='department'
+						defaultValue='Select Department'
+						ref={department}
+						onChange={() =>
+							handleDropdownValidation(
+								department,
+								setIsButtonEnabled,
+								setformInputValid,
+								formInputValid
+							)
+						}
+					>
+						<option value='Select Department' disabled>
+							Select Department
+						</option>
+						<option value='IT'>IT</option>
+						<option value='CSE'>CSE</option>
+						<option value='ECE'>ECE</option>
+						<option value='EEE'>EEE</option>
+						<option value='MECH'>MECH</option>
+						<option value='CIVIL'>CIVIL</option>
+						<option value='MBBS'>MBBS</option>
+					</select>
+				</InputContainerStyle>
+				<InputContainerStyle>
+					<label>Year</label>
+					<select
+						name='year'
+						defaultValue='Select Year'
+						ref={year}
+						onChange={() =>
+							handleDropdownValidation(
+								year,
+								setIsButtonEnabled,
+								setformInputValid,
+								formInputValid
+							)
+						}
+					>
+						<option value='Select Year' disabled>
+							Select Year
+						</option>
+						<option value='1'>1</option>
+						<option value='2'>2</option>
+						<option value='3'>3</option>
+						<option value='4'>4</option>
+					</select>
+				</InputContainerStyle>
+			</div>
 			<InputContainerStyle>
-				<lable>Department</lable>
-				<select
-					name='department'
-					defaultValue='Select Department'
-					ref={department}
-					onChange={() =>
-						handleDropdownValidation(
-							department,
-							setIsButtonEnabled,
-							setformInputValid,
-							formInputValid
-						)
-					}
-				>
-					<option value='Select Department' disabled>
-						Select Department
-					</option>
-					<option value='IT'>IT</option>
-					<option value='CSE'>CSE</option>
-					<option value='ECE'>ECE</option>
-					<option value='EEE'>EEE</option>
-					<option value='MECH'>MECH</option>
-					<option value='CIVIL'>CIVIL</option>
-					<option value='MBBS'>MBBS</option>
-				</select>
-			</InputContainerStyle>
-			<InputContainerStyle>
-				<lable>Year</lable>
-				<select
-					name='year'
-					defaultValue='Select Year'
-					ref={year}
-					onChange={() =>
-						handleDropdownValidation(
-							year,
-							setIsButtonEnabled,
-							setformInputValid,
-							formInputValid
-						)
-					}
-				>
-					<option value='Select Year' disabled>
-						Select Year
-					</option>
-					<option value='1'>1</option>
-					<option value='2'>2</option>
-					<option value='3'>3</option>
-					<option value='4'>4</option>
-				</select>
-			</InputContainerStyle>
-			<InputContainerStyle>
-				<lable>College</lable>
+				<label>College</label>
 				<input
 					name='college'
 					type='text'
