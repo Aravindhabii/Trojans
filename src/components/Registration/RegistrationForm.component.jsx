@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import {
 	handleTextValidation,
@@ -6,8 +8,7 @@ import {
 	handlePhoneValidation,
 	handleDropdownValidation,
 	handleSubmit,
-	handleFocus,
-	handleBlur
+	handleEmailVerify
 } from './registrationFormValidation.utils';
 import {
 	InputContainerStyle,
@@ -15,6 +16,7 @@ import {
 } from './registrationForm.style';
 
 const RegistrationForm = () => {
+	const [searchParams] = useSearchParams();
 	const name = useRef('');
 	const email = useRef('');
 	const phone = useRef('');
@@ -23,9 +25,13 @@ const RegistrationForm = () => {
 	const college = useRef('');
 	const event = useRef('');
 
+	const [isEmailVerified, setIsEmailVerified] = useState(
+		searchParams.get('emailVerified') === 'true'
+	);
+
 	const [formInputValid, setformInputValid] = useState({
 		name: false,
-		email: false,
+		email: searchParams.get('email') ? true : false,
 		phone: false,
 		department: false,
 		year: false,
@@ -47,9 +53,48 @@ const RegistrationForm = () => {
 				handleSubmit(e, name, email, phone, department, year, college, event)
 			}
 		>
+			{searchParams.get('email') &&
+				toast.success(
+					'Email verified! You may proceed my with the necessary details.'
+				)}
+			<div className='email'>
+				<InputContainerStyle>
+					<label>Email</label>
+					<input
+						name='email'
+						type='email'
+						disabled={isEmailVerified}
+						autoFocus
+						onChange={() =>
+							handleEmailValidation(
+								email,
+								setIsButtonEnabled,
+								setformInputValid,
+								formInputValid
+							)
+						}
+						ref={email}
+						value={
+							searchParams.get('email')
+								? searchParams.get('email')
+								: email.current.value
+						}
+					/>
+				</InputContainerStyle>
+				<button
+					type='button'
+					disabled={
+						!formInputValid.email ? true : isEmailVerified ? true : false
+					}
+					onClick={() => handleEmailVerify(email)}
+				>
+					{!isEmailVerified ? 'Verify' : 'Verified'}
+				</button>
+			</div>
 			<InputContainerStyle>
 				<label>Name</label>
 				<input
+					disabled={!isEmailVerified || !formInputValid.email}
 					name='name'
 					type='text'
 					className='focused'
@@ -66,24 +111,9 @@ const RegistrationForm = () => {
 				/>
 			</InputContainerStyle>
 			<InputContainerStyle>
-				<label>Email</label>
-				<input
-					name='email'
-					type='email'
-					onChange={() =>
-						handleEmailValidation(
-							email,
-							setIsButtonEnabled,
-							setformInputValid,
-							formInputValid
-						)
-					}
-					ref={email}
-				/>
-			</InputContainerStyle>
-			<InputContainerStyle>
 				<label>Phone</label>
 				<input
+					disabled={!isEmailVerified || !formInputValid.email}
 					name='phone'
 					type='text'
 					onChange={() =>
@@ -101,6 +131,7 @@ const RegistrationForm = () => {
 				<InputContainerStyle>
 					<label>Department</label>
 					<select
+						disabled={!isEmailVerified || !formInputValid.email}
 						name='department'
 						defaultValue='Select Department'
 						ref={department}
@@ -128,6 +159,7 @@ const RegistrationForm = () => {
 				<InputContainerStyle>
 					<label>Year</label>
 					<select
+						disabled={!isEmailVerified || !formInputValid.email}
 						name='year'
 						defaultValue='Select Year'
 						ref={year}
@@ -153,6 +185,7 @@ const RegistrationForm = () => {
 			<InputContainerStyle>
 				<label>College</label>
 				<input
+					disabled={!isEmailVerified || !formInputValid.email}
 					name='college'
 					type='text'
 					onChange={() =>
@@ -169,6 +202,7 @@ const RegistrationForm = () => {
 			<InputContainerStyle>
 				<label>Event</label>
 				<select
+					disabled={!isEmailVerified || !formInputValid.email}
 					name='event'
 					defaultValue='Select Event'
 					ref={event}

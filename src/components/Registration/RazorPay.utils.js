@@ -56,7 +56,7 @@ export const displayRazorpay = async (
         order_id: data.id,
         name: "Donation",
         description: "Thank you for nothing. Please give us some money",
-        image: "http://localhost:8080/logo",
+        // image: "http://localhost:8080/logo",
         handler: async function (response) {
             // alert(response.razorpay_payment_id);
             // alert(response.razorpay_order_id);

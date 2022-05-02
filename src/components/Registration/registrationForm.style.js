@@ -42,7 +42,6 @@ export const FormContainerStyle = styled.form`
 		background: transparent;
 		transition: all 0.3s ease;
 		position: relative;
-		color: #bc13fe;
 		z-index: 1;
 		margin-bottom: 3rem;
 		margin-top: 1rem;
@@ -70,7 +69,6 @@ export const FormContainerStyle = styled.form`
 		}
 		&:hover:after {
 			background: #bc13fe;
-			-webkit-transform: scale(2) rotate(180deg);
 			transform: scale(2) rotate(180deg);
 			box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 1),
 				-4px -4px 6px 0 rgba(116, 125, 136, 0.2),
@@ -99,7 +97,6 @@ export const InputContainerStyle = styled.div`
 	input {
 		font-size: 1rem;
 		outline: none;
-		border: none;
 		color: white;
 		width: 100%;
 		padding: 1rem 0.8rem;
@@ -151,6 +148,11 @@ export const InputContainerStyle = styled.div`
 		margin-left: 0.3rem;
 	}
 
+	input[disabled],
+	select[disabled] {
+		box-shadow: 0 0 5px #530074, 0 0 15px #530074;
+		border: 1px solid #530074;
+	}
 	input:focus,
 	select:focus {
 		box-shadow: 0 0 5px white, 0 0 15px white;
@@ -159,9 +161,11 @@ export const InputContainerStyle = styled.div`
 	input.error,
 	select.error {
 		box-shadow: 0 0 5px red, 0 0 15px red;
+		border: 1px solid red;
 	}
 	input.success,
 	select.success {
 		box-shadow: 0 0 5px green, 0 0 15px green;
+		border: 1px solid green;
 	}
 `;

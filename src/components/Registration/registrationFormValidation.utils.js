@@ -1,6 +1,10 @@
 import { toast } from 'react-toastify';
 
-import { registrationEventAxios } from '../../axios/registration.axios';
+import { auth } from '../../firebase-config';
+import {
+	sendEmailVerification,
+	createUserWithEmailAndPassword
+} from 'firebase/auth';
 
 import { displayRazorpay } from './RazorPay.utils';
 
@@ -114,4 +118,34 @@ export const handleSubmit = async (
 			? 200
 			: 100;
 	displayRazorpay(name, email, phone, department, year, college, event, amount);
+};
+
+export const handleEmailVerify = async (email) => {
+	try {
+		await createUserWithEmailAndPassword(
+			auth,
+			email.current.value,
+			'123456789'
+		).then(async (res) => {
+			await sendEmailVerification(auth.currentUser, {
+				url:
+					'http://localhost:3000/registration?emailVerified=true&email=' +
+					email.current.value
+			})
+				.then(() => {
+					toast.success('Verification email sent.');
+				})
+
+				.catch((error) => {
+					toast.error('Error in verifying email');
+					console.log(error.message);
+				});
+		});
+	} catch (error) {
+		if (error.message.includes('email')) {
+			console.log(error);
+			toast.error('You have already registered.');
+			return;
+		}
+	}
 };
