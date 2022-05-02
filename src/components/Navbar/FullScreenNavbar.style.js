@@ -4,6 +4,7 @@ export const FullScreenNavbarStyle = styled.div`
 	position: fixed;
 	width: 100%;
 	height: 100vh;
+	top: 0;
 	background-color: black;
 	z-index: 1000;
 	display: flex;
@@ -14,6 +15,10 @@ export const FullScreenNavbarStyle = styled.div`
 	transition: all 0.3s ease-in-out;
 	opacity: ${({ isNavOpen }) => (isNavOpen ? 1 : 0)};
 	z-index: ${({ isNavOpen }) => (isNavOpen ? 100 : -1)};
+
+	@media (max-width: 500px) {
+		padding-left: 2rem;
+	}
 `;
 
 export const NavLinksContainer = styled.ul`
@@ -42,6 +47,10 @@ export const Navlink = styled.li`
 		transition: all 0.2s ease-in;
 		position: relative;
 		font-family: 'ShareTechMono';
+
+		@media (max-width: 350px) {
+			font-size: 2rem;
+		}
 	}
 
 	a::before {

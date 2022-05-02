@@ -20,7 +20,7 @@ const Technical = (props) => {
     setisTabletOpen,
     setCurrentEvent,
     selectedEvent,
-    setSelectedEvent
+    setSelectedEvent,
   } = props;
 
   // return

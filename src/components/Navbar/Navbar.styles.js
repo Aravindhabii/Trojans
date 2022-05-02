@@ -27,11 +27,12 @@ export const NavbarContainer = styled.div`
 	}
 `;
 
-export const NavbarLogo = styled.div`
+export const NavbarLogo = styled.a`
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-right: 1rem;
+	text-decoration: none;
 
 	h1 {
 		color: transparent;

@@ -13,8 +13,14 @@ import Nontechrobo from "./models/Nontechrobo";
 import Workshop from "./models/Scene";
 import Laptop from "./models/Laptop";
 import Bitcoin from "./models/Bitcoin";
-
-
+import SquidBot from "./models/Squidbot";
+import Bitcointwo from "./models/Bitcointwo"
+import Bitcointhree from "./models/Bitcointhree"
+import PinkSoldier from "./models/Squidbot"
+import Soldier from "./models/Soldier";
+import Gaurdsglb from "./models/Gaurdsglb";
+import Game from "./models/Game"
+import Cypher from "./models/Cypher";
 
 export default function Threed() {
   const [camera, setcamera] = useState({ fov: 20, near: 2, far: 1000, z: 5 })
@@ -24,7 +30,10 @@ export default function Threed() {
     <Canvas
       className="canvas"
       updateDefaultCamera={true}
-      camera={{ fov: 10, near: 2, far: 1000, z: 4 }}
+      // camera={{ fov: 10, near: 2, far: 1000, z: 4 }}
+      // camera={{ fov: 100, near:0.2, far: 1000, z: 10 }}
+      // camera={{ fov: 60,near: 2, far: 10, z: -5 }}
+      camera={{ fov: 40,near: 2, far: 10, z: -5 }}
     >
       <ambientLight intensity={1} />
       <spotLight position={[5, 180, -40]} />
@@ -33,9 +42,18 @@ export default function Threed() {
       <Suspense fallback={null}>
         {/* <Fredbear /> */}
         {/* <GipsyDange /> */}
-        <Laptop />
+        {/* <Soldier/> */}
+        {/* <Gaurdsglb/> */}
+        {/* <Game/> */}
+        < Cypher />
+        {/* <Laptop /> */}
         {/* <Workshop /> */}
         {/* <Nontechrobo /> */}
+        {/* < SquidBot/> */}
+        {/* <Bitcoin/> */}
+        {/* <Bitcointwo/> */}
+        {/* <Bitcointhree/> */}
+        {/* <PinkSoldier/> */}
       </Suspense>
       <OrbitControls
         autoRotate

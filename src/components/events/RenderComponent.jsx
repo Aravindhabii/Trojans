@@ -18,7 +18,7 @@ const RenderComponent = (props) => {
     setisTabletOpen,
     setCurrentEvent,
     selectedEvent,
-    setSelectedEvent
+    setSelectedEvent,
   } = props;
   const [previousPage, setPreviousPage] = useState("");
 
