@@ -89,7 +89,6 @@ const EventsPage = (props) => {
 	}, [page]);
 
 	useEffect(() => {
-		console.log(clickedEvent, 'clickedEvent');
 		if (selectedEvent === 'CODERS CHEMISTRY') {
 			setCurrentEvent(CodersChemistry);
 		} else if (selectedEvent === 'MASTER MINDS') {
