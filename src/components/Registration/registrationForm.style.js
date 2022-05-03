@@ -153,6 +153,7 @@ export const InputContainerStyle = styled.div`
 		box-shadow: 0 0 5px #530074, 0 0 15px #530074;
 		border: 1px solid #530074;
 	}
+
 	input:focus,
 	select:focus {
 		box-shadow: 0 0 5px white, 0 0 15px white;

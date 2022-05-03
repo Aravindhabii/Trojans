@@ -110,7 +110,7 @@ export const handleSubmit = async (
 	e.preventDefault();
 	let amount =
 		event.current.value === 'Technical'
-			? 100
+			? 1
 			: event.current.value === 'Non-Technical'
 			? 100
 			: event.current.value === 'Tojans CTF'

@@ -301,6 +301,7 @@ export const TabImgContainer = styled.div`
 		text-decoration: none;
 		background-color: rgba(0, 0, 0, 0.5);
 		margin-top: 1rem;
+		border-radius: 10px;
 
 		&:before {
 			height: 0%;

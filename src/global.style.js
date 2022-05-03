@@ -19,11 +19,6 @@ export const GlobalStyles = createGlobalStyle`
 		overflow: overlay;
 	}
 
-	::-webkit-scrollbar-thumb {
-		background: red; 
-		border-radius: 10px;
-	}
-
 	h1,h2,h3,h4,h5,h6{
 		font-family: 'EdhanMartine', sans-serif;
 	}

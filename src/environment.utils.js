@@ -1,8 +1,8 @@
 const __DEV__ = document.domain === 'localhost';
 
 export const BACKEND_BASE_URL = __DEV__
-	? 'http://localhost:8080'
-	: 'https://trojans-server.herokuapp.com';
+	? 'http://localhost:8080/api'
+	: 'https://trojans-server.herokuapp.com/api';
 
 export const REACT_BASE_URL = __DEV__
 	? 'http://localhost:3000'
