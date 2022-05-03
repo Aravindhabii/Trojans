@@ -57,11 +57,11 @@ export const ContactContainer = styled.div`
 	background: #000;
 	color: #fff;
 	overflow: visible;
-margin-left: 6rem;
+	margin-left: 6rem;
 	/* z-index: 2; */
 	h1 {
 		font-size: 3rem;
-		margin-bottom: 0.5rem;
+		margin-bottom: 1rem;
 		color: black;
 		/* text-shadow: 0 0 7px #bc13fe, 0 0 10px #bc13fe, 0 0 21px #bc13fe,
                 0 0 42px #bc13fe, 0 0 82px #bc13fe, 0 0 92px #bc13fe,
@@ -79,12 +79,13 @@ margin-left: 6rem;
 		justify-content: space-between;
 	}
 
-	a{
+	a {
 		text-decoration: none;
 		color: white;
 	}
 	form {
 		width: 100%;
+		height: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -95,6 +96,8 @@ margin-left: 6rem;
 			flex-direction: column;
 			justify-content: center;
 			height: 6.5rem;
+			margin-bottom: 1rem;
+
 			label {
 				font-size: 1.5rem;
 			}
@@ -132,7 +135,7 @@ margin-left: 6rem;
 			}
 
 			button {
-				width: 30%;
+				width: 10rem;
 				height: 3rem;
 				background: #000;
 				outline: none;

@@ -96,14 +96,14 @@ const EventsHome = () => {
 					handlePhoneButtonClick={() => handlePhoneButtonClick('technical')}
 				/>
 				<PhoneButton
-					text='Non Technical Events'
-					bgColor='#03e9f4'
-					handlePhoneButtonClick={() => handlePhoneButtonClick('non-technical')}
-				/>
-				<PhoneButton
 					text='Workshops'
 					bgColor='#03e9f4'
 					handlePhoneButtonClick={() => handlePhoneButtonClick('workshops')}
+				/>
+				<PhoneButton
+					text='Non Technical Events'
+					bgColor='#03e9f4'
+					handlePhoneButtonClick={() => handlePhoneButtonClick('non-technical')}
 				/>
 			</Tilt>
 			{window.innerWidth > 500 && (
@@ -125,7 +125,7 @@ const EventsHome = () => {
 									<p>Trojan's CTF</p>
 									<p>Site-ing</p>
 								</div>
-								<a href='/events'>View more</a>
+								<a href='/technical'>View more</a>
 							</div>
 						</TabImgContainer>
 					)}
@@ -142,7 +142,7 @@ const EventsHome = () => {
 									<p>GAMERS PARADISE UNITED</p>
 									<p>ENNA ENNA SOLRAN PAARUNGA</p>
 								</div>
-								<a href='/events'>View more</a>
+								<a href='/nontechnical'>View more</a>
 							</div>
 						</TabImgContainer>
 					)}
@@ -167,7 +167,7 @@ const EventsHome = () => {
 										START-UP AND <br /> ENTREPRENEURSHIP
 									</p>
 								</div>
-								<a href='/events'>View more</a>
+								<a href='/workshop'>View more</a>
 							</div>
 						</TabImgContainer>
 					)}

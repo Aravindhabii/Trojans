@@ -43,7 +43,7 @@ const AboutHome = () => {
 	};
 	return (
 		<>
-			<HeroSection contentTrigger={contentTrigger}>
+			<HeroSection contentTrigger={contentTrigger} id='about'>
 				{/* <video className='video' loop autoPlay muted>
 					<source src={video} type="video/mp4"/>
 				</video> */}

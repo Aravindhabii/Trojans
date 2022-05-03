@@ -291,7 +291,6 @@ export const TabImgContainer = styled.div`
 		font-family: 'Lato', sans-serif;
 		font-weight: 500;
 		background: transparent;
-		cursor: pointer;
 		transition: all 0.3s ease;
 		position: relative;
 		display: inline-block;

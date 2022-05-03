@@ -11,6 +11,7 @@ const Registration = () => {
 		<RegistrationContainer>
 			<Navbar active={{ route: 'registration', scroll: 0 }} />
 			<RegistrationForm />
+			<Footer />
 		</RegistrationContainer>
 	);
 };

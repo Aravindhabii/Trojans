@@ -34,10 +34,31 @@ function Footer() {
 							{ url: '/events', name: 'Workshops' }
 						]}
 					/>
+					<FooterlLinksContainer
+						title='About'
+						links={[
+							{ url: '/', name: 'Trojans' },
+							{ url: '/', name: 'Deparmant' },
+							{ url: '/', name: 'College' }
+						]}
+					/>
+					<FooterlLinksContainer
+						title='Connect'
+						links={[
+							{
+								url: 'https://www.instagram.com/trojans_cit/',
+								name: 'Instagram'
+							},
+							{ url: '/', name: 'Contact' }
+						]}
+					/>
+				</div>
+				<div>
+					<img src={Trojans} alt='Trojans' />
 				</div>
 			</div>
 			<div className='copyright'>
-				<p>COPYRIGHT © TROJANS 2022-2023</p>
+				<p>COPYRIGHT © TROJANS</p>
 			</div>
 		</FooterContainer>
 	);

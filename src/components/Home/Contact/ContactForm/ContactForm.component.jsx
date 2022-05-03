@@ -56,7 +56,6 @@ const ContactForm = () => {
 						name='name'
 						ref={name}
 						id='name'
-						autoFocus
 						onChange={() =>
 							handleTextValidation(
 								name,

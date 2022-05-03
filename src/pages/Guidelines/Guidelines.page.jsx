@@ -13,7 +13,7 @@ const GuidelinesPage = () => {
         </Helmet>
 			<Navbar active={{ route: 'guidelines', scroll: 3 }} />
 			<FirstSection />
-			{/* <Footer /> */}
+			<Footer />
 		</>
 	);
 };

@@ -135,7 +135,6 @@ export const SponserSection = styled.section`
 `;
 
 export const MembersSection = styled.section`
-    height: 100vh;
     width: 100%;
     background-color: black;
     display: flex;

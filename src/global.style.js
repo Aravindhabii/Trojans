@@ -35,7 +35,7 @@ export const GlobalStyles = createGlobalStyle`
 		}
 	}
 
-	p{
+	p,a{
 		font-size: 1rem;
 		font-family: 'MontserratMedium' ,cursive;
 

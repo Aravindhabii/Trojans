@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
+
+import Footer from '../../components/Footer/Footer'
 import { SponserSection, MembersSection, MembersDiv } from './sponser.styles';
 import img from '../../assets/about/1.jpg';
 import img2 from '../../assets/about/4.jpg';
 import img3 from '../../assets/about/5.jpg';
 import Navbar from '../../components/Navbar/Navbar.component';
-import gsap from 'gsap';
 import Tilt from 'react-parallax-tilt';
 
 function Sponser() {
@@ -93,6 +94,8 @@ const DevelopersCard = ({ name, description, instagram, linkedin, color }) => {
 					</div>
 				</MembersDiv>
 			</Tilt>
+			<Footer />
+
 		</>
 	);
 };

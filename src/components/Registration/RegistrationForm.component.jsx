@@ -111,7 +111,7 @@ const RegistrationForm = () => {
 				/>
 			</InputContainerStyle>
 			<InputContainerStyle>
-				<label>Phone</label>
+				<label>What's app number</label>
 				<input
 					disabled={!isEmailVerified || !formInputValid.email}
 					name='phone'
