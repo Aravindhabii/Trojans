@@ -6,6 +6,7 @@ import {
 	createUserWithEmailAndPassword
 } from 'firebase/auth';
 
+import { REACT_BASE_URL } from '../../environment.utils';
 import { displayRazorpay } from './RazorPay.utils';
 
 export const handleTextValidation = (
@@ -128,9 +129,7 @@ export const handleEmailVerify = async (email) => {
 			'123456789'
 		).then(async (res) => {
 			await sendEmailVerification(auth.currentUser, {
-				url:
-					'http://localhost:3000/registration?emailVerified=true&email=' +
-					email.current.value
+				url: `${REACT_BASE_URL}/registration?emailVerified=true&email=${email.current.value}`
 			})
 				.then(() => {
 					toast.success('Verification email sent.');

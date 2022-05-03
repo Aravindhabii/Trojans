@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import { RegistrationContainer } from './Registration.style';
 
 const Registration = () => {
+	console.log(process.env.BASE_URL);
 	return (
 		<RegistrationContainer>
 			<Navbar active={{ route: 'registration', scroll: 0 }} />

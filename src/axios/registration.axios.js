@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import { BACKEND_BASE_URL } from '../environment.utils';
+
 export const registrationEventAxios = (
 	name,
 	email,
@@ -9,7 +11,7 @@ export const registrationEventAxios = (
 	college,
 	event
 ) =>
-	axios.post(`https://trojans-cit.herokuapp.com/api/data`, {
+	axios.post(`${BACKEND_BASE_URL}/api/data`, {
 		name,
 		email,
 		phone,
