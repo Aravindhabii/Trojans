@@ -10,4 +10,4 @@ export const REACT_BASE_URL = __DEV__
 
 export const RAZORPAY_KEY = __DEV__
 	? 'rzp_test_o2U8BQRS1aZ9Ww'
-	: 'rzp_live_MclbQXG3g9lyBX';
+	: 'rzp_live_ntnN5NKmqdPeFG';

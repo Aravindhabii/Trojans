@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 import {
 	ContactSection,
@@ -32,7 +32,7 @@ function Contact() {
 					</ContactPerson>
 					<ContactPerson>
 						<p>
-							<span>Vice President (Anu)</span>
+							<span>Vice President (Anumesh)</span>
 							<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span>
 							<a href='tel:+919840189946'> +91 98401 89946</a>
 						</p>
