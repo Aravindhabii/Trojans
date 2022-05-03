@@ -58,8 +58,8 @@ const EventsHome = () => {
 			<main
 				onClick={() =>
 					setPhonesPosition({
-						phone1: 20,
-						tablet1: 10
+						phone1: 50,
+						tablet1: -150
 					})
 				}
 			></main>

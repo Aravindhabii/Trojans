@@ -8,8 +8,8 @@ const FooterlLinksContainer = ({ title, links }) => {
 		<div className='footer-links-container'>
 			<h2>{title}</h2>
 			<ul>
-				{links.map((link) => (
-					<li>
+				{links.map((link, index) => (
+					<li key={index}>
 						<a href={link.url}>{link.name}</a>
 					</li>
 				))}
@@ -49,7 +49,7 @@ function Footer() {
 								url: 'https://www.instagram.com/trojans_cit/',
 								name: 'Instagram'
 							},
-							{ url: '/', name: 'Contact' }
+							{ url: '/#contact', name: 'Contact' }
 						]}
 					/>
 				</div>

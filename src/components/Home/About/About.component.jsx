@@ -1,8 +1,10 @@
 import React from 'react';
 import { useRef, useEffect, useState } from 'react';
-import './about.css';
-
 import { gsap } from 'gsap';
+
+import './about.css';
+import CITImg from '../../../assets/Trojans_logo/CIT_Logo_white.png';
+
 import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
 import { HeroSection } from './About.styles';
 
@@ -25,13 +27,29 @@ const AboutHome = () => {
 				x: 0,
 				ease: 'easeInOut',
 				duration: 1
-			});
+			}).to(
+				element.querySelectorAll('.about-title'),
+				{
+					x: 0,
+					ease: 'easeInOut',
+					duration: 1
+				},
+				'-=1'
+			);
 		} else {
 			t1.to(element.querySelectorAll('.para'), {
 				y: 0,
 				ease: 'easeInOut',
 				duration: 1
-			});
+			}).to(
+				element.querySelectorAll('.about-title'),
+				{
+					y: 0,
+					ease: 'easeInOut',
+					duration: 1
+				},
+				'-=1'
+			);
 		}
 	}, [display]);
 	const handleClick = (type) => {
@@ -55,9 +73,9 @@ const AboutHome = () => {
 					<span className='cam2'></span>
 					<span className='cam3'></span>
 					{display == 1 ? (
-						<>
+						<main>
+							<h1 className='about-title'>TROJANS</h1>
 							<p className='para para1'>
-								<h1>About Trojans.</h1>
 								Trojans is a national level technical symposium organised by the
 								IT department of Chennai Institute of Technology. Trojans were
 								first launched on the day of 13th March, 2022. Trojans aim to
@@ -72,12 +90,15 @@ const AboutHome = () => {
 								encouraging the young minds of this generation to invoke the
 								creative and tactical side of thinking.
 							</p>
-						</>
+						</main>
 					) : null}
 					{display == 2 ? (
-						<>
+						<main>
+							<h1 className='about-title'>
+								Chennai Institute of Technology{' '}
+								<img src={CITImg} alt='CIT Logo' />
+							</h1>
 							<p className='para para2'>
-								<h1>About Chennai Institute of Technology</h1>
 								Chennai Institute of Technology (CIT Chennai) is an Industry
 								Connected Institute, affiliated to Anna University and is a
 								co-educational engineering college located at Kundrathur,
@@ -100,12 +121,12 @@ const AboutHome = () => {
 									</span>
 								)}
 							</p>
-						</>
+						</main>
 					) : null}
 					{display == 3 ? (
-						<>
+						<main>
+							<h1 className='about-title'>About IT Department of CIT</h1>
 							<p className='para para2'>
-								<h1>About IT Department of CIT</h1>
 								The department of Information Technology in Chennai Institute of
 								Technology has existed since the year 2019. It’s main aim is to
 								develop Engineers who are capable of creating software
@@ -118,7 +139,7 @@ const AboutHome = () => {
 								national and international level technical events and have
 								brought laurel to the department.
 							</p>
-						</>
+						</main>
 					) : null}
 				</div>
 			</HeroSection>

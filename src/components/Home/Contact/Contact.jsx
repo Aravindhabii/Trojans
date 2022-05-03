@@ -12,13 +12,13 @@ import ContactForm from './ContactForm/ContactForm.component';
 function Contact() {
 	return (
 		<>
-			<ContactSection>
+			<ContactSection id='contact'>
 				{/* <video autoPlay loop muted>
                     <source src={NeonVideo} type="video/mp4" />
                 </video> */}
 				<ContactContainer>
 					<h1>Contact</h1>
-					<p>What to learn more about us ? Confused ?</p>
+					<p>Want to learn more about us ? Confused ?</p>
 					<p>Contact us to know more about us.</p>
 					<ContactPerson>
 						<p>

@@ -16,7 +16,6 @@ const Preloader = () => {
 				duration: 1,
 				overflow: 'hidden'
 			})
-
 			.fromTo(
 				spans('img'),
 				{
@@ -28,7 +27,8 @@ const Preloader = () => {
 					duration: 1,
 					rotation: 0,
 					scale: 1
-				}
+				},
+				'-=1'
 			)
 			.fromTo(
 				spans('span'),

@@ -45,13 +45,12 @@ export const FooterContainer = styled.section`
 				ul {
 					list-style: none;
 				}
-				li {
-					margin-bottom: 0.5rem;
-				}
 
 				ul a {
 					color: #fff;
 					text-decoration: none;
+					padding: 0.5rem;
+					display: block;
 				}
 			}
 		}
