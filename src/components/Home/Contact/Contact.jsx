@@ -16,24 +16,21 @@ function Contact() {
 				{/* <video autoPlay loop muted>
                     <source src={NeonVideo} type="video/mp4" />
                 </video> */}
-				<ContactContainer>
+				<ContactContainer style={{ marginLeft: '6rem' }}>
 					<h1>Contact</h1>
 					<p>Want to learn more about us ? Confused ?</p>
 					<p>Contact us to know more about us.</p>
 					<ContactPerson>
 						<p>
 							<span>President (Vijay)</span>
-							<span>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								:
-							</span>
+							<span>:</span>
 							<a href='tel:+919500373830'> +91 95003 73830</a>
 						</p>
 					</ContactPerson>
 					<ContactPerson>
 						<p>
 							<span>Vice President (Anumesh)</span>
-							<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span>
+							<span> :</span>
 							<a href='tel:+919840189946'> +91 98401 89946</a>
 						</p>
 					</ContactPerson>
