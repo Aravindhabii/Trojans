@@ -40,6 +40,11 @@ export const FormContainerStyle = styled.form`
 			padding: 1.1rem 0;
 			margin-top: 0.3rem;
 			margin-left: 0.5rem;
+			color: white;
+
+			&:hover {
+				color: white;
+			}
 		}
 	}
 

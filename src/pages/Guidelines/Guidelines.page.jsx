@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import Navbar from '../../components/Navbar/Navbar.component';
 import FirstSection from '../../components/Guidelines/FirstSection';
+import SecondSection from '../../components/Guidelines/SecondSection';
 import Footer from '../../components/Footer/Footer';
 
 const GuidelinesPage = () => {
@@ -13,6 +14,7 @@ const GuidelinesPage = () => {
         </Helmet>
 			<Navbar active={{ route: 'guidelines', scroll: 3 }} />
 			<FirstSection />
+			<SecondSection />
 			<Footer />
 		</>
 	);

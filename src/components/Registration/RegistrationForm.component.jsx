@@ -41,7 +41,6 @@ const OTPComponent = ({
 						otpType='number'
 						disabled={false}
 					/>
-					<ResendOTP onResendClick={() => generateOTP(email)} />
 				</div>
 				<button
 					onClick={() => {
@@ -94,13 +93,20 @@ const RegistrationForm = () => {
 	}, [formInputValid]);
 
 	const generateOTP = async (email) => {
-		await verifyPost(email.current.value).then((res) => {
-			if (res.data === 'error') {
-				toast.error('Error in sending OTP, Try again.');
-			} else {
-				setFetchedOTP(res.data.otp);
-			}
-		});
+		try {
+			await verifyPost(email.current.value).then((res) => {
+				if (res.data === 'error') {
+					toast.error('Error in sending OTP, Try again.');
+					setIsOTPRequested(false);
+				} else {
+					setFetchedOTP(res.data.otp);
+				}
+			});
+		} catch (err) {
+			console.log(err);
+			toast.error('Error in sending OTP, Try again.');
+			setIsOTPRequested(false);
+		}
 	};
 
 	return (
