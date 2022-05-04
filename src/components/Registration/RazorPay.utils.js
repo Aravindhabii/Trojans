@@ -45,15 +45,14 @@ export const displayRazorpay = async (
 		}
 	}).then((t) => t.json());
 
-	console.log(data);
-
 	const options = {
 		key: RAZORPAY_KEY,
 		currency: data.currency,
 		amount: data.amount.toString(),
 		order_id: data.id,
-		name: 'Donation',
-		description: 'Thank you for nothing. Please give us some money',
+		name: 'Trojans event registration payment gateway',
+		description: 'Registration for ' ,
+
 		// image: "http://localhost:8080/logo",
 		handler: async function (response) {
 			// alert(response.razorpay_payment_id);
@@ -87,8 +86,8 @@ export const displayRazorpay = async (
 		},
 		prefill: {
 			name,
-			email: 'prasannavelmuruagn0200@gmail.com',
-			phone_number: ''
+			email,
+			phone
 		}
 	};
 	const paymentObject = new window.Razorpay(options);

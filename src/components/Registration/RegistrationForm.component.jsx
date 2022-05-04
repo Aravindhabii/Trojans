@@ -1,22 +1,68 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import OTPInput, { ResendOTP } from 'otp-input-react';
 
 import {
 	handleTextValidation,
 	handleEmailValidation,
 	handlePhoneValidation,
 	handleDropdownValidation,
-	handleSubmit,
-	handleEmailVerify
+	handleSubmit
 } from './registrationFormValidation.utils';
+
+import { verifyPost } from '../../axios/verifyEmail.axios';
+
 import {
 	InputContainerStyle,
 	FormContainerStyle
 } from './registrationForm.style';
+import { OTPPopup } from '../../pages/Registration/Registration.style';
+
+const OTPComponent = ({
+	email,
+	generateOTP,
+	fetchedOTP,
+	setIsOTPRequested,
+	setIsEmailVerified
+}) => {
+	const [OTP, setOTP] = useState('');
+
+	return (
+		<OTPPopup>
+			<div className='otp-popup'>
+				<h1>Enter OTP</h1>
+				<p>OTP is sent to your email.</p>
+				<div className=''>
+					<OTPInput
+						value={OTP}
+						onChange={setOTP}
+						autoFocus
+						OTPLength={6}
+						otpType='number'
+						disabled={false}
+					/>
+					<ResendOTP onResendClick={() => generateOTP(email)} />
+				</div>
+				<button
+					onClick={() => {
+						if (OTP.length && parseInt(OTP) === fetchedOTP) {
+							toast.success('OTP verified successfully');
+							setIsOTPRequested(false);
+							setIsEmailVerified(true);
+						} else {
+							toast.error('Please enter valid OTP');
+						}
+					}}
+					type='button'
+				>
+					Submit
+				</button>
+			</div>
+		</OTPPopup>
+	);
+};
 
 const RegistrationForm = () => {
-	const [searchParams] = useSearchParams();
 	const name = useRef('');
 	const email = useRef('');
 	const phone = useRef('');
@@ -25,20 +71,20 @@ const RegistrationForm = () => {
 	const college = useRef('');
 	const event = useRef('');
 
-	const [isEmailVerified, setIsEmailVerified] = useState(
-		searchParams.get('emailVerified') === 'true'
-	);
-
 	const [formInputValid, setformInputValid] = useState({
 		name: false,
-		email: searchParams.get('email') ? true : false,
+		email: false,
 		phone: false,
 		department: false,
 		year: false,
 		college: false,
 		event: false
 	});
+
+	const [isEmailVerified, setIsEmailVerified] = useState(false);
 	const [isButtonEnabled, setIsButtonEnabled] = useState(false);
+	const [isOTPRequested, setIsOTPRequested] = useState(false);
+	const [fetchedOTP, setFetchedOTP] = useState('');
 
 	useEffect(() => {
 		const isFormValid = Object.values(formInputValid).every(
@@ -47,16 +93,33 @@ const RegistrationForm = () => {
 		setIsButtonEnabled(isFormValid);
 	}, [formInputValid]);
 
+	const generateOTP = async (email) => {
+		await verifyPost(email.current.value).then((res) => {
+			if (res.data === 'error') {
+				toast.error('Error in sending OTP, Try again.');
+			} else {
+				setFetchedOTP(res.data.otp);
+			}
+		});
+	};
+
 	return (
 		<FormContainerStyle
 			onSubmit={(e) =>
 				handleSubmit(e, name, email, phone, department, year, college, event)
 			}
 		>
-			{searchParams.get('email') &&
-				toast.success(
-					'Email verified! You may proceed my with the necessary details.'
-				)}
+			{isOTPRequested && (
+				<OTPComponent
+					email={email}
+					setIsOTPRequested={setIsOTPRequested}
+					fetchedOTP={fetchedOTP}
+					setFetchedOTP={setFetchedOTP}
+					generateOTP={generateOTP}
+					setIsEmailVerified={setIsEmailVerified}
+				/>
+			)}
+
 			<div className='email'>
 				<InputContainerStyle>
 					<label>Email</label>
@@ -74,11 +137,6 @@ const RegistrationForm = () => {
 							)
 						}
 						ref={email}
-						value={
-							searchParams.get('email')
-								? searchParams.get('email')
-								: email.current.value
-						}
 					/>
 				</InputContainerStyle>
 				<button
@@ -86,7 +144,10 @@ const RegistrationForm = () => {
 					disabled={
 						!formInputValid.email ? true : isEmailVerified ? true : false
 					}
-					onClick={() => handleEmailVerify(email)}
+					onClick={() => {
+						setIsOTPRequested(true);
+						generateOTP(email);
+					}}
 				>
 					{!isEmailVerified ? 'Verify' : 'Verified'}
 				</button>
@@ -107,7 +168,6 @@ const RegistrationForm = () => {
 						)
 					}
 					ref={name}
-					autoFocus
 				/>
 			</InputContainerStyle>
 			<InputContainerStyle>

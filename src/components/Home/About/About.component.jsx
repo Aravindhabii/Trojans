@@ -125,7 +125,7 @@ const AboutHome = () => {
 					) : null}
 					{display == 3 ? (
 						<main>
-							<h1 className='about-title'>About IT Department of CIT</h1>
+							<h1 className='about-title'>IT Department of CIT</h1>
 							<p className='para para2'>
 								The department of Information Technology in Chennai Institute of
 								Technology has existed since the year 2019. It’s main aim is to

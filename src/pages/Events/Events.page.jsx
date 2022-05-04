@@ -61,7 +61,6 @@ const EventsPage = (props) => {
 	};
 
 	const phoneClick = (e) => {
-		console.log('cicked ds');
 		if (isphoneopen === true && window.screen.width < 910) {
 			setisphoneopen(false);
 			setClickedEvent('');

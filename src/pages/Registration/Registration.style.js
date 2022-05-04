@@ -18,21 +18,6 @@ export const RegistrationContainer = styled.div`
 		}
 	}
 
-	.email {
-		display: flex;
-		width: 100%;
-		align-items: center;
-		justify-content: center;
-
-		button {
-			margin: 0;
-			margin-top: 0.5rem;
-			padding: 1rem 0.8rem;
-			margin-left: 0.5rem;
-			font-size: 1.1rem;
-		}
-	}
-
 	button:disabled {
 		color: #530074;
 		border: 1px solid #530074;
@@ -41,6 +26,68 @@ export const RegistrationContainer = styled.div`
 		&:hover:after {
 			background: none;
 			box-shadow: none;
+		}
+	}
+`;
+
+export const OTPPopup = styled.div`
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+
+	.otp-popup {
+		padding: 3rem;
+		height: fit-content;
+		background-color: white;
+		border-radius: 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0 0 5px black, 0 0 5px black inset;
+		background-color: #100C0C;
+		color: white;
+
+		p {
+			margin-bottom: 1rem;
+		}
+	}
+	button {
+		margin: 1rem;
+	}
+
+	div[data-testid='otp-resend-root'] {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 1rem;
+
+		button {
+			width: auto;
+			background: none;
+			outline: none;
+			border: none;
+			box-shadow: none;
+			padding: 0;
+			margin: 0;
+			margin-right: 1rem;
+
+			&:hover {
+				cursor: pointer;
+				background-color: none;
+				color: white;
+			}
+
+			&::after {
+				display: none;
+			}
 		}
 	}
 `;

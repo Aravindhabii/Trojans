@@ -22,11 +22,26 @@ const flicker = keyframes`
 export const FormContainerStyle = styled.form`
 	position: relative;
 	width: 50vw;
-	margin-top: 5rem;
+	margin-top: 6rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	.email {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+
+		button {
+			margin: 0;
+			position: relative;
+			padding: 1.1rem 0;
+			margin-top: 0.3rem;
+			margin-left: 0.5rem;
+		}
+	}
 
 	@media (max-width: 650px) {
 		width: 70vw;
@@ -67,6 +82,11 @@ export const FormContainerStyle = styled.form`
 		&:hover {
 			color: #000;
 		}
+
+		&:disabled:hover {
+			color: #530074;
+		}
+
 		&:hover:after {
 			background: #bc13fe;
 			transform: scale(2) rotate(180deg);
