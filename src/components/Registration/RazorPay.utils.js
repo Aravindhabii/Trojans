@@ -46,12 +46,12 @@ export const displayRazorpay = async (
 	}).then((t) => t.json());
 
 	const options = {
-		key: RAZORPAY_KEY,
+		key: process.env.RAZORPAY_LIVE_API_KEY,
 		currency: data.currency,
 		amount: data.amount.toString(),
 		order_id: data.id,
 		name: 'Trojans event registration payment gateway',
-		description: 'Registration for ' ,
+		description: 'Registration for ',
 
 		// image: "http://localhost:8080/logo",
 		handler: async function (response) {
