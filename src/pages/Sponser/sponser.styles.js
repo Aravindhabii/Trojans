@@ -109,5 +109,23 @@ img {
     height: 100%;
     border-radius: 10px;
 }
-
+.team {
+    width: 80%;
+    border: 2px solid rgba(153, 0, 240, 1);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem;
+    margin-left: auto;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    margin-right: auto;
+}
+.members {
+    position: relative;
+    height: 200px;
+    width:200px;
+    background-color:white;
+    border-radius: 50%;
+    
+}
 `

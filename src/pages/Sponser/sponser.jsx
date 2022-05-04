@@ -57,6 +57,12 @@ function sponser() {
         
         
       </div>
+      <div className="team">
+        <div className="members">Prasanna</div>
+        <div className="members">Loki</div>
+        <div className="members">Abi</div>
+        <div className="members">Santy</div>
+      </div>
     </SponserSection>
   );
 }
