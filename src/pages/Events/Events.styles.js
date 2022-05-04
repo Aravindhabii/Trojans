@@ -103,7 +103,7 @@ export const Button = styled.button`
 	border-radius: 5px;
 	color: #fff;
 	background: black;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	font-weight: bold;
 	padding: 3rem 1rem;
 	margin-top: 1rem;
@@ -171,7 +171,7 @@ export const Eventsdiv = styled.div.attrs({
 		height: 70%;
 		width: 75%;
 		left: 13%;
-		font-size: 1rem;
+		/* font-size: 1rem; */
 		border-radius: 40px;
 	}
 `;
@@ -227,7 +227,7 @@ export const Tabletcont = styled.div.attrs({
 	h1 {
 		position: absolute;
 		top: 10%;
-		font-size: 2rem;
+		/* font-size: 2rem; */
 		font-weight: bold;
 	}
 `;
@@ -286,7 +286,7 @@ export const TabletScreen = styled.div.attrs({
 		position: relative;
 		align-self: center;
 		font-weight: 500;
-		font-size: 1.5rem;
+		/* font-size: 1.5rem; */
 	}
 	.rules {
 		position: relative;
@@ -309,7 +309,7 @@ export const TabletScreen = styled.div.attrs({
 	li {
 		position: relative;
 		margin-bottom: 2%;
-		font-size: 1.2rem;
+		/* font-size: 1.2rem; */
 		font-weight: 500;
 	}
 	.students {
@@ -335,19 +335,19 @@ export const TabletScreen = styled.div.attrs({
 	}
 	.name {
 		position: relative;
-		font-size: 1.4rem;
+		/* font-size: 1.4rem; */
 		font-weight: 500;
 	}
 	.phoneno {
 		position: relative;
-		font-size: 1.4rem;
+		/* font-size: 1.4rem; */
 		font-weight: 500;
 		margin-left: 1%;
 	}
 
 	@media (max-width: 1150px) {
 		p {
-			font-size: 1.1rem;
+			/* font-size: 1.1rem; */
 		}
 	}
 	@media (max-width: 700px) {
@@ -384,7 +384,7 @@ export const Eventslist = styled.button.attrs({
 	align-items: center;
 	justify-content: center;
 	border-radius: 5px;
-	font-size: 1.2rem;
+	/* font-size: 1.2rem; */
 	font-weight: bold;
 	text-shadow: 0px 0px 10px #03e9f4;
 	box-shadow: 0px 0px 10px 0px #03e9f4, inset 0px 0px 4px 0px #03e9f4;

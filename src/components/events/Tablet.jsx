@@ -12,7 +12,7 @@ const Tablet = ( props) => {
   return (
     <Tabletcont tab={tab} >
         <h1>{currentEvent.name}</h1>
-        <Tabletcontent currentEvent={currentEvent}/>
+        <Tabletcontent currentEvent={currentEvent} isTabletOpen={isTabletOpen}/>
     </Tabletcont>
   )
 }

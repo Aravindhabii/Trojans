@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TabletScreen } from "../../pages/Events/Events.styles";
 import { RightCircleOutlined, LeftCircleOutlined } from "@ant-design/icons";
 
 const Tabletcontent = (props) => {
-  const { currentEvent } = props;
+  const { currentEvent, isTabletOpen } = props;
   const [pageno, setpageno] = useState(1);
 
   const handleLeft = () => {
@@ -17,11 +17,16 @@ const Tabletcontent = (props) => {
     }
   };
 
+  useEffect(() => {
+    if(isTabletOpen === false){
+      setpageno(1)
+    }
+  }, [isTabletOpen]);
   return (
     <TabletScreen pageno={pageno}>
       <LeftCircleOutlined onClick={handleLeft} className="leftarrow" />
       <RightCircleOutlined onClick={handleRight} className="rightarrow" />
-
+      
       <div className="description">
         <h2>Description</h2>
         <p>{currentEvent.description}</p>
