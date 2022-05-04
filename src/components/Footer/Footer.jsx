@@ -22,8 +22,13 @@ function Footer() {
 	return (
 		<FooterContainer>
 			<div className='footer-top'>
-				<div>
-					<img src={Trojans} alt='Trojans' />
+				<div className='footer-logo-container'>
+					<div>
+						<img src={Trojans} alt='Trojans' />
+					</div>
+					<div>
+						<img src={Trojans} alt='Trojans' />
+					</div>
 				</div>
 				<div>
 					<FooterlLinksContainer
@@ -52,9 +57,6 @@ function Footer() {
 							{ url: '/#contact', name: 'Contact' }
 						]}
 					/>
-				</div>
-				<div>
-					<img src={Trojans} alt='Trojans' />
 				</div>
 			</div>
 			<div className='copyright'>

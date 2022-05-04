@@ -10,19 +10,36 @@ export const FooterContainer = styled.section`
 	background-color: #100c0c;
 	color: white;
 	text-align: center;
-	padding: 0 6rem;
 	box-shadow: 0 5px 30px #03e9f4;
 
 	.footer-top {
+		padding: 0 6rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
 		margin-top: 3rem;
 		margin-bottom: 1rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+
+		.footer-logo-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			div {
+				display: block !important;
+			}
+		}
 
 		img {
-			width: 10rem;
+			width: 8vw;
+
+			@media (max-width: 1050px) {
+				width: 14vw;
+			}
 		}
 
 		div:nth-of-type(2) {
