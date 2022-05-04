@@ -163,3 +163,123 @@ export const TrojansThrottle = {
     },
   ],
 };
+export const ShutterStop  = {
+  id: 1,
+  name: "Shutter Stop",
+  description:
+    "A completely online photography contest. The winner of the contest will be selected based on the amount of likes and poll results their photo aggregates on Trojans official Instagram page along with the judge’s decision. The first and second prize winners will be notified through WhatsApp and email. Participation e-certificate will be provided to all the participants.",
+  rules: [
+    "Only single entry is allowed (No specific theme to be followed).",
+    "Participants are allowed to use both their mobile and DSLR to take the photo.",
+    "Only colour grading is allowed.",
+    "Registration fee of Rs. 30 has to paid for participation.",
+    "Take a screenshot of the payment featuring your name, department, year and college name.",
+    "Once the payment is done, fill out the google form provided in our Instagram bio.",
+    "Your photograph should not contain any watermarks (Violators will be banned from participating in the event.)",
+    "Make sure that you attach the screenshot of your payment and your photograph for the competition in the google form.",
+    "Total of 30 minutes."
+
+  ],
+  studentCordinators: [
+    {
+      id: 1,
+      name: "Name -",
+      phoneNo: "Phone No.",
+    },
+    {
+      id: 2,
+      name: "Name -",
+      phoneNo: "Phone No.",
+    },
+  ],
+};
+export const ShipWreck  = {
+  id: 1,
+  name: "Ship Wreck",
+  description:
+    "A two and half an hour individual event. A random fictional or non-fictional character will be given and the contestants will be given two mins to prepare and act as the given character.",
+  rules: [
+    "Characters will be only given on-spot.",
+    "Unparliamentary wards are strictly prohibited. ",
+    "The judges will decide the winner.",
+
+  ],
+  studentCordinators: [
+    {
+      id: 1,
+      name: "Name -",
+      phoneNo: "Phone No.",
+    },
+    {
+      id: 2,
+      name: "Name -",
+      phoneNo: "Phone No.",
+    },
+  ],
+};
+export const TalentFest  = {
+  id: 1,
+  name: "Talent Fest",
+  description:
+    "A one and a half an hour talent showcase contest and the contestant must display their talent in a given span of time. All type of talents is welcomed. Both solo and group performances are allowed.",
+  rules: [
+    "Winners will be based on the quality of the performances.",
+    "Offensive performance is not encouraged.",
+  ],
+  studentCordinators: [
+    {
+      id: 1,
+      name: "Name -",
+      phoneNo: "Phone No.",
+    },
+    {
+      id: 2,
+      name: "Name -",
+      phoneNo: "Phone No.",
+    },
+  ],
+};
+export const SquidGame  = {
+  id: 1,
+  name: "Squid Game",
+  description:
+    "More to be revealed on the day of symposium. Come and have fun!",
+  rules: [
+    "Will be announced at the start of the event.",
+  ],
+  studentCordinators: [
+    {
+      id: 1,
+      name: "Name -",
+      phoneNo: "Phone No.",
+    },
+    {
+      id: 2,
+      name: "Name -",
+      phoneNo: "Phone No.",
+    },
+  ],
+};
+export const BoxCricket  = {
+  id: 1,
+  name: "Box Cricket",
+  description:
+    "More to be revealed on the day of symposium. Come and have fun!",
+  rules: [
+    "Will be announced at the start of the event.",
+  ],
+  studentCordinators: [
+    {
+      id: 1,
+      name: "Name -",
+      phoneNo: "Phone No.",
+    },
+    {
+      id: 2,
+      name: "Name -",
+      phoneNo: "Phone No.",
+    },
+  ],
+};
+
+

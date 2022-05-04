@@ -57,7 +57,6 @@ export const ContactContainer = styled.div`
 	background: #000;
 	color: #fff;
 	overflow: visible;
-	margin-left: 6rem;
 	/* z-index: 2; */
 	h1 {
 		font-size: 3rem;
@@ -75,8 +74,6 @@ export const ContactContainer = styled.div`
 		font-size: 1.2rem;
 		color: white;
 		width: 100%;
-		display: flex;
-		justify-content: space-between;
 	}
 
 	a {

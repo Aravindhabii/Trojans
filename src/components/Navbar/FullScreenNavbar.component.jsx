@@ -161,7 +161,7 @@ const FullScreenNavbar = ({ active, isNavOpen, setIsNavOpen }) => {
 				<NavLinkComponent
 					activeRoute={active.route === 'sponser' ? true : false}
 					url='/sponser'
-					body='&nbsp;Sponser'
+					body='&nbsp;Sponsor'
 					setScrollDiv={setScrollDiv}
 					scroll={4}
 					activeScroll={active.scroll}

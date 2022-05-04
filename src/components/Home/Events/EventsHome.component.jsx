@@ -115,7 +115,7 @@ const EventsHome = () => {
 					{tabletImage.length > 0 && tabletImage === 'technical' && (
 						<TabImgContainer imgUrl={TechnicalBg}>
 							<div className='events-bg-content'>
-								<h1>NON - TECHNICAL EVENTS</h1>
+								<h1>TECHNICAL EVENTS</h1>
 								<div>
 									<p>Paper bytes</p>
 									<p>Goose Chase</p>

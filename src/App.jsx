@@ -50,7 +50,7 @@ const App = () => {
 					<Route
 						exact
 						path='/workshop'
-						element={<EventsPage page='workshop' />}
+						element={<EventsPage page='workshops' />}
 					/>
 					<Route
 						exact
