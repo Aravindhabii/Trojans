@@ -40,6 +40,7 @@ export const SecondContainer = styled.div`
     justify-content: center;
     .maindiv {
         width: 70%;
+        margin-bottom: 1rem;
         display: flex;
         height: fit-content;
         position: relative;
@@ -87,7 +88,7 @@ export const SecondContainer = styled.div`
         color: white;
         border: 5px solid white;
         background-color: black;
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
         font-size: 1.5rem;
         font-weight: bold;
     } 
@@ -98,6 +99,44 @@ export const SecondContainer = styled.div`
         width: 75%;
         border-bottom:  5px solid #AB46D2;
         
+    }
+    @media (max-width: 1100px) { 
+        .maindiv {
+        width: 90%;
+    }
+    p {
+        width: 70%;
+    }
+    
+    }
+    @media (max-width: 768px) {
+        .maindiv {
+            width: 95%;
+        }
+        p {
+            line-height: 1.5rem;
+            
+            padding: 1rem;
+        }
+        .sideline {
+            width: 15%;
+            display: none;
+            
+
+        }
+        .content {
+            padding: 0rem;
+            align-items: center;
+            /* width: 80%; */
+        }
+        p {
+            width: 90%;
+        }
+        span {
+            width: 30px;
+        height: 30px;
+        font-size: 1rem;
+        }
     }
 
 
