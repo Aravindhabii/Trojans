@@ -32,7 +32,76 @@ export const SectionGuide = styled.section`
         background: linear-gradient(transparent, rgba(0, 0, 0, 1));
     }
 `;
+export const SecondContainer = styled.div`
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .maindiv {
+        width: 70%;
+        display: flex;
+        height: fit-content;
+        position: relative;
+        
 
+        
+    }
+    .black {
+        height: 5%;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        /* box-shadow: 2px 2px 40px blac; */
+        top: 0;
+    }
+    .sideline {
+        width:20%;
+        height:95%;
+        left:0;
+        bottom:0;
+        position: absolute;
+        background-color: #AB46D2;
+        box-shadow: 5px 5px 20px rgba(255, 127, 255, .8);
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    } 
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding:2rem 2rem 2rem 2rem;
+    } 
+    span {
+        padding: 1rem;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border: 5px solid white;
+        background-color: black;
+        margin-bottom: 5rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    } 
+    p {
+        color: white;
+        padding:2rem;
+        line-height: 3rem;
+        width: 75%;
+        border-bottom:  5px solid #AB46D2;
+        
+    }
+
+
+`;
 export const GuideContainer = styled.div`
     /* background: url("https://img.freepik.com/free-vector/colors-neon-frame-stacking-style-design_1017-29813.jpg?w=826&t=st=1650907396~exp=1650907996~hmac=4fdace09c25fa4e3b24655951274906ec4744415a8116636b5bc23be54077e47")
         center/cover no-repeat; */

@@ -1,134 +1,62 @@
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 export const FooterContainer = styled.section`
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background: #000;
-    @media (max-width: 700px) {
-        padding: 5% 0;
-        height: fit-content;
-    }
-`;
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	background-color: #100c0c;
+	color: white;
+	text-align: center;
+	padding: 0 6rem;
+	box-shadow: 0 5px 30px #03e9f4;
 
-const flickerBox = keyframes`
-    0%,
-    18%,
-    22%,
-    25%,
-    53%,
-    57%,
-    100% {
-        box-shadow:  0 0 40px #00efff;
-    }
-    20%,
-    24%,
-    55% {
-        box-shadow: none;
-    }
-`;
+	.footer-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 3rem;
+		margin-bottom: 1rem;
 
-export const FooterDiv = styled.section`
-    width: 100%;
-    height: 90%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    z-index: 1;
-    background: #000;
-    /* border-radius: 10px; */
-    /* box-shadow:  0 0 40px #00efff; */
-    /* animation: ${flickerBox} 1s infinite; */
-    @media (max-width: 700px) {
-        flex-direction: column;
-    }
-`;
+		img {
+			width: 10rem;
+		}
 
-export const FooterSubDiv = styled.section`
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    p {
-        color: #fff;
-        padding: 2% 7%;
-        font-size: 1.2rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        a {
-            margin-left: 10px;
-        }
-    }
-    div {
-        position: relative;
-        width: 18rem;
-        height: 12rem;
-        span:nth-child(1) {
-            position: absolute;
-            width: 100%;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: #00efff;
-            box-shadow: 0 0 10px #00efff;
-            z-index: 5;
-            transform: translateX(-5%);
-        }
-        span:nth-child(2) {
-            position: absolute;
-            width: 3px;
-            top: 0;
-            left: 0;
-            height: 100%;
-            background: #00efff;
-            box-shadow: 0 0 10px #00efff;
-            transform: translateY(5%);
-            z-index: 5;
-        }
-        span:nth-child(3) {
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-            left: 0;
-            height: 3px;
-            background: #00efff;
-            z-index: 5;
-            box-shadow: 0 0 10px #00efff;
-            transform: translateX(5%);
-        }
-        span:nth-child(4) {
-            position: absolute;
-            width: 3px;
-            top: 0;
-            right: 0;
-            height: 100%;
-            background: #00efff;
-            box-shadow: 0 0 10px #00efff;
-            transform: translateY(-5%);
-            z-index: 5;
-        }
-    }
-    @media (max-width: 600px) {
-        width: 90%;
-        div {
-            width: 13rem;
-            height: 10rem;
-        }
-        p {
-            padding: 2% 5%;
-            font-size: 1.3rem;
-        }
-    }
+		div:nth-of-type(2) {
+			display: flex;
+			width: 100%;
+
+			.footer-links-container {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-direction: column;
+				width: 100%;
+				height: 100%;
+				padding: 0 2rem;
+
+				h2 {
+					margin-bottom: 1rem;
+				}
+
+				ul {
+					list-style: none;
+				}
+
+				ul a {
+					color: #fff;
+					text-decoration: none;
+					padding: 0.5rem;
+					display: block;
+				}
+			}
+		}
+	}
+
+	.copyright {
+		padding: 1rem 0;
+	}
 `;

@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import Tilt from 'react-parallax-tilt';
 
-import { PhonesContainer, PhoneButtonStyles } from './EventsHome.style';
+import {
+	PhonesContainer,
+	PhoneButtonStyles,
+	TabImgContainer
+} from './EventsHome.style';
 
 import HexBg from '../HexBg/HexBg.component';
 
 import Phone1 from '../../../assets/home/phonepng.png';
 import Tablet1 from '../../../assets/home/tabletpng.png';
+import TechnicalBg from '../../../assets/home/events/1.jpg';
+import NonTechnicalBg from '../../../assets/home/events/2.jpg';
+import WorkshopsBg from '../../../assets/home/events/3.jpg';
+import HexImg from '../../../assets/home/Hexagon.svg';
 
 const PhoneButton = ({ text, bgColor, url, handlePhoneButtonClick }) => (
 	<>
@@ -30,12 +38,12 @@ const EventsHome = () => {
 	});
 	const [tabletImage, setTabletImage] = useState('');
 
-	const handlePhoneButtonClick = (url) => {
+	const handlePhoneButtonClick = (slug) => {
 		setPhonesPosition({
 			phone1: 20,
 			tablet1: 10
 		});
-		setTabletImage(url);
+		setTabletImage(slug);
 	};
 
 	return (
@@ -43,15 +51,15 @@ const EventsHome = () => {
 			phone1={Phone1}
 			tablet1={Tablet1}
 			phonesPosition={phonesPosition}
-			url={tabletImage}
 			id='events'
+			url={TechnicalBg}
 		>
-			<HexBg direction='to top' />
+			<HexBg direction='to top' svg={HexImg} />
 			<main
 				onClick={() =>
 					setPhonesPosition({
-						phone1: '50%',
-						tablet1: '-150%'
+						phone1: 50,
+						tablet1: -150
 					})
 				}
 			></main>
@@ -85,20 +93,17 @@ const EventsHome = () => {
 				<PhoneButton
 					text='Technical Events'
 					bgColor='#03e9f4'
-					url='https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg'
-					handlePhoneButtonClick={handlePhoneButtonClick}
-				/>
-				<PhoneButton
-					text='Non Technical Events'
-					bgColor='#03e9f4'
-					url='https://images.pexels.com/photos/302743/pexels-photo-302743.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
-					handlePhoneButtonClick={handlePhoneButtonClick}
+					handlePhoneButtonClick={() => handlePhoneButtonClick('technical')}
 				/>
 				<PhoneButton
 					text='Workshops'
 					bgColor='#03e9f4'
-					url='https://media.istockphoto.com/photos/picturesque-morning-in-plitvice-national-park-colorful-spring-scene-picture-id1093110112?k=20&m=1093110112&s=612x612&w=0&h=3OhKOpvzOSJgwThQmGhshfOnZTvMExZX2R91jNNStBY='
-					handlePhoneButtonClick={handlePhoneButtonClick}
+					handlePhoneButtonClick={() => handlePhoneButtonClick('workshops')}
+				/>
+				<PhoneButton
+					text='Non Technical Events'
+					bgColor='#03e9f4'
+					handlePhoneButtonClick={() => handlePhoneButtonClick('non-technical')}
 				/>
 			</Tilt>
 			{window.innerWidth > 500 && (
@@ -107,7 +112,65 @@ const EventsHome = () => {
 					className='tablet-container'
 					perspective={4000}
 				>
-					<div></div>
+					{tabletImage.length > 0 && tabletImage === 'technical' && (
+						<TabImgContainer imgUrl={TechnicalBg}>
+							<div className='events-bg-content'>
+								<h1>NON - TECHNICAL EVENTS</h1>
+								<div>
+									<p>Paper bytes</p>
+									<p>Goose Chase</p>
+									<p>Master minds</p>
+									<p>Coder's Chemistry</p>
+									<p>Trojan's Throttle</p>
+									<p>Trojan's CTF</p>
+									<p>Site-ing</p>
+								</div>
+								<a href='/technical'>View more</a>
+							</div>
+						</TabImgContainer>
+					)}
+					{tabletImage.length > 0 && tabletImage === 'non-technical' && (
+						<TabImgContainer imgUrl={NonTechnicalBg}>
+							<div className='events-bg-content'>
+								<h1>NON - TECHNICAL EVENTS</h1>
+								<div>
+									<p>SHUTTER STOP</p>
+									<p>SQUID GAME</p>
+									<p>BOX CRICKET</p>
+									<p>TALENT FEST</p>
+									<p>SHIP WRECK</p>
+									<p>GAMERS PARADISE UNITED</p>
+									<p>ENNA ENNA SOLRAN PAARUNGA</p>
+								</div>
+								<a href='/nontechnical'>View more</a>
+							</div>
+						</TabImgContainer>
+					)}
+					{tabletImage.length > 0 && tabletImage === 'workshops' && (
+						<TabImgContainer imgUrl={WorkshopsBg}>
+							<div className='events-bg-content'>
+								<h1>WORKSHOPS</h1>
+								<div>
+									<p>
+										<span>HANDS ON</span>
+										<br />
+										MACHINE LEARNING
+									</p>
+									<br />
+									<p>
+										<span>HANDS ON</span>
+										<br />
+										BLOCKCHAIN TECHNOLOGY
+									</p>
+									<br />
+									<p>
+										START-UP AND <br /> ENTREPRENEURSHIP
+									</p>
+								</div>
+								<a href='/workshop'>View more</a>
+							</div>
+						</TabImgContainer>
+					)}
 				</Tilt>
 			)}
 		</PhonesContainer>

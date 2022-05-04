@@ -3,6 +3,7 @@ import Assassin from './assets/fonts/Assassin.ttf';
 import ShareTechMono from './assets/fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf';
 import EdhanMartine from './assets/fonts/edhan-martine-font/EdhanMartine-0WrVv.ttf';
 import MontserratMedium from './assets/fonts/Montserrat/Montserrat-Medium.ttf';
+import StrongBrain from './assets/fonts/strong_brain.otf';
 
 export const GlobalStyles = createGlobalStyle`
 	*{
@@ -34,7 +35,7 @@ export const GlobalStyles = createGlobalStyle`
 		}
 	}
 
-	p{
+	p,a{
 		font-size: 1rem;
 		font-family: 'MontserratMedium' ,cursive;
 
@@ -66,6 +67,12 @@ export const GlobalStyles = createGlobalStyle`
 	@font-face {
 		font-family: 'MontserratMedium';
 		src: url(${MontserratMedium});
+
+	}
+
+	@font-face {
+		font-family: 'StrongBrain';
+		src: url(${StrongBrain}) format('opentype');
 	}
 
 	body{

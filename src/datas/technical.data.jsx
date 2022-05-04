@@ -1,24 +1,30 @@
 export const technicalevents = [
-  { id: 1, name: "Coders Chemistry" },
-  { id: 1, name: "Master Minds" },
-  { id: 1, name: "Site-ing" },
-  { id: 1, name: "Paper Bytes" },
-  { id: 1, name: "Goose chase" },
-  { id: 1, name: "Trojan's Throttle" },
-  { id: 1, name: "Trojanctf" },
+  { id: 1, name: "CODERS CHEMISTRY" },
+  { id: 1, name: "MASTER MINDS" },
+  { id: 1, name: "SITE-ING" },
+  { id: 1, name: "PAPER BYTES" },
+  { id: 1, name: "GOOSE CHASE" },
+  { id: 1, name: "TROJAN'S THROTTLE" },
+  { id: 1, name: "TROJANCTF" },
 ];
 
 export const nontechnicalevents = [
-  { id: 1, name: "Event 1" },
-  { id: 1, name: "Event 2" },
-  { id: 1, name: "Event 3" },
-  { id: 1, name: "Event 4" },
-  { id: 1, name: "Event 5" },
-  { id: 1, name: "Event 6" },
-  { id: 1, name: "Event 7" },
+  { id: 1, name: "SHUTTER STOP" },
+  { id: 1, name: "SHIP WRECK" },
+  { id: 1, name: "TALENT FEST" },
+  { id: 1, name: "SQUID GAME" },
+  { id: 1, name: "BOX CRICKET" },
+  { id: 1, name: "ADVERTISEMENT"},
 ]
 
 export const workshops = [
-  { id: 1, name: "Workshop 1" },
-  { id: 1, name: "Workshop 2" }
+  { id: 1, name: "MACHINE LEARNING" },
+  { id: 1, name: "BLOCKCHAIN" },
+  { id: 1, name: "ENTREPRENEUR" },
+]
+
+export const gamming = [
+  { id: 1, name: "VALORANT" },
+  { id: 1, name: "BGMI" },
+  { id: 1, name: "FREE FIRE" },
 ]

@@ -19,6 +19,8 @@ const Technical = (props) => {
     isTabletOpen,
     setisTabletOpen,
     setCurrentEvent,
+    selectedEvent,
+    setSelectedEvent,
   } = props;
 
   // return
@@ -32,6 +34,8 @@ const Technical = (props) => {
         isTabletOpen={isTabletOpen}
         setisTabletOpen={setisTabletOpen}
         setCurrentEvent={setCurrentEvent}
+        selectedEvent = {selectedEvent}
+        setSelectedEvent = {setSelectedEvent}
       />
     </Eventsdiv>
 

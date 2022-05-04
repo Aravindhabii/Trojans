@@ -14,7 +14,7 @@ const Navbar = ({ active }) => {
 				setIsNavOpen={setIsNavOpen}
 			/>
 			<NavbarContainer>
-				<NavbarLogo>
+				<NavbarLogo href='/'>
 					<h1>Trojans</h1>
 				</NavbarLogo>
 				<MenuButton onClick={() => setIsNavOpen(true)}>

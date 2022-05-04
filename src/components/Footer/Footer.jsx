@@ -1,33 +1,67 @@
-import React from "react";
-import {FooterContainer, FooterDiv, FooterSubDiv} from "./Footer.styles";
+import React from 'react';
+
+import Trojans from '../../assets/Trojans_logo/trojans_logo.png';
+import { FooterContainer } from './Footer.styles';
+
+const FooterlLinksContainer = ({ title, links }) => {
+	return (
+		<div className='footer-links-container'>
+			<h2>{title}</h2>
+			<ul>
+				{links.map((link, index) => (
+					<li key={index}>
+						<a href={link.url}>{link.name}</a>
+					</li>
+				))}
+			</ul>
+		</div>
+	);
+};
 
 function Footer() {
-    return (
-        <FooterContainer>
-            <FooterDiv>
-                <FooterSubDiv>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Est natus inventore maxime odio? Nostrum inventore esse
-                        nihil repellat vero labore tempora iusto, aperiam culpa
-                        illo veritatis delectus itaque aliquid modi.
-                    </p>
-                    <p>
-                        <a href=""><img src="https://img.icons8.com/ios/40/ffffff/instagram-new--v1.png"/></a>
-                        <a href=""><img src="https://img.icons8.com/ios/50/ffffff/youtube-play--v1.png"/></a>
-                    </p>
-                </FooterSubDiv>
-                <FooterSubDiv>
-                    <div>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </FooterSubDiv>
-            </FooterDiv>
-        </FooterContainer>
-    );
+	return (
+		<FooterContainer>
+			<div className='footer-top'>
+				<div>
+					<img src={Trojans} alt='Trojans' />
+				</div>
+				<div>
+					<FooterlLinksContainer
+						title='Events'
+						links={[
+							{ url: '/events', name: 'Technical' },
+							{ url: '/events', name: 'Non - Technical' },
+							{ url: '/events', name: 'Workshops' }
+						]}
+					/>
+					<FooterlLinksContainer
+						title='About'
+						links={[
+							{ url: '/', name: 'Trojans' },
+							{ url: '/', name: 'Deparmant' },
+							{ url: '/', name: 'College' }
+						]}
+					/>
+					<FooterlLinksContainer
+						title='Connect'
+						links={[
+							{
+								url: 'https://www.instagram.com/trojans_cit/',
+								name: 'Instagram'
+							},
+							{ url: '/#contact', name: 'Contact' }
+						]}
+					/>
+				</div>
+				<div>
+					<img src={Trojans} alt='Trojans' />
+				</div>
+			</div>
+			<div className='copyright'>
+				<p>COPYRIGHT © TROJANS</p>
+			</div>
+		</FooterContainer>
+	);
 }
 
 export default Footer;

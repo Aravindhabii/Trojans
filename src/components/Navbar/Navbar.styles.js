@@ -14,24 +14,21 @@ export const NavbarContainer = styled.div`
 	z-index: 100;
 	height: 6rem;
 	color: white;
-	z-index: 10;
 	padding: 0 5rem;
-	background: linear-gradient(
-		to bottom,
-		rgba(0, 0, 0, 1) 0%,
-		rgba(0, 0, 0, 0) 80%
-	);
+	background: rgba(0, 0, 0, 0.9);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 
 	@media (max-width: 500px) {
 		padding: 0 2rem;
 	}
 `;
 
-export const NavbarLogo = styled.div`
+export const NavbarLogo = styled.a`
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin-right: 1rem;
+	text-decoration: none;
 
 	h1 {
 		color: transparent;

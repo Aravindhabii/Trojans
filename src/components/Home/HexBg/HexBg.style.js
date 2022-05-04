@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-import HexImg from '../../../assets/home/Hexagon.svg';
+// import HexImg from '../../../assets/home/Hexagon.svg';
+// import HexImageWhite from '../../../assets/home/Hexagon-white-1.png';
 
 export const HexBgStyle = styled.div`
 	height: 100vh;
@@ -11,7 +12,7 @@ export const HexBgStyle = styled.div`
 	overflow: hidden;
 
 	.hex {
-		background: url(${HexImg}) repeat;
+		background: url(${({svg})=> svg}) repeat;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -53,7 +54,8 @@ export const HexBgStyle = styled.div`
 		position: absolute;
 		height: 300px;
 		width: 300px;
-		background: linear-gradient(90deg, #9500ff 0%, #ff41df 100%);
+		/* background: linear-gradient(90deg, #9500ff 0%, #ff41df 100%); */
+		background: ${({ color }) => (color ? color : "linear-gradient(90deg, #9500ff 0%, #ff41df 100%);")};
 		filter: blur(20px);
 		z-index: 0;
 		border-radius: 50%;
