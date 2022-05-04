@@ -60,7 +60,7 @@ export const OTPPopup = styled.div`
 		}
 	}
 	button {
-		margin: 1rem;
+		margin: 2rem;
 	}
 
 	div[data-testid='otp-resend-root'] {
