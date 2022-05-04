@@ -26,6 +26,8 @@ const turning2 = keyframes`
 export const SponserSection = styled.section`
     /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"); */
     background-color: black;
+    padding-top: 4rem;
+    /* padding-bottom: rem; */
     h1 {
         color: white;
         font-size: 4rem;
@@ -162,11 +164,12 @@ export const MembersDiv = styled.section`
         display: flex;
         background: ${({color}) => color};
         box-shadow: 0 0 5px ${({color}) => color},
-            0 0 10px ${({color}) => color},
-            0 0 20px ${({color}) => color} /* 0 0 40px ${({color}) => color} */;
+            0 0 5px ${({color}) => color},
+            0 0 15px ${({color}) => color} /* 0 0 40px ${({color}) => color} */;
         z-index: 1;
         transition: all 0.5s ease-in-out;
     }
+    /* 0 0 3px #fffff0, 0 0 2px #fffff0, 0 0 15px #fffff0 */
     &:hover .shadow_conatiner {
         height: 100%;
     }
@@ -174,7 +177,7 @@ export const MembersDiv = styled.section`
         position: relative;
         width: 10rem;
         height: 10rem;
-        border: 1px solid #fff;
+        border: 1px solid #000;
         border-radius: 50%;
         z-index: 2;
         top: 15%;
@@ -196,7 +199,7 @@ export const MembersDiv = styled.section`
         text-align: center;
         z-index: 2;
         transition: all 0.5s ease-in-out;
-        color: white;
+        color: black;
         opacity: 0;
         transform: perspective(2000px);
         transform-style: preserve-3d;

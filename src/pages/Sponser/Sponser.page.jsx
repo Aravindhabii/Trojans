@@ -21,7 +21,7 @@ function Sponser() {
 const SponserMainSection = () => {
 	return (
 		<SponserSection>
-			<h1>Sponsers</h1>
+			<h1>Sponsors</h1>
 			<div className='mainmain'>
 				<CardComponent url={img2} name={'Poorvika'} />
 				<CardComponent url={img2} name={'Poorvika'} />
@@ -57,7 +57,7 @@ const DevelopersSection = () => {
 					description={'Developer'}
 					instagram={'https://www.instagram.com/'}
 					linkedin={'https://www.linkedin.com/'}
-					color={'#ff3503'}
+					color={'#fffff0'}
 				/>
 			</MembersSection>
 		</>
