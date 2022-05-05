@@ -1,7 +1,10 @@
 import { registrationEventAxios } from '../../axios/registration.axios';
 import { toast } from 'react-toastify';
 
-import { BACKEND_BASE_URL, RAZORPAY_KEY } from '../../environment.utils';
+import {
+	BACKEND_BASE_URL,
+	RAZORPAY_LIVE_API_KEY
+} from '../../environment.utils';
 
 const loadScript = (src) => {
 	return new Promise((resolve) => {
@@ -46,7 +49,7 @@ export const displayRazorpay = async (
 	}).then((t) => t.json());
 
 	const options = {
-		key: process.env.RAZORPAY_LIVE_API_KEY,
+		key: RAZORPAY_LIVE_API_KEY,
 		currency: data.currency,
 		amount: data.amount.toString(),
 		order_id: data.id,
@@ -55,6 +58,7 @@ export const displayRazorpay = async (
 
 		// image: "http://localhost:8080/logo",
 		handler: async function (response) {
+			console.log(response);
 			// alert(response.razorpay_signature);
 			await registrationEventAxios(
 				name.current.value,
