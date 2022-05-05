@@ -32,7 +32,7 @@ export const SponsorSection = styled.section`
         color: white;
         font-size: 4rem;
         text-align: center;
-        padding-top: 4rem;
+        /* padding-top: 4rem; */
     }
     h2 {
         font-size: 1.5rem;

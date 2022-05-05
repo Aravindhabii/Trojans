@@ -8,11 +8,11 @@ import "react-toastify/dist/ReactToastify.css";
 
 import Trojans from "./assets/Trojans_logo/trojans-compressed.png";
 
-const Sponsor = lazy(() => import("./pages/Sponsor/Sponsor.page"));
-const Cursor = lazy(() => import("./components/Cursor/Cursor.component.jsx"));
-const HomePage = lazy(() => import("./pages/Home/Home.page.jsx"));
-const EventsPage = lazy(() => import("./pages/Events/Events.page"));
-const GuidelinesPage = lazy(() => import("./pages/Guidelines/Guidelines.page"));
+const Sponsor = lazy(() => import('./pages/Sponsor/Sponsor.page'));
+const Cursor = lazy(() => import('./components/Cursor/Cursor.component.jsx'));
+const HomePage = lazy(() => import('./pages/Home/Home.page.jsx'));
+const EventsPage = lazy(() => import('./pages/Events/Events.page'));
+const GuidelinesPage = lazy(() => import('./pages/Guidelines/Guidelines.page'));
 const RegistrationPage = lazy(() =>
     import("./pages/Registration/Registration.page")
 );
