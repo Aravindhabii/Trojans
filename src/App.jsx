@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext } from 'react';
+import React, { useRef, useContext, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { GlobalStyles } from './global.style.js';
 import { ThemeProvider } from 'styled-components';
@@ -6,12 +6,12 @@ import { ToastContainer } from 'react-toastify';
 import ThemeContext from './Theme.context.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Sponser from './pages/Sponser/Sponser.page';
-import Cursor from './components/Cursor/Cursor.component.jsx';
-import HomePage from './pages/Home/Home.page.jsx';
-import EventsPage from './pages/Events/Events.page';
-import GuidelinesPage from './pages/Guidelines/Guidelines.page';
-import RegistrationPage from './pages/Registration/Registration.page';
+const Sponser = lazy(() => './pages/Sponser/Sponser.page');
+const Cursor = lazy(() => './components/Cursor/Cursor.component.jsx');
+const HomePage = lazy(() => './pages/Home/Home.page.jsx');
+const EventsPage = lazy(() => './pages/Events/Events.page');
+const GuidelinesPage = lazy(() => './pages/Guidelines/Guidelines.page');
+const RegistrationPage = lazy(() => './pages/Registration/Registration.page');
 
 const App = () => {
 	const theme = useContext(ThemeContext);
