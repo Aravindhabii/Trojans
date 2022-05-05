@@ -13,6 +13,7 @@ const FooterlLinksContainer = ({ title, links }) => {
 						<a href={link.url}>{link.name}</a>
 					</li>
 				))}
+				
 			</ul>
 		</div>
 	);
