@@ -45,7 +45,7 @@ function Footer() {
                         title="About"
                         links={[
                             {url: "/", name: "Trojans"},
-                            {url: "/", name: "Deparmant"},
+                            {url: "/", name: "Departmant"},
                             {url: "/", name: "College"},
                         ]}
                     />
