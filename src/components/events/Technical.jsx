@@ -1,18 +1,18 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import {
   Eventsdiv,
-  Eventslist,
-  righttwo,
+  // Eventslist,
+  // righttwo,
 } from "../../pages/Events/Events.styles";
 import RenderComponent from "../../components/events/RenderComponent";
 
 import Phone from "../../assets/events/phonepng.png";
-import tablet from "../../assets/events/pngtablet.png"
+// import tablet from "../../assets/events/pngtablet.png"
 
 const Technical = (props) => {
   const {
     currentPage,
-    isphoneopen,
+    // isphoneopen,
     setCurrentPage,
     setClickedEvent,
     clickedEvent,

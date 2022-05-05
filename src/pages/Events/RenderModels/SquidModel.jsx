@@ -1,11 +1,11 @@
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
-  useGLTF,
+  // useGLTF,
   OrbitControls,
-  ContactShadows,
+  // ContactShadows,
   Environment,
-  SpotLight,
+  // SpotLight,
 } from "@react-three/drei";
 
 import Gaurdsglb from "../models/Gaurdsglb";

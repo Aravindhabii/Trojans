@@ -19,8 +19,6 @@ import {
 import { OTPPopup } from '../../pages/Registration/Registration.style';
 
 const OTPComponent = ({
-	email,
-	generateOTP,
 	fetchedOTP,
 	setIsOTPRequested,
 	setIsEmailVerified
@@ -112,7 +110,17 @@ const RegistrationForm = () => {
 	return (
 		<FormContainerStyle
 			onSubmit={(e) =>
-				handleSubmit(e, name, email, phone, department, year, college, event)
+				handleSubmit(
+					e,
+					name,
+					email,
+					phone,
+					department,
+					year,
+					college,
+					event,
+					setIsButtonEnabled
+				)
 			}
 		>
 			{isOTPRequested && (

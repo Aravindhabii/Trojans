@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { useSpring, animated } from 'react-spring';
+// import { useSpring } from 'react-spring';
 import gsap from 'gsap';
 
 import Navbar from '../../components/Navbar/Navbar.component';
-import Threed from './threed';
+// import Threed from './threed';
 import LaptopModel from './RenderModels/LaptopModel';
 import GamingModel from './RenderModels/GamingModel';
 import SquidModel from './RenderModels/SquidModel';
@@ -32,7 +32,7 @@ import {
 	TalentFest,
 	SquidGame,
 	BoxCricket,
-	Entrepreneur,
+	// Entrepreneur,
 	Blockchain,
 	MachineLearning,
 	BGMI,
@@ -58,14 +58,14 @@ const EventsPage = (props) => {
 	const [selectedEvent, setSelectedEvent] = useState('');
 	const [isTabletOpen, setisTabletOpen] = useState(false);
 
-	const animation = useSpring({
-		from: {
-			opacity: 0
-		},
-		to: {
-			opacity: 1
-		}
-	});
+	// const animation = useSpring({
+	// 	from: {
+	// 		opacity: 0
+	// 	},
+	// 	to: {
+	// 		opacity: 1
+	// 	}
+	// });
 
 	const closetab = () => {
 		setisTabletOpen(false);

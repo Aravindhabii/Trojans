@@ -28,13 +28,22 @@ export const displayRazorpay = async (
 	year,
 	college,
 	event,
-	amount
+	amount,
+	setIsButtonEnabled
 ) => {
 	const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js');
 
 	if (!res) {
 		// alert("Razorpay SDK failed to load. Are you online?");
 		toast.error('Some error occurred. Please try again later.');
+		name.current.setAttribute('disabled', false);
+		email.current.setAttribute('disabled', false);
+		phone.current.setAttribute('disabled', false);
+		department.current.setAttribute('disabled', false);
+		year.current.setAttribute('disabled', false);
+		college.current.setAttribute('disabled', false);
+		event.current.setAttribute('disabled', false);
+		setIsButtonEnabled(true);
 		return;
 	}
 
@@ -75,13 +84,30 @@ export const displayRazorpay = async (
 					name.current.value = '';
 					email.current.value = '';
 					phone.current.value = '';
-					department.current.value = 'Select Departnemt';
+					department.current.value = 'Select Department';
 					year.current.value = 'Select Year';
 					college.current.value = 'Select College';
 					event.current.value = 'Select Event';
 
+					name.current.setAttribute('disabled', false);
+					email.current.setAttribute('disabled', false);
+					phone.current.setAttribute('disabled', false);
+					department.current.setAttribute('disabled', false);
+					year.current.setAttribute('disabled', false);
+					college.current.setAttribute('disabled', false);
+					event.current.setAttribute('disabled', false);
+					setIsButtonEnabled(true);
+
 					toast.success('Hooray! You are registered successfully.');
 				} else {
+					name.current.setAttribute('disabled', false);
+					email.current.setAttribute('disabled', false);
+					phone.current.setAttribute('disabled', false);
+					department.current.setAttribute('disabled', false);
+					year.current.setAttribute('disabled', false);
+					college.current.setAttribute('disabled', false);
+					event.current.setAttribute('disabled', false);
+					setIsButtonEnabled(true);
 					toast.error(
 						'Oops! Registration failed. Please try again in a moment.'
 					);

@@ -97,7 +97,8 @@ export const handleSubmit = async (
 	department,
 	year,
 	college,
-	event
+	event,
+	setIsButtonEnabled
 ) => {
 	e.preventDefault();
 	let amount =
@@ -111,5 +112,23 @@ export const handleSubmit = async (
 			? 200
 			: 100;
 	name.current.setAttribute('disabled', true);
-	displayRazorpay(name, email, phone, department, year, college, event, amount);
+	email.current.setAttribute('disabled', true);
+	phone.current.setAttribute('disabled', true);
+	department.current.setAttribute('disabled', true);
+	year.current.setAttribute('disabled', true);
+	college.current.setAttribute('disabled', true);
+	event.current.setAttribute('disabled', true);
+	setIsButtonEnabled(false);
+
+	displayRazorpay(
+		name,
+		email,
+		phone,
+		department,
+		year,
+		college,
+		event,
+		amount,
+		setIsButtonEnabled
+	);
 };
