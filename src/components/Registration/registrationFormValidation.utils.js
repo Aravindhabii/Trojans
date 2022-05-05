@@ -110,5 +110,6 @@ export const handleSubmit = async (
 			: event.current.value === 'Gaming'
 			? 200
 			: 100;
+	name.current.setAttribute('disabled', true);
 	displayRazorpay(name, email, phone, department, year, college, event, amount);
 };

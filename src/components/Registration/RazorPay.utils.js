@@ -48,20 +48,18 @@ export const displayRazorpay = async (
 		}
 	}).then((t) => t.json());
 
-	console.log(phone.current.va);
-
 	const options = {
 		key: RAZORPAY_LIVE_API_KEY,
 		currency: data.currency,
 		amount: data.amount.toString(),
 		order_id: data.id,
 		name: 'Trojans event registration payment gateway',
-		description: 'Registration for ',
+		description: `Registration for ${event.current.value} event`,
+		phone: phone.current.value,
 
 		// image: "http://localhost:8080/logo",
 		handler: async function (response) {
-			console.log(response);
-			// alert(response.razorpay_signature);
+			// alert(response.razorpay_signaturare);
 			await registrationEventAxios(
 				name.current.value,
 				email.current.value,
@@ -71,8 +69,7 @@ export const displayRazorpay = async (
 				college.current.value,
 				event.current.value,
 				response.razorpay_payment_id,
-				response.razorpay_order_id,
-				new Date().toISOString()
+				response.razorpay_order_id
 			).then((res) => {
 				if (res.status === 200) {
 					name.current.value = '';

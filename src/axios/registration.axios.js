@@ -14,7 +14,7 @@ export const registrationEventAxios = (
 	orderID,
 	date
 ) =>
-	axios.post(`${BACKEND_BASE_URL}/api/data`, {
+	axios.post(`${BACKEND_BASE_URL}/data`, {
 		name,
 		email,
 		phone,
