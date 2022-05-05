@@ -48,6 +48,8 @@ export const displayRazorpay = async (
 		}
 	}).then((t) => t.json());
 
+	console.log(phone.current.va);
+
 	const options = {
 		key: RAZORPAY_LIVE_API_KEY,
 		currency: data.currency,
@@ -90,9 +92,9 @@ export const displayRazorpay = async (
 			});
 		},
 		prefill: {
-			name,
-			email,
-			phone
+			name: name.current.value,
+			email: email.current.value,
+			phone: phone.current.value
 		}
 	};
 	const paymentObject = new window.Razorpay(options);
