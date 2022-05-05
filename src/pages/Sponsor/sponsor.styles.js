@@ -53,8 +53,6 @@ export const SponsorSection = styled.section`
         align-items: center;
         display: grid;
         row-gap: 3rem;
-        /* justify-content: space-evenly;
-     */
         margin-top: 2rem;
         position: relative;
         grid-template-columns: repeat(3, 1fr);
@@ -133,6 +131,12 @@ export const SponsorSection = styled.section`
         width: 100%;
         height: 100%;
         border-radius: 10px;
+    }
+    @media (max-width: 400px) {
+        .mainmain
+        {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 `;
 

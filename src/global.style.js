@@ -1,9 +1,9 @@
-import { createGlobalStyle } from 'styled-components';
-import Assassin from './assets/fonts/Assassin.ttf';
-import ShareTechMono from './assets/fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf';
-import EdhanMartine from './assets/fonts/edhan-martine-font/EdhanMartine-0WrVv.ttf';
-import MontserratMedium from './assets/fonts/Montserrat/Montserrat-Medium.ttf';
-import StrongBrain from './assets/fonts/strong_brain.otf';
+import {createGlobalStyle} from "styled-components";
+import Assassin from "./assets/fonts/Assassin.ttf";
+import ShareTechMono from "./assets/fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf";
+import EdhanMartine from "./assets/fonts/edhan-martine-font/EdhanMartine-0WrVv.ttf";
+import MontserratMedium from "./assets/fonts/Montserrat/Montserrat-Medium.ttf";
+import StrongBrain from "./assets/fonts/strong_brain.otf";
 
 export const GlobalStyles = createGlobalStyle`
 	*{
@@ -77,5 +77,24 @@ export const GlobalStyles = createGlobalStyle`
 
 	body{
 		overflow-x: hidden;
+	}
+
+
+	::-webkit-scrollbar
+	{
+		width: 10px;
+		transition: all .5s ease-in-out;
+		background: rgba(0,0,0,1);
+	}
+	::-webkit-scrollbar-thumb
+	{
+		/* background: #ff41df; */
+		background: linear-gradient(to top, #ff41df, #6600ff);
+		border-radius: 50px;
+		transition: all .5s ease-in-out;
+	}
+	::-webkit-scrollbar-thumb:hover
+	{
+		background: linear-gradient(to bottom, #ff41df, #6600ff);
 	}
 `;
