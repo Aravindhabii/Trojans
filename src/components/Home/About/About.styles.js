@@ -226,6 +226,7 @@ export const HeroSection = styled.section`
 			height: 30px;
 			width: 30px;
 			border-radius: 50%;
+
 			border: 5px solid #30aadd;
 		}
 
@@ -259,6 +260,11 @@ export const HeroSection = styled.section`
 		}
 	}
 	@media (max-width: 600px) {
+		.para , .about-title
+		{
+			transform: translate(15px, 0px) !important; 
+		}
+		
 		.btn1 {
 			top: 93%;
 		}
