@@ -9,12 +9,19 @@ const Navbar = ({ active }) => {
 	const navRef = useRef();
 
 	useEffect(() => {
-		if (window.screenY > 500) {
-			gsap.to(useRef.current, {
-				duration: 0.5,
-				backgroundColor: 'black'
-			});
-		}
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 500) {
+				gsap.to(navRef.current, {
+					duration: 0.5,
+					backgroundColor: 'rgba(0,0,0,0.8)'
+				});
+			} else {
+				gsap.to(navRef.current, {
+					duration: 0.5,
+					backgroundColor: 'rgba(0,0,0,0)'
+				});
+			}
+		});
 	}, []);
 
 	return (
