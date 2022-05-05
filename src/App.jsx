@@ -4,10 +4,11 @@ import { GlobalStyles } from './global.style.js';
 import { ThemeProvider } from 'styled-components';
 import { ToastContainer } from 'react-toastify';
 import ThemeContext from './Theme.context.jsx';
-import Preloader from './components/PreLoader/Preloader.component';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Sponsor = lazy(() => import('./pages/Sponsor/Sponsor.page'));
+import Trojans from './assets/Trojans_logo/trojans-compressed.png';
+
+const Sponser = lazy(() => import('./pages/Sponser/Sponser.page'));
 const Cursor = lazy(() => import('./components/Cursor/Cursor.component.jsx'));
 const HomePage = lazy(() => import('./pages/Home/Home.page.jsx'));
 const EventsPage = lazy(() => import('./pages/Events/Events.page'));
@@ -22,7 +23,25 @@ const App = () => {
 	const cursorRef = useRef();
 
 	return (
-		<Suspense fallback={<Preloader />}>
+		<Suspense
+			fallback={
+				<div
+					style={{
+						width: '100%',
+						height: '100vh',
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center',
+						backgroundColor: 'black',
+						padding: 0,
+						margin: 0,
+						boxSizing: 'border-box'
+					}}
+				>
+					<img src={Trojans} style={{ width: '10rem' }} alt='Trojans' />
+				</div>
+			}
+		>
 			<ThemeProvider theme={theme}>
 				<div
 					onMouseMove={(e) =>

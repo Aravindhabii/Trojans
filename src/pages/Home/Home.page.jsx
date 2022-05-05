@@ -28,7 +28,7 @@ const HomePage = () => (
 		<HeroHome />
 		<AboutHome />
 		<EventsHome />
-		{/* <Contact /> */}
+		<Contact />
 		<Footer />
 	</div>
 );
