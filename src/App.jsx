@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import ThemeContext from './Theme.context.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Trojans from './assets/Trojans_logo/trojans-full-gold-min.png';
+import Trojans from './assets/Trojans_logo/trojans-compressed.png';
 
 const Sponser = lazy(() => import('./pages/Sponser/Sponser.page'));
 const Cursor = lazy(() => import('./components/Cursor/Cursor.component.jsx'));
