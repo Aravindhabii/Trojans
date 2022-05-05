@@ -7,7 +7,7 @@ import ThemeContext from './Theme.context.jsx';
 import Preloader from './components/PreLoader/Preloader.component';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Sponser = lazy(() => import('./pages/Sponser/Sponser.page'));
+const Sponsor = lazy(() => import('./pages/Sponsor/Sponsor.page'));
 const Cursor = lazy(() => import('./components/Cursor/Cursor.component.jsx'));
 const HomePage = lazy(() => import('./pages/Home/Home.page.jsx'));
 const EventsPage = lazy(() => import('./pages/Events/Events.page'));
@@ -73,7 +73,7 @@ const App = () => {
 						/>
 						<Route exact path='/guidelines' element={<GuidelinesPage />} />
 						<Route exact path='/registration' element={<RegistrationPage />} />
-						<Route exact path='/sponser' element={<Sponser />} />
+						<Route exact path='/sponsor' element={<Sponsor />} />
 					</Routes>
 					{/* )} */}
 				</div>

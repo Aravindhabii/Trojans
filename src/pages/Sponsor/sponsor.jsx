@@ -1,12 +1,12 @@
 import React from "react";
-import { SponserSection } from "./sponser.styles";
+import { SponsorSection } from "./sponsor.styles";
 import img from "../../assets/about/1.jpg";
 import img2 from "../../assets/about/4.jpg";
 import img3 from "../../assets/about/5.jpg";
-function sponser() {
+function sponsor() {
   return (
-    <SponserSection>
-      <h1>Sponsers</h1>
+    <SponsorSection>
+      <h1>sponsors</h1>
       <div className="mainmain">
         
         <div className="main">
@@ -63,8 +63,8 @@ function sponser() {
         <div className="members">Abi</div>
         <div className="members">Santy</div>
       </div>
-    </SponserSection>
+    </SponsorSection>
   );
 }
 
-export default sponser;
+export default sponsor;
