@@ -96,7 +96,7 @@ const AboutHome = () => {
 						<main>
 							<h1 className='about-title'>
 								Chennai Institute of Technology{' '}
-								<img src={CITImg} alt='CIT Logo' />
+								{/* <img src={CITImg} alt='CIT Logo' /> */}
 							</h1>
 							<p className='para para2'>
 								Chennai Institute of Technology (CIT Chennai) is an Industry
