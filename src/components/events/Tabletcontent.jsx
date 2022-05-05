@@ -34,15 +34,15 @@ const Tabletcontent = (props) => {
       <div className="rules">
         <h2>Rules</h2>
         <ul>
-          {currentEvent.rules.map((event) => (
-            <li key={event}>{event}</li>
+          {currentEvent.rules.map((event,index) => (
+            <li key={index}>{event}</li>
           ))}
         </ul>
       </div>
       <div className="students">
         <h2>Student Coordinators</h2>
-        {currentEvent.studentCordinators.map((student) => (
-          <div className="studentscontainer">
+        {currentEvent.studentCordinators.map((student,index) => (
+          <div className="studentscontainer" key={index}>
             <h3 className="name">{student.name}</h3>
             <h3 className="phoneno">{student.phoneNo}</h3>
           </div>

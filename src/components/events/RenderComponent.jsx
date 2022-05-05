@@ -60,8 +60,8 @@ const RenderComponent = (props) => {
 
 	return (
 		<div className='eventlistdiv'>
-			{currentPage.map((event) => (
-				<Eventslist onClick={click}>
+			{currentPage.map((event,index) => (
+				<Eventslist onClick={click} key={index}>
 					<h3 className='heading' key={event.id}>
 						{event.name}
 					</h3>
