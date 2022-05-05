@@ -92,7 +92,7 @@ const App = () => {
 						/>
 						<Route exact path='/guidelines' element={<GuidelinesPage />} />
 						<Route exact path='/registration' element={<RegistrationPage />} />
-						<Route exact path='/sponser' element={<Sponser />} />
+						<Route exact path='/sponsor' element={<Sponsor />} />
 					</Routes>
 					{/* )} */}
 				</div>

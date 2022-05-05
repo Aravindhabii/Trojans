@@ -1,26 +1,26 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import Footer from '../../components/Footer/Footer'
-import { SponserSection, MembersSection, MembersDiv } from './sponser.styles';
+import { SponsorSection, MembersSection, MembersDiv } from './sponsor.styles';
 import img from '../../assets/about/1.jpg';
 import img2 from '../../assets/about/4.jpg';
 import img3 from '../../assets/about/5.jpg';
 import Navbar from '../../components/Navbar/Navbar.component';
 import Tilt from 'react-parallax-tilt';
 
-function Sponser() {
+function Sponsor() {
 	return (
 		<>
-			<Navbar active={{ route: 'sponser', scroll: 0 }} />
-			<SponserMainSection />
+			<Navbar active={{ route: 'sponsor', scroll: 0 }} />
+			<SponsorMainSection />
 			<DevelopersSection />
 		</>
 	);
 }
 
-const SponserMainSection = () => {
+const SponsorMainSection = () => {
 	return (
-		<SponserSection>
+		<SponsorSection>
 			<h1>Sponsors</h1>
 			<div className='mainmain'>
 				<CardComponent url={img2} name={'Poorvika'} />
@@ -30,7 +30,7 @@ const SponserMainSection = () => {
 				<CardComponent url={img2} name={'Poorvika'} />
 				<CardComponent url={img2} name={'Poorvika'} />
 			</div>
-		</SponserSection>
+		</SponsorSection>
 	);
 };
 
@@ -100,4 +100,4 @@ const DevelopersCard = ({ name, description, instagram, linkedin, color }) => {
 	);
 };
 
-export default Sponser;
+export default Sponsor;

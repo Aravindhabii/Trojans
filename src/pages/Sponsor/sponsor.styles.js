@@ -23,7 +23,7 @@ const turning2 = keyframes`
     }
 `;
 
-export const SponserSection = styled.section`
+export const SponsorSection = styled.section`
     /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"); */
     background-color: black;
     padding-top: 4rem;
