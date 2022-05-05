@@ -55,8 +55,6 @@ export const displayRazorpay = async (
 
 		// image: "http://localhost:8080/logo",
 		handler: async function (response) {
-			// alert(response.razorpay_payment_id);
-			// alert(response.razorpay_order_id);
 			// alert(response.razorpay_signature);
 			await registrationEventAxios(
 				name.current.value,
@@ -65,7 +63,10 @@ export const displayRazorpay = async (
 				department.current.value,
 				year.current.value,
 				college.current.value,
-				event.current.value
+				event.current.value,
+				response.razorpay_payment_id,
+				response.razorpay_order_id,
+				new Date().toISOString()
 			).then((res) => {
 				if (res.status === 200) {
 					name.current.value = '';

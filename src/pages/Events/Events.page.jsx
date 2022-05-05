@@ -26,7 +26,18 @@ import {
 	SiteIng,
 	PaperBytes,
 	GooseChase,
-	TrojansThrottle
+	TrojansThrottle,
+	ShutterStop,
+	ShipWreck,
+	TalentFest,
+	SquidGame,
+	BoxCricket,
+	Entrepreneur,
+	Blockchain,
+	MachineLearning,
+	BGMI,
+	Valorant,
+	FreeFireMax
 } from '../../datas/events.data';
 
 import Technical from '../../components/events/Technical';
@@ -103,27 +114,27 @@ const EventsPage = (props) => {
 		} else if (selectedEvent === 'TROJANCTF') {
 			setCurrentEvent(CodersChemistry);
 		} else if (selectedEvent === 'SHUTTER STOP') {
-			setCurrentEvent(CodersChemistry);
+			setCurrentEvent(ShutterStop);
 		} else if (selectedEvent === 'SHIP WRECK') {
-			setCurrentEvent(CodersChemistry);
+			setCurrentEvent(ShipWreck);
 		} else if (selectedEvent === 'TALENT FEST') {
-			setCurrentEvent(CodersChemistry);
+			setCurrentEvent(TalentFest);
 		} else if (selectedEvent === 'SQUID GAME') {
-			setCurrentEvent(CodersChemistry);
+			setCurrentEvent(SquidGame);
 		} else if (selectedEvent === 'BOX CRICKET') {
-			setCurrentEvent(CodersChemistry);
+			setCurrentEvent(BoxCricket);
 		} else if (selectedEvent === 'ADVERTISEMENT') {
-			setCurrentEvent(CodersChemistry);
+			setCurrentEvent(BoxCricket);
 		} else if (selectedEvent === 'MACHINE LEARNING') {
-			setCurrentEvent(CodersChemistry);
+			setCurrentEvent(MachineLearning);
 		} else if (selectedEvent === 'BLOCKCHAIN') {
-			setCurrentEvent(CodersChemistry);
+			setCurrentEvent(Blockchain);
 		} else if (selectedEvent === 'VALORANT') {
-			setCurrentEvent(CodersChemistry);
+			setCurrentEvent(Valorant);
 		} else if (selectedEvent === 'BGMI') {
-			setCurrentEvent(CodersChemistry);
+			setCurrentEvent(BGMI);
 		} else if (selectedEvent === 'FREE FIRE') {
-			setCurrentEvent(CodersChemistry);
+			setCurrentEvent(FreeFireMax);
 		}
 	}, [selectedEvent]);
 
@@ -181,7 +192,7 @@ const EventsPage = (props) => {
 						Non-Technical
 					</Button>
 					<Button value='gamming' onClick={click}>
-						Gamming
+						Gaming
 					</Button>
 					<Button value='workshops' onClick={click}>
 						Workshops
@@ -215,7 +226,7 @@ const EventsPage = (props) => {
 			</HeroSection>
 			<Tabletdiv isTabletOpen={isTabletOpen} setisTabletOpen={setisTabletOpen}>
 				<div onClick={closetab} className='forclose'></div>
-				<Tablet currentEvent={currentEvent} />
+				<Tablet currentEvent={currentEvent} isTabletOpen = {isTabletOpen}/>
 			</Tabletdiv>
 		</section>
 	);
