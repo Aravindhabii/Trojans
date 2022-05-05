@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import ThemeContext from './Theme.context.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Trojans from './assets/Trojans_logo/trojans-compressed.png';
+// import Trojans from './assets/Trojans_logo/trojans-compressed.png';
 
 const Sponsor = lazy(() => import('./pages/Sponsor/Sponsor.page'));
 const Cursor = lazy(() => import('./components/Cursor/Cursor.component.jsx'));
@@ -23,25 +23,7 @@ const App = () => {
 	const cursorRef = useRef();
 
 	return (
-		<Suspense
-			fallback={
-				<div
-					style={{
-						width: '100%',
-						height: '100vh',
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-						backgroundColor: 'black',
-						padding: 0,
-						margin: 0,
-						boxSizing: 'border-box'
-					}}
-				>
-					<img src={Trojans} style={{ width: '10rem' }} alt='Trojans' />
-				</div>
-			}
-		>
+		<Suspense>
 			<ThemeProvider theme={theme}>
 				<div
 					onMouseMove={(e) =>

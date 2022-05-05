@@ -93,6 +93,20 @@ export const FooterContainer = styled.section`
 					padding: 2rem;
 				}
 			}
+			@media (max-width: 350px) {
+				/* flex-direction: column; */
+
+				.footer-links-container {
+					padding: 1rem;
+				}
+			}
+			@media (max-width: 300px) {
+				/* flex-direction: column; */
+
+				.footer-links-container {
+					padding: 0.5rem;
+				}
+			}
 			@media (max-width: 900px) {
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
