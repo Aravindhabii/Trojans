@@ -15,6 +15,9 @@ import TechnicalBg from '../../../assets/home/events/1.jpg';
 import NonTechnicalBg from '../../../assets/home/events/2.jpg';
 import WorkshopsBg from '../../../assets/home/events/3.jpg';
 import HexImg from '../../../assets/home/Hexagon.svg';
+import NonTechEventsPoster from '../../../assets/home/events/non-tech-events-poster.png';
+import TechEventsPoster from '../../../assets/home/events/tech-events-poster.png';
+import WorkshopsPoster from '../../../assets/home/events/workshops-poster.png';
 
 const PhoneButton = ({ text, bgColor, url, handlePhoneButtonClick }) => (
 	<>
@@ -43,6 +46,7 @@ const EventsHome = () => {
 			phone1: 20,
 			tablet1: 10
 		});
+
 		setTabletImage(slug);
 	};
 
@@ -82,7 +86,16 @@ const EventsHome = () => {
 							d='M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z'
 						/>
 					</svg> */}
-					<img src={tabletImage} alt='phone' />
+					<img
+						src={
+							tabletImage === 'technical'
+								? TechEventsPoster
+								: tabletImage === 'non-technical'
+								? NonTechEventsPoster
+								: WorkshopsPoster
+						}
+						alt='phone'
+					/>
 				</div>
 			)}
 			<Tilt

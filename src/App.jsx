@@ -6,7 +6,7 @@ import {ToastContainer} from "react-toastify";
 import ThemeContext from "./Theme.context.jsx";
 import "react-toastify/dist/ReactToastify.css";
 
-import Trojans from "./assets/Trojans_logo/trojans-compressed.png";
+// import Trojans from "./assets/Trojans_logo/trojans-compressed.png";
 
 const Sponsor = lazy(() => import('./pages/Sponsor/Sponsor.page'));
 const Cursor = lazy(() => import('./components/Cursor/Cursor.component.jsx'));
@@ -22,49 +22,31 @@ const App = () => {
     // const [showCountdown, setShowCountdown] = useState(true);
     const cursorRef = useRef();
 
-    return (
-        <Suspense
-            fallback={
-                <div
-                    style={{
-                        width: "100%",
-                        height: "100vh",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        backgroundColor: "black",
-                        padding: 0,
-                        margin: 0,
-                        boxSizing: "border-box",
-                    }}
-                >
-                    <img src={Trojans} style={{width: "10rem"}} alt="Trojans" />
-                </div>
-            }
-        >
-            <ThemeProvider theme={theme}>
-                <div
-                    onMouseMove={(e) =>
-                        (document.querySelector(
-                            ".cursor"
-                        ).style.transform = `translate(${e.clientX}px, ${e.clientY}px)`)
-                    }
-                >
-                    <ToastContainer
-                        position="top-right"
-                        autoClose={5000}
-                        hideProgressBar
-                        newestOnTop
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                        theme="dark"
-                    />
-                    <Cursor cursorRef={cursorRef} />
-                    <GlobalStyles />
-                    {/* {showCountdown ? (
+	return (
+		<Suspense>
+			<ThemeProvider theme={theme}>
+				<div
+					onMouseMove={(e) =>
+						(document.querySelector(
+							'.cursor'
+						).style.transform = `translate(${e.clientX}px, ${e.clientY}px)`)
+					}
+				>
+					<ToastContainer
+						position='top-right'
+						autoClose={5000}
+						hideProgressBar
+						newestOnTop
+						closeOnClick
+						rtl={false}
+						pauseOnFocusLoss
+						draggable
+						pauseOnHover
+						theme='dark'
+					/>
+					<Cursor cursorRef={cursorRef} />
+					<GlobalStyles />
+					{/* {showCountdown ? (
 					<Countdown setShowCountdown={setShowCountdown} />
 				) : ( */}
                     <Routes>
