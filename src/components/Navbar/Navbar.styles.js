@@ -15,8 +15,6 @@ export const NavbarContainer = styled.div`
 	height: 6rem;
 	color: white;
 	padding: 0 5rem;
-	background: rgba(0, 0, 0, 0.9);
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 
 	@media (max-width: 500px) {
 		padding: 0 2rem;
