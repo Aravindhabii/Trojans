@@ -13,6 +13,7 @@ export const nontechnicalevents = [
   { id: 1, name: "SHIP WRECK" },
   { id: 1, name: "TALENT FEST" },
   { id: 1, name: "SQUID GAME" },
+  { id: 1, name: "ENNA ENNA SOLRAN PARUNGA" },
   { id: 1, name: "BOX CRICKET" },
   { id: 1, name: "ADVERTISEMENT"},
 ]
