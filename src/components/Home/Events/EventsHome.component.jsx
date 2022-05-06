@@ -109,14 +109,14 @@ const EventsHome = () => {
 					handlePhoneButtonClick={() => handlePhoneButtonClick('technical')}
 				/>
 				<PhoneButton
-					text='Workshops'
-					bgColor='#03e9f4'
-					handlePhoneButtonClick={() => handlePhoneButtonClick('workshops')}
-				/>
-				<PhoneButton
 					text='Non Technical Events'
 					bgColor='#03e9f4'
 					handlePhoneButtonClick={() => handlePhoneButtonClick('non-technical')}
+				/>
+				<PhoneButton
+					text='Workshops'
+					bgColor='#03e9f4'
+					handlePhoneButtonClick={() => handlePhoneButtonClick('workshops')}
 				/>
 			</Tilt>
 			{window.innerWidth > 500 && (

@@ -18,8 +18,8 @@ function Contact() {
                 </video> */}
 				<ContactContainer style={{ marginLeft: '6rem' }}>
 					<h1>Contact</h1>
-					<p>Want to learn more about us ? Confused ?</p>
-					<p>Contact us to know more about us.</p>
+					<p>Curious to learn more about us? </p>
+					<p>We are just a call away..</p>
 					<ContactPerson>
 						<p>
 							<span>President (Vijay)</span>
