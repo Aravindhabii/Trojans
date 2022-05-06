@@ -3,16 +3,23 @@ import React from 'react';
 import {
 	ContactSection,
 	ContactContainer,
-	ContactPerson,
-	HoverContact
+	ContactPerson
+	// HoverContact
 } from './Contact.styles';
 
+import HexImg from '../../../assets/home/Hexagon.svg';
+import HexBg from '../HexBg/HexBg.component';
 import ContactForm from './ContactForm/ContactForm.component';
 
 function Contact() {
 	return (
 		<>
 			<ContactSection id='contact'>
+				<HexBg
+					direction='to top'
+					style={{ height: '100%', zIndex: -1 }}
+					svg={HexImg}
+				/>
 				{/* <video autoPlay loop muted>
                     <source src={NeonVideo} type="video/mp4" />
                 </video> */}
@@ -41,7 +48,7 @@ function Contact() {
 							<a href='tel:+919962572312'> +91 99625 72312</a>
 						</p>
 					</ContactPerson>
-					<HoverContact>
+					{/* <HoverContact>
 						<span
 							style={{
 								transform: 'rotate(calc(36deg * 1))',
@@ -102,7 +109,7 @@ function Contact() {
 								animationDelay: 'calc(-0.25s * 10)'
 							}}
 						></span>
-					</HoverContact>
+					</HoverContact> */}
 				</ContactContainer>
 				<ContactForm />
 			</ContactSection>

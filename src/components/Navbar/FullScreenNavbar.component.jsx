@@ -141,20 +141,11 @@ const FullScreenNavbar = ({ active, isNavOpen, setIsNavOpen }) => {
 					color='blue'
 				/>
 				<NavLinkComponent
-					activeRoute={active.route === 'workshop' ? true : false}
-					url='/workshop'
-					body='&nbsp;Workshops'
-					setScrollDiv={setScrollDiv}
-					scroll={2}
-					activeScroll={active.scroll}
-					color='blue'
-				/>
-				<NavLinkComponent
 					activeRoute={active.route === 'guidelines' ? true : false}
 					url='/guidelines'
 					body='&nbsp;Guidelines'
 					setScrollDiv={setScrollDiv}
-					scroll={3}
+					scroll={2}
 					activeScroll={active.scroll}
 					color='green'
 				/>
@@ -163,7 +154,7 @@ const FullScreenNavbar = ({ active, isNavOpen, setIsNavOpen }) => {
 					url='/sponsor'
 					body='&nbsp;Sponsor'
 					setScrollDiv={setScrollDiv}
-					scroll={4}
+					scroll={3}
 					activeScroll={active.scroll}
 					color='purple'
 				/>
@@ -172,7 +163,7 @@ const FullScreenNavbar = ({ active, isNavOpen, setIsNavOpen }) => {
 					url='/registration'
 					body='&nbsp;Register'
 					setScrollDiv={setScrollDiv}
-					scroll={5}
+					scroll={4}
 					activeScroll={active.scroll}
 					color='yellow'
 				/>
