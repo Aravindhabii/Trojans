@@ -11,7 +11,7 @@ const cursorColor = keyframes`
 export const CursorDiv = styled.div.attrs({
 	className: 'cursor'
 })`
-	z-index: 999;
+	z-index: 99999999;
 	position: fixed;
 	background: #2696e8;
 	width: 20px;
