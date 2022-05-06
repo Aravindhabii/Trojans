@@ -48,41 +48,37 @@ const App = () => {
 					/>
 					<Cursor cursorRef={cursorRef} />
 					<GlobalStyles />
-					{showCountdown ? (
+					{/* {showCountdown ? (
 						<Countdown setShowCountdown={setShowCountdown} />
-					) : (
-						<Routes>
-							<Route path='/' element={<HomePage />} />
-							<Route exact path='/events' element={<EventsPage page='' />} />
-							<Route
-								exact
-								path='/workshop'
-								element={<EventsPage page='workshops' />}
-							/>
-							<Route
-								exact
-								path='/nontechnical'
-								element={<EventsPage page='nontechnicalevents' />}
-							/>
-							<Route
-								exact
-								path='/technical'
-								element={<EventsPage page='technicalevents' />}
-							/>
-							<Route
-								exact
-								path='/gaming'
-								element={<EventsPage page='gaming' />}
-							/>
-							<Route exact path='/guidelines' element={<GuidelinesPage />} />
-							<Route
-								exact
-								path='/registration'
-								element={<RegistrationPage />}
-							/>
-							<Route exact path='/sponsor' element={<Sponsor />} />
-						</Routes>
-					)}
+					) : ( */}
+					<Routes>
+						<Route path='/' element={<HomePage />} />
+						<Route exact path='/events' element={<EventsPage page='' />} />
+						<Route
+							exact
+							path='/workshop'
+							element={<EventsPage page='workshops' />}
+						/>
+						<Route
+							exact
+							path='/nontechnical'
+							element={<EventsPage page='nontechnicalevents' />}
+						/>
+						<Route
+							exact
+							path='/technical'
+							element={<EventsPage page='technicalevents' />}
+						/>
+						<Route
+							exact
+							path='/gaming'
+							element={<EventsPage page='gaming' />}
+						/>
+						<Route exact path='/guidelines' element={<GuidelinesPage />} />
+						<Route exact path='/registration' element={<RegistrationPage />} />
+						<Route exact path='/sponsor' element={<Sponsor />} />
+					</Routes>
+					{/* )} */}
 				</div>
 			</ThemeProvider>
 		</Suspense>

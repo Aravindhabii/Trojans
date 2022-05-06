@@ -78,7 +78,9 @@ export const handleDropdownValidation = (
 	setIsButtonEnabled,
 	setformInputValid,
 	formInputValid,
-	setIsWorkshopDropdownVisible
+	setIsWorkshopDropdownVisible,
+	setIsGamingDropdownVisible,
+	eventOrGaming
 ) => {
 	if (value.current.value.includes('Select')) {
 		value.current.classList.add('error');
@@ -89,9 +91,16 @@ export const handleDropdownValidation = (
 		value.current.classList.remove('error');
 		value.current.classList.add('success');
 		setformInputValid({ ...formInputValid, [value.current.name]: true });
-		if (value.current.value === 'Workshops') {
+		if (eventOrGaming.current.value === 'Workshops') {
 			setIsWorkshopDropdownVisible(true);
+		} else if (
+			eventOrGaming.current.value === 'Valorant' ||
+			eventOrGaming.current.value === 'BGMI' ||
+			eventOrGaming.current.value === 'FreeFire'
+		) {
+			setIsGamingDropdownVisible(true);
 		} else {
+			setIsGamingDropdownVisible(false);
 			setIsWorkshopDropdownVisible(false);
 		}
 		setIsButtonEnabled(true);

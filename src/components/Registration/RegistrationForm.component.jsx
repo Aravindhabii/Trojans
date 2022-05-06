@@ -68,16 +68,18 @@ const RegistrationForm = () => {
 	const college = useRef('');
 	const event = useRef('');
 	const workshops = useRef('');
+	const gaming = useRef('');
 
 	const [formInputValid, setformInputValid] = useState({
 		name: false,
-		email: false,
+		email: true,
 		phone: false,
 		department: false,
 		year: false,
 		college: false,
 		event: false,
-		workshops: event.current.value === 'workshops' ? false : true
+		workshops: event.current.value === 'workshops' ? false : true,
+		gaming: event.current.value === 'gaming' ? false : true
 	});
 
 	const [isEmailVerified, setIsEmailVerified] = useState(false);
@@ -86,6 +88,7 @@ const RegistrationForm = () => {
 	const [fetchedOTP, setFetchedOTP] = useState('');
 	const [isWorkshopDropdownVisible, setIsWorkshopDropdownVisible] =
 		useState(false);
+	const [isGamingDropdownVisible, setIsGamingDropdownVisible] = useState(false);
 
 	useEffect(() => {
 		const isFormValid = Object.values(formInputValid).every(
@@ -292,7 +295,9 @@ const RegistrationForm = () => {
 							setIsButtonEnabled,
 							setformInputValid,
 							formInputValid,
-							setIsWorkshopDropdownVisible
+							setIsWorkshopDropdownVisible,
+							setIsGamingDropdownVisible,
+							event
 						);
 					}}
 				>
@@ -321,7 +326,9 @@ const RegistrationForm = () => {
 								setIsButtonEnabled,
 								setformInputValid,
 								formInputValid,
-								setIsWorkshopDropdownVisible
+								setIsWorkshopDropdownVisible,
+								setIsGamingDropdownVisible,
+								event
 							)
 						}
 					>
@@ -331,6 +338,35 @@ const RegistrationForm = () => {
 						<option value='Machine Learning'>Machine Learning</option>
 						<option value='Blockchain Technology'>Blockchain Technology</option>
 						<option value='entrepreneurship'>entrepreneurship</option>
+					</select>
+				</InputContainerStyle>
+			)}
+			{isGamingDropdownVisible && (
+				<InputContainerStyle>
+					<label>Select Game</label>
+					<select
+						disabled={!isEmailVerified || !formInputValid.email}
+						name='gaming'
+						defaultValue='Select Gaming'
+						ref={gaming}
+						onChange={() =>
+							handleDropdownValidation(
+								gaming,
+								setIsButtonEnabled,
+								setformInputValid,
+								formInputValid,
+								setIsWorkshopDropdownVisible,
+								setIsGamingDropdownVisible,
+								gaming
+							)
+						}
+					>
+						<option value='Select Gaming' disabled>
+							Select Gaming
+						</option>
+						<option value='Valorant'>Valorant</option>
+						<option value='BGMI'>BGMI</option>
+						<option value='Free Fire'>Free Fire</option>
 					</select>
 				</InputContainerStyle>
 			)}
