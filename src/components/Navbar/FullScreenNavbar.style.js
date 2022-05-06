@@ -49,6 +49,7 @@ export const Navlink = styled.li`
 		font-family: 'ShareTechMono';
 
 		@media (max-width: 350px) {
+			
 			font-size: 2rem !important;
 		}
 	}
