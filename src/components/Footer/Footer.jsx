@@ -88,7 +88,7 @@ function Footer() {
                 </div>
             </div>
             <div className="copyright">
-                <p>COPYRIGHT © TROJANS</p>
+                <p>COPYRIGHT © TROJANS </p>
             </div>
         </FooterContainer>
     );
