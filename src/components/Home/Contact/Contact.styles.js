@@ -10,17 +10,7 @@ export const ContactSection = styled.section`
 	width: 100%;
 	/* background: #000; */
 	overflow: hidden;
-	background: url("https://img.freepik.com/free-vector/stream-binary-code-design_53876-97406.jpg?t=st=1651815297~exp=1651815897~hmac=aedd8249ae37373f7ae5a42405426e257bb7da6a320ebf549ee76219407a4dcb&w=740") center/cover no-repeat;
-	
-	&::after {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		/* background: linear-gradient(to top, transparent 80%, rgba(0, 0, 0, 1)); */
-		backdrop-filter: blur(5px);
-		z-index: 1;
-	}
+	/* background: url("https://img.freepik.com/free-vector/stream-binary-code-design_53876-97406.jpg?t=st=1651815297~exp=1651815897~hmac=aedd8249ae37373f7ae5a42405426e257bb7da6a320ebf549ee76219407a4dcb&w=740") center/cover no-repeat; */
 	@media (max-width: 700px) {
 		flex-direction: column;
 		height: fit-content;

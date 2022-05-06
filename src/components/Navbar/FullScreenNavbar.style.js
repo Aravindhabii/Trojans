@@ -37,7 +37,7 @@ export const Navlink = styled.li`
 	margin: 0.5rem 0;
 
 	a {
-		font-size: 3rem !important;
+		font-size: 2rem !important;
 		text-decoration: none;
 		font-weight: bold;
 		color: transparent;
@@ -49,6 +49,7 @@ export const Navlink = styled.li`
 		font-family: 'ShareTechMono';
 
 		@media (max-width: 350px) {
+			
 			font-size: 2rem !important;
 		}
 	}

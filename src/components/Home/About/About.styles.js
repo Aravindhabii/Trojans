@@ -3,7 +3,7 @@ import bg from '../../../assets/about/2.jpg';
 export const HeroSection = styled.section`
 	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
 	width: 100%;
-	height: 100vh;
+	height: fit-content;
 	background: black;
 
 	display: flex;
@@ -16,7 +16,7 @@ export const HeroSection = styled.section`
 	}
 	div {
 		// width: 80%;
-		height: 80vh;
+		height: fit-content;
 		background: #100c0c;
 		border-radius: 15px;
 		border: 5px solid #30aadd;
@@ -32,7 +32,7 @@ export const HeroSection = styled.section`
 	video {
 		width: 100%;
 		object-fit: cover;
-		height: 100vh;
+		height: fit-content;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -245,12 +245,12 @@ export const HeroSection = styled.section`
 	}
 	@media (max-width: 780px) {
 		div {
-			padding: 1rem;
+			padding: 5rem 1rem;
 		}
 	}
 	@media (max-width: 700px) {
 		div {
-			padding: 0.6rem;
+			padding: 5rem 1rem;
 		}
 		p {
 			line-height: 1.6rem;
@@ -260,9 +260,9 @@ export const HeroSection = styled.section`
 		}
 	}
 	@media (max-width: 600px) {
-		.para , .about-title
-		{
-			transform: translate(15px, 0px) !important; 
+		.para,
+		.about-title {
+			transform: translate(15px, 0px) !important;
 		}
 		
 		.btn1 {
@@ -272,12 +272,11 @@ export const HeroSection = styled.section`
 			top: 93%;
 		}
 		div {
+			padding: 5rem 1rem !important;
 			width: 90%;
-			height: 88vh;
+			height: fit-content;
 			padding: 0.5rem;
-			padding-top: 2rem;
-			padding-bottom: 2rem;
-			min-height: 650px;
+			min-height: fit-content;
 		}
 		p {
 			text-align: justify;
