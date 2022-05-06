@@ -33,7 +33,7 @@ const Navbar = ({ active }) => {
 			/>
 			<NavbarContainer ref={navRef}>
 				<NavbarLogo href='/'>
-					<h1>Trojans</h1>
+					{/* <h1>Trojans</h1> */}
 				</NavbarLogo>
 				<MenuButton onClick={() => setIsNavOpen(true)}>
 					<span></span>
