@@ -152,7 +152,7 @@ export const TrojansThrottle = {
     studentCordinators: [
         {
             id: 1,
-            name: "Name - Vekateswar S",
+            name: "Name - Venkateswar S",
             phoneNo: "Phone No. 9498386608",
         },
         {

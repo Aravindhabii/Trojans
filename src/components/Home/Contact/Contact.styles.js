@@ -8,15 +8,17 @@ export const ContactSection = styled.section`
 	justify-content: center;
 	height: 100vh;
 	width: 100%;
-	background: #000;
+	/* background: #000; */
 	overflow: hidden;
-
+	background: url("https://img.freepik.com/free-vector/stream-binary-code-design_53876-97406.jpg?t=st=1651815297~exp=1651815897~hmac=aedd8249ae37373f7ae5a42405426e257bb7da6a320ebf549ee76219407a4dcb&w=740") center/cover no-repeat;
+	
 	&::after {
 		content: '';
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(to top, transparent 80%, rgba(0, 0, 0, 1));
+		/* background: linear-gradient(to top, transparent 80%, rgba(0, 0, 0, 1)); */
+		backdrop-filter: blur(5px);
 		z-index: 1;
 	}
 	@media (max-width: 700px) {
@@ -54,7 +56,7 @@ export const ContactContainer = styled.div`
 	justify-content: center;
 	width: 50%;
 	height: 100%;
-	background: #000;
+	/* background: #000; */
 	color: #fff;
 	overflow: visible;
 	/* z-index: 2; */
@@ -68,7 +70,7 @@ export const ContactContainer = styled.div`
 		text-shadow: 2px 0 0 #bc13fe, -2px 0 0 #bc13fe, 0 2px 0 #bc13fe,
 			0 -2px 0 #bc13fe, 1px 1px #bc13fe, -1px -1px 0 #bc13fe, 1px -1px 0 #bc13fe,
 			-1px 1px 0 #bc13fe, 0 0 7px #bc13fe, 0 0 10px #bc13fe, 0 0 21px #bc13fe;
-		z-index: 10;
+		z-index: 2;
 	}
 	p {
 		font-size: 1.2rem;
@@ -100,16 +102,16 @@ export const ContactContainer = styled.div`
 			}
 			input {
 				width: 100%;
-				background: #000;
 				outline: none;
 				color: #fff;
 				font-size: 1.2rem;
 				padding: 1rem 0.8rem;
 				border-radius: 10px;
-				background-color: black;
-				box-shadow: 0 0 5px #bc13fe, 0 0 15px #bc13fe;
+				background: #000;
+				box-shadow: 0 0 5px rgb(29,144,244), 0 0 15px rgb(29,144,244);
 				margin: 1rem 0;
-				border: 1px solid #bc13fe;
+				border: 1px solid rgb(29,144,244);
+				border: none;
 				margin-bottom: 0.5rem;
 				z-index: 5;
 			}

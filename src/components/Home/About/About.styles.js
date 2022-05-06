@@ -105,7 +105,7 @@ export const HeroSection = styled.section`
 	}
 
 	p {
-		width: 90%;
+		width: 95%;
 		font-size: 1rem;
 		line-height: 2.3rem;
 		color: white;
