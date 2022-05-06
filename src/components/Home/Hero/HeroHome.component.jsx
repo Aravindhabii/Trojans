@@ -16,11 +16,11 @@ const HeroHome = () => {
                 <h3> PRESENTS</h3>
                 <img src={TrojansGold} alt="Trojans" />
                 <h3>A NATIONAL LEVEL TECHNICAL SYMPOSIUM</h3>
+                {/* <h3>EXPLORE</h3> */}
+                <a href="">
+                    <h1 className="registration_link">REGISTER</h1>
+                </a>
                 <a href="#about">
-                    {/* <h3>EXPLORE</h3> */}
-                    <h3 className="">
-                        <a href="Registration"></a>
-                    </h3>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-6 w-6"
