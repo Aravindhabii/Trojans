@@ -144,6 +144,6 @@ export const CountdownCircleStyle = styled.div`
 
 	@media (max-width: 350px) {
 		width: 3rem;
-		margin: 0 .5rem;
+		margin: 0 0.5rem;
 	}
 `;
