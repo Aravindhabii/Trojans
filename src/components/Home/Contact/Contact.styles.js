@@ -10,7 +10,7 @@ export const ContactSection = styled.section`
 	width: 100%;
 	/* background: #000; */
 	overflow: hidden;
-	background: url("https://wallpapercave.com/wp/wp2771493.png") center/cover no-repeat;
+	background: url("https://img.freepik.com/free-vector/stream-binary-code-design_53876-97406.jpg?t=st=1651815297~exp=1651815897~hmac=aedd8249ae37373f7ae5a42405426e257bb7da6a320ebf549ee76219407a4dcb&w=740") center/cover no-repeat;
 	
 	&::after {
 		content: '';
@@ -70,7 +70,7 @@ export const ContactContainer = styled.div`
 		text-shadow: 2px 0 0 #bc13fe, -2px 0 0 #bc13fe, 0 2px 0 #bc13fe,
 			0 -2px 0 #bc13fe, 1px 1px #bc13fe, -1px -1px 0 #bc13fe, 1px -1px 0 #bc13fe,
 			-1px 1px 0 #bc13fe, 0 0 7px #bc13fe, 0 0 10px #bc13fe, 0 0 21px #bc13fe;
-		z-index: 10;
+		z-index: 2;
 	}
 	p {
 		font-size: 1.2rem;
