@@ -1,6 +1,7 @@
 export const CodersChemistry = {
   id: 1,
   name: "Coders Chemistry",
+  timestamp: "10:00 AM - 12:00 PM",
   description:
     "This is a team event comprising of coding and physical tasks. The team members have to swap their roles every 10 minutes. While one does a physical task, the other tries to find the output for the given use case. The team that finds the output first, wins.",
   rules: [
