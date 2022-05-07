@@ -48,6 +48,7 @@ const ContactForm = () => {
 	};
 	return (
 		<ContactContainer>
+			<h1 style={{ textAlign: 'center' }}>Feedback</h1>
 			<form onSubmit={handleSubmit}>
 				<div>
 					<label htmlFor='name'>Name</label>

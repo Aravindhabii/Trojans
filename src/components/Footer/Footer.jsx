@@ -12,7 +12,26 @@ const FooterlLinksContainer = ({title, links}) => {
             <ul>
                 {links.map((link, index) => (
                     <li key={index}>
-                        <a href={link.url}>{link.name}</a>
+                        <a href={link.url}>
+							{link.name}
+                            {/* <img src={link.image} alt={link.alt} /> */}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+const FooterlLinksContainerIcons = ({title, links}) => {
+    return (
+        <div className="footer-links-container">
+            <h2>{title}</h2>
+            <ul className="image-footer-atag">
+                {links.map((link, index) => (
+                    <li key={index}>
+                        <a href={link.url}>
+                            <img className="image-footer-icons" src={link.image} alt={link.alt} />
+                        </a>
                     </li>
                 ))}
             </ul>
@@ -36,8 +55,9 @@ function Footer() {
                     <FooterlLinksContainer
                         title="Events"
                         links={[
-                            {url: "/events", name: "Technical"},
-                            {url: "/events", name: "Non - Technical"},
+                            {url: "/technical", name: "Technical"},
+                            {url: "/nontechnical", name: "Non - Technical"},
+                            {url: "/workshop", name: "Gaming"},
                             {url: "/events", name: "Workshops"},
                         ]}
                     />
@@ -49,25 +69,32 @@ function Footer() {
                             {url: "/", name: "College"},
                         ]}
                     />
-                    <FooterlLinksContainer
+                    <FooterlLinksContainerIcons
                         title="Connect"
                         links={[
                             {
                                 url: "https://www.instagram.com/trojans_cit/",
-                                name: "Instagram",
+                                image: "https://img.icons8.com/ios/50/ffffff/instagram-new--v1.png",
+                                alt: "Instagram",
                             },
                             {
                                 url: "https://www.linkedin.com/in/trojans-cit-363404239/",
-                                name: "LinkedIn",
+                                image: "https://img.icons8.com/ios/50/ffffff/linkedin.png",
+                                alt: "LinkedIn",
                             },
                             {
                                 url: "https://www.youtube.com/channel/UC5pM39xn_AYsaldF2DPpI3A",
-                                name: "Youtube",
+                                image: "https://img.icons8.com/ios/50/ffffff/youtube-play--v1.png",
+                                alt: "Youtube",
                             },
-                            {url: "/#contact", name: "Contact Us"},
+                            {
+                                url: "/#contact",
+                                image: "https://img.icons8.com/material-outlined/50/ffffff/call-male.png",
+                                alt: "Contact Us",
+                            },
                         ]}
                     />
-                    
+
                     <FooterlLinksContainer
                         title="Guidelines"
                         links={[

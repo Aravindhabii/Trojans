@@ -1,5 +1,8 @@
-import { displayRazorpay } from './RazorPay.utils';
-import { verifyPost } from '../../axios/verifyEmail.axios';
+// import { displayRazorpay } from './RazorPay.utils';
+// import { verifyPost } from '../../axios/verifyEmail.axios';
+
+import { registrationEventAxios } from '../../axios/registration.axios';
+import { toast } from 'react-toastify';
 
 export const handleTextValidation = (
 	value,
@@ -74,6 +77,37 @@ export const handleDropdownValidation = (
 	value,
 	setIsButtonEnabled,
 	setformInputValid,
+	formInputValid,
+	setIsWorkshopDropdownVisible,
+	setIsGamingDropdownVisible
+) => {
+	if (value.current.value.includes('Select')) {
+		value.current.classList.add('error');
+		value.current.classList.remove('success');
+		setformInputValid({ ...formInputValid, [value.current.name]: false });
+		setIsButtonEnabled(false);
+	} else {
+		value.current.classList.remove('error');
+		value.current.classList.add('success');
+		setformInputValid({ ...formInputValid, [value.current.name]: true });
+		if (value.current.value === 'Workshops') {
+			setIsWorkshopDropdownVisible(true);
+			setIsGamingDropdownVisible(false);
+		} else if (value.current.value === 'Gaming') {
+			setIsWorkshopDropdownVisible(false);
+			setIsGamingDropdownVisible(true);
+		} else {
+			setIsGamingDropdownVisible(false);
+			setIsWorkshopDropdownVisible(false);
+		}
+		setIsButtonEnabled(true);
+	}
+};
+
+export const handleSubDropdownValidation = (
+	value,
+	setIsButtonEnabled,
+	setformInputValid,
 	formInputValid
 ) => {
 	if (value.current.value.includes('Select')) {
@@ -85,7 +119,6 @@ export const handleDropdownValidation = (
 		value.current.classList.remove('error');
 		value.current.classList.add('success');
 		setformInputValid({ ...formInputValid, [value.current.name]: true });
-		setIsButtonEnabled(true);
 	}
 };
 
@@ -97,19 +130,61 @@ export const handleSubmit = async (
 	department,
 	year,
 	college,
-	event
+	event,
+	workshops,
+	gaming,
+	setIsButtonEnabled,
+	setIsWorkshopDropdownVisible,
+	setIsGamingDropdownVisible,
+	setIsEmailVerified,
+	setformInputValid,
+	formInputValid
 ) => {
 	e.preventDefault();
-	let amount =
-		event.current.value === 'Technical'
-			? 1
-			: event.current.value === 'Non-Technical'
-			? 100
-			: event.current.value === 'Tojans CTF'
-			? 200
-			: event.current.value === 'Gaming'
-			? 200
-			: 100;
-	name.current.setAttribute('disabled', true);
-	displayRazorpay(name, email, phone, department, year, college, event, amount);
+	setIsButtonEnabled(false);
+	// let amount =
+	// 	event.current.value === 'Technical and Non-Technical'
+	// 		? 100
+	// 		: event.current.value === 'Tojans CTF'
+	// 		? 200
+	// 		: event.current.value === 'Gaming'
+	// 		? 200
+	// 		: 100;
+	// displayRazorpay(name, email, phone, department, year, college, event, amount);
+	await registrationEventAxios(
+		name.current.value,
+		email.current.value,
+		phone.current.value,
+		department.current.value,
+		year.current.value,
+		college.current.value,
+		event.current.value,
+		workshops.current ? workshops.current.value : null,
+		gaming.current ? gaming.current.value : null
+	).then((res) => {
+		if (res.status === 200) {
+			email.current.removeAttribute('disabled');
+			name.current.value = '';
+			email.current.value = '';
+			phone.current.value = '';
+			department.current.value = 'Select Department';
+			year.current.value = 'Select Year';
+			college.current.value = 'Select College';
+			event.current.value = 'Select Event';
+			Object.keys(formInputValid).forEach((key) => {
+				setformInputValid({ ...formInputValid, [key]: false });
+			});
+
+			setIsWorkshopDropdownVisible(false);
+			setIsGamingDropdownVisible(false);
+			setIsEmailVerified(false);
+			// workshops.current.value = 'Select Workshop';
+			// gaming.current.value = 'Select Game';
+			setIsButtonEnabled(false);
+			toast.success('Hooray! You are registered successfully.');
+		} else {
+			setIsButtonEnabled(true);
+			toast.error('Oops! Registration failed. Please try again in a moment.');
+		}
+	});
 };

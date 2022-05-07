@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import { CountdownContainer, CountdownCircleStyle } from './Countdown.style';
 
 import TrojansGold from '../../assets/Trojans_logo/trojans-compressed.png';
-const targetTime = moment('18-05-2021', 'DD-MM-YYYY');
+const targetTime = moment('25-05-2022', 'DD-MM-YYYY');
 
 const CountdownCircle = ({ time, timeType, strokeDashOffset, color }) => {
 	const circleRef = useRef();
@@ -59,7 +59,7 @@ const Countdown = ({ setShowCountdown }) => {
 	return (
 		<CountdownContainer>
 			<Helmet>
-				<title>COUNTDOWN | TROJANS</title>
+				<title>TROJANS | COUNTDOWN</title>
 			</Helmet>
 			<div>
 				<h2>A NATIONAL LEVEL TECHNICAL SYMPOSIUM</h2>

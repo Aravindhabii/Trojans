@@ -1,12 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
-import OTPInput, { ResendOTP } from 'otp-input-react';
+import OTPInput from 'otp-input-react';
 
 import {
 	handleTextValidation,
 	handleEmailValidation,
 	handlePhoneValidation,
 	handleDropdownValidation,
+	handleSubDropdownValidation,
 	handleSubmit
 } from './registrationFormValidation.utils';
 
@@ -67,6 +68,8 @@ const RegistrationForm = () => {
 	const year = useRef('');
 	const college = useRef('');
 	const event = useRef('');
+	const workshops = useRef('');
+	const gaming = useRef('');
 
 	const [formInputValid, setformInputValid] = useState({
 		name: false,
@@ -75,13 +78,18 @@ const RegistrationForm = () => {
 		department: false,
 		year: false,
 		college: false,
-		event: false
+		event: false,
+		workshops: event.current.value === 'workshops' ? false : true,
+		gaming: event.current.value === 'gaming' ? false : true
 	});
 
 	const [isEmailVerified, setIsEmailVerified] = useState(false);
 	const [isButtonEnabled, setIsButtonEnabled] = useState(false);
 	const [isOTPRequested, setIsOTPRequested] = useState(false);
 	const [fetchedOTP, setFetchedOTP] = useState('');
+	const [isWorkshopDropdownVisible, setIsWorkshopDropdownVisible] =
+		useState(false);
+	const [isGamingDropdownVisible, setIsGamingDropdownVisible] = useState(false);
 
 	useEffect(() => {
 		const isFormValid = Object.values(formInputValid).every(
@@ -119,7 +127,13 @@ const RegistrationForm = () => {
 					year,
 					college,
 					event,
-					setIsButtonEnabled
+					workshops,
+					gaming,
+					setIsButtonEnabled,
+					setIsWorkshopDropdownVisible,
+					setIsGamingDropdownVisible,
+					setIsEmailVerified,
+					setformInputValid,formInputValid
 				)
 			}
 		>
@@ -214,7 +228,9 @@ const RegistrationForm = () => {
 								department,
 								setIsButtonEnabled,
 								setformInputValid,
-								formInputValid
+								formInputValid,
+								setIsWorkshopDropdownVisible,
+								setIsGamingDropdownVisible
 							)
 						}
 					>
@@ -242,7 +258,9 @@ const RegistrationForm = () => {
 								year,
 								setIsButtonEnabled,
 								setformInputValid,
-								formInputValid
+								formInputValid,
+								setIsWorkshopDropdownVisible,
+								setIsGamingDropdownVisible
 							)
 						}
 					>
@@ -280,25 +298,80 @@ const RegistrationForm = () => {
 					name='event'
 					defaultValue='Select Event'
 					ref={event}
-					onChange={() =>
+					onChange={() => {
 						handleDropdownValidation(
 							event,
 							setIsButtonEnabled,
 							setformInputValid,
-							formInputValid
-						)
-					}
+							formInputValid,
+							setIsWorkshopDropdownVisible,
+							setIsGamingDropdownVisible
+						);
+					}}
 				>
 					<option value='Select Event' disabled>
 						Select Event
 					</option>
-					<option value='Technical'>Technical</option>
+					<option value='Technical and Non-Technical'>
+						Technical and Non-Technical
+					</option>
 					<option value='Trojans CTF'>Trojans CTF</option>
-					<option value='Non-Technical'>Non-Technical</option>
 					<option value='Gaming'>Gaming</option>
 					<option value='Workshops'>Workshops</option>
 				</select>
 			</InputContainerStyle>
+			{isWorkshopDropdownVisible && (
+				<InputContainerStyle>
+					<label>Select Workshop</label>
+					<select
+						disabled={!isEmailVerified || !formInputValid.email}
+						name='workshop'
+						defaultValue='Select Workshop'
+						ref={workshops}
+						onChange={() =>
+							handleSubDropdownValidation(
+								workshops,
+								setIsButtonEnabled,
+								setformInputValid,
+								formInputValid
+							)
+						}
+					>
+						<option value='Select Workshop' disabled>
+							Select Workshop
+						</option>
+						<option value='Machine Learning'>Machine Learning</option>
+						<option value='Blockchain Technology'>Blockchain Technology</option>
+						<option value='entrepreneurship'>entrepreneurship</option>
+					</select>
+				</InputContainerStyle>
+			)}
+			{isGamingDropdownVisible && (
+				<InputContainerStyle>
+					<label>Select Game</label>
+					<select
+						disabled={!isEmailVerified || !formInputValid.email}
+						name='gaming'
+						defaultValue='Select Gaming'
+						ref={gaming}
+						onChange={() =>
+							handleSubDropdownValidation(
+								gaming,
+								setIsButtonEnabled,
+								setformInputValid,
+								formInputValid
+							)
+						}
+					>
+						<option value='Select Gaming' disabled>
+							Select Gaming
+						</option>
+						<option value='Valorant'>Valorant</option>
+						<option value='BGMI'>BGMI</option>
+						<option value='Free Fire'>Free Fire</option>
+					</select>
+				</InputContainerStyle>
+			)}
 			<button disabled={!isButtonEnabled}>Submit</button>
 		</FormContainerStyle>
 	);

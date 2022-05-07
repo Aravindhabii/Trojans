@@ -80,7 +80,7 @@ export const SponsorSection = styled.section`
         top: 90%;
         /* border-radius: 10px; */
         background-color: #9900f0;
-        box-shadow: 5px 5px 50px rgba(153, 0, 240, 1);
+        box-shadow: 0px 0px 10px rgba(153, 0, 240, 1);
         z-index: 3;
         display: flex;
         justify-content: center;
@@ -94,7 +94,7 @@ export const SponsorSection = styled.section`
         top: -8%;
         border-radius: 10px;
         background-color: rgb(56, 232, 255);
-        box-shadow: 2px 2px 30px rgb(56, 232, 255);
+        box-shadow: 2px 2px 10px rgb(56, 232, 255);
         z-index: 1;
         transition: all 2s ease-in-out;
     }

@@ -47,7 +47,7 @@ import {
 	technicalevents,
 	nontechnicalevents,
 	workshops,
-	gamming
+	gaming
 } from '../../datas/technical.data';
 
 const EventsPage = (props) => {
@@ -88,9 +88,9 @@ const EventsPage = (props) => {
 			setCurrentPage(nontechnicalevents);
 			setClickedEvent('nontechnicalevents');
 			setisphoneopen(true);
-		} else if (page === 'gamming') {
-			setCurrentPage(gamming);
-			setClickedEvent('gamming');
+		} else if (page === 'gaming') {
+			setCurrentPage(gaming);
+			setClickedEvent('gaming');
 			setisphoneopen(true);
 		} else if (page === 'workshops') {
 			setCurrentPage(workshops);
@@ -142,7 +142,7 @@ const EventsPage = (props) => {
 			return <LaptopModel />;
 		} else if (clickedEvent === 'nontechnicalevents') {
 			return <SquidModel />;
-		} else if (clickedEvent === 'gamming') {
+		} else if (clickedEvent === 'gaming') {
 			return <GamingModel />;
 		} else if (clickedEvent === 'workshops') {
 			return <BitCoinModel />;
@@ -179,7 +179,7 @@ const EventsPage = (props) => {
 		>
 			<HexBg direction='to bottom' svg={svg} color='rgba(3, 233, 244, 0.9)' />
 			<Helmet>
-				<title>EVENTS | TROJANS</title>
+				<title>TROJANS | EVENTS</title>
 			</Helmet>
 			<Navbar active={{ route: 'events', scroll: 2 }} />
 			<HeroSection isphoneopen={isphoneopen}>
@@ -190,7 +190,7 @@ const EventsPage = (props) => {
 					<Button value='nontechnicalevents' onClick={click}>
 						Non-Technical
 					</Button>
-					<Button value='gamming' onClick={click}>
+					<Button value='gaming' onClick={click}>
 						Gaming
 					</Button>
 					<Button value='workshops' onClick={click}>
@@ -225,7 +225,7 @@ const EventsPage = (props) => {
 			</HeroSection>
 			<Tabletdiv isTabletOpen={isTabletOpen} setisTabletOpen={setisTabletOpen}>
 				<div onClick={closetab} className='forclose'></div>
-				<Tablet currentEvent={currentEvent} isTabletOpen = {isTabletOpen}/>
+				<Tablet currentEvent={currentEvent} isTabletOpen={isTabletOpen} />
 			</Tabletdiv>
 		</section>
 	);

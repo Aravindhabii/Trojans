@@ -10,9 +10,8 @@ export const registrationEventAxios = (
 	year,
 	college,
 	event,
-	transactionID,
-	orderID,
-	date
+	workshops,
+	gaming
 ) =>
 	axios.post(`${BACKEND_BASE_URL}/data`, {
 		name,
@@ -22,7 +21,6 @@ export const registrationEventAxios = (
 		year,
 		college,
 		event,
-		transactionID,
-		orderID,
-		date
+		workshops,
+		gaming
 	});
