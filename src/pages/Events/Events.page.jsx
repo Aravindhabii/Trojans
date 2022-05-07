@@ -33,6 +33,7 @@ import {
 	SquidGame,
 	BoxCricket,
 	// Entrepreneur,
+	TrojansCtf,
 	Blockchain,
 	MachineLearning,
 	BGMI,
@@ -111,8 +112,8 @@ const EventsPage = (props) => {
 			setCurrentEvent(GooseChase);
 		} else if (selectedEvent === "TROJAN'S THROTTLE") {
 			setCurrentEvent(TrojansThrottle);
-		} else if (selectedEvent === 'TROJANCTF') {
-			setCurrentEvent(CodersChemistry);
+		} else if (selectedEvent === 'TROJANSCTF') {
+			setCurrentEvent(TrojansCtf);
 		} else if (selectedEvent === 'SHUTTER STOP') {
 			setCurrentEvent(ShutterStop);
 		} else if (selectedEvent === 'SHIP WRECK') {
