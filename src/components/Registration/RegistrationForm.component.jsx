@@ -7,6 +7,7 @@ import {
 	handleEmailValidation,
 	handlePhoneValidation,
 	handleDropdownValidation,
+	handleSubDropdownValidation,
 	handleSubmit
 } from './registrationFormValidation.utils';
 
@@ -72,7 +73,7 @@ const RegistrationForm = () => {
 
 	const [formInputValid, setformInputValid] = useState({
 		name: false,
-		email: true,
+		email: false,
 		phone: false,
 		department: false,
 		year: false,
@@ -126,7 +127,13 @@ const RegistrationForm = () => {
 					year,
 					college,
 					event,
-					setIsButtonEnabled
+					workshops,
+					gaming,
+					setIsButtonEnabled,
+					setIsWorkshopDropdownVisible,
+					setIsGamingDropdownVisible,
+					setIsEmailVerified,
+					setformInputValid,formInputValid
 				)
 			}
 		>
@@ -222,7 +229,8 @@ const RegistrationForm = () => {
 								setIsButtonEnabled,
 								setformInputValid,
 								formInputValid,
-								setIsWorkshopDropdownVisible
+								setIsWorkshopDropdownVisible,
+								setIsGamingDropdownVisible
 							)
 						}
 					>
@@ -251,7 +259,8 @@ const RegistrationForm = () => {
 								setIsButtonEnabled,
 								setformInputValid,
 								formInputValid,
-								setIsWorkshopDropdownVisible
+								setIsWorkshopDropdownVisible,
+								setIsGamingDropdownVisible
 							)
 						}
 					>
@@ -296,8 +305,7 @@ const RegistrationForm = () => {
 							setformInputValid,
 							formInputValid,
 							setIsWorkshopDropdownVisible,
-							setIsGamingDropdownVisible,
-							event
+							setIsGamingDropdownVisible
 						);
 					}}
 				>
@@ -314,21 +322,18 @@ const RegistrationForm = () => {
 			</InputContainerStyle>
 			{isWorkshopDropdownVisible && (
 				<InputContainerStyle>
-					<label>Select Woekshop</label>
+					<label>Select Workshop</label>
 					<select
 						disabled={!isEmailVerified || !formInputValid.email}
 						name='workshop'
 						defaultValue='Select Workshop'
 						ref={workshops}
 						onChange={() =>
-							handleDropdownValidation(
+							handleSubDropdownValidation(
 								workshops,
 								setIsButtonEnabled,
 								setformInputValid,
-								formInputValid,
-								setIsWorkshopDropdownVisible,
-								setIsGamingDropdownVisible,
-								event
+								formInputValid
 							)
 						}
 					>
@@ -350,14 +355,11 @@ const RegistrationForm = () => {
 						defaultValue='Select Gaming'
 						ref={gaming}
 						onChange={() =>
-							handleDropdownValidation(
+							handleSubDropdownValidation(
 								gaming,
 								setIsButtonEnabled,
 								setformInputValid,
-								formInputValid,
-								setIsWorkshopDropdownVisible,
-								setIsGamingDropdownVisible,
-								gaming
+								formInputValid
 							)
 						}
 					>
