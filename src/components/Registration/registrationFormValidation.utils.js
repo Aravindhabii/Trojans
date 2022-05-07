@@ -1,5 +1,8 @@
-import { displayRazorpay } from './RazorPay.utils';
-import { verifyPost } from '../../axios/verifyEmail.axios';
+// import { displayRazorpay } from './RazorPay.utils';
+// import { verifyPost } from '../../axios/verifyEmail.axios';
+
+import { registrationEventAxios } from '../../axios/registration.axios';
+import { toast } from 'react-toastify';
 
 export const handleTextValidation = (
 	value,
@@ -74,7 +77,10 @@ export const handleDropdownValidation = (
 	value,
 	setIsButtonEnabled,
 	setformInputValid,
-	formInputValid
+	formInputValid,
+	setIsWorkshopDropdownVisible,
+	setIsGamingDropdownVisible,
+	eventOrGaming
 ) => {
 	if (value.current.value.includes('Select')) {
 		value.current.classList.add('error');
@@ -85,6 +91,16 @@ export const handleDropdownValidation = (
 		value.current.classList.remove('error');
 		value.current.classList.add('success');
 		setformInputValid({ ...formInputValid, [value.current.name]: true });
+		if (eventOrGaming.current.value === 'Workshops') {
+			setIsWorkshopDropdownVisible(true);
+			setIsGamingDropdownVisible(false);
+		} else if (eventOrGaming.current.value === 'Gaming') {
+			setIsWorkshopDropdownVisible(false);
+			setIsGamingDropdownVisible(true);
+		} else {
+			setIsGamingDropdownVisible(false);
+			setIsWorkshopDropdownVisible(false);
+		}
 		setIsButtonEnabled(true);
 	}
 };
@@ -97,19 +113,42 @@ export const handleSubmit = async (
 	department,
 	year,
 	college,
-	event
+	event,
+	workshops
 ) => {
 	e.preventDefault();
-	let amount =
-		event.current.value === 'Technical'
-			? 1
-			: event.current.value === 'Non-Technical'
-			? 100
-			: event.current.value === 'Tojans CTF'
-			? 200
-			: event.current.value === 'Gaming'
-			? 200
-			: 100;
-	name.current.setAttribute('disabled', true);
-	displayRazorpay(name, email, phone, department, year, college, event, amount);
+	// let amount =
+	// 	event.current.value === 'Technical and Non-Technical'
+	// 		? 100
+	// 		: event.current.value === 'Tojans CTF'
+	// 		? 200
+	// 		: event.current.value === 'Gaming'
+	// 		? 200
+	// 		: 100;
+	// displayRazorpay(name, email, phone, department, year, college, event, amount);
+	await registrationEventAxios(
+		name.current.value,
+		email.current.value,
+		phone.current.value,
+		department.current.value,
+		year.current.value,
+		college.current.value,
+		event.current.value,
+		workshops.current.value
+	).then((res) => {
+		if (res.status === 200) {
+			name.current.value = '';
+			email.current.value = '';
+			phone.current.value = '';
+			department.current.value = 'Select Department';
+			year.current.value = 'Select Year';
+			college.current.value = 'Select College';
+			event.current.value = 'Select Event';
+			workshops.current.value = 'Select Workshop';
+
+			toast.success('Hooray! You are registered successfully.');
+		} else {
+			toast.error('Oops! Registration failed. Please try again in a moment.');
+		}
+	});
 };

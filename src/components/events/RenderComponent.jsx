@@ -3,7 +3,7 @@ import {
 	technicalevents,
 	nontechnicalevents,
 	workshops,
-	gamming
+	gaming
 } from '../../datas/technical.data';
 import { Eventslist } from '../../pages/Events/Events.styles';
 import { gsap } from 'gsap';
@@ -36,8 +36,8 @@ const RenderComponent = (props) => {
 			setCurrentPage(nontechnicalevents);
 		} else if (clickedEvent === 'workshops') {
 			setCurrentPage(workshops);
-		} else if (clickedEvent === 'gamming') {
-			setCurrentPage(gamming);
+		} else if (clickedEvent === 'gaming') {
+			setCurrentPage(gaming);
 		}
 	}, [clickedEvent]);
 
@@ -60,7 +60,7 @@ const RenderComponent = (props) => {
 
 	return (
 		<div className='eventlistdiv'>
-			{currentPage.map((event,index) => (
+			{currentPage.map((event, index) => (
 				<Eventslist onClick={click} key={index}>
 					<h3 className='heading' key={event.id}>
 						{event.name}
