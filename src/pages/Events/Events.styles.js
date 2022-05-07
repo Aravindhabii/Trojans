@@ -130,7 +130,7 @@ export const Eventsdiv = styled.div.attrs({
     className: "rightTwo",
 })`
     position: absolute;
-    width: 95%;
+    width: 85%;
     height: 85%;
     color: #fff;
     background: ${({phoneimg}) =>
