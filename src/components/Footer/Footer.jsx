@@ -56,9 +56,18 @@ function Footer() {
                                 url: "https://www.instagram.com/trojans_cit/",
                                 name: "Instagram",
                             },
-                            {url: "/#contact", name: "Contact"},
+                            {
+                                url: "https://www.linkedin.com/in/trojans-cit-363404239/",
+                                name: "LinkedIn",
+                            },
+                            {
+                                url: "https://www.youtube.com/channel/UC5pM39xn_AYsaldF2DPpI3A",
+                                name: "Youtube",
+                            },
+                            {url: "/#contact", name: "Contact Us"},
                         ]}
                     />
+                    
                     <FooterlLinksContainer
                         title="Guidelines"
                         links={[
@@ -79,7 +88,7 @@ function Footer() {
                 </div>
             </div>
             <div className="copyright">
-                <p>COPYRIGHT © TROJANS</p>
+                <p>COPYRIGHT © TROJANS </p>
             </div>
         </FooterContainer>
     );

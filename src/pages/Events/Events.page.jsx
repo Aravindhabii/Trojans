@@ -123,8 +123,6 @@ const EventsPage = (props) => {
 			setCurrentEvent(SquidGame);
 		} else if (selectedEvent === 'BOX CRICKET') {
 			setCurrentEvent(BoxCricket);
-		} else if (selectedEvent === 'ADVERTISEMENT') {
-			setCurrentEvent(BoxCricket);
 		} else if (selectedEvent === 'MACHINE LEARNING') {
 			setCurrentEvent(MachineLearning);
 		} else if (selectedEvent === 'BLOCKCHAIN') {

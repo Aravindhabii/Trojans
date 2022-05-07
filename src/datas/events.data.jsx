@@ -15,7 +15,7 @@ export const CodersChemistry = {
     studentCordinators: [
         {
             id: 1,
-            name: "Name - Kavya Priya R",
+            name: "Name - Kavyapriya R",
             phoneNo: "Phone No. 7397286229",
         },
         {
@@ -48,7 +48,7 @@ export const MasterMinds = {
         },
         {
             id: 2,
-            name: "Name - Srilatha",
+            name: "Name - Srilatha G",
             phoneNo: "Phone No. 8667320763",
         },
     ],
@@ -77,7 +77,7 @@ export const SiteIng = {
         },
         {
             id: 2,
-            name: "Name - Solomon Santhosh",
+            name: "Name - Solomon Santhosh I",
             phoneNo: "Phone No. 7397293940",
         },
     ],
@@ -162,6 +162,37 @@ export const TrojansThrottle = {
         },
     ],
 };
+export const TrojansCtf = {
+    id: 1,
+    name: "TrojansCTF",
+    description:
+        "This event consists of two subevents, and interested participants can enroll individually. The first subevent, Bravo Six Going Dark, is coding with a dark twist. 10 minutes will be provided to understand the problem statement, after that the monitor will be turned off, then you have to code without visuals for 10 minutes, after completion of 10 minutes, 30 seconds is given for code verification, doing this multiple times will cause point deduction by 5 each time done. The second subevent, Runtime Terror is where the participant will be given working java code without any errors, and they will be given 30 minutes to optimize the code.",
+    rules: [
+        "This comprises of 2 subevents",
+        "Round 1 (Bravo 6 going dark).",
+        "After the 10 min the monitor will be turned off and cannot be turned back on for the rest of the session.",
+        "The player has to code the program without seeing the screen.",
+        "The player can verify his code for 30 seconds each session.",
+        "If the player asks to see the code again within that session, 5 points will be reduced from the 100 points he possesses.",
+        "Round 2 (Run time terror)",
+        "The player will be given a working Java code which has to optimize without changing the functionality.",
+        "Total of 30 minutes.",
+    ],
+    studentCordinators: [
+        {
+            id: 1,
+            name: "Name - Deepika S",
+            phoneNo: "Phone No. 8248430551",
+        },
+        {
+            id: 2,
+            name: "Name - Pavan Kalyan",
+            phoneNo: "Phone No. 9940571461",
+        },
+    ],
+};
+
+
 export const ShutterStop = {
     id: 1,
     name: "Shutter Stop",
