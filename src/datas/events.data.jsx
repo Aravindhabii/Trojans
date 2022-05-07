@@ -229,31 +229,32 @@ export const ShutterStop = {
   ],
 };
 export const ShutterStopOffline = {
-  id: 1,
-  name: "Shutter Stop Offline",
-  description:
-    "An offline photography event where the participants will be provided with a theme and have to come up with their best photograph matching the given theme. The winner will be decided solely based on judge’s scores.",
-  rules: [
-    "•	Only one entry per participant is permitted.",
-    "•	Participants physical presence is required.",
-    "•	Only one theme will be given, which is not subject to change. The theme will be decided during the day of the event.",
-    "•	The area where the photo must be taken is limited to only the CIT college campus.",
-    "•	Photo must contain a valid timestamp (within the duration of event). No photos taken before or after the event duration will be considered for the contest.",
-    "•	Colour grading is allowed, which must also be done within the event time limit.",
-    "•	Violators of any rules will be disqualified, no refunds will be provided.",
-  ],
-  studentCordinators: [
-    {
-      id: 1,
-      name: "Name - Sarabeswaran",
-      phoneNo: "Phone No. 8489267799",
-    },
-    {
-      id: 2,
-      name: "Name - Gokul",
-      phoneNo: "Phone No. 9345333651",
-    },
-  ],
+    id: 1,
+    name: "Shutter Stop Offline",
+    timestamp: "",
+	description:
+        "An offline photography event where the participants will be provided with a theme and have to come up with their best photograph matching the given theme. The winner will be decided solely based on judge’s scores.",
+    rules: [
+        "•	Only one entry per participant is permitted.",
+        "•	Participants physical presence is required.",
+        "•	Only one theme will be given, which is not subject to change. The theme will be decided during the day of the event.",
+        "•	The area where the photo must be taken is limited to only the CIT college campus.",
+        "•	Photo must contain a valid timestamp (within the duration of event). No photos taken before or after the event duration will be considered for the contest.",
+        "•	Colour grading is allowed, which must also be done within the event time limit.",
+        "•	Violators of any rules will be disqualified, no refunds will be provided.",
+    ],
+    studentCordinators: [
+        {
+            id: 1,
+            name: "Name - Sarabeswaran",
+            phoneNo: "Phone No. 8489267799",
+        },
+        {
+            id: 2,
+            name: "Name - Gokul",
+            phoneNo: "Phone No. 9345333651",
+        },
+    ],
 };
 export const ShipWreck = {
   id: 1,
@@ -329,6 +330,28 @@ export const SquidGame = {
     },
   ],
 };
+
+export const EnnaEnnaSolranParunga = {
+    id: 1,
+    name: "Enna Enna Solran Parunga",
+    timestamp: "",
+	description:
+        "More to be revealed on the day of symposium. Come and have fun!",
+    rules: ["Will be announced at the start of the event."],
+    studentCordinators: [
+        {
+            id: 1,
+            name: "Name - Ashwin Kanna",
+            phoneNo: "Phone No. 8270011279",
+        },
+        {
+            id: 2,
+            name: "Name - Sugesh",
+            phoneNo: "Phone No. 7448354747",
+        },
+    ],
+};
+
 export const BoxCricket = {
   id: 1,
   name: "Box Cricket",
@@ -444,103 +467,106 @@ export const MachineLearning = {
     "Attendees can bring their own laptops to the workshop if they wish(not mandatory). Internet access will be provided. ",
   ],
 
-  studentCordinators: [
-    {
-      id: 1,
-      name: "Name - S Sruthi",
-      phoneNo: "Phone No. 7871394652",
-    },
-    {
-      id: 2,
-      name: "Name - P Karthik",
-      phoneNo: "Phone No. 9025600359",
-    },
-  ],
+    studentCordinators: [
+        {
+            id: 1,
+            name: "Name - S Sruthi",
+            phoneNo: "Phone No. 7871394652",
+        },
+        {
+            id: 2,
+            name: "Name - P Karthik",
+            phoneNo: "Phone No. 9025600359",
+        },
+    ],
 };
 export const BGMI = {
-  id: 1,
-  name: "BGMI",
-  description:
-    "Battlegrounds Mobile India is a player versus player shooter game in which up to one hundred players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive. Players can choose to enter the match solo, or as a small team of upto four.",
-  rules: [
-    "Every team must have 4 members, and should have a captain. ",
-    "Players should bring their own devices.",
-    "No interaction among teams while playing.",
-    "Hacking and use of third-party software leads to disqualification.",
-    "To be eligible players must be a rank of gold or above in TPP or FPP.",
-    "Offensive team names will not be entertained.",
-    "All games will be held in TPP squad mode.",
-    "All games will be held in Erangel, Miramar, Sanhok and Vikendi.",
-    "There are no pauses permitted during the game.",
-    "Further rules will be provided on the day of the event.",
-  ],
-  studentCordinators: [
-    {
-      id: 1,
-      name: "Name - Suriya Kiran",
-      phoneNo: "Phone No. 9176974758",
-    },
-    {
-      id: 2,
-      name: "Name - Dhanush Kumar",
-      phoneNo: "Phone No. 9790871242",
-    },
-  ],
+    id: 1,
+    name: "BGMI",
+    timestamp: "",
+	description:
+        "Battlegrounds Mobile India is a player versus player shooter game in which up to one hundred players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive. Players can choose to enter the match solo, or as a small team of upto four.",
+    rules: [
+        "Every team must have 4 members, and should have a captain. ",
+        "Players should bring their own devices.",
+        "No interaction among teams while playing.",
+        "Hacking and use of third-party software leads to disqualification.",
+        "To be eligible players must be a rank of gold or above in TPP or FPP.",
+        "Offensive team names will not be entertained.",
+        "All games will be held in TPP squad mode.",
+        "All games will be held in Erangel, Miramar, Sanhok and Vikendi.",
+        "There are no pauses permitted during the game.",
+        "Further rules will be provided on the day of the event.",
+    ],
+    studentCordinators: [
+        {
+            id: 1,
+            name: "Name - Suriya Kiran",
+            phoneNo: "Phone No. 9176974758",
+        },
+        {
+            id: 2,
+            name: "Name - Dhanush Kumar",
+            phoneNo: "Phone No. 9790871242",
+        },
+    ],
 };
 export const Valorant = {
-  id: 1,
-  name: "Valorant",
-  description:
-    "Valorant is a tactical shooting game involving two teams with 5 players in each team. Every player can sign in and play remotely from anywhere in the world. Every game has 25 rounds and the team that wins 13 of them first wins the game. Players can choose their in-game characters called agents at the start of the game. Players can buy abilities and weapons at the start of the game.",
-  rules: [
-    "Event will be conducted both online and offline. ",
-    "Devices should be brought by the player.",
-    "No interaction among the teams while playing.",
-    "Map Pool: Bind, Haven, Split, Ascent, Icebox, Breeze.",
-    "Home/Away Designation: The higher seeded team will be designated as the “Home” team.",
-    "Map Veto Process: Best of 3.",
-    "Further rules will be provided on the day of the event.",
-  ],
-  studentCordinators: [
-    {
-      id: 1,
-      name: "Name - HanishKhan",
-      phoneNo: "Phone No. 8870529966",
-    },
-    {
-      id: 2,
-      name: "Name - Shyam Suraj",
-      phoneNo: "Phone No. 8925275097",
-    },
-  ],
+    id: 1,
+    name: "Valorant",
+    timestamp: "",
+	description:
+        "Valorant is a tactical shooting game involving two teams with 5 players in each team. Every player can sign in and play remotely from anywhere in the world. Every game has 25 rounds and the team that wins 13 of them first wins the game. Players can choose their in-game characters called agents at the start of the game. Players can buy abilities and weapons at the start of the game.",
+    rules: [
+        "Event will be conducted both online and offline. ",
+        "Devices should be brought by the player.",
+        "No interaction among the teams while playing.",
+        "Map Pool: Bind, Haven, Split, Ascent, Icebox, Breeze.",
+        "Home/Away Designation: The higher seeded team will be designated as the “Home” team.",
+        "Map Veto Process: Best of 3.",
+        "Further rules will be provided on the day of the event.",
+    ],
+    studentCordinators: [
+        {
+            id: 1,
+            name: "Name - HanishKhan",
+            phoneNo: "Phone No. 8870529966",
+        },
+        {
+            id: 2,
+            name: "Name - Shyam Suraj",
+            phoneNo: "Phone No. 8925275097",
+        },
+    ],
 };
 export const FreeFireMax = {
-  id: 1,
-  name: "Free Fire Max",
-  description:
-    "Garena Free Fire is an online-only action-adventure battle royale game played in third person perspective. A battle royale match consists of up to 50 players parachuting onto an island in search of weapons and equipment to kill the other players. Players are free to choose their starting position and take weapons and supplies to extend their battle life.",
-  rules: [
-    "Teams must register with 4 members with no substitutes.",
-    "Devices should be brought by the players.",
-    "No interaction among teams while playing.",
-    "If found hacking then the whole team would be abruptly disqualified.",
-    "Players must be a minimum rank of Gold or above in Ranked or cs-ranked for participation.",
-    "All participants must be present for the event on the specified time.",
-    "Every Player in a team is required to have their own Free Fire account.",
-    "Match restart will not be entertained in any case.",
-    "Any requests for a pause or a remake will not be entertained.",
-    "Further rules will be said on the day of the event.",
-  ],
-  studentCordinators: [
-    {
-      id: 1,
-      name: "Name - Ghoushik",
-      phoneNo: "Phone No. 8220140665",
-    },
-    {
-      id: 2,
-      name: "Name - Satihsh Kumar",
-      phoneNo: "Phone No. 8072152633",
-    },
-  ],
+    id: 1,
+    name: "Free Fire Max",
+    timestamp: "",
+	description:
+        "Garena Free Fire is an online-only action-adventure battle royale game played in third person perspective. A battle royale match consists of up to 50 players parachuting onto an island in search of weapons and equipment to kill the other players. Players are free to choose their starting position and take weapons and supplies to extend their battle life.",
+    rules: [
+        "Teams must register with 4 members with no substitutes.",
+        "Devices should be brought by the players.",
+        "No interaction among teams while playing.",
+        "If found hacking then the whole team would be abruptly disqualified.",
+        "Players must be a minimum rank of Gold or above in Ranked or cs-ranked for participation.",
+        "All participants must be present for the event on the specified time.",
+        "Every Player in a team is required to have their own Free Fire account.",
+        "Match restart will not be entertained in any case.",
+        "Any requests for a pause or a remake will not be entertained.",
+        "Further rules will be said on the day of the event.",
+    ],
+    studentCordinators: [
+        {
+            id: 1,
+            name: "Name - Ghoushik",
+            phoneNo: "Phone No. 8220140665",
+        },
+        {
+            id: 2,
+            name: "Name - Satihsh Kumar",
+            phoneNo: "Phone No. 8072152633",
+        },
+    ],
 };

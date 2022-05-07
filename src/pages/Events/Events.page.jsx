@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import React, {useState, useEffect} from "react";
+import {Helmet} from "react-helmet";
 // import { useSpring } from 'react-spring';
-import gsap from 'gsap';
+import gsap from "gsap";
 
-import Navbar from '../../components/Navbar/Navbar.component';
+import Navbar from "../../components/Navbar/Navbar.component";
 // import Threed from './threed';
 import LaptopModel from './RenderModels/LaptopModel';
 import GamingModel from './RenderModels/GamingModel';
@@ -15,13 +15,13 @@ import rain from '../../assets/events/rain.svg'
 import HexBg from '../../components/Home/HexBg/HexBg.component';
 
 import {
-	HeroSection,
-	Button,
-	Threeddiv,
-	Righttwo,
-	Rightone,
-	Tabletdiv
-} from './Events.styles';
+    HeroSection,
+    Button,
+    Threeddiv,
+    Righttwo,
+    Rightone,
+    Tabletdiv,
+} from "./Events.styles";
 import {
 	CodersChemistry,
 	MasterMinds,
@@ -45,63 +45,63 @@ import {
 	FreeFireMax
 } from '../../datas/events.data';
 
-import Technical from '../../components/events/Technical';
-import Tablet from '../../components/events/Tablet';
+import Technical from "../../components/events/Technical";
+import Tablet from "../../components/events/Tablet";
 import {
-	technicalevents,
-	nontechnicalevents,
-	workshops,
-	gaming
-} from '../../datas/technical.data';
+    technicalevents,
+    nontechnicalevents,
+    workshops,
+    gaming,
+} from "../../datas/technical.data";
 
 const EventsPage = (props) => {
-	const { page } = props;
-	const [currentPage, setCurrentPage] = useState(technicalevents);
-	const [isphoneopen, setisphoneopen] = useState(false);
-	const [currentEvent, setCurrentEvent] = useState(CodersChemistry);
-	const [clickedEvent, setClickedEvent] = useState('');
-	const [selectedEvent, setSelectedEvent] = useState('');
-	const [isTabletOpen, setisTabletOpen] = useState(false);
+    const {page} = props;
+    const [currentPage, setCurrentPage] = useState(technicalevents);
+    const [isphoneopen, setisphoneopen] = useState(false);
+    const [currentEvent, setCurrentEvent] = useState(CodersChemistry);
+    const [clickedEvent, setClickedEvent] = useState("");
+    const [selectedEvent, setSelectedEvent] = useState("");
+    const [isTabletOpen, setisTabletOpen] = useState(false);
 
-	// const animation = useSpring({
-	// 	from: {
-	// 		opacity: 0
-	// 	},
-	// 	to: {
-	// 		opacity: 1
-	// 	}
-	// });
+    // const animation = useSpring({
+    // 	from: {
+    // 		opacity: 0
+    // 	},
+    // 	to: {
+    // 		opacity: 1
+    // 	}
+    // });
 
-	const closetab = () => {
-		setisTabletOpen(false);
-	};
+    const closetab = () => {
+        setisTabletOpen(false);
+    };
 
-	const phoneClick = (e) => {
-		if (isphoneopen === true && window.screen.width < 910) {
-			setisphoneopen(false);
-			setClickedEvent('');
-		}
-	};
+    const phoneClick = (e) => {
+        if (isphoneopen === true && window.screen.width < 910) {
+            setisphoneopen(false);
+            setClickedEvent("");
+        }
+    };
 
-	useEffect(() => {
-		if (page === 'technicalevents') {
-			setCurrentPage(technicalevents);
-			setClickedEvent('technicalevents');
-			setisphoneopen(true);
-		} else if (page === 'nontechnicalevents') {
-			setCurrentPage(nontechnicalevents);
-			setClickedEvent('nontechnicalevents');
-			setisphoneopen(true);
-		} else if (page === 'gaming') {
-			setCurrentPage(gaming);
-			setClickedEvent('gaming');
-			setisphoneopen(true);
-		} else if (page === 'workshops') {
-			setCurrentPage(workshops);
-			setClickedEvent('workshops');
-			setisphoneopen(true);
-		}
-	}, [page]);
+    useEffect(() => {
+        if (page === "technicalevents") {
+            setCurrentPage(technicalevents);
+            setClickedEvent("technicalevents");
+            setisphoneopen(true);
+        } else if (page === "nontechnicalevents") {
+            setCurrentPage(nontechnicalevents);
+            setClickedEvent("nontechnicalevents");
+            setisphoneopen(true);
+        } else if (page === "gaming") {
+            setCurrentPage(gaming);
+            setClickedEvent("gaming");
+            setisphoneopen(true);
+        } else if (page === "workshops") {
+            setCurrentPage(workshops);
+            setClickedEvent("workshops");
+            setisphoneopen(true);
+        }
+    }, [page]);
 
 	useEffect(() => {
 		if (selectedEvent === 'CODERS CHEMISTRY') {
@@ -147,29 +147,29 @@ const EventsPage = (props) => {
 		}
 	}, [selectedEvent]);
 
-	const ThreedModel = () => {
-		if (clickedEvent === 'technicalevents') {
-			return <LaptopModel />;
-		} else if (clickedEvent === 'nontechnicalevents') {
-			return <SquidModel />;
-		} else if (clickedEvent === 'gaming') {
-			return <GamingModel />;
-		} else if (clickedEvent === 'workshops') {
-			return <BitCoinModel />;
-		} else {
-			return <GamingModel />;
-		}
-	};
+    const ThreedModel = () => {
+        if (clickedEvent === "technicalevents") {
+            return <LaptopModel />;
+        } else if (clickedEvent === "nontechnicalevents") {
+            return <SquidModel />;
+        } else if (clickedEvent === "gaming") {
+            return <GamingModel />;
+        } else if (clickedEvent === "workshops") {
+            return <BitCoinModel />;
+        } else {
+            return <GamingModel />;
+        }
+    };
 
-	const click = (e) => {
-		if (e.target.value !== clickedEvent) {
-			setClickedEvent(e.target.value);
-			setisphoneopen(true);
-		} else {
-			setisphoneopen(false);
-			setClickedEvent('');
-		}
-	};
+    const click = (e) => {
+        if (e.target.value !== clickedEvent) {
+            setClickedEvent(e.target.value);
+            setisphoneopen(true);
+        } else {
+            setisphoneopen(false);
+            setClickedEvent("");
+        }
+    };
 
 	return (
 		<section
@@ -212,7 +212,7 @@ const EventsPage = (props) => {
 						<Threeddiv openorclose={isphoneopen}>
 							{/* <div> */}
 
-							<ThreedModel />
+                            <ThreedModel />
 
 							{/* </div> */}
 						</Threeddiv>

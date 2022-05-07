@@ -32,6 +32,7 @@ export const SectionGuide = styled.section`
         background: linear-gradient(transparent, rgba(0, 0, 0, 1));
     }
 `;
+
 export const SecondContainer = styled.div`
     width: 100%;
     background-color: black;
@@ -80,15 +81,18 @@ export const SecondContainer = styled.div`
             justify-content: space-evenly;
             align-items: center;
             .bar-div {
-                width: 30%;
+                width: 10%;
                 height: 85%;
                 margin: 2%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
                 align-items: center;
-                background-color: #ab46d2;
-                box-shadow: 5px 5px 10px rgba(255, 127, 255, 0.8);
+                transition: all 0.5s ease-in-out;
+                /* &:hover {
+                    background-color: #ab46d2;
+                    box-shadow: 5px 5px 10px rgba(255, 127, 255, 0.8);
+                } */
             }
             p {
                 width: 70%;
@@ -262,6 +266,7 @@ export const ImageDiv = styled.div`
         justify-content: center;
         p {
             text-shadow: 0 0 7px #bc13fe, 0 0 10px #bc13fe, 0 0 21px #bc13fe;
+            font-size: 1rem;
         }
     }
     svg {

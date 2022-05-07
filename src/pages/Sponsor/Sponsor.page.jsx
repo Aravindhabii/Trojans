@@ -28,11 +28,6 @@ const SponsorMainSection = () => {
 			<h1>Sponsors</h1>
 			<div className='mainmain'>
 				<CardComponent url={img2} alt={'poorvika'} name={'Poorvika'} />
-				{/* <CardComponent url={img2} alt={'poorvika'} name={'Poorvika'} />
-				<CardComponent url={img2} alt={'poorvika'} name={'Poorvika'} />
-				<CardComponent url={img2} alt={'poorvika'} name={'Poorvika'} />
-				<CardComponent url={img2} alt={'poorvika'} name={'Poorvika'} />
-				<CardComponent url={img2} alt={'poorvika'} name={'Poorvika'} /> */}
 			</div>
 		</SponsorSection>
 	);

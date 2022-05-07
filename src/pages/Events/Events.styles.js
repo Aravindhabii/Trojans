@@ -122,14 +122,9 @@ export const Button = styled.button`
     box-shadow: 0px 0px 30px 0px rgba(46, 255, 171, 0.86);
   }
   @media (max-width: 910px) {
-    width: 50%;
+    width: 70%;
     height: 30%;
   }
-  @media (max-width: 560px) {
-    width: 61%;
-    height: 18%;
-  }
-
 `;
 
 export const Eventsdiv = styled.div.attrs({
@@ -167,15 +162,14 @@ export const Eventsdiv = styled.div.attrs({
     position: absolute;
     bottom: 2%;
     right: 50%;
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     display: inline-block;
     transform: translateX(50%);
     border-radius: 50%;
     box-shadow: 0 0 1px #03e9f4, 0 0 2px #03e9f4, 0 0 1px #03e9f4,
-      inset 0 0 5px rgba(3, 233, 244, 0.5),
-      inset 0 0 15px rgba(3, 233, 244, 0.5),
-      inset 0 0 5px rgba(3, 233, 244, 0.5);
+    inset 0 0 5px rgba(3, 233, 244, 0.5), inset 0 0 15px rgba(3, 233, 244, 0.5),
+    inset 0 0 5px rgba(3, 233, 244, 0.5);
   }
   /* .closeone{
     position: absolute;
@@ -428,20 +422,6 @@ export const TabletScreen = styled.div.attrs({
       overflow-y: scroll;
     }
   }
-`;
-
-export const Closebtn = styled.span`
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  color: #fff;
-  border: #fff solid 3px;
-  height: 40px;
-  width: 40px;
-  z-index: 5;
-  transform: translateX(-50%);
-  box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 5px #03e9f4;
-  border-radius: 50%;
 `;
 
 export const Eventslist = styled.button.attrs({

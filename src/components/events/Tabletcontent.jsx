@@ -9,16 +9,16 @@ const Tabletcontent = (props) => {
     setisTabletOpen(false);
   }
 
-  const handleLeft = () => {
-    if (pageno > 1) {
-      setpageno(pageno - 1);
-    }
-  };
-  const handleRight = () => {
-    if (pageno < 3) {
-      setpageno(pageno + 1);
-    }
-  };
+    const handleLeft = () => {
+        if (pageno > 1) {
+            setpageno(pageno - 1);
+        }
+    };
+    const handleRight = () => {
+        if (pageno < 3) {
+            setpageno(pageno + 1);
+        }
+    };
 
   useEffect(() => {
     if(isTabletOpen === false){
@@ -63,12 +63,12 @@ const Tabletcontent = (props) => {
 export default Tabletcontent;
 
 {
-  /* <h3 className="name">Name -</h3>
+    /* <h3 className="name">Name -</h3>
           <h3 className="phoneno">Phone No.</h3> */
 }
 
 {
-  /* <ul>
+    /* <ul>
           <li>A single Team should consist of two members. </li>
           <li>
             The time limit of the task is about 30 min and should be strictly
