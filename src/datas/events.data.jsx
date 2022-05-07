@@ -1,6 +1,7 @@
 export const CodersChemistry = {
   id: 1,
   name: "Coders Chemistry",
+  duration: "30 mins",
   description:
     "This is a team event comprising of coding and physical tasks. The team members have to swap their roles every 10 minutes. While one does a physical task, the other tries to find the output for the given use case. The team that finds the output first, wins.",
   rules: [
@@ -28,6 +29,7 @@ export const CodersChemistry = {
 export const MasterMinds = {
   id: 1,
   name: "Master Minds",
+  duration: "2 hrs",
   description:
     "This is a team event comprising of 3 rounds namely Connections, Aptitude and Technical. After every round of completion, one team member has to be expelled from participation. The team that has answered the highest number of questions wins the event.",
   rules: [
@@ -54,6 +56,7 @@ export const MasterMinds = {
 export const SiteIng = {
   id: 1,
   name: "Site-ing",
+  duration: "2 hrs",
   description:
     "The event consists of 2 rounds. On the first round, the participant will be asked to design a website using “figma” within 30 minutes of time. On the second round, the participant will be asked to design the same website that has been implemented using figma, by using HTML and CSS within 1.5 hours of time.",
   rules: [
@@ -82,6 +85,7 @@ export const SiteIng = {
 export const PaperBytes = {
   id: 1,
   name: "Paper Bytes",
+  duration: "Not specific",
   description:
     "This event is open for both individual and team participation. The participants have to do a presentation on any technological field for a given time, followed by a question-and-answer session.",
   rules: [
@@ -108,6 +112,7 @@ export const PaperBytes = {
 export const GooseChase = {
   id: 1,
   name: "Goose Chase",
+  duration: "1.5 hrs",
   description:
     "The event comprises of 3 levels of coding and additional tasks. The contestant must a select a problem statement through a physical task and find the output which is the clue for the next round. Each clue found in one round is linked to the next and is essential for the participant's progression through the event.",
   rules: [
@@ -134,6 +139,7 @@ export const GooseChase = {
 export const TrojansThrottle = {
   id: 1,
   name: "Trojans Throttle",
+  duration: "1 hrs",
   description:
     "The capture the flag event is an individual contest. Participants should use various tools and techniques to find hidden clues or “flags”. The first team that locates either most of the flags or all of the flags during the event wins. This is an entry-level contest and is open to the public.",
   rules: [
@@ -166,6 +172,7 @@ export const TrojansThrottle = {
 export const TrojansCtf = {
   id: 1,
   name: "TrojansCTF",
+  duration: "3 hrs",
   description:
     "This event consists of two subevents, and interested participants can enroll individually. The first subevent, Bravo Six Going Dark, is coding with a dark twist. 10 minutes will be provided to understand the problem statement, after that the monitor will be turned off, then you have to code without visuals for 10 minutes, after completion of 10 minutes, 30 seconds is given for code verification, doing this multiple times will cause point deduction by 5 each time done. The second subevent, Runtime Terror is where the participant will be given working java code without any errors, and they will be given 30 minutes to optimize the code.",
   rules: [
@@ -195,7 +202,7 @@ export const TrojansCtf = {
 
 export const ShutterStop = {
   id: 1,
-  name: "Shutter Stop",
+  name: "Shutter Stop Online",
   description:
     "This is an online photography contest. The winner will be selected based on the number of likes secured by the post on our official Instagram page along with the judge’s decision. The first and second prize winners will be notified through WhatsApp and email. Participation e-certificate will be provided to all the participants.",
   rules: [
@@ -251,7 +258,7 @@ export const ShutterStopOffline = {
 export const ShipWreck = {
   id: 1,
   name: "Ship Wreck",
-  duration: "2.5 hours",
+  duration: "2.5 hrs",
   description:
     "A fictional or non-fictional character will be given to each participant and they will be given 2 minutes of time for preparation. The participant must come up with a valid explanation on why he/she deserves to be given the life jacket.",
   rules: [
@@ -277,7 +284,7 @@ export const ShipWreck = {
 export const TalentFest = {
   id: 1,
   name: "Talent Fest",
-  duration: "1.5 hours",
+  duration: "1.5 hrs",
   description:
     "The contestants should showcase their talent within the given time limit. Both solo and group performances are allowed. All types of talents are welcomed to perform.",
   rules: [
@@ -303,7 +310,7 @@ export const TalentFest = {
 export const SquidGame = {
   id: 1,
   name: "Squid Game",
-  duration: "2.5 hours",
+  duration: "2.5 hrs",
   description: "Not so fast. Wait until the day of the event to find out.",
   rules: [
     "Only one entry per participant is permitted.",
@@ -325,7 +332,7 @@ export const SquidGame = {
 export const BoxCricket = {
   id: 1,
   name: "Box Cricket",
-  duration: "3 hours",
+  duration: "3 hrs",
   description:
     "The is a gully cricket tournament event. Further details of the event will be dealt on the day of the event.",
   rules: [
@@ -345,10 +352,10 @@ export const BoxCricket = {
     },
   ],
 };
-export const ADVERTISEMENT = {
+export const Advertisement = {
   id: 1,
   name: "Enna Enna Solran Paarunga",
-  duration: "2.5 hours",
+  duration: "2.5 hrs",
   description:
     "The contestant will be provided with the name of a product and 2 minutes of time for preparation. The contestant should come up with a convincing act to sell out their product.",
   rules: [
@@ -372,10 +379,16 @@ export const ADVERTISEMENT = {
 export const Entrepreneur = {
   id: 1,
   name: "Entrepreneur",
+  duration: "1 hrs",
   description:
     "In this modern generation, with a vast number of career options, many young graduates and college students are opting towards creating startups and going towards the path of being successful entrepreneurs, but they do not have the proper guidance on how to progress towards their end goal and end up making mistakes during their journey, this workshop will help in aiding students towards proper understanding and analysis of entrepreneurship and its inbetweens....",
-  rules: ["No rules for the workshop."],
-
+  rules: [
+    "Each participant must pay the fee Rs. 120, on-spot before participating in the workshop",
+    "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
+    "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
+    "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
+    "Attendees can bring their own laptops to the workshop if they wish(not mandatory). Internet access will be provided. ",
+  ],
   studentCordinators: [
     {
       id: 1,
@@ -392,9 +405,17 @@ export const Entrepreneur = {
 export const Blockchain = {
   id: 1,
   name: "Blockchain",
+  duration: "1 hrs",
+
   description:
     "Blockchain technology is a structure that stores transactional records, also known as the block, of the public in several databases, known as the “chain,” in a network connected through peer-to-peer nodes. Typically, this storage is referred to as a 'digital ledger. This technology is used in our day to day life in many ways like money transfers, financial exchanges, insurance, cryptocurrency, IOT, NFTs etc. This workshop is aimed towards the individuals who want to pursue their further education in Blockchain Technologies or towards the audience who wants to enhance their knowledge towards this subject.",
-  rules: ["No rules for the workshop."],
+  rules: [
+    "Each participant must pay the fee Rs. 120, on-spot before participating in the workshop",
+    "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
+    "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
+    "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
+    "Attendees can bring their own laptops to the workshop if they wish(not mandatory). Internet access will be provided. ",
+  ],
   studentCordinators: [
     {
       id: 1,
@@ -411,9 +432,17 @@ export const Blockchain = {
 export const MachineLearning = {
   id: 1,
   name: "Machine Learning",
+  duration: "1 hrs",
+
   description:
     "Machine learning (ML) is a type of artificial intelligence (AI) that allows software applications to become more accurate at predicting outcomes without being explicitly programmed to do so. Machine learning algorithms use historical data as input to predict new output values. This workshop will educate the interested audience to the basics of Machine Learning and can code basic programs to utilitize MI",
-  rules: ["No rules for the workshop."],
+  rules: [
+    "Each participant must pay the fee Rs. 120, on-spot before participating in the workshop",
+    "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
+    "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
+    "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
+    "Attendees can bring their own laptops to the workshop if they wish(not mandatory). Internet access will be provided. ",
+  ],
 
   studentCordinators: [
     {

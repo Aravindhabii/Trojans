@@ -10,6 +10,8 @@ import GamingModel from './RenderModels/GamingModel';
 import SquidModel from './RenderModels/SquidModel';
 import BitCoinModel from './RenderModels/BitCoinModel';
 import svg from '../../assets/events/binarynumber.svg';
+// import rain from '../../assets/events/rain.svg';
+import rain from '../../assets/events/rain.svg'
 import HexBg from '../../components/Home/HexBg/HexBg.component';
 
 import {
@@ -32,7 +34,9 @@ import {
 	TalentFest,
 	SquidGame,
 	BoxCricket,
-	// Entrepreneur,
+	Entrepreneur,
+	ShutterStopOffline,
+	Advertisement,
 	TrojansCtf,
 	Blockchain,
 	MachineLearning,
@@ -114,20 +118,26 @@ const EventsPage = (props) => {
 			setCurrentEvent(TrojansThrottle);
 		} else if (selectedEvent === 'TROJANSCTF') {
 			setCurrentEvent(TrojansCtf);
-		} else if (selectedEvent === 'SHUTTER STOP') {
+		} else if (selectedEvent === 'SHUTTER STOP ONLINE') {
 			setCurrentEvent(ShutterStop);
+		} else if (selectedEvent === 'SHUTTER STOP OFFLINE') {
+			setCurrentEvent(ShutterStopOffline);
 		} else if (selectedEvent === 'SHIP WRECK') {
 			setCurrentEvent(ShipWreck);
 		} else if (selectedEvent === 'TALENT FEST') {
 			setCurrentEvent(TalentFest);
 		} else if (selectedEvent === 'SQUID GAME') {
 			setCurrentEvent(SquidGame);
+		} else if (selectedEvent === 'ENNA ENNA SOLRAN PARUNGA') {
+			setCurrentEvent(Advertisement);
 		} else if (selectedEvent === 'BOX CRICKET') {
 			setCurrentEvent(BoxCricket);
 		} else if (selectedEvent === 'MACHINE LEARNING') {
 			setCurrentEvent(MachineLearning);
 		} else if (selectedEvent === 'BLOCKCHAIN') {
 			setCurrentEvent(Blockchain);
+		} else if (selectedEvent === 'ENTREPRENEUR') {
+			setCurrentEvent(Entrepreneur);
 		} else if (selectedEvent === 'VALORANT') {
 			setCurrentEvent(Valorant);
 		} else if (selectedEvent === 'BGMI') {
@@ -184,13 +194,13 @@ const EventsPage = (props) => {
 			<Navbar active={{ route: 'events', scroll: 2 }} />
 			<HeroSection isphoneopen={isphoneopen}>
 				<div className='left'>
-					<Button value='technicalevents' onClick={click}>
+					<Button value='technicalevents' onClick={click} rain={rain}>
 						Technical
 					</Button>
-					<Button value='nontechnicalevents' onClick={click}>
+					<Button value='nontechnicalevents' onClick={click} rain={rain}>
 						Non-Technical
 					</Button>
-					<Button value='gaming' onClick={click}>
+					<Button value='gaming' onClick={click} rain={rain}>
 						Gaming
 					</Button>
 					<Button value='workshops' onClick={click}>
@@ -225,7 +235,7 @@ const EventsPage = (props) => {
 			</HeroSection>
 			<Tabletdiv isTabletOpen={isTabletOpen} setisTabletOpen={setisTabletOpen}>
 				<div onClick={closetab} className='forclose'></div>
-				<Tablet currentEvent={currentEvent} isTabletOpen={isTabletOpen} />
+				<Tablet currentEvent={currentEvent} isTabletOpen={isTabletOpen} setisTabletOpen={setisTabletOpen}/>
 			</Tabletdiv>
 		</section>
 	);
