@@ -93,7 +93,9 @@ export const handleDropdownValidation = (
 		setformInputValid({ ...formInputValid, [value.current.name]: true });
 		if (eventOrGaming.current.value === 'Workshops') {
 			setIsWorkshopDropdownVisible(true);
+			setIsGamingDropdownVisible(false);
 		} else if (eventOrGaming.current.value === 'Gaming') {
+			setIsWorkshopDropdownVisible(false);
 			setIsGamingDropdownVisible(true);
 		} else {
 			setIsGamingDropdownVisible(false);
