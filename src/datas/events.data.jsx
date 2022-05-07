@@ -192,7 +192,6 @@ export const TrojansCtf = {
     ],
 };
 
-
 export const ShutterStop = {
     id: 1,
     name: "Shutter Stop",
@@ -286,6 +285,33 @@ export const SquidGame = {
         },
     ],
 };
+
+
+export const EnnaEnnaSolranParunga = {
+    id: 1,
+    name: "Enna Enna Solran Parunga",
+    description:
+        "More to be revealed on the day of symposium. Come and have fun!",
+    rules: ["Will be announced at the start of the event."],
+    studentCordinators: [
+        {
+            id: 1,
+            name: "Name - Ashwin Kanna",
+            phoneNo: "Phone No. 8270011279",
+        },
+        {
+            id: 2,
+            name: "Name - Sugesh",
+            phoneNo: "Phone No. 7448354747",
+        },
+    ],
+};
+
+
+
+
+
+
 export const BoxCricket = {
     id: 1,
     name: "Box Cricket",

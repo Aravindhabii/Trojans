@@ -15,6 +15,13 @@ export const GlobalStyles = createGlobalStyle`
 		user-select: none;
 	}
 
+	html {
+		background: #000 !important;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
 	body {
 		overflow: overlay;
 	}
