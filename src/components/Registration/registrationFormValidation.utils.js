@@ -79,8 +79,7 @@ export const handleDropdownValidation = (
 	setformInputValid,
 	formInputValid,
 	setIsWorkshopDropdownVisible,
-	setIsGamingDropdownVisible,
-	eventOrGaming
+	setIsGamingDropdownVisible
 ) => {
 	if (value.current.value.includes('Select')) {
 		value.current.classList.add('error');
@@ -91,10 +90,10 @@ export const handleDropdownValidation = (
 		value.current.classList.remove('error');
 		value.current.classList.add('success');
 		setformInputValid({ ...formInputValid, [value.current.name]: true });
-		if (eventOrGaming.current.value === 'Workshops') {
+		if (value.current.value === 'Workshops') {
 			setIsWorkshopDropdownVisible(true);
 			setIsGamingDropdownVisible(false);
-		} else if (eventOrGaming.current.value === 'Gaming') {
+		} else if (value.current.value === 'Gaming') {
 			setIsWorkshopDropdownVisible(false);
 			setIsGamingDropdownVisible(true);
 		} else {
@@ -102,6 +101,24 @@ export const handleDropdownValidation = (
 			setIsWorkshopDropdownVisible(false);
 		}
 		setIsButtonEnabled(true);
+	}
+};
+
+export const handleSubDropdownValidation = (
+	value,
+	setIsButtonEnabled,
+	setformInputValid,
+	formInputValid
+) => {
+	if (value.current.value.includes('Select')) {
+		value.current.classList.add('error');
+		value.current.classList.remove('success');
+		setformInputValid({ ...formInputValid, [value.current.name]: false });
+		setIsButtonEnabled(false);
+	} else {
+		value.current.classList.remove('error');
+		value.current.classList.add('success');
+		setformInputValid({ ...formInputValid, [value.current.name]: true });
 	}
 };
 
@@ -114,9 +131,17 @@ export const handleSubmit = async (
 	year,
 	college,
 	event,
-	workshops
+	workshops,
+	gaming,
+	setIsButtonEnabled,
+	setIsWorkshopDropdownVisible,
+	setIsGamingDropdownVisible,
+	setIsEmailVerified,
+	setformInputValid,
+	formInputValid
 ) => {
 	e.preventDefault();
+	setIsButtonEnabled(false);
 	// let amount =
 	// 	event.current.value === 'Technical and Non-Technical'
 	// 		? 100
@@ -134,9 +159,11 @@ export const handleSubmit = async (
 		year.current.value,
 		college.current.value,
 		event.current.value,
-		workshops.current.value
+		workshops.current ? workshops.current.value : null,
+		gaming.current ? gaming.current.value : null
 	).then((res) => {
 		if (res.status === 200) {
+			email.current.removeAttribute('disabled');
 			name.current.value = '';
 			email.current.value = '';
 			phone.current.value = '';
@@ -144,10 +171,19 @@ export const handleSubmit = async (
 			year.current.value = 'Select Year';
 			college.current.value = 'Select College';
 			event.current.value = 'Select Event';
-			workshops.current.value = 'Select Workshop';
+			Object.keys(formInputValid).forEach((key) => {
+				setformInputValid({ ...formInputValid, [key]: false });
+			});
 
+			setIsWorkshopDropdownVisible(false);
+			setIsGamingDropdownVisible(false);
+			setIsEmailVerified(false);
+			// workshops.current.value = 'Select Workshop';
+			// gaming.current.value = 'Select Game';
+			setIsButtonEnabled(false);
 			toast.success('Hooray! You are registered successfully.');
 		} else {
+			setIsButtonEnabled(true);
 			toast.error('Oops! Registration failed. Please try again in a moment.');
 		}
 	});
