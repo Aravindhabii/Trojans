@@ -10,7 +10,7 @@ const GuidelinesPage = () => {
 	return (
 		<>
         <Helmet>
-            <title>GUIDELINES | TROJANS</title>
+            <title>TROJANS | GUIDELINES</title>
         </Helmet>
 			<Navbar active={{ route: 'guidelines', scroll: 3 }} />
 			<FirstSection />

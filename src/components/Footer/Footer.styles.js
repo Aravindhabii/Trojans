@@ -71,6 +71,27 @@ export const FooterContainer = styled.section`
 				height: 100%;
 				padding: 0 2rem;
 
+				.image-footer-atag
+				{
+					position: relative;
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+
+					a {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+
+
+					.image-footer-icons
+					{
+						width: 2rem;
+						height: 2rem;
+					}
+				}
+
+
 				h2 {
 					margin-bottom: 1rem;
 				}

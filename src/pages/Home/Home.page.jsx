@@ -21,7 +21,7 @@ const HomePage = () => (
 		}}
 	>
 		<Helmet>
-			<title>HOME | TROJANS</title>
+			<title>TROJANS | HOME</title>
 		</Helmet>
 		<Preloader />
 		<Navbar active={{ route: 'home', scroll: 0 }} />

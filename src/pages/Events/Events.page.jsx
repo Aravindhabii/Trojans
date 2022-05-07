@@ -178,7 +178,7 @@ const EventsPage = (props) => {
 		>
 			<HexBg direction='to bottom' svg={svg} color='rgba(3, 233, 244, 0.9)' />
 			<Helmet>
-				<title>EVENTS | TROJANS</title>
+				<title>TROJANS | EVENTS</title>
 			</Helmet>
 			<Navbar active={{ route: 'events', scroll: 2 }} />
 			<HeroSection isphoneopen={isphoneopen}>

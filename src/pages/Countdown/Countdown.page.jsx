@@ -59,7 +59,7 @@ const Countdown = ({ setShowCountdown }) => {
 	return (
 		<CountdownContainer>
 			<Helmet>
-				<title>COUNTDOWN | TROJANS</title>
+				<title>TROJANS | COUNTDOWN</title>
 			</Helmet>
 			<div>
 				<h2>A NATIONAL LEVEL TECHNICAL SYMPOSIUM</h2>
