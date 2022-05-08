@@ -34,7 +34,7 @@ const Tabletcontent = (props) => {
 			<Closebtn onClick={tabclose} />
 			{/* <Closebtn onClick={tabclose} /> */}
 			<div className='description'>
-				<h2>Description</h2>
+				{/* <h2>Description</h2> */}
 				{currentEvent.duration ? (
 					<h3>
 						<b>Duration:</b> {currentEvent.duration}

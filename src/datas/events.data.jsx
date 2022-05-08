@@ -144,7 +144,7 @@ export const TrojansThrottle = {
   id: 1,
   name: "Trojans Throttle",
   duration: "2 hrs",
-  timestamp: "12.30 pm -2.30 pm",
+  timestamp: "12.30 pm -2 pm",
   description:
     "The capture the flag event is an individual contest. Participants should use various tools and techniques to find hidden clues or “flags”. The first team that locates either most of the flags or all of the flags during the event wins. This is an entry-level contest and is open to the public.",
   rules: [
@@ -471,7 +471,7 @@ export const MachineLearning = {
   id: 1,
   name: "Machine Learning",
   duration: "1 hrs",
-  timestamp: "10 am to 11 am",
+  timestamp: "10 am to 12 pm & 1 pm to 3 pm",
   description:
     "Machine learning (ML) is a type of artificial intelligence (AI) that allows software applications to become more accurate at predicting outcomes without being explicitly programmed to do so. Machine learning algorithms use historical data as input to predict new output values. This workshop will educate the interested audience to the basics of Machine Learning and can code basic programs to utilitize MI",
   rules: [
@@ -479,7 +479,6 @@ export const MachineLearning = {
     "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
     "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
     "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
-    "Attendees can bring their own laptops to the workshop if they wish(not mandatory). Internet access will be provided. ",
   ],
 
   studentCordinators: [
