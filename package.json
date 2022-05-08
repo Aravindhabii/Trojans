@@ -36,6 +36,7 @@
 		"git": "git add . && git commit -m changes && git push origin main",
 		"deploy": "git pull origin main && npm run build && git add . && git commit -m changes && git push origin main"
 	},
+	
 	"eslintConfig": {
 		"extends": [
 			"react-app",
