@@ -70,6 +70,13 @@ const RegistrationForm = () => {
 	const event = useRef('');
 	const workshops = useRef('');
 	const gaming = useRef('');
+	const paper = useRef('');
+	const abstract = useRef('');
+	const presentation = useRef('');
+
+	const [uploadPaper, setUploadPaper] = useState(null);
+	const [uploadAbstract, setUploadAbstract] = useState(null);
+	const [uploadPresentation, setUploadPresentation] = useState(null);
 
 	const [formInputValid, setformInputValid] = useState({
 		name: false,
@@ -80,7 +87,9 @@ const RegistrationForm = () => {
 		college: false,
 		event: false,
 		workshops: event.current.value === 'workshops' ? false : true,
-		gaming: event.current.value === 'gaming' ? false : true
+		gaming: event.current.value === 'gaming' ? false : true,
+		abstract: event.current.value === 'Paper Bytes' ? false : true,
+		presentation: event.current.value === 'Paper Bytes' ? false : true
 	});
 
 	const [isEmailVerified, setIsEmailVerified] = useState(false);
@@ -90,6 +99,7 @@ const RegistrationForm = () => {
 	const [isWorkshopDropdownVisible, setIsWorkshopDropdownVisible] =
 		useState(false);
 	const [isGamingDropdownVisible, setIsGamingDropdownVisible] = useState(false);
+	const [isPaperBytesVisible, setIsPaperBytesVisible] = useState(false);
 
 	useEffect(() => {
 		const isFormValid = Object.values(formInputValid).every(
@@ -129,11 +139,16 @@ const RegistrationForm = () => {
 					event,
 					workshops,
 					gaming,
+					uploadPaper,
+					uploadAbstract,
+					uploadPresentation,
 					setIsButtonEnabled,
 					setIsWorkshopDropdownVisible,
 					setIsGamingDropdownVisible,
+					setIsPaperBytesVisible,
 					setIsEmailVerified,
-					setformInputValid,formInputValid
+					setformInputValid,
+					formInputValid
 				)
 			}
 		>
@@ -305,7 +320,8 @@ const RegistrationForm = () => {
 							setformInputValid,
 							formInputValid,
 							setIsWorkshopDropdownVisible,
-							setIsGamingDropdownVisible
+							setIsGamingDropdownVisible,
+							setIsPaperBytesVisible
 						);
 					}}
 				>
@@ -318,6 +334,7 @@ const RegistrationForm = () => {
 					<option value='Trojans CTF'>Trojans CTF</option>
 					<option value='Gaming'>Gaming</option>
 					<option value='Workshops'>Workshops</option>
+					<option value='Paper Bytes'>Paper Bytes</option>
 				</select>
 			</InputContainerStyle>
 			{isWorkshopDropdownVisible && (
@@ -371,6 +388,43 @@ const RegistrationForm = () => {
 						<option value='Free Fire'>Free Fire</option>
 					</select>
 				</InputContainerStyle>
+			)}
+			{isPaperBytesVisible && (
+				<>
+					<InputContainerStyle>
+						<label>Paper (not required)</label>
+						<input
+							type='file'
+							name='uploadPaper'
+							ref={paper}
+							onChange={(e) => setUploadPaper(e.target.files[0])}
+							accept='application/pdf'
+							disabled={!isEmailVerified || !formInputValid.email}
+						/>
+					</InputContainerStyle>
+					<InputContainerStyle>
+						<label>Abstract (PDF)</label>
+						<input
+							type='file'
+							name='uploadAbstract'
+							ref={abstract}
+							onChange={(e) => setUploadAbstract(e.target.files[0])}
+							accept='application/pdf'
+							disabled={!isEmailVerified || !formInputValid.email}
+						/>
+					</InputContainerStyle>
+					<InputContainerStyle>
+						<label>Presentation (PPT)</label>
+						<input
+							type='file'
+							name='uploadPresentation'
+							ref={presentation}
+							onChange={(e) => setUploadPresentation(e.target.files[0])}
+							accept='application/vnd.ms-powerpoint'
+							disabled={!isEmailVerified || !formInputValid.email}
+						/>
+					</InputContainerStyle>
+				</>
 			)}
 			<button disabled={!isButtonEnabled}>Submit</button>
 		</FormContainerStyle>
