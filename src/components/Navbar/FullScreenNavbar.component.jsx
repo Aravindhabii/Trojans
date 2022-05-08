@@ -10,12 +10,12 @@ import {
 	HoverContact
 } from './FullScreenNavbar.style';
 
-import img1 from '../../assets/nav/pic1.jpg';
-import img2 from '../../assets/nav/pic2.jpg';
-import img3 from '../../assets/nav/pic3.jpg';
-import img4 from '../../assets/nav/pic4.jpg';
-import img5 from '../../assets/nav/pic5.jpg';
-import img6 from '../../assets/nav/pic6.jpg';
+import img1 from '../../assets/nav/pic1.webp';
+import img2 from '../../assets/nav/pic2.webp';
+import img3 from '../../assets/nav/pic3.webp';
+import img4 from '../../assets/nav/pic4.webp';
+import img5 from '../../assets/nav/pic5.webp';
+import img6 from '../../assets/nav/pic6.webp';
 
 const NavLinkComponent = ({
 	body,

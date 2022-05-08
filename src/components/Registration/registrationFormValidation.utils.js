@@ -185,6 +185,7 @@ export const handleSubmit = async (
 			year.current.value = 'Select Year';
 			college.current.value = 'Select College';
 			event.current.value = 'Select Event';
+			event.current.removeAttribute('disabled');
 			Object.keys(formInputValid).forEach((key) => {
 				setformInputValid({ ...formInputValid, [key]: false });
 			});
