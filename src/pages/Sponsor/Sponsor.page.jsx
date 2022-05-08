@@ -51,6 +51,7 @@ const DevelopersSection = () => {
     return (
         <>
             <MembersSection>
+            <h1>Developers</h1>
                 <DevelopersCard
                     name={"Solomon Santhosh I"}
                     description={"Full Stack"}

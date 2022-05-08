@@ -17,7 +17,7 @@ const HeroHome = () => {
                 <img src={TrojansGold} alt="Trojans" />
                 <h3>A NATIONAL LEVEL TECHNICAL SYMPOSIUM</h3>
                 {/* <h3>EXPLORE</h3> */}
-                <a href="">
+                <a href="/registration">
                     <h1 className="registration_link">REGISTER</h1>
                 </a>
                 <a href="#about">
