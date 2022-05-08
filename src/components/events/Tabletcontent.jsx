@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { TabletScreen, 
-  // Closebtn
+	Closebtn
  } from '../../pages/Events/Events.styles';
 import { RightCircleOutlined, LeftCircleOutlined } from '@ant-design/icons';
 
@@ -31,12 +31,18 @@ const Tabletcontent = (props) => {
 		<TabletScreen pageno={pageno}>
 			<LeftCircleOutlined onClick={handleLeft} className='leftarrow' />
 			<RightCircleOutlined onClick={handleRight} className='rightarrow' />
+			<Closebtn onClick={tabclose} />
 			{/* <Closebtn onClick={tabclose} /> */}
 			<div className='description'>
 				<h2>Description</h2>
 				{currentEvent.duration ? (
 					<h3>
 						<b>Duration:</b> {currentEvent.duration}
+					</h3>
+				) : null}
+				{currentEvent.timestamp ? (
+					<h3>
+						<b>Timing:</b> {currentEvent.timestamp}
 					</h3>
 				) : null}
 				<p>{currentEvent.description}</p>
