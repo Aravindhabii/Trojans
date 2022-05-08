@@ -3,7 +3,7 @@ import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 
 import "./about.css";
-import CITImg from "../../../assets/Trojans_logo/CIT_Logo_white.png";
+// import CITImg from "../../../assets/Trojans_logo/CIT_Logo_white.webp";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 import { HeroSection } from "./About.styles";

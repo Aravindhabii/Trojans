@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import GoldTexture from '../../assets/Trojans_logo/gold_texture.jpg';
+import GoldTexture from '../../assets/Trojans_logo/gold_texture.webp';
 
 export const PreLoaderContainer = styled.div`
 	position: fixed;

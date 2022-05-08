@@ -1,6 +1,6 @@
 import React from "react";
 import {LoadingScreen} from "./Loading.styles";
-import Logo from "../../assets/Trojans_logo/trojans_logo.png";
+import Logo from "../../assets/Trojans_logo/trojans_logo.webp";
 
 function Loading() {
     return (
