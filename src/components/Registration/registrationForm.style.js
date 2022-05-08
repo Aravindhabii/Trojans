@@ -39,8 +39,8 @@ export const FormContainerStyle = styled.form`
 			position: relative;
 			padding: 1.1rem 0;
 			margin-top: 0.3rem;
-			margin-left: 0.5rem;
-			color: white;
+			margin-left: 1rem;
+			color: white !important;
 
 			&:hover {
 				color: white;
@@ -72,8 +72,7 @@ export const FormContainerStyle = styled.form`
 		box-shadow: 0 0 5px #bc13fe, 0 0 5px #bc13fe inset;
 		transition: all 0.3s ease;
 		overflow: hidden;
-		cursor: pointer;
-
+		
 		&:after {
 			position: absolute;
 			content: ' ';
@@ -87,8 +86,9 @@ export const FormContainerStyle = styled.form`
 		&:hover {
 			color: #000;
 		}
-
+		
 		&:disabled:hover {
+			cursor: pointer;
 			color: #530074;
 		}
 

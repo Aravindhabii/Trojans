@@ -39,8 +39,6 @@ function SecondSection() {
                             number of events as long as the event timings don’t
                             clash.
                             <br />
-                            Rules are subject to change at the discretion of the
-                            event organiser.
                         </p>
                     </div>
                     <div className="sidebar-div">

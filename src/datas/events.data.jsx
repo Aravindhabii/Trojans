@@ -207,32 +207,32 @@ export const TrojansCtf = {
 };
 
 export const ShutterStop = {
-  id: 1,
-  name: "Shutter Stop Online",
-  description:
-    "This is an online photography contest. The winner will be selected based on the number of likes secured by the post on our official Instagram page along with the judge’s decision. The first and second prize winners will be notified through WhatsApp and email. Participation e-certificate will be provided to all the participants.",
-  rules: [
-    "Only single entry is allowed (No specific theme to be followed).",
-    "Registration fee of Rs. 30 has to paid for participation.",
-    "Take a screenshot of the payment featuring your name, department, year and college name.",
-    "Once the payment is done, fill out the google form provided in our Instagram bio.",
-    "Make sure to attach the screenshot of your payment and your photograph in the google form.",
-    "Participants are allowed to use either their mobile or DSLR to take the photo.",
-    "Only colour grading is allowed.",
-    "Your photograph should not contain any watermarks (Violators will be banned from participating in the event.)",
-  ],
-  studentCordinators: [
-    {
-      id: 1,
-      name: "Name - Sarabeswaran",
-      phoneNo: "Phone No. 8489267799",
-    },
-    {
-      id: 2,
-      name: "Name - Gokul",
-      phoneNo: "Phone No. 9345333651",
-    },
-  ],
+    id: 1,
+    name: "Shutter Stop Online",
+    description:
+        "This is an online photography contest. The winner will be selected based on the number of likes secured by the post on our official Instagram page along with the judge’s decision. The first and second prize winners will be notified through WhatsApp and email. Participation e-certificate will be provided to all the participants.",
+    rules: [
+        "Only single entry is allowed (No specific theme to be followed).",
+        "Registration fee of Rs. 30 has to paid for participation.",
+        "Take a screenshot of the payment featuring your name, department, year and college name.",
+        "Once the payment is done, fill out the google form provided in our Instagram bio.",
+        "Make sure to attach the screenshot of your payment and your photograph in the google form.",
+        "Participants are allowed to use either their mobile or DSLR to take the photo.",
+        "Only colour grading is allowed.",
+        "Your photograph should not contain any watermarks (Violators will be banned from participating in the event.)",
+    ],
+    studentCordinators: [
+        {
+            id: 1,
+            name: "Name - Sarabeshwaran",
+            phoneNo: "Phone No. 8489267799",
+        },
+        {
+            id: 2,
+            name: "Name - Gokul",
+            phoneNo: "Phone No. 9345333651",
+        },
+    ],
 };
 export const ShutterStopOffline = {
   id: 1,
@@ -280,7 +280,7 @@ export const ShipWreck = {
   studentCordinators: [
     {
       id: 1,
-      name: "Name - Sid",
+      name: "Name - Sidharth R",
       phoneNo: "Phone No. 9791231231",
     },
     {
@@ -341,26 +341,26 @@ export const SquidGame = {
   ],
 };
 
-// export const EnnaEnnaSolranParunga = {
-//   id: 1,
-//   name: "Enna Enna Solran Parunga",
-//   timestamp: "10 am to 12.30 pm",
-//   description:
-//     "More to be revealed on the day of symposium. Come and have fun!",
-//   rules: ["Will be announced at the start of the event."],
-//   studentCordinators: [
-//     {
-//       id: 1,
-//       name: "Name - Ashwin Kanna",
-//       phoneNo: "Phone No. 8270011279",
-//     },
-//     {
-//       id: 2,
-//       name: "Name - Sugesh",
-//       phoneNo: "Phone No. 7448354747",
-//     },
-//   ],
-// };
+export const EnnaEnnaSolranParunga = {
+  id: 1,
+  name: "Enna Enna Solran Parunga",
+  timestamp: "10 am to 12.30 pm",
+  description:
+    "More to be revealed on the day of symposium. Come and have fun!",
+  rules: ["Will be announced at the start of the event."],
+  studentCordinators: [
+    {
+      id: 1,
+      name: "Name - Ashwin Kanna",
+      phoneNo: "Phone No. 8270011279",
+    },
+    {
+      id: 2,
+      name: "Name - Sugesh",
+      phoneNo: "Phone No. 7448354747",
+    },
+  ],
+};
 
 export const BoxCricket = {
   id: 1,
@@ -415,57 +415,57 @@ export const Advertisement = {
   ],
 };
 export const Entrepreneur = {
-  id: 1,
-  name: "Entrepreneur",
-  duration: "1 hrs",
-  description:
-    "In this modern generation, with a vast number of career options, many young graduates and college students are opting towards creating startups and going towards the path of being successful entrepreneurs, but they do not have the proper guidance on how to progress towards their end goal and end up making mistakes during their journey, this workshop will help in aiding students towards proper understanding and analysis of entrepreneurship and its inbetweens....",
-  rules: [
-    "Each participant must pay the fee Rs. 120, on-spot before participating in the workshop",
-    "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
-    "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
-    "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
-    "Attendees can bring their own laptops to the workshop if they wish(not mandatory). Internet access will be provided. ",
-  ],
-  studentCordinators: [
-    {
-      id: 1,
-      name: "Name -",
-      phoneNo: "Phone No.",
-    },
-    {
-      id: 2,
-      name: "Name -",
-      phoneNo: "Phone No.",
-    },
-  ],
+    id: 1,
+    name: "Startup & Entrepreneurship",
+    duration: "1 hrs",
+    description:
+        "In this modern generation, with a vast number of career options, many young graduates and college students are opting towards creating startups and going towards the path of being successful entrepreneurs, but they do not have the proper guidance on how to progress towards their end goal and end up making mistakes during their journey, this workshop will help in aiding students towards proper understanding and analysis of entrepreneurship and its inbetweens....",
+    rules: [
+        "Each participant must pay the fee Rs. 120, on-spot before participating in the workshop",
+        "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
+        "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
+        "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
+        "Attendees can bring their own laptops to the workshop if they wish(not mandatory). Internet access will be provided. ",
+    ],
+    studentCordinators: [
+        {
+            id: 1,
+            name: "Name - Muralidharan",
+            phoneNo: "Phone No. 9962428382",
+        },
+        {
+            id: 2,
+            name: "Name - Madhoora Mohan",
+            phoneNo: "Phone No. 9443623371",
+        },
+    ],
 };
 export const Blockchain = {
-  id: 1,
-  name: "Blockchain",
-  duration: "1 hrs",
-  timestamp: "10 am to 12 pm",
-  description:
-    "Blockchain technology is a structure that stores transactional records, also known as the block, of the public in several databases, known as the “chain,” in a network connected through peer-to-peer nodes. Typically, this storage is referred to as a 'digital ledger. This technology is used in our day to day life in many ways like money transfers, financial exchanges, insurance, cryptocurrency, IOT, NFTs etc. This workshop is aimed towards the individuals who want to pursue their further education in Blockchain Technologies or towards the audience who wants to enhance their knowledge towards this subject.",
-  rules: [
-    "Each participant must pay the fee Rs. 120, on-spot before participating in the workshop",
-    "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
-    "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
-    "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
-    "Attendees can bring their own laptops to the workshop if they wish(not mandatory). Internet access will be provided. ",
-  ],
-  studentCordinators: [
-    {
-      id: 1,
-      name: "Name - Abhishek ",
-      phoneNo: "Phone No. 7598535604",
-    },
-    {
-      id: 2,
-      name: "Name - Sumanth ",
-      phoneNo: "Phone No. 8247218655",
-    },
-  ],
+    id: 1,
+    name: "Blockchain",
+    timestamp: "10 am to 11 am",
+    duration: "1 hrs",
+
+    description:
+        "Blockchain technology is a structure that stores transactional records, also known as the block, of the public in several databases, known as the “chain,” in a network connected through peer-to-peer nodes. Typically, this storage is referred to as a 'digital ledger. This technology is used in our day to day life in many ways like money transfers, financial exchanges, insurance, cryptocurrency, IOT, NFTs etc. This workshop is aimed towards the individuals who want to pursue their further education in Blockchain Technologies or towards the audience who wants to enhance their knowledge towards this subject.",
+    rules: [
+        "Each participant must pay the fee Rs. 150, on-spot before participating in the workshop",
+        "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
+        "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
+        "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
+    ],
+    studentCordinators: [
+        {
+            id: 1,
+            name: "Name - Abhishek ",
+            phoneNo: "Phone No. 7598535604",
+        },
+        {
+            id: 2,
+            name: "Name - Sumanth ",
+            phoneNo: "Phone No. 8247218655",
+        },
+    ],
 };
 export const MachineLearning = {
   id: 1,

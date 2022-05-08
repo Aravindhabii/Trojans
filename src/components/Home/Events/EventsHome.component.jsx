@@ -1,78 +1,78 @@
-import React, {useState} from "react";
-import Tilt from "react-parallax-tilt";
+import React, { useState } from 'react';
+import Tilt from 'react-parallax-tilt';
 
 import {
-    PhonesContainer,
-    PhoneButtonStyles,
-    TabImgContainer,
-} from "./EventsHome.style";
+	PhonesContainer,
+	PhoneButtonStyles,
+	TabImgContainer
+} from './EventsHome.style';
 
-import HexBg from "../HexBg/HexBg.component";
+import HexBg from '../HexBg/HexBg.component';
 
-import Phone1 from "../../../assets/home/phonepng.png";
-import Tablet1 from "../../../assets/home/tabletpng.png";
-import TechnicalBg from "../../../assets/home/events/1.jpg";
-import NonTechnicalBg from "../../../assets/home/events/2.jpg";
-import WorkshopsBg from "../../../assets/home/events/3.jpg";
-import HexImg from "../../../assets/home/Hexagon.svg";
-import NonTechEventsPoster from "../../../assets/home/events/non-tech-events-poster.png";
-import TechEventsPoster from "../../../assets/home/events/tech-events-poster.png";
-import WorkshopsPoster from "../../../assets/home/events/workshops-poster.png";
+import Phone1 from '../../../assets/home/phonepng.png';
+import Tablet1 from '../../../assets/home/tabletpng.png';
+import TechnicalBg from '../../../assets/home/events/1.jpg';
+import NonTechnicalBg from '../../../assets/home/events/2.jpg';
+import WorkshopsBg from '../../../assets/home/events/3.jpg';
+import HexImg from '../../../assets/home/Hexagon.svg';
+import NonTechEventsPoster from '../../../assets/home/events/non-tech-events-poster.png';
+import TechEventsPoster from '../../../assets/home/events/tech-events-poster.png';
+import WorkshopsPoster from '../../../assets/home/events/workshops-poster.png';
 
-const PhoneButton = ({text, bgColor, url, handlePhoneButtonClick}) => (
-    <>
-        <PhoneButtonStyles
-            bgColor={bgColor}
-            onClick={() => handlePhoneButtonClick(url)}
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            {text}
-        </PhoneButtonStyles>
-    </>
+const PhoneButton = ({ text, bgColor, url, handlePhoneButtonClick }) => (
+	<>
+		<PhoneButtonStyles
+			bgColor={bgColor}
+			onClick={() => handlePhoneButtonClick(url)}
+		>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			{text}
+		</PhoneButtonStyles>
+	</>
 );
 
 const EventsHome = () => {
-    const [phonesPosition, setPhonesPosition] = useState({
-        phone1: 50,
-        tablet1: -150,
-    });
-    const [tabletImage, setTabletImage] = useState("");
+	const [phonesPosition, setPhonesPosition] = useState({
+		phone1: 50,
+		tablet1: -150
+	});
+	const [tabletImage, setTabletImage] = useState('');
 
-    const handlePhoneButtonClick = (slug) => {
-        setPhonesPosition({
-            phone1: 20,
-            tablet1: 10,
-        });
+	const handlePhoneButtonClick = (slug) => {
+		setPhonesPosition({
+			phone1: 20,
+			tablet1: 10
+		});
 
-        setTabletImage(slug);
-    };
+		setTabletImage(slug);
+	};
 
-    return (
-        <PhonesContainer
-            phone1={Phone1}
-            tablet1={Tablet1}
-            phonesPosition={phonesPosition}
-            id="events"
-            url={TechnicalBg}
-        >
-            <HexBg direction="to top" svg={HexImg} />
-            <main
-                onClick={() =>
-                    setPhonesPosition({
-                        phone1: 50,
-                        tablet1: -150,
-                    })
-                }
-            ></main>
-            {tabletImage.length > 0 && window.innerWidth < 800 && (
-                <div
-                    className="phone-container-popup"
-                    onClick={() => setTabletImage("")}
-                >
-                    {/* <svg
+	return (
+		<PhonesContainer
+			phone1={Phone1}
+			tablet1={Tablet1}
+			phonesPosition={phonesPosition}
+			id='events'
+			url={TechnicalBg}
+		>
+			<HexBg direction='to top' svg={HexImg} />
+			<main
+				onClick={() =>
+					setPhonesPosition({
+						phone1: 50,
+						tablet1: -150
+					})
+				}
+			></main>
+			{tabletImage.length > 0 && window.innerWidth < 800 && (
+				<div
+					className='phone-container-popup'
+					onClick={() => setTabletImage('')}
+				>
+					{/* <svg
 						xmlns='http://www.w3.org/2000/svg'
 						className='h-6 w-6'
 						fill='none'
