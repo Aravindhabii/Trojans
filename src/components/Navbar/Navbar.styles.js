@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // import GoldTexture from '../../assets/Trojans_logo/gold_texture.jpg';
-import LogoTrojans from '../../assets/Trojans_logo/trojans-compressed.png';
+import LogoTrojans from '../../assets/Trojans_logo/trojans-compressed.webp';
 
 export const NavbarContainer = styled.div`
 	display: flex;

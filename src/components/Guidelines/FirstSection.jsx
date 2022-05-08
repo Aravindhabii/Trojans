@@ -10,7 +10,7 @@ import {
     GridSection,
     ImageDiv,
 } from "./Guideliness.styles";
-import OnlyLogo_White from "../../assets/Trojans_logo/OnlyLogo_White.png";
+import OnlyLogo_White from "../../assets/Trojans_logo/OnlyLogo_White.webp";
 import NeonEffectVideo from "../../assets/NeonEffect.mp4";
 
 function FirstSection() {

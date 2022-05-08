@@ -1,7 +1,7 @@
 import React from "react";
 
-import Trojans from "../../assets/Trojans_logo/trojans_logo.png";
-import CIT from "../../assets/Trojans_logo/cit_white_logo.png";
+import Trojans from "../../assets/Trojans_logo/trojans_logo.webp";
+import CIT from "../../assets/Trojans_logo/cit_white_logo.webp";
 
 import {FooterContainer} from "./Footer.styles";
 

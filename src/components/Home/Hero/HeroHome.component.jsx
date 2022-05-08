@@ -1,6 +1,6 @@
 import React from "react";
 
-import TrojansGold from "../../../assets/Trojans_logo/trojans-compressed.png";
+import TrojansGold from "../../../assets/Trojans_logo/trojans-compressed.webp";
 
 import {HeroSection, HeroContent} from "./HeroHome.style";
 
