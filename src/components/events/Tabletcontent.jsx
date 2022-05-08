@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { TabletScreen, 
+import { TabletScreen, Register, 
 	Closebtn
  } from '../../pages/Events/Events.styles';
 import { RightCircleOutlined, LeftCircleOutlined } from '@ant-design/icons';
+import { Link } from "react-router-dom";
 
 const Tabletcontent = (props) => {
 	const { currentEvent, isTabletOpen, setisTabletOpen } = props;
@@ -32,9 +33,10 @@ const Tabletcontent = (props) => {
 			<LeftCircleOutlined onClick={handleLeft} className='leftarrow' />
 			<RightCircleOutlined onClick={handleRight} className='rightarrow' />
 			<Closebtn onClick={tabclose} />
+			<Link style={{textDecoration: 'none'}} to="/registration"><Register><p>Register</p></Register></Link>
 			{/* <Closebtn onClick={tabclose} /> */}
 			<div className='description'>
-				<h2>Description</h2>
+				{/* <h2>Description</h2> */}
 				{currentEvent.duration ? (
 					<h3>
 						<b>Duration:</b> {currentEvent.duration}
