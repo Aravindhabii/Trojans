@@ -45,6 +45,12 @@ export const SponsorSection = styled.section`
         height: 100%;
         z-index: 3;
         border-radius: 10px;
+        background: #000;
+    }
+    .sp1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
     .mainmain {
         width: 90%;
@@ -145,9 +151,11 @@ export const MembersSection = styled.section`
     width: 100%;
     background-color: black;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding-bottom: 3rem;
 `;
 
 export const MembersDiv = styled.section`
@@ -155,6 +163,7 @@ export const MembersDiv = styled.section`
     height: 18rem;
     /* border: 1px solid #9900f0; */
     display: flex;
+    margin: 0 1rem;
     flex-direction: column;
     justify-content: center;
     transition: all 0.5s ease-in-out;
@@ -167,31 +176,34 @@ export const MembersDiv = styled.section`
         width: 100%;
         height: 5rem;
         display: flex;
-        background: ${({color}) => color};
+        background: rgb(16,12,12);
         box-shadow: 0 0 5px ${({color}) => color}, 0 0 5px ${({color}) => color},
             0 0 15px ${({color}) => color} /* 0 0 40px ${({color}) => color} */;
         z-index: 1;
         transition: all 0.5s ease-in-out;
+        border-radius: 10px;
     }
     /* 0 0 3px #fffff0, 0 0 2px #fffff0, 0 0 15px #fffff0 */
     &:hover .shadow_conatiner {
-        height: 100%;
+        height: 10rem;
     }
     .image_div {
         position: relative;
-        width: 10rem;
-        height: 10rem;
-        border: 1px solid #000;
-        border-radius: 50%;
+        padding: 3rem 0;
+        /* width: 10rem; */
+        width: 14rem;
         z-index: 2;
         top: 15%;
-        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         transition: all 0.5s ease-in-out;
         transform: translateZ(50px);
-        img {
+        h2 {
+            text-align: center;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            color: white;
         }
     }
     .content_div {
@@ -203,7 +215,7 @@ export const MembersDiv = styled.section`
         text-align: center;
         z-index: 2;
         transition: all 0.5s ease-in-out;
-        color: black;
+        color: white;
         opacity: 0;
         transform: perspective(2000px);
         transform-style: preserve-3d;
@@ -226,12 +238,14 @@ export const MembersDiv = styled.section`
         }
     }
     &:hover .image_div {
-        top: -5%;
+        margin-bottom: 2rem;
+        padding: 0;
+        top: 5%;
     }
     &:hover .content_div {
         opacity: 1;
     }
-    &:hover {
-        height: 23rem;
-    }
+    /* &:hover {
+        height: 12rem;
+    } */
 `;
