@@ -334,13 +334,13 @@ export const TabletScreen = styled.div.attrs({
   }
   h2 {
     position: relative;
-    margin-bottom: 3%;
+    margin-bottom: 1%;
     align-self: flex-start;
     font-size: 2rem;
   }
   h3 {
     position: relative;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
     align-self: flex-start;
   }
   p {
