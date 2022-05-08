@@ -7,7 +7,7 @@ export const HeroSection = styled.section`
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   padding-top: 3rem;
   z-index: 2;
 
@@ -82,13 +82,14 @@ export const Righttwo = styled.div.attrs({
   width: 40%;
   display: flex;
   justify-content: center;
+  overflow-y: hidden;
   align-items: center;
   transform: ${({ openorclose }) =>
       openorclose ? "translateX(0)" : "translateX(200%)"}
     rotate(0deg);
   transition: transform 0.5s ease-in-out;
   @media (max-width: 1150px) {
-    width: 50%;
+    width: 100%;
     z-index: 5;
   }
   @media (max-width: 560px) {
@@ -162,8 +163,8 @@ export const Eventsdiv = styled.div.attrs({
     position: absolute;
     bottom: 2%;
     right: 50%;
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     display: inline-block;
     transform: translateX(50%);
     border-radius: 50%;
@@ -191,12 +192,13 @@ export const Eventsdiv = styled.div.attrs({
   } */
 
   @media (max-width: 1150px) {
-    left: 60%;
     background: rgba(0, 0, 0, 0.9);
+    width: 40%;
+    left: 30%;
   }
   @media (max-width: 710px) {
     left: 50%;
-    width: 110%;
+    width: 100%;
   }
   @media (max-width: 560px) {
     left: 16%;
@@ -210,6 +212,21 @@ export const Eventsdiv = styled.div.attrs({
     border-radius: 40px;
   }
 `;
+
+export const Closebtn = styled.div`
+  position: absolute;
+  bottom: 5%;
+  right: 50%;
+  height: 40px;
+  width: 40px;
+  /* border: 1px solid #fff; */
+  transform: translateX(50%);
+  border-radius: 50%;
+  box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 5px #03e9f4,
+    inset 0 0 5px rgba(3, 233, 244, 0.5), inset 0 0 15px rgba(3, 233, 244, 0.5),
+    inset 0 0 5px rgba(3, 233, 244, 0.5);
+
+`
 
 export const Tabletdiv = styled.div.attrs({
   className: "tabletdiv",
