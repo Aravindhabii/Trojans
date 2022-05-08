@@ -346,26 +346,26 @@ export const SquidGame = {
     ],
 };
 
-export const EnnaEnnaSolranParunga = {
-    id: 1,
-    name: "Enna Enna Solran Parunga",
-    timestamp: "10 am to 12.30 pm",
-    description:
-        "More to be revealed on the day of symposium. Come and have fun!",
-    rules: ["Will be announced at the start of the event."],
-    studentCordinators: [
-        {
-            id: 1,
-            name: "Name - Ashwin Kanna",
-            phoneNo: "Phone No. 8270011279",
-        },
-        {
-            id: 2,
-            name: "Name - Sugesh",
-            phoneNo: "Phone No. 7448354747",
-        },
-    ],
-};
+// export const EnnaEnnaSolranParunga = {
+//     id: 1,
+//     name: "Enna Enna Solran Parunga",
+//     timestamp: "10 am to 12.30 pm",
+//     description:
+//         "More to be revealed on the day of symposium. Come and have fun!",
+//     rules: ["Will be announced at the start of the event."],
+//     studentCordinators: [
+//         {
+//             id: 1,
+//             name: "Name - Ashwin Kanna",
+//             phoneNo: "Phone No. 8270011279",
+//         },
+//         {
+//             id: 2,
+//             name: "Name - Sugesh",
+//             phoneNo: "Phone No. 7448354747",
+//         },
+//     ],
+// };
 
 export const BoxCricket = {
     id: 1,
@@ -409,13 +409,13 @@ export const Advertisement = {
     studentCordinators: [
         {
             id: 1,
-            name: "Name - Selva Aswath",
-            phoneNo: "Phone No. 6384647541",
+            name: "Name - Ashwin Kanna",
+            phoneNo: "Phone No. 8270011279",
         },
         {
             id: 2,
-            name: "Name - Gokul",
-            phoneNo: "Phone No. 9345333651",
+            name: "Name - Sugesh",
+            phoneNo: "Phone No. 7448354747",
         },
     ],
 };
