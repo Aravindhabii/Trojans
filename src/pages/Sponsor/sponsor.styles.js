@@ -51,12 +51,14 @@ export const SponsorSection = styled.section`
         margin-left: auto;
         margin-right: auto;
         align-items: center;
-        display: grid;
-        row-gap: 3rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         margin-top: 2rem;
+        margin-bottom: 2rem;
         position: relative;
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
     }
     .main2 {
         flex-direction: row-reverse !important;
@@ -66,7 +68,7 @@ export const SponsorSection = styled.section`
         height: 18rem;
         width: 18rem;
         background-color: white;
-        margin: 3rem 0rem;
+        margin: 3rem;
         border: 2px solid rgba(153, 0, 240, 1);
         z-index: 4;
         transition: all 2s ease-in-out;
@@ -133,10 +135,9 @@ export const SponsorSection = styled.section`
         border-radius: 10px;
     }
     @media (max-width: 400px) {
-        .mainmain
-        {
+        /* .mainmain {
             grid-template-columns: repeat(1, 1fr);
-        }
+        } */
     }
 `;
 
@@ -167,8 +168,7 @@ export const MembersDiv = styled.section`
         height: 5rem;
         display: flex;
         background: ${({color}) => color};
-        box-shadow: 0 0 5px ${({color}) => color},
-            0 0 5px ${({color}) => color},
+        box-shadow: 0 0 5px ${({color}) => color}, 0 0 5px ${({color}) => color},
             0 0 15px ${({color}) => color} /* 0 0 40px ${({color}) => color} */;
         z-index: 1;
         transition: all 0.5s ease-in-out;

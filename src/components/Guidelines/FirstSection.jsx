@@ -26,7 +26,6 @@ function FirstSection() {
                     height: "100vh",
                     transition: "all 5s ease-in-out",
                     scrollBehavior: "smooth",
-                    overflow: scrollEffect ? "visible" : "hidden",
                 }}
             >
                 <SectionGuide>
@@ -41,7 +40,7 @@ function FirstSection() {
                                 wins championships.
                             </p>
                             <NeonButton>
-                                <a href="" id="know_more">
+                                <a href="#know_more" id="know_more">
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -90,27 +89,6 @@ function FirstSection() {
                         </ImageDiv>
                     </GuideContainer>
                 </SectionGuide>
-
-                <GuidelinesPoints>
-                    <GuidelinesPointsDiv>
-                        <div id="points">
-                            <h1>Guidelines</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Ex similique ullam illum
-                                consequatur repellat obcaecati sapiente. Quis,
-                                inventore modi quidem aliquam sint ad iusto non
-                                suscipit ipsam nesciunt, commodi in.
-                            </p>
-                        </div>
-                    </GuidelinesPointsDiv>
-                    <GridSection>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </GridSection>
-                </GuidelinesPoints>
             </section>
         </>
     );

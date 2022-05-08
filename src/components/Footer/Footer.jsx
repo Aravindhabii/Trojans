@@ -29,7 +29,7 @@ const FooterlLinksContainerIcons = ({title, links}) => {
             <ul className="image-footer-atag">
                 {links.map((link, index) => (
                     <li key={index}>
-                        <a href={link.url}>
+                        <a target="_blank" href={link.url}>
                             <img className="image-footer-icons" src={link.image} alt={link.alt} />
                         </a>
                     </li>

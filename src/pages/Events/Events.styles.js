@@ -93,6 +93,7 @@ export const Righttwo = styled.div.attrs({
   }
   @media (max-width: 560px) {
     width: 100%;
+    background: #000;
   }
 `;
 
@@ -100,7 +101,7 @@ export const Button = styled.button`
   position: relative;
   border: none;
   width: 70%;
-  height:17%;
+  height: 17%;
   border-radius: 5px;
   color: #fff;
   background: black;
@@ -121,8 +122,8 @@ export const Button = styled.button`
     box-shadow: 0px 0px 30px 0px rgba(46, 255, 171, 0.86);
   }
   @media (max-width: 910px) {
-    width: 70%; 
-	height: 30%;
+    width: 70%;
+    height: 30%;
   }
 `;
 
@@ -155,7 +156,39 @@ export const Eventsdiv = styled.div.attrs({
     align-items: center;
     height: 85%;
     width: 95%;
+    background: rgba(0, 0, 0, 0.9);
   }
+  .closediv {
+    position: absolute;
+    bottom: 2%;
+    right: 50%;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    transform: translateX(50%);
+    border-radius: 50%;
+    box-shadow: 0 0 1px #03e9f4, 0 0 2px #03e9f4, 0 0 1px #03e9f4,
+    inset 0 0 5px rgba(3, 233, 244, 0.5), inset 0 0 15px rgba(3, 233, 244, 0.5),
+    inset 0 0 5px rgba(3, 233, 244, 0.5);
+  }
+  /* .closeone{
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: #fff;
+    transform: rotate(45deg);
+    
+  }
+  .closetwo{
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: #fff;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 1px #03e9f4, 0 0 2px #03e9f4, 0 0 1px #03e9f4,
+    inset 0 0 5px rgba(3, 233, 244, 0.5), inset 0 0 15px rgba(3, 233, 244, 0.5),
+    inset 0 0 5px rgba(3, 233, 244, 0.5);
+  } */
 
   @media (max-width: 1150px) {
     left: 60%;
@@ -170,7 +203,7 @@ export const Eventsdiv = styled.div.attrs({
     width: 70%;
   }
   @media (max-width: 440px) {
-    height: 70%;
+    height: 80%;
     width: 75%;
     left: 13%;
     /* font-size: 1rem; */
@@ -233,8 +266,9 @@ export const Tabletcont = styled.div.attrs({
     font-weight: bold;
   }
   @media (max-width: 850px) {
-    border-width: 17px 12px;
+    border-width: 12px 12px;
     height: 78%;
+    margin-top: 14%;
   }
 `;
 
@@ -284,9 +318,14 @@ export const TabletScreen = styled.div.attrs({
   }
   h2 {
     position: relative;
-    margin-bottom: 6%;
+    margin-bottom: 3%;
     align-self: flex-start;
     font-size: 2rem;
+  }
+  h3 {
+    position: relative;
+    margin-bottom: 4%;
+    align-self: flex-start;
   }
   p {
     position: relative;
@@ -307,9 +346,9 @@ export const TabletScreen = styled.div.attrs({
   }
   ul {
     position: relative;
-    list-style: "->  ";
-    list-style-position: inside;
+    list-style: circle;
     height: 60%;
+    list-style-position: inside;
     overflow-y: scroll;
   }
   li {
@@ -343,7 +382,7 @@ export const TabletScreen = styled.div.attrs({
     position: relative;
     /* font-size: 1.4rem; */
     font-weight: 700;
-	padding-bottom: 2%;
+    padding-bottom: 2%;
   }
   .phoneno {
     position: relative;
@@ -366,16 +405,17 @@ export const TabletScreen = styled.div.attrs({
       width: 90%;
       align-items: center;
     }
-	.description{
-		height: 60%;
-    width: 85%;
-	}
+    .description {
+      height: 60%;
+      width: 85%;
+    }
     ul {
       height: 20rem;
       position: relative;
       overflow-y: scroll;
       width: 90%;
-      list-style: dot;
+      list-style: circle;
+      list-style-position: inside;
     }
     .description p {
       height: 15rem;
@@ -413,7 +453,7 @@ export const Eventslist = styled.button.attrs({
   }
   @media (max-width: 410px) {
     margin: 0.6rem;
-	height: 20%;
+    height: 20%;
   }
 `;
 

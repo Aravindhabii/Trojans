@@ -32,6 +32,7 @@ export const SectionGuide = styled.section`
         background: linear-gradient(transparent, rgba(0, 0, 0, 1));
     }
 `;
+
 export const SecondContainer = styled.div`
     width: 100%;
     background-color: black;
@@ -44,9 +45,6 @@ export const SecondContainer = styled.div`
         display: flex;
         height: fit-content;
         position: relative;
-        
-
-        
     }
     .black {
         height: 5%;
@@ -57,25 +55,51 @@ export const SecondContainer = styled.div`
         top: 0;
     }
     .sideline {
-        width:20%;
-        height:95%;
-        left:0;
-        bottom:0;
+        width: 20%;
+        height: 95%;
+        left: 0;
+        bottom: 0;
         position: absolute;
-        background-color: #AB46D2;
-        box-shadow: 5px 5px 20px rgba(255, 127, 255, .8);
+        background-color: #ab46d2;
+        box-shadow: 5px 5px 20px rgba(255, 127, 255, 0.8);
         z-index: 4;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-    } 
+    }
     .content {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        padding:2rem 2rem 2rem 2rem;
-    } 
+        padding: 2rem 2rem 2rem 2rem;
+        .sidebar-div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            .bar-div {
+                width: 10%;
+                height: 85%;
+                margin: 2%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                transition: all 0.5s ease-in-out;
+                /* &:hover {
+                    background-color: #ab46d2;
+                    box-shadow: 5px 5px 10px rgba(255, 127, 255, 0.8);
+                } */
+            }
+            p {
+                width: 70%;
+                height: 100%;
+            }
+        }
+    }
     span {
         padding: 1rem;
         border-radius: 50%;
@@ -88,26 +112,23 @@ export const SecondContainer = styled.div`
         color: white;
         border: 5px solid white;
         background-color: black;
-        margin-bottom: 3rem;
         font-size: 1.5rem;
         font-weight: bold;
-    } 
+    }
     p {
         color: white;
-        padding:2rem;
+        padding: 2rem;
         line-height: 3rem;
         width: 75%;
-        border-bottom:  5px solid #AB46D2;
-        
+        border-bottom: 5px solid #ab46d2;
     }
-    @media (max-width: 1100px) { 
+    @media (max-width: 1100px) {
         .maindiv {
-        width: 90%;
-    }
-    p {
-        width: 70%;
-    }
-    
+            width: 90%;
+        }
+        p {
+            width: 70%;
+        }
     }
     @media (max-width: 768px) {
         .maindiv {
@@ -115,14 +136,12 @@ export const SecondContainer = styled.div`
         }
         p {
             line-height: 1.5rem;
-            
+
             padding: 1rem;
         }
         .sideline {
             width: 15%;
             display: none;
-            
-
         }
         .content {
             padding: 0rem;
@@ -134,12 +153,10 @@ export const SecondContainer = styled.div`
         }
         span {
             width: 30px;
-        height: 30px;
-        font-size: 1rem;
+            height: 30px;
+            font-size: 1rem;
         }
     }
-
-
 `;
 export const GuideContainer = styled.div`
     /* background: url("https://img.freepik.com/free-vector/colors-neon-frame-stacking-style-design_1017-29813.jpg?w=826&t=st=1650907396~exp=1650907996~hmac=4fdace09c25fa4e3b24655951274906ec4744415a8116636b5bc23be54077e47")
@@ -249,6 +266,7 @@ export const ImageDiv = styled.div`
         justify-content: center;
         p {
             text-shadow: 0 0 7px #bc13fe, 0 0 10px #bc13fe, 0 0 21px #bc13fe;
+            font-size: 1rem;
         }
     }
     svg {

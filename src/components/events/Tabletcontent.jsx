@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { TabletScreen } from "../../pages/Events/Events.styles";
+import { TabletScreen, Closebtn } from "../../pages/Events/Events.styles";
 import { RightCircleOutlined, LeftCircleOutlined } from "@ant-design/icons";
 
 const Tabletcontent = (props) => {
-  const { currentEvent, isTabletOpen } = props;
+  const { currentEvent, isTabletOpen, setisTabletOpen } = props;
   const [pageno, setpageno] = useState(1);
+  const tabclose = () => {
+    setisTabletOpen(false);
+  }
 
-  const handleLeft = () => {
-    if (pageno > 1) {
-      setpageno(pageno - 1);
-    }
-  };
-  const handleRight = () => {
-    if (pageno < 3) {
-      setpageno(pageno + 1);
-    }
-  };
+    const handleLeft = () => {
+        if (pageno > 1) {
+            setpageno(pageno - 1);
+        }
+    };
+    const handleRight = () => {
+        if (pageno < 3) {
+            setpageno(pageno + 1);
+        }
+    };
 
   useEffect(() => {
     if(isTabletOpen === false){
@@ -26,9 +29,14 @@ const Tabletcontent = (props) => {
     <TabletScreen pageno={pageno}>
       <LeftCircleOutlined onClick={handleLeft} className="leftarrow" />
       <RightCircleOutlined onClick={handleRight} className="rightarrow" />
-      
+      <Closebtn onClick={tabclose}/>
       <div className="description">
         <h2>Description</h2>
+        {currentEvent.duration ? (
+        <h3>
+            <b>Duration:</b> {currentEvent.duration}
+          </h3>
+        ) : null}
         <p>{currentEvent.description}</p>
       </div>
       <div className="rules">
@@ -43,8 +51,8 @@ const Tabletcontent = (props) => {
         <h2>Student Coordinators</h2>
         {currentEvent.studentCordinators.map((student,index) => (
           <div className="studentscontainer" key={index}>
-            <h3 className="name">{student.name}</h3>
-            <h3 className="phoneno">{student.phoneNo}</h3>
+            <h4 className="name">{student.name}</h4>
+            <h4 className="phoneno">{student.phoneNo}</h4>
           </div>
         ))}
       </div>
@@ -55,12 +63,12 @@ const Tabletcontent = (props) => {
 export default Tabletcontent;
 
 {
-  /* <h3 className="name">Name -</h3>
+    /* <h3 className="name">Name -</h3>
           <h3 className="phoneno">Phone No.</h3> */
 }
 
 {
-  /* <ul>
+    /* <ul>
           <li>A single Team should consist of two members. </li>
           <li>
             The time limit of the task is about 30 min and should be strictly
