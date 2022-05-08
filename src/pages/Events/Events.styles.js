@@ -212,6 +212,45 @@ export const Eventsdiv = styled.div.attrs({
   }
 `;
 
+export const Register = styled.button`
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  border: none;
+  background: transparent;
+  color: rgba(3, 233, 244, 0.5);
+  /* font-size: 1.2rem; */
+  font-weight: bold;
+  padding: 15px 25px;
+
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 5px #03e9f4,
+    inset 0 0 5px rgba(3, 233, 244, 0.5), inset 0 0 15px rgba(3, 233, 244, 0.5),
+    inset 0 0 5px rgba(3, 233, 244, 0.5);
+  &:hover {
+    box-shadow: 0 0 1px rgba(3, 233, 244, 0.5),
+      0 0 2px rgba(3, 233, 244, 0.5),
+      0 0 1px rgba(3, 233, 244, 0.5),
+      inset 0 0 5px rgba(3, 233, 244, 0.5),
+      inset 0 0 15px rgba(3, 233, 244, 0.5),
+      inset 0 0 5px rgba(3, 233, 244, 0.5);
+  }
+  /* @media (max-width: 1150px) {
+    display: none;
+  }
+  @media (max-width: 710px) {
+    display: none;
+
+  } */
+  @media (max-width: 560px) {
+    display: none;
+  }
+  @media (max-width: 440px) {
+    display: none;
+  }
+
+`
+
 export const Closebtn = styled.div`
   position: absolute;
   bottom: 5%;
@@ -278,8 +317,10 @@ export const Tabletcont = styled.div.attrs({
   h1 {
     position: absolute;
     top: 10%;
-    /* font-size: 2rem; */
+    font-size: 4rem;
     font-weight: bold;
+    font-family: "trojans", sans-serif;
+    color: #B08016 !important;
   }
   @media (max-width: 850px) {
     border-width: 12px 12px;
