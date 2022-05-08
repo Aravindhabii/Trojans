@@ -140,7 +140,7 @@ export const Eventsdiv = styled.div.attrs({
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-  left: 0%;
+  left: 3%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -157,7 +157,6 @@ export const Eventsdiv = styled.div.attrs({
     align-items: center;
     height: 85%;
     width: 95%;
-    background: rgba(0, 0, 0, 0.9);
   }
   .closediv {
     position: absolute;
