@@ -5,12 +5,14 @@ import gsap from "gsap";
 
 import Navbar from "../../components/Navbar/Navbar.component";
 // import Threed from './threed';
-import LaptopModel from "./RenderModels/LaptopModel";
-import GamingModel from "./RenderModels/GamingModel";
-import SquidModel from "./RenderModels/SquidModel";
-import BitCoinModel from "./RenderModels/BitCoinModel";
-import svg from "../../assets/events/binarynumber.svg";
-import HexBg from "../../components/Home/HexBg/HexBg.component";
+import LaptopModel from './RenderModels/LaptopModel';
+import GamingModel from './RenderModels/GamingModel';
+import SquidModel from './RenderModels/SquidModel';
+import BitCoinModel from './RenderModels/BitCoinModel';
+import svg from '../../assets/events/binarynumber.svg';
+// import rain from '../../assets/events/rain.svg';
+import rain from '../../assets/events/rain.svg'
+import HexBg from '../../components/Home/HexBg/HexBg.component';
 
 import {
     HeroSection,
@@ -21,26 +23,27 @@ import {
     Tabletdiv,
 } from "./Events.styles";
 import {
-    CodersChemistry,
-    MasterMinds,
-    SiteIng,
-    PaperBytes,
-    GooseChase,
-    TrojansThrottle,
-    TrojansCtf,
-    ShutterStop,
-    ShipWreck,
-    TalentFest,
-    SquidGame,
-	EnnaEnnaSolranParunga,
-    BoxCricket,
-    // Entrepreneur,
-    Blockchain,
-    MachineLearning,
-    BGMI,
-    Valorant,
-    FreeFireMax,
-} from "../../datas/events.data";
+	CodersChemistry,
+	MasterMinds,
+	SiteIng,
+	PaperBytes,
+	GooseChase,
+	TrojansThrottle,
+	ShutterStop,
+	ShipWreck,
+	TalentFest,
+	SquidGame,
+	BoxCricket,
+	Entrepreneur,
+	ShutterStopOffline,
+	Advertisement,
+	TrojansCtf,
+	Blockchain,
+	MachineLearning,
+	BGMI,
+	Valorant,
+	FreeFireMax
+} from '../../datas/events.data';
 
 import Technical from "../../components/events/Technical";
 import Tablet from "../../components/events/Tablet";
@@ -100,45 +103,49 @@ const EventsPage = (props) => {
         }
     }, [page]);
 
-    useEffect(() => {
-        if (selectedEvent === "CODERS CHEMISTRY") {
-            setCurrentEvent(CodersChemistry);
-        } else if (selectedEvent === "MASTER MINDS") {
-            setCurrentEvent(MasterMinds);
-        } else if (selectedEvent === "SITE-ING") {
-            setCurrentEvent(SiteIng);
-        } else if (selectedEvent === "PAPER BYTES") {
-            setCurrentEvent(PaperBytes);
-        } else if (selectedEvent === "GOOSE CHASE") {
-            setCurrentEvent(GooseChase);
-        } else if (selectedEvent === "TROJAN'S THROTTLE") {
-            setCurrentEvent(TrojansThrottle);
-        } else if (selectedEvent === "TROJANSCTF") {
-            setCurrentEvent(TrojansCtf);
-        } else if (selectedEvent === "SHUTTER STOP") {
-            setCurrentEvent(ShutterStop);
-        } else if (selectedEvent === "SHIP WRECK") {
-            setCurrentEvent(ShipWreck);
-        } else if (selectedEvent === "TALENT FEST") {
-            setCurrentEvent(TalentFest);
-        } else if (selectedEvent === "SQUID GAME") {
-            setCurrentEvent(SquidGame);
-        } else if (selectedEvent === "ENNA ENNA SOLRAN PARUNGA") {
-            setCurrentEvent(EnnaEnnaSolranParunga);
-        } else if (selectedEvent === "BOX CRICKET") {
-            setCurrentEvent(BoxCricket);
-        } else if (selectedEvent === "MACHINE LEARNING") {
-            setCurrentEvent(MachineLearning);
-        } else if (selectedEvent === "BLOCKCHAIN") {
-            setCurrentEvent(Blockchain);
-        } else if (selectedEvent === "VALORANT") {
-            setCurrentEvent(Valorant);
-        } else if (selectedEvent === "BGMI") {
-            setCurrentEvent(BGMI);
-        } else if (selectedEvent === "FREE FIRE") {
-            setCurrentEvent(FreeFireMax);
-        }
-    }, [selectedEvent]);
+	useEffect(() => {
+		if (selectedEvent === 'CODERS CHEMISTRY') {
+			setCurrentEvent(CodersChemistry);
+		} else if (selectedEvent === 'MASTER MINDS') {
+			setCurrentEvent(MasterMinds);
+		} else if (selectedEvent === 'SITE-ING') {
+			setCurrentEvent(SiteIng);
+		} else if (selectedEvent === 'PAPER BYTES') {
+			setCurrentEvent(PaperBytes);
+		} else if (selectedEvent === 'GOOSE CHASE') {
+			setCurrentEvent(GooseChase);
+		} else if (selectedEvent === "TROJAN'S THROTTLE") {
+			setCurrentEvent(TrojansThrottle);
+		} else if (selectedEvent === 'TROJANSCTF') {
+			setCurrentEvent(TrojansCtf);
+		} else if (selectedEvent === 'SHUTTER STOP ONLINE') {
+			setCurrentEvent(ShutterStop);
+		} else if (selectedEvent === 'SHUTTER STOP OFFLINE') {
+			setCurrentEvent(ShutterStopOffline);
+		} else if (selectedEvent === 'SHIP WRECK') {
+			setCurrentEvent(ShipWreck);
+		} else if (selectedEvent === 'TALENT FEST') {
+			setCurrentEvent(TalentFest);
+		} else if (selectedEvent === 'SQUID GAME') {
+			setCurrentEvent(SquidGame);
+		} else if (selectedEvent === 'ENNA ENNA SOLRAN PARUNGA') {
+			setCurrentEvent(Advertisement);
+		} else if (selectedEvent === 'BOX CRICKET') {
+			setCurrentEvent(BoxCricket);
+		} else if (selectedEvent === 'MACHINE LEARNING') {
+			setCurrentEvent(MachineLearning);
+		} else if (selectedEvent === 'BLOCKCHAIN') {
+			setCurrentEvent(Blockchain);
+		} else if (selectedEvent === 'ENTREPRENEUR') {
+			setCurrentEvent(Entrepreneur);
+		} else if (selectedEvent === 'VALORANT') {
+			setCurrentEvent(Valorant);
+		} else if (selectedEvent === 'BGMI') {
+			setCurrentEvent(BGMI);
+		} else if (selectedEvent === 'FREE FIRE') {
+			setCurrentEvent(FreeFireMax);
+		}
+	}, [selectedEvent]);
 
     const ThreedModel = () => {
         if (clickedEvent === "technicalevents") {
@@ -164,84 +171,74 @@ const EventsPage = (props) => {
         }
     };
 
-    return (
-        <section
-            style={{
-                height: "100vh",
-                width: "100vw",
-                overflow: "hidden",
-                position: "relative",
-            }}
-            onMouseMove={(e) => {
-                gsap.to(".bg", {
-                    duration: 1,
-                    x: e.clientX - 150,
-                    y: e.clientY - 150,
-                });
-            }}
-        >
-            <HexBg
-                direction="to bottom"
-                svg={svg}
-                color="rgba(3, 233, 244, 0.9)"
-            />
-            <Helmet>
-                <title>TROJANS | EVENTS</title>
-            </Helmet>
-            <Navbar active={{route: "events", scroll: 2}} />
-            <HeroSection isphoneopen={isphoneopen}>
-                <div className="left">
-                    <Button value="technicalevents" onClick={click}>
-                        Technical
-                    </Button>
-                    <Button value="nontechnicalevents" onClick={click}>
-                        Non-Technical
-                    </Button>
-                    <Button value="gaming" onClick={click}>
-                        Gaming
-                    </Button>
-                    <Button value="workshops" onClick={click}>
-                        Workshops
-                    </Button>
-                </div>
-                <div className="right" onClick={phoneClick}>
-                    <Rightone isphoneopen={isphoneopen}>
-                        <Threeddiv openorclose={isphoneopen}>
-                            {/* <div> */}
+	return (
+		<section
+			style={{
+				height: '100vh',
+				width: '100vw',
+				overflow: 'hidden',
+				position: 'relative'
+			}}
+			onMouseMove={(e) => {
+				gsap.to('.bg', {
+					duration: 1,
+					x: e.clientX - 150,
+					y: e.clientY - 150
+				});
+			}}
+		>
+			<HexBg direction='to bottom' svg={svg} color='rgba(3, 233, 244, 0.9)' />
+			<Helmet>
+				<title>TROJANS | EVENTS</title>
+			</Helmet>
+			<Navbar active={{ route: 'events', scroll: 2 }} />
+			<HeroSection isphoneopen={isphoneopen}>
+				<div className='left'>
+					<Button value='technicalevents' onClick={click} rain={rain}>
+						Technical
+					</Button>
+					<Button value='nontechnicalevents' onClick={click} rain={rain}>
+						Non-Technical
+					</Button>
+					<Button value='gaming' onClick={click} rain={rain}>
+						Gaming
+					</Button>
+					<Button value='workshops' onClick={click}>
+						Workshops
+					</Button>
+				</div>
+				<div className='right' onClick={phoneClick}>
+					<Rightone isphoneopen={isphoneopen}>
+						<Threeddiv openorclose={isphoneopen}>
+							{/* <div> */}
 
                             <ThreedModel />
 
-                            {/* </div> */}
-                        </Threeddiv>
-                    </Rightone>
-                    <Righttwo openorclose={isphoneopen}>
-                        <Technical
-                            setCurrentEvent={setCurrentEvent}
-                            currentEvent={currentEvent}
-                            currentPage={currentPage}
-                            setCurrentPage={setCurrentPage}
-                            clickedEvent={clickedEvent}
-                            setClickedEvent={setClickedEvent}
-                            selectedEvent={selectedEvent}
-                            setSelectedEvent={setSelectedEvent}
-                            isTabletOpen={isTabletOpen}
-                            setisTabletOpen={setisTabletOpen}
-                        />
-                    </Righttwo>
-                </div>
-            </HeroSection>
-            <Tabletdiv
-                isTabletOpen={isTabletOpen}
-                setisTabletOpen={setisTabletOpen}
-            >
-                <div onClick={closetab} className="forclose"></div>
-                <Tablet
-                    currentEvent={currentEvent}
-                    isTabletOpen={isTabletOpen}
-                />
-            </Tabletdiv>
-        </section>
-    );
+							{/* </div> */}
+						</Threeddiv>
+					</Rightone>
+					<Righttwo openorclose={isphoneopen}>
+						<Technical
+							setCurrentEvent={setCurrentEvent}
+							currentEvent={currentEvent}
+							currentPage={currentPage}
+							setCurrentPage={setCurrentPage}
+							clickedEvent={clickedEvent}
+							setClickedEvent={setClickedEvent}
+							selectedEvent={selectedEvent}
+							setSelectedEvent={setSelectedEvent}
+							isTabletOpen={isTabletOpen}
+							setisTabletOpen={setisTabletOpen}
+						/>
+					</Righttwo>
+				</div>
+			</HeroSection>
+			<Tabletdiv isTabletOpen={isTabletOpen} setisTabletOpen={setisTabletOpen}>
+				<div onClick={closetab} className='forclose'></div>
+				<Tablet currentEvent={currentEvent} isTabletOpen={isTabletOpen} setisTabletOpen={setisTabletOpen}/>
+			</Tabletdiv>
+		</section>
+	);
 };
 
 export default EventsPage;

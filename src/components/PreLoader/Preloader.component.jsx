@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 
 import { PreLoaderContainer } from './PreLoader.style';
 
-import TrojansLogo from '../../assets/Trojans_logo/trojans_logo.png';
+import TrojansLogo from '../../assets/Trojans_logo/trojans_logo.webp';
 
 const Preloader = () => {
 	const preLoaderRef = useRef();
@@ -64,7 +64,7 @@ const Preloader = () => {
 				duration: 1,
 				overflow: 'auto'
 			});
-	}, []);
+	}, [spans]);
 
 	return (
 		<PreLoaderContainer ref={preLoaderRef}>

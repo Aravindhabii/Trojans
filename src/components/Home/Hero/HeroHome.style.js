@@ -1,5 +1,5 @@
 import styled, {keyframes} from "styled-components";
-import GoldText from "../../../assets/Trojans_logo/gold_texture.jpg";
+import GoldText from "../../../assets/Trojans_logo/gold_texture.webp";
 
 export const HeroSection = styled.section`
     background-color: black;

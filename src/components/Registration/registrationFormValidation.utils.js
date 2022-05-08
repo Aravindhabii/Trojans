@@ -29,7 +29,7 @@ export const handleEmailValidation = (
 	setformInputValid,
 	formInputValid
 ) => {
-	if (/[ `!#$%^&*()_+\-=\[\]{};':"\\|,<>\/?~]/.test(email.current.value))
+	if (/[ `!#$%^&*()_+\-=[\]{};':"\\|,<>/?~]/.test(email.current.value))
 		email.current.value = email.current.value.slice(0, -1);
 	if (
 		!(
@@ -79,7 +79,8 @@ export const handleDropdownValidation = (
 	setformInputValid,
 	formInputValid,
 	setIsWorkshopDropdownVisible,
-	setIsGamingDropdownVisible
+	setIsGamingDropdownVisible,
+	setIsPaperBytesVisible
 ) => {
 	if (value.current.value.includes('Select')) {
 		value.current.classList.add('error');
@@ -93,9 +94,15 @@ export const handleDropdownValidation = (
 		if (value.current.value === 'Workshops') {
 			setIsWorkshopDropdownVisible(true);
 			setIsGamingDropdownVisible(false);
+			setIsPaperBytesVisible(false);
 		} else if (value.current.value === 'Gaming') {
 			setIsWorkshopDropdownVisible(false);
 			setIsGamingDropdownVisible(true);
+			setIsPaperBytesVisible(false);
+		} else if (value.current.value === 'Paper Bytes') {
+			setIsWorkshopDropdownVisible(false);
+			setIsGamingDropdownVisible(false);
+			setIsPaperBytesVisible(true);
 		} else {
 			setIsGamingDropdownVisible(false);
 			setIsWorkshopDropdownVisible(false);
@@ -133,9 +140,13 @@ export const handleSubmit = async (
 	event,
 	workshops,
 	gaming,
+	uploadPaper,
+	uploadAbstract,
+	uploadPresentation,
 	setIsButtonEnabled,
 	setIsWorkshopDropdownVisible,
 	setIsGamingDropdownVisible,
+	setIsPaperBytesVisible,
 	setIsEmailVerified,
 	setformInputValid,
 	formInputValid
@@ -160,7 +171,10 @@ export const handleSubmit = async (
 		college.current.value,
 		event.current.value,
 		workshops.current ? workshops.current.value : null,
-		gaming.current ? gaming.current.value : null
+		gaming.current ? gaming.current.value : null,
+		uploadPaper,
+		uploadAbstract,
+		uploadPresentation
 	).then((res) => {
 		if (res.status === 200) {
 			email.current.removeAttribute('disabled');
@@ -171,12 +185,14 @@ export const handleSubmit = async (
 			year.current.value = 'Select Year';
 			college.current.value = 'Select College';
 			event.current.value = 'Select Event';
+			event.current.removeAttribute('disabled');
 			Object.keys(formInputValid).forEach((key) => {
 				setformInputValid({ ...formInputValid, [key]: false });
 			});
 
 			setIsWorkshopDropdownVisible(false);
 			setIsGamingDropdownVisible(false);
+			setIsPaperBytesVisible(false);
 			setIsEmailVerified(false);
 			// workshops.current.value = 'Select Workshop';
 			// gaming.current.value = 'Select Game';

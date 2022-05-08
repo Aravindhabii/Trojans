@@ -9,6 +9,7 @@ export const RegistrationContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	overflow-x: hidden;
 
 	.dropdown-container {
 		display: flex;
@@ -52,7 +53,7 @@ export const OTPPopup = styled.div`
 		justify-content: center;
 		align-items: center;
 		box-shadow: 0 0 5px black, 0 0 5px black inset;
-		background-color: #100C0C;
+		background-color: #100c0c;
 		color: white;
 
 		p {

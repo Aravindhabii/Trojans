@@ -9,7 +9,8 @@ export const technicalevents = [
 ];
 
 export const nontechnicalevents = [
-	{ id: 1, name: 'SHUTTER STOP' },
+	{ id: 1, name: 'SHUTTER STOP ONLINE' },
+	{ id: 1, name: 'SHUTTER STOP OFFLINE' },
 	{ id: 1, name: 'SHIP WRECK' },
 	{ id: 1, name: 'TALENT FEST' },
 	{ id: 1, name: 'SQUID GAME' },
