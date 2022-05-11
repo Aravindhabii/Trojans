@@ -151,7 +151,7 @@ export const TrojansThrottle = {
     duration: "2 hrs",
     timestamp: "12.30 pm -2.30 pm",
     description:
-    "This is an individual contest comprising of two rounds. The first round, “Bravo Six Going Dark”, is coding with a dark twist. The participant will be given a problem statement and will be asked to code while the monitor is turned off. The second round, “Among Us” is where the participant will be given a working java code, and then they will be given a 30 minute of time to optimize the code.",
+        "This is an individual contest comprising of two rounds. The first round, “Bravo Six Going Dark”, is coding with a dark twist. The participant will be given a problem statement and will be asked to code while the monitor is turned off. The second round, “Among Us” is where the participant will be given a working java code, and then they will be given a 30 minute of time to optimize the code.",
     rules: [
         "Only one entry per participant is permitted",
         "A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many technical events of your choice.",
@@ -425,12 +425,13 @@ export const Entrepreneur = {
     duration: "1 hrs",
     description:
         "In this modern generation, with a vast number of career options, many young graduates and college students are opting towards creating startups and going towards the path of being successful entrepreneurs, but they do not have the proper guidance on how to progress towards their end goal and end up making mistakes during their journey, this workshop will help in aiding students towards proper understanding and analysis of entrepreneurship and its inbetweens....",
-    rules: [
-        "Each participant must pay the fee Rs. 120, on-spot before participating in the workshop",
-        "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
-        "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
-        "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
-    ],
+    // rules: [
+    //     "Each participant must pay the fee Rs. 120, on-spot before participating in the workshop",
+    //     "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
+    //     "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
+    //     "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
+    // ],
+    rules: ["No rules for workshops"],
     studentCordinators: [
         {
             id: 1,
@@ -452,12 +453,13 @@ export const Blockchain = {
 
     description:
         "Blockchain technology is a structure that stores transactional records, also known as the block, of the public in several databases, known as the “chain,” in a network connected through peer-to-peer nodes. Typically, this storage is referred to as a 'digital ledger. This technology is used in our day to day life in many ways like money transfers, financial exchanges, insurance, cryptocurrency, IOT, NFTs etc. This workshop is aimed towards the individuals who want to pursue their further education in Blockchain Technologies or towards the audience who wants to enhance their knowledge towards this subject.",
-    rules: [
-        "Each participant must pay the fee Rs. 150, on-spot before participating in the workshop",
-        "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
-        "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
-        "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
-    ],
+    // rules: [
+    //     "Each participant must pay the fee Rs. 150, on-spot before participating in the workshop",
+    //     "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
+    //     "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
+    //     "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
+    // ],
+    rules: ["No rules for workshops"],
     studentCordinators: [
         {
             id: 1,

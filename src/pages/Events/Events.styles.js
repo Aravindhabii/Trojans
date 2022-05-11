@@ -506,7 +506,7 @@ export const Eventslist = styled.button.attrs({
   transition: all 0.5s ease-in-out;
   &:hover {
     background-color: #03e9f4;
-    color: #fff;
+    color: #000;
   }
   @media (max-width: 410px) {
     margin: 0.6rem;

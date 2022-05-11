@@ -200,7 +200,7 @@ export const PhoneButtonStyles = styled.h2`
 	transform: translateZ(30px);
 	&:hover {
 		background-color: ${({ bgColor }) => bgColor};
-		color: black;
+		color: black !important;
 		box-shadow: 0 0 5px ${({ bgColor }) => bgColor},
 			0 0 15px ${({ bgColor }) => bgColor}, 0 0 18px ${({ bgColor }) => bgColor};
 	}
