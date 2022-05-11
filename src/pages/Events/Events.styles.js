@@ -501,7 +501,6 @@ export const Eventslist = styled.button.attrs({
   align-items: center;
   justify-content: center;
   opacity: 0;
-  /* transform: translateX(400%); */
   margin: 1rem;
   transition: all 0.5s ease-in-out;
   &:hover {
