@@ -453,13 +453,13 @@ export const Blockchain = {
 
     description:
         "Blockchain technology is a structure that stores transactional records, also known as the block, of the public in several databases, known as the “chain,” in a network connected through peer-to-peer nodes. Typically, this storage is referred to as a 'digital ledger. This technology is used in our day to day life in many ways like money transfers, financial exchanges, insurance, cryptocurrency, IOT, NFTs etc. This workshop is aimed towards the individuals who want to pursue their further education in Blockchain Technologies or towards the audience who wants to enhance their knowledge towards this subject.",
-    // rules: [
-    //     "Each participant must pay the fee Rs. 150, on-spot before participating in the workshop",
-    //     "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
-    //     "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
-    //     "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
-    // ],
-    rules: ["No rules for workshops"],
+    rules: [
+        "Each participant must pay the fee Rs. 150, on-spot before participating in the workshop",
+        "The workshop will be conducted in two batches,	First Batch starts @ 10.00 AM ,	Second Batch starts @ 1.00 PM ",
+        "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
+        "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
+    ],
+    // rules: ["No rules for workshops"],
     studentCordinators: [
         {
             id: 1,
