@@ -46,8 +46,8 @@ const CardComponent = ({ url, name }) => {
 const DevelopersSection = () => {
     return (
         <>
+            <h1 style={{color: "white", textAlign: "center"}}>Developers</h1>
             <MembersSection>
-            <h1>Developers</h1>
                 <DevelopersCard
                     name={"Solomon Santhosh I"}
                     description={"Full Stack"}
