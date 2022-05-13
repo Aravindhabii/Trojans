@@ -16,6 +16,7 @@ import {verifyPost} from "../../axios/verifyEmail.axios";
 import {
     InputContainerStyle,
     FormContainerStyle,
+    NoticeDivStyle,
 } from "./registrationForm.style";
 import {OTPPopup} from "../../pages/Registration/Registration.style";
 
@@ -154,7 +155,7 @@ const RegistrationForm = () => {
             }
         >
             <h1 style={{color: "white"}}>Registration</h1>
-            <p
+            {/* <p
                 style={{
                     color: "#c264e7",
                     margin: "2% 0",
@@ -164,7 +165,7 @@ const RegistrationForm = () => {
                 }}
             >
                 Offline Registration Available
-            </p>
+            </p> */}
             {isOTPRequested && (
                 <OTPComponent
                     email={email}
@@ -459,6 +460,12 @@ const RegistrationForm = () => {
                     </InputContainerStyle>
                 </>
             )}
+            <NoticeDivStyle>
+                <p>
+                    Note: Participants can also register for any event through
+                    offline mode on the day of the event
+                </p>
+            </NoticeDivStyle>
             <button disabled={!isButtonEnabled}>Submit</button>
         </FormContainerStyle>
     );

@@ -195,3 +195,18 @@ export const InputContainerStyle = styled.div`
 		border: 1px solid green;
 	}
 `;
+
+
+export const NoticeDivStyle = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem 0;
+	border-radius: 20px;
+	color: #bc13fe;
+	text-align: center;
+	padding: 2%;
+	box-shadow: 0 0 5px #bc13fe, 0 0 15px #bc13fe;
+`;
