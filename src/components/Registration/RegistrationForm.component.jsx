@@ -153,6 +153,18 @@ const RegistrationForm = () => {
                 )
             }
         >
+            <h1 style={{color: "white"}}>Registration</h1>
+            <p
+                style={{
+                    color: "#c264e7",
+                    margin: "2% 0",
+                    fontSize: "1.4rem",
+                    textShadow:
+                        "0 0 4px #bc13fe, 0 0 11px #bc13fe, 0 0 19px #bc13fe",
+                }}
+            >
+                Offline Registration Available
+            </p>
             {isOTPRequested && (
                 <OTPComponent
                     email={email}

@@ -56,7 +56,7 @@ export const LoadingScreen = styled.section`
         width: 100px;
         /* height: 30px; */
         text-align: center;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -45%);
         font-family: "PT Sans Narrow", sans-serif;
     }
 
