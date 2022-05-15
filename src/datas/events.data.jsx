@@ -448,8 +448,8 @@ export const Entrepreneur = {
 export const Blockchain = {
     id: 1,
     name: "Blockchain",
-    timestamp: "10 am to 11 am",
-    duration: "1 hrs",
+    timestamp: "",
+    duration: "2 hrs",
 
     description:
         "Blockchain technology is a structure that stores transactional records, also known as the block, of the public in several databases, known as the “chain,” in a network connected through peer-to-peer nodes. Typically, this storage is referred to as a 'digital ledger. This technology is used in our day to day life in many ways like money transfers, financial exchanges, insurance, cryptocurrency, IOT, NFTs etc. This workshop is aimed towards the individuals who want to pursue their further education in Blockchain Technologies or towards the audience who wants to enhance their knowledge towards this subject.",
@@ -476,13 +476,13 @@ export const Blockchain = {
 export const MachineLearning = {
     id: 1,
     name: "Machine Learning",
-    timestamp: "10 am to 11 am",
-    duration: "1 hrs",
+    timestamp: "10 am to 12pm & 1pm to 3pm",
+    duration: "2 hrs",
 
     description:
-        "Machine learning (ML) is a type of artificial intelligence (AI) that allows software applications to become more accurate at predicting outcomes without being explicitly programmed to do so. Machine learning algorithms use historical data as input to predict new output values. This workshop will educate the interested audience to the basics of Machine Learning and can code basic programs to utilitize MI",
+        "Machine Learning(ML) is a subset of Artificial Intelligence(AI) that allows applications to become more accurate at predicting outcomes without being explicitly programmed to do so. Machine learning algorithms use historical data as input to predict new output values. This workshop will educate the interested audience to the basics of Machine Learning.",
     rules: [
-        "Each participant must pay the fee Rs. 120, on-spot before participating in the workshop",
+        "Each participant must pay the fee Rs. 100, on-spot before participating in the workshop",
         "The workshop will be conducted in two batches,	First Batch starts @ 10.00 AM ,	Second Batch starts @ 1.00 PM ",
         "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
         "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
