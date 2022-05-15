@@ -50,7 +50,7 @@ const Tabletcontent = (props) => {
                 ) : null}
                 {currentEvent.timestamp ? (
                     <h3>
-                        <b>Timing:</b> {currentEvent.timestamp}
+                        <b>Timings:</b> {currentEvent.timestamp}
                     </h3>
                 ) : null}
                 <p>{currentEvent.description}</p>
