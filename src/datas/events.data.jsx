@@ -4,7 +4,7 @@ export const CodersChemistry = {
 	duration: '30 mins',
 	timestamp: '9 am - 9.30 am',
 	description:
-		'This is a team event comprising of coding and fun physical tasks. The team members have to swap their roles every 10 minutes. While one does a physical task, the other tries to find the output for the given use case. The team that finds the output first, wins._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many technical events of your choice.',
+		'This is a team event comprising of coding and fun physical tasks. The team members have to swap their roles every 10 minutes. While one does a physical task, the other tries to find the output for the given use case. The team that finds the output first, wins._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'A team of 2 members must participate in the event.',
 		'The teams must come up with the output as fast as they can within the given duration of time.',
@@ -32,7 +32,7 @@ export const MasterMinds = {
 	name: 'Master Minds',
 	duration: '2 hrs',
 	description:
-		'This is a team event comprising of 3 rounds namely Connections, Aptitude and Technical. After every round of completion, one team member has to be expelled from participation. The team that has answered the highest number of questions wins the event._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many technical events of your choice.',
+		'This is a team event comprising of 3 rounds namely Connections, Aptitude and Technical. After every round of completion, one team member has to be expelled from participation. The team that has answered the highest number of questions wins the event._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Each Team must consist of 3 members.',
 		'After every round, a member of the team’s will be expelled from the team.',
@@ -60,7 +60,7 @@ export const SiteIng = {
 	duration: '2 hrs',
 	timestamp: '10 am -12 pm',
 	description:
-		'The event consists of 2 rounds. On the first round, the participant will be asked to design a website using “figma” within 30 minutes of time. On the second round, the participant will be asked to design the same website that has been implemented using figma, by using HTML and CSS within 1.5 hours of time._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many technical events of your choice.',
+		'The event consists of 2 rounds. On the first round, the participant will be asked to design a website using “figma” within 30 minutes of time. On the second round, the participant will be asked to design the same website that has been implemented using figma, by using HTML and CSS within 1.5 hours of time._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Only one entry participant is permitted.',
 		'This is an individual event of 2 rounds.',
@@ -90,7 +90,7 @@ export const PaperBytes = {
 	duration: 'Not specific',
 	timestamp: '10 am',
 	description:
-		'This event is open for both individual and team participation. The participants have to do a presentation on any technological field for a given time, followed by a question-and-answer session._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many technical events of your choice.',
+		'This event is open for both individual and team participation. The participants have to do a presentation on any technological field for a given time, followed by a question-and-answer session._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Either an individual or a team can participate in the event.',
 		'The participants must submit their abstract, ppt and paper(optional) while registering.',
@@ -118,7 +118,7 @@ export const GooseChase = {
 	duration: '1.5 hrs',
 	timestamp: '1 pm -2.30 pm',
 	description:
-		"The event comprises of 3 levels of coding and additional tasks. The contestant must a select a problem statement through a physical task and find the output which is the clue for the next round. Each clue found in one round is linked to the next and is essential for the participant's progression through the event._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many technical events of your choice.",
+		"The event comprises of 3 levels of coding and additional tasks. The contestant must a select a problem statement through a physical task and find the output which is the clue for the next round. Each clue found in one round is linked to the next and is essential for the participant's progression through the event._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.",
 	rules: [
 		'Only one entry per participant is permitted.',
 		'Plagiarism is grounds for disqualification.',
@@ -146,7 +146,7 @@ export const TrojansThrottle = {
 	duration: '2 hrs',
 	timestamp: '12.30 pm -2.30 pm',
 	description:
-		'This is an individual contest comprising of two rounds. The first round, “Bravo Six Going Dark”, is coding with a dark twist. The participant will be given a problem statement and will be asked to code while the monitor is turned off. The second round, “Among Us” is where the participant will be given a working java code, and then they will be given a 30 minute of time to optimize the code._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many technical events of your choice.',
+		'This is an individual contest comprising of two rounds. The first round, “Bravo Six Going Dark”, is coding with a dark twist. The participant will be given a problem statement and will be asked to code while the monitor is turned off. The second round, “Among Us” is where the participant will be given a working java code, and then they will be given a 30 minute of time to optimize the code._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Only one entry per participant is permitted',
 		'Round 1 Rules (Bravo 6 going dark):',
@@ -179,7 +179,7 @@ export const TrojansCtf = {
 	duration: '3 hrs',
 	timestamp: '9.30 am -12.30 pm',
 	description:
-		'The capture the flag event is an individual contest. Participants should use various tools and techniques to find hidden clues or “flags”. The first team that locates either most of the flags or all of the flags during the event wins. This is an entry-level contest and is open to the public._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many technical events of your choice.',
+		'The capture the flag event is an individual contest. Participants should use various tools and techniques to find hidden clues or “flags”. The first team that locates either most of the flags or all of the flags during the event wins. This is an entry-level contest and is open to the public._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in this technical event',
 	rules: [
 		'Only individual participation is allowed.',
 		'A fee of Rs.100 (Per head) will be collected on the day of the event to participate in the contest. ',
@@ -209,7 +209,7 @@ export const ShutterStop = {
 	id: 1,
 	name: 'Shutter Stop Online',
 	description:
-		'This is an online photography contest. The winner will be selected based on the number of likes secured by the post on our official Instagram page along with the judge’s decision. The first and second prize winners will be notified through WhatsApp and email. Participation e-certificate will be provided to all the participants._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non - technical events of your choice.',
+		'This is an online photography contest. The winner will be selected based on the number of likes secured by the post on our official Instagram page along with the judge’s decision. The first and second prize winners will be notified through WhatsApp and email. Participation e-certificate will be provided to all the participants._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Only single entry is allowed (No specific theme to be followed).',
 		'Registration fee of Rs. 30 has to paid for participation.',
@@ -239,7 +239,7 @@ export const ShutterStopOffline = {
 	timestamp: '9 am to 1 pm',
 	duration: '4 hr',
 	description:
-		'An offline photography event where the participants will be provided with a theme and have to come up with their best photograph matching the given theme. The winner will be decided solely based on judge’s scores._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non - technical events of your choice.',
+		'An offline photography event where the participants will be provided with a theme and have to come up with their best photograph matching the given theme. The winner will be decided solely based on judge’s scores._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Only one entry per participant is permitted.',
 		'Participants physical presence is required.',
@@ -268,7 +268,7 @@ export const ShipWreck = {
 	duration: '2.5 hrs',
 	timestamp: '10 am to 12.30 pm',
 	description:
-		'A fictional or non-fictional character will be given to each participant and they will be given 2 minutes of time for preparation. The participant must come up with a valid explanation on why he/she deserves to be given the life jacket._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non - technical events of your choice.',
+		'A fictional or non-fictional character will be given to each participant and they will be given 2 minutes of time for preparation. The participant must come up with a valid explanation on why he/she deserves to be given the life jacket._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Only one entry per participant is permitted.',
 		'Characters allotment will be done on-spot. ',
@@ -295,7 +295,7 @@ export const TalentFest = {
 	duration: '1.5 hrs',
 	timestamp: '10.30 am to 1.30 pm',
 	description:
-		'The contestants should showcase their talent within the given time limit. Both solo and group performances are allowed. All types of talents are welcomed to perform._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non - technical events of your choice.',
+		'The contestants should showcase their talent within the given time limit. Both solo and group performances are allowed. All types of talents are welcomed to perform._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Only one entry per participant is permitted.',
 		'Participants must bring their own props.',
@@ -321,7 +321,7 @@ export const SquidGame = {
 	name: 'Squid Game',
 	duration: '2.5 hrs',
 	timestamp: '10 am to 3 pm',
-	description: 'Not so fast. Wait until the day of the event to find out._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non - technical events of your choice.',
+	description: 'Not so fast. Wait until the day of the event to find out._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Only one entry per participant is permitted.',
 		'Rules will be explained in detail on the day of the event.'
@@ -367,7 +367,7 @@ export const BoxCricket = {
 	duration: '3 hrs',
 	timestamp: '10 am to 12 pm',
 	description:
-		'The is a gully cricket tournament event. Further details of the event will be dealt on the day of the event._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non - technical events of your choice.',
+		'The is a gully cricket tournament event. Further details of the event will be dealt on the day of the event._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Only one entry per participant is permitted.',
 		'Rules will be explained in detail on the day of the event.'
@@ -391,11 +391,11 @@ export const Advertisement = {
 	duration: '2.5 hrs',
 	timestamp: '10 am to 12.30 pm',
 	description:
-		'The contestant will be provided with the name of a product and 2 minutes of time for preparation. The contestant should come up with a convincing act to sell out their product._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non - technical events of your choice.',
+		'The contestant will be provided with the name of a product and 2 minutes of time for preparation. The contestant should come up with a convincing act to sell out their product._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Only one entry per participant is permitted.',
 		'The act can either be done in English or Tamil.',
-		'A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non-technical events of your choice.',
+		'A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non-technical events of your choice.',
 		'Usage of offensive language and political references is strictly prohibited.',
 		'Judge’s decision will be final and binding.',
 		'Violators will be banned from further participation and no refund will be provided.'
@@ -444,7 +444,7 @@ export const Blockchain = {
 	name: 'Blockchain',
 	timestamp: '',
 	duration: '2 hrs',
-
+	
 	description:
 		"Blockchain technology is a structure that stores transactional records, also known as the block, of the public in several databases, known as the “chain,” in a network connected through peer-to-peer nodes. Typically, this storage is referred to as a 'digital ledger. This technology is used in our day to day life in many ways like money transfers, financial exchanges, insurance, cryptocurrency, IOT, NFTs etc. This workshop is aimed towards the individuals who want to pursue their further education in Blockchain Technologies or towards the audience who wants to enhance their knowledge towards this subject.",
 	rules: [
@@ -501,7 +501,7 @@ export const BGMI = {
 	timestamp: '9 am to 1 pm',
 	duration: '3 hrs',
 	description:
-		'Battlegrounds Mobile India is a player versus player shooter game in which up to one hundred players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive. Players can choose to enter the match solo, or as a small team of upto four._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non - technical events of your choice.',
+		'Battlegrounds Mobile India is a player versus player shooter game in which up to one hundred players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive. Players can choose to enter the match solo, or as a small team of upto four._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Team head (captain) must register with a unique team name, 4 members and no substitutes. Team heads cannot be changed during the course of the event.',
 		"Team's name, once registered cannot be changed again without prior approval.",
@@ -534,7 +534,7 @@ export const Valorant = {
 	timestamp: '9 am to 1 pm',
 	duration: '3 hrs',
 	description:
-		'Valorant is a tactical shooting game involving two teams with 5 players in each team. Every player can sign in and play remotely from anywhere in the world. Every game has 25 rounds and the team that wins 13 of them first wins the game. Players can choose their in-game characters called agents at the start of the game. Players can buy abilities and weapons at the start of the game._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non - technical events of your choice.',
+		'Valorant is a tactical shooting game involving two teams with 5 players in each team. Every player can sign in and play remotely from anywhere in the world. Every game has 25 rounds and the team that wins 13 of them first wins the game. Players can choose their in-game characters called agents at the start of the game. Players can buy abilities and weapons at the start of the game._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Team head (captain) must register with a unique team name, 5 members and no substitutes.',
 		'Teams must be ready with entry fee Rs.150 (per team), to participate on the day of the event.',
@@ -566,7 +566,7 @@ export const FreeFireMax = {
 	timestamp: '9 am to 1 pm',
 	duration: '3 hrs',
 	description:
-		'Garena Free Fire is an online-only action-adventure battle royale game played in third person perspective. A battle royale match consists of up to 50 players parachuting onto an island in search of weapons and equipment to kill the other players. Players are free to choose their starting position and take weapons and supplies to extend their battle life._*A common registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non - technical events of your choice.',
+		'Garena Free Fire is an online-only action-adventure battle royale game played in third person perspective. A battle royale match consists of up to 50 players parachuting onto an island in search of weapons and equipment to kill the other players. Players are free to choose their starting position and take weapons and supplies to extend their battle life._*A common registration fee of Rs.100 (Per head) will be collected on the day of the event to participate in as many technical and non - technical events of your choice.',
 	rules: [
 		'Team head must register with a unique team name, 4 members and no substitutes.',
 		'The players must meet a minimum rank of Gold or above in any mode (Ranked or cs-ranked) at the time of registration.',
