@@ -200,7 +200,7 @@ export const TrojansCtf = {
 		{
 			id: 2,
 			name: 'Name - Pavan Kalyan',
-			phoneNo: 'Phone No. 9940571461'
+			phoneNo: 'Phone No. 9940574161'
 		}
 	]
 };
