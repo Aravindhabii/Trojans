@@ -268,7 +268,7 @@ const RegistrationForm = () => {
                             )
                         }
                     >
-                        <option value="Select Department" disabled>
+                        <option value="" disabled selected>
                             Select Department
                         </option>
                         <option value="IT">IT</option>
@@ -422,7 +422,7 @@ const RegistrationForm = () => {
             {isPaperBytesVisible && (
                 <>
                     <InputContainerStyle>
-                        <label>Paper (not required)</label>
+                        <label>Paper</label>
                         <input
                             type="file"
                             name="uploadPaper"
