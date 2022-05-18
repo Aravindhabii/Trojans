@@ -198,6 +198,7 @@ export const handleSubmit = async (
 			// gaming.current.value = 'Select Game';
 			setIsButtonEnabled(false);
 			toast.success('Hooray! You are registered successfully.');
+			window.location.reload();
 		} else {
 			setIsButtonEnabled(true);
 			toast.error('Oops! Registration failed. Please try again in a moment.');
