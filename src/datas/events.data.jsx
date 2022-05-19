@@ -415,30 +415,30 @@ export const Advertisement = {
 	]
 };
 export const Entrepreneur = {
-    id: 1,
-    name: "Startup & Entrepreneurship",
-    duration: "1 hrs",
-    description:
-        "In this modern generation, with a vast number of career options, many young graduates and college students are opting towards creating startups and going towards the path of being successful entrepreneurs, but they do not have the proper guidance on how to progress towards their end goal and end up making mistakes during their journey, this workshop will help in aiding students towards proper understanding and analysis of entrepreneurship and its inbetweens....",
-    // rules: [
-    //     "Each participant must pay the fee Rs. 120, on-spot before participating in the workshop",
-    //     "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
-    //     "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
-    //     "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
-    // ],
-    rules: ["No rules for workshops"],
-    studentCordinators: [
-        {
-            id: 1,
-            name: "Name - Muralidharan",
-            phoneNo: "Phone No. 9962428382",
-        },
-        {
-            id: 2,
-            name: "Name - Madhoora Mohan",
-            phoneNo: "Phone No. 7010317128",
-        },
-    ],
+	id: 1,
+	name: 'Startup & Entrepreneurship',
+	duration: '1 hrs',
+	description:
+		'In this modern generation, with a vast number of career options, many young graduates and college students are opting towards creating startups and going towards the path of being successful entrepreneurs, but they do not have the proper guidance on how to progress towards their end goal and end up making mistakes during their journey, this workshop will help in aiding students towards proper understanding and analysis of entrepreneurship and its inbetweens...._*A registration fee of Rs.120 (Per head) will be collected on the day of the event to participate in the workshop.',
+	// rules: [
+	//     "Each participant must pay the fee Rs. 120, on-spot before participating in the workshop",
+	//     "The workshop will be conducted in two batches : First Batch starts @ 10.00 AM, Second Batch starts @ 1.00 PM ",
+	//     "Event organizers will not be held responsible if participant fails to attend the workshop on time. And no refunds will be provided",
+	//     "The duration of workshop will be two hours. Attendees must have prior knowledge in basics of python programming language.",
+	// ],
+	rules: ['No rules for workshops'],
+	studentCordinators: [
+		{
+			id: 1,
+			name: 'Name - Muralidharan',
+			phoneNo: 'Phone No. 9962428382'
+		},
+		{
+			id: 2,
+			name: 'Name - Madhoora Mohan',
+			phoneNo: 'Phone No. 7010317128'
+		}
+	]
 };
 export const Blockchain = {
 	id: 1,
