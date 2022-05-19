@@ -436,7 +436,7 @@ export const Entrepreneur = {
         {
             id: 2,
             name: "Name - Madhoora Mohan",
-            phoneNo: "Phone No. 9443623371",
+            phoneNo: "Phone No. 7010317128",
         },
     ],
 };
