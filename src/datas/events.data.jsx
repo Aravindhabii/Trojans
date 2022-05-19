@@ -502,7 +502,7 @@ export const BGMI = {
 	timestamp: '9 am to 1 pm',
 	duration: '3 hrs',
 	description:
-		'Battlegrounds Mobile India is a player versus player shooter game in which up to one hundred players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive. Players can choose to enter the match solo, or as a small team of upto four._*A registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non - technical events of your choice.',
+		'Battlegrounds Mobile India is a player versus player shooter game in which up to one hundred players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive. Players can choose to enter the match solo, or as a small team of upto four.',
 	rules: [
 		'Team head (captain) must register with a unique team name, 4 members and no substitutes. Team heads cannot be changed during the course of the event.',
 		"Team's name, once registered cannot be changed again without prior approval.",
@@ -535,7 +535,7 @@ export const Valorant = {
 	timestamp: '9 am to 1 pm',
 	duration: '3 hrs',
 	description:
-		'Valorant is a tactical shooting game involving two teams with 5 players in each team. Every player can sign in and play remotely from anywhere in the world. Every game has 25 rounds and the team that wins 13 of them first wins the game. Players can choose their in-game characters called agents at the start of the game. Players can buy abilities and weapons at the start of the game._*A registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non - technical events of your choice.',
+		'Valorant is a tactical shooting game involving two teams with 5 players in each team. Every player can sign in and play remotely from anywhere in the world. Every game has 25 rounds and the team that wins 13 of them first wins the game. Players can choose their in-game characters called agents at the start of the game. Players can buy abilities and weapons at the start of the game.',
 	rules: [
 		'Team head (captain) must register with a unique team name, 5 members and no substitutes.',
 		'Teams must be ready with entry fee Rs.150 (per team), to participate on the day of the event.',
@@ -567,7 +567,7 @@ export const FreeFireMax = {
 	timestamp: '9 am to 1 pm',
 	duration: '3 hrs',
 	description:
-		'Garena Free Fire is an online-only action-adventure battle royale game played in third person perspective. A battle royale match consists of up to 50 players parachuting onto an island in search of weapons and equipment to kill the other players. Players are free to choose their starting position and take weapons and supplies to extend their battle life._*A registration fee of Rs.50 (Per head) will be collected on the day of the event to participate in as many non - technical events of your choice.',
+		'Garena Free Fire is an online-only action-adventure battle royale game played in third person perspective. A battle royale match consists of up to 50 players parachuting onto an island in search of weapons and equipment to kill the other players. Players are free to choose their starting position and take weapons and supplies to extend their battle life.',
 	rules: [
 		'Team head must register with a unique team name, 4 members and no substitutes.',
 		'The players must meet a minimum rank of Gold or above in any mode (Ranked or cs-ranked) at the time of registration.',
