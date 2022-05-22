@@ -183,7 +183,7 @@ export const handleSubmit = async (
 			phone.current.value = '';
 			department.current.value = 'Select Department';
 			year.current.value = 'Select Year';
-			college.current.value = 'Select College';
+			college.current.value = '';
 			event.current.value = 'Select Event';
 			event.current.removeAttribute('disabled');
 			Object.keys(formInputValid).forEach((key) => {
