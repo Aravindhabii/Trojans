@@ -177,6 +177,7 @@ export const handleSubmit = async (
 		uploadPresentation
 	).then((res) => {
 		if (res.status === 200) {
+			toast.success('Hooray! You are registered successfully.');
 			email.current.removeAttribute('disabled');
 			name.current.value = '';
 			email.current.value = '';
@@ -197,7 +198,6 @@ export const handleSubmit = async (
 			// workshops.current.value = 'Select Workshop';
 			// gaming.current.value = 'Select Game';
 			setIsButtonEnabled(false);
-			toast.success('Hooray! You are registered successfully.');
 			window.location.reload();
 		} else {
 			setIsButtonEnabled(true);
