@@ -156,9 +156,14 @@ const RegistrationForm = () => {
 			<NoticeDivStyle>
 				<p>
 					Note: Participants can also register for any event through offline
-					mode on the day of the event
+					mode on the day of the event  Or you can register using the link : <a href="https://forms.gle/u5Lm83M8JK1e1woN9" style={{textDecoration: 'none' ,color:'#c264e7'}} target='_blank'>https://forms.gle/u5Lm83M8JK1e1woN9</a>
 				</p>
 			</NoticeDivStyle>
+			{/* <NoticeDivStyle>
+				<p>
+					Note:
+				</p>
+			</NoticeDivStyle> */}
 			{/* <p
                 style={{
                     color: "#c264e7",
